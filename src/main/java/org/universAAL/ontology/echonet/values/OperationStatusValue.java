@@ -22,15 +22,27 @@ public class OperationStatusValue extends ManagedIndividual {
 	public static final int NOT_POSSIBLE = 13;
 	public static final int NORMAL = 14;
 	public static final int ALARM = 15;
-	public static final int CONNECTED = 16;
-	public static final int DISCONNECTED = 17;
-	public static final int NOT_REGISTERED = 18;
-	public static final int DELETED = 19;
-
+	public static final int INITIAL = 16;
+	public static final int HEATING_SUSPENDED = 17;
+	public static final int HEATING_CYCLE_COMPLETED = 18;
+	public static final int SETTING = 19;
+	public static final int PRE_HEATING = 20;
+	public static final int PREHEAT_TEMPERATURE_MAINTENANCE = 21;
+	public static final int HEATING_TEMPORILY_STOPPED = 22;
+	public static final int NOT_SPECIFIED = 23;
+	public static final int STOP = 24;
+	public static final int COOKING = 25;
+	public static final int STEAMING = 26;
+	public static final int COOKING_COMPLETED = 27;
+	public static final int REFRIGERATION = 28;
+	public static final int FREEZING = 29;
 	private static final String[] names = { "On", "Off","AutomaticOn","ManualOn","ManualOff",
 											"Automatic","NonAutomatic","AutomaticUsed","NonAutomaticStopped",
 											"NonAutomaticUsed","Heating","NotHeating","Possible", "NotPossible",
-											"Normal","Alarm","Connected","Disconnected","NotRegistered","Deleted"};
+											"Normal","Alarm","Initial","HeatingSuspended","HeatingCycleCompleted",
+											"Setting","PreHeating","PreheatTemperatureMaintenance","HeatingTemporilyStopped",
+											"NotSpecified","Stop","Cooking","Steaming","CookingCompleted","Refrigeration",
+											"Freezing"};
 	
 	public static final OperationStatusValue On = new OperationStatusValue(ON);
 	public static final OperationStatusValue Off = new OperationStatusValue(OFF);
@@ -48,11 +60,20 @@ public class OperationStatusValue extends ManagedIndividual {
 	public static final OperationStatusValue NotPossible = new OperationStatusValue(NOT_POSSIBLE);
 	public static final OperationStatusValue Normal = new OperationStatusValue(NORMAL);
 	public static final OperationStatusValue Alarm = new OperationStatusValue(ALARM);
-	public static final OperationStatusValue Connected = new OperationStatusValue(CONNECTED);
-	public static final OperationStatusValue Disconnected = new OperationStatusValue(DISCONNECTED);
-	public static final OperationStatusValue NotRegistered = new OperationStatusValue(NOT_REGISTERED);
-	public static final OperationStatusValue Deleted = new OperationStatusValue(DELETED);
-
+	public static final OperationStatusValue Initial = new OperationStatusValue(INITIAL);
+	public static final OperationStatusValue HeatingSuspended = new OperationStatusValue(HEATING_SUSPENDED);
+	public static final OperationStatusValue HeatingCycleCompleted = new OperationStatusValue(HEATING_CYCLE_COMPLETED);
+	public static final OperationStatusValue Setting = new OperationStatusValue(SETTING);
+	public static final OperationStatusValue PreHeating = new OperationStatusValue(PRE_HEATING);
+	public static final OperationStatusValue PreheatTemperatureMaintenance = new OperationStatusValue(PREHEAT_TEMPERATURE_MAINTENANCE);
+	public static final OperationStatusValue HeatingTemporilyStopped = new OperationStatusValue(HEATING_TEMPORILY_STOPPED);
+	public static final OperationStatusValue NotSpecified = new OperationStatusValue(NOT_SPECIFIED);
+	public static final OperationStatusValue Stop = new OperationStatusValue(STOP);
+	public static final OperationStatusValue Cooking = new OperationStatusValue(COOKING);
+	public static final OperationStatusValue Steaming = new OperationStatusValue(STEAMING);
+	public static final OperationStatusValue CookingCompleted = new OperationStatusValue(COOKING_COMPLETED);
+	public static final OperationStatusValue Refrigeration = new OperationStatusValue(REFRIGERATION);
+	public static final OperationStatusValue Freezing = new OperationStatusValue(FREEZING);
 
 	private int order;
 
@@ -95,14 +116,34 @@ public class OperationStatusValue extends ManagedIndividual {
 			return Normal;
 		case ALARM:
 			return Alarm;	
-		case CONNECTED:
-			return Connected;
-		case DISCONNECTED:
-			return Disconnected;	
-		case NOT_REGISTERED:
-			return NotRegistered;
-		case DELETED:
-			return Deleted;
+		case INITIAL:
+			return Initial;
+		case HEATING_SUSPENDED:
+			return HeatingSuspended;
+		case HEATING_CYCLE_COMPLETED:
+			return HeatingCycleCompleted;
+		case SETTING:
+			return Setting;	
+		case PRE_HEATING:
+			return PreHeating;
+		case PREHEAT_TEMPERATURE_MAINTENANCE:
+			return PreheatTemperatureMaintenance;	
+		case HEATING_TEMPORILY_STOPPED:
+			return HeatingTemporilyStopped;	
+		case NOT_SPECIFIED:
+			return NotSpecified;	
+		case STOP:
+			return Stop;
+		case COOKING:
+			return Cooking;	
+		case STEAMING:
+			return Steaming;	
+		case COOKING_COMPLETED:
+			return CookingCompleted;	
+		case REFRIGERATION:
+			return Refrigeration;	
+		case FREEZING:
+			return Freezing;
 		default:
 			return null;
 		}
@@ -115,7 +156,7 @@ public class OperationStatusValue extends ManagedIndividual {
 		if (name.startsWith(EchonetOntology.NAMESPACE))
 			name = name.substring(EchonetOntology.NAMESPACE.length());
 
-		for (int i = ON; i <= DELETED; i++)
+		for (int i = ON; i <= FREEZING; i++)
 			if (names[i].equals(name))
 				return getOperationStatusValueByOrder(i);
 		return null;

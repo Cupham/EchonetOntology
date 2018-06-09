@@ -44,6 +44,15 @@ public static final String MY_URI = EchonetOntology.NAMESPACE + "OperationStateS
 	public static final int BUSY_STATE = 35;
 	public static final int IMPLEMENTED_STATE = 36;
 	public static final int NOT_IMPLEMENTED_STATE = 37;
+	public static final int ENABLE_STATE = 38;
+	public static final int DISABLE_STATE = 39;
+	public static final int TEMPORARY_DISABLE_STATE = 40;
+	public static final int CONNECTED_STATE = 41;
+	public static final int DISCONNECTED_STATE = 42;
+	public static final int NOT_REGISTERED_STATE = 43;
+	public static final int DELETED_STATE = 44;
+	public static final int STARTED_RESTARTED_STATE = 45;
+	public static final int SUSPENDED_STATE = 46;
 	
 	
 	private static final String[] names = {"NormalOperation", "SpecialState","DefrostingState","PreHeatingState","HeatRemovalState",
@@ -54,7 +63,9 @@ public static final String MY_URI = EchonetOntology.NAMESPACE + "OperationStateS
 										   "Idling","UndeterminedState","VehicleNotConnectedState","VehicleConnectedNotChargeableNotDischargableState",
 										   "VehicleConnectedChargeableNotDischargableState","VehicleConnectedNotChargeableDischargableState",
 										   "VehicleConnectedChargeableDischargableState","VehicleConnectedChargeableState",
-										   "VehicleConnectedNotChargableState","ReadyState","BusyState","ImplementedState","NotImplementedState"};
+										   "VehicleConnectedNotChargableState","ReadyState","BusyState","ImplementedState","NotImplementedState",
+										   "EnableState","DisableState","TemporaryDisableState","ConnectedState","DisconnectedState","NotRegisteredState",
+										   "DeletedState","StartedRestartedState","SuspendedState"};
 	
 	
 	public static final OperationStateSettingValue NormalOperation = new OperationStateSettingValue(NORMAL_OPERATION_STATE);
@@ -95,6 +106,16 @@ public static final String MY_URI = EchonetOntology.NAMESPACE + "OperationStateS
 	public static final OperationStateSettingValue BusyState = new OperationStateSettingValue(BUSY_STATE);
 	public static final OperationStateSettingValue ImplementedState = new OperationStateSettingValue(IMPLEMENTED_STATE);
 	public static final OperationStateSettingValue NotImplementedState = new OperationStateSettingValue(NOT_IMPLEMENTED_STATE);
+	public static final OperationStateSettingValue EnableState = new OperationStateSettingValue(ENABLE_STATE);
+	public static final OperationStateSettingValue DisableState = new OperationStateSettingValue(DISABLE_STATE);
+	public static final OperationStateSettingValue TemporaryDisableState = new OperationStateSettingValue(TEMPORARY_DISABLE_STATE);
+	public static final OperationStateSettingValue ConnectedState = new OperationStateSettingValue(CONNECTED_STATE);
+	public static final OperationStateSettingValue DisconnectedState = new OperationStateSettingValue(DISCONNECTED_STATE);
+	public static final OperationStateSettingValue NotRegisteredState = new OperationStateSettingValue(NOT_REGISTERED_STATE);
+	public static final OperationStateSettingValue DeletedState = new OperationStateSettingValue(DELETED_STATE);
+	public static final OperationStateSettingValue StartedRestartedState = new OperationStateSettingValue(STARTED_RESTARTED_STATE);
+	public static final OperationStateSettingValue SuspendedState = new OperationStateSettingValue(SUSPENDED_STATE);
+
 
 	
 	
@@ -181,6 +202,24 @@ public static final String MY_URI = EchonetOntology.NAMESPACE + "OperationStateS
 			return ImplementedState;
 		case NOT_IMPLEMENTED_STATE:
 			return NotImplementedState;
+		case ENABLE_STATE:
+			return EnableState;
+		case DISABLE_STATE:
+			return DisableState;
+		case TEMPORARY_DISABLE_STATE:
+			return TemporaryDisableState;
+		case CONNECTED_STATE:
+			return ConnectedState;
+		case DISCONNECTED_STATE:
+			return DisconnectedState;	
+		case NOT_REGISTERED_STATE:
+			return NotRegisteredState;
+		case DELETED_STATE:
+			return DeletedState;
+		case STARTED_RESTARTED_STATE:
+			return StartedRestartedState;
+		case SUSPENDED_STATE:
+			return SuspendedState;
 		default:
 			return null;
 		}
@@ -193,7 +232,7 @@ public static final String MY_URI = EchonetOntology.NAMESPACE + "OperationStateS
 		if (name.startsWith(EchonetOntology.NAMESPACE))
 			name = name.substring(EchonetOntology.NAMESPACE.length());
 
-		for (int i = NORMAL_OPERATION_STATE; i <= NOT_IMPLEMENTED_STATE; i++)
+		for (int i = NORMAL_OPERATION_STATE; i <= SUSPENDED_STATE; i++)
 			if (names[i].equals(name))
 				return getOperationStateSettingValueValueByOrder(i);
 		return null;

@@ -28,13 +28,23 @@ public static final String MY_URI = EchonetOntology.NAMESPACE + "OperationFuntio
 	public static final int RELATIVE_TIME_BASED_RESERVATION_ON = 19;
 	public static final int HYBRID = 20;
 	public static final int SYSTEM_LINKED = 21;
+	public static final int FLUORESCENT_LIGHTS = 22;
+	public static final int LED = 23;
+	public static final int NO_LIGHTING = 24;
+	public static final int NON_FLUOROCARBON_INVETER = 25;
+	public static final int INVERTER = 26;
+	public static final int BUILT_IN_TYPE = 27;
+	public static final int SEPERATE_TYPE = 28;
+	public static final int OTHERS = 29;
 	
 	private static final String[] names = {"NoSetting", "ClothesDryerFunction", "MiteMoldControlFunction","ActiveDefrostingFunction",
 										   "Open", "Close", "Stop", "ContinousSetting","OneTimeSetting",
 										   "SystemInterconnectedReservePowerFlowAcceptable","Independent",
 										   "SystemInterconnectedReservePowerFlowNotAcceptable","TimerOff","Timer1_On","Timer2_On",
 										   "TimeAndRelativeTimeBasedRevervationON", "TimeAndRelativeTimeBasedRevervationOFF", 
-										   "TimeBasedRevervationON","RelativeTimeBasedRevervationON","Hybrid","SystemLinked"};
+										   "TimeBasedRevervationON","RelativeTimeBasedRevervationON","Hybrid","SystemLinked",
+										   "FluorescentLight","Led","NoLight","NonFluorocarbonInverter","Inverter","BuiltInType",
+										   "SeperateType","Others"};
 	
 	public static final OperationFuntionSettingValue NoSetting = new OperationFuntionSettingValue(NO_SETTING);
 	public static final OperationFuntionSettingValue ClothesDryerFunction = new OperationFuntionSettingValue(CLOTHES_DRYER_FUNCTION);
@@ -58,6 +68,16 @@ public static final String MY_URI = EchonetOntology.NAMESPACE + "OperationFuntio
 	public static final OperationFuntionSettingValue RelativeTimeBasedRevervationON = new OperationFuntionSettingValue(RELATIVE_TIME_BASED_RESERVATION_ON);
 	public static final OperationFuntionSettingValue Hybrid = new OperationFuntionSettingValue(HYBRID);
 	public static final OperationFuntionSettingValue SystemLinked = new OperationFuntionSettingValue(SYSTEM_LINKED);
+	public static final OperationFuntionSettingValue FluorescentLight = new OperationFuntionSettingValue(FLUORESCENT_LIGHTS);
+	public static final OperationFuntionSettingValue Led = new OperationFuntionSettingValue(LED);
+	public static final OperationFuntionSettingValue NoLight = new OperationFuntionSettingValue(NO_LIGHTING);
+	public static final OperationFuntionSettingValue NonFluorocarbonInverter = new OperationFuntionSettingValue(NON_FLUOROCARBON_INVETER);
+	public static final OperationFuntionSettingValue Inverter = new OperationFuntionSettingValue(INVERTER);
+	public static final OperationFuntionSettingValue BuiltInType = new OperationFuntionSettingValue(BUILT_IN_TYPE);
+	public static final OperationFuntionSettingValue SeperateType = new OperationFuntionSettingValue(SEPERATE_TYPE);
+	public static final OperationFuntionSettingValue Others = new OperationFuntionSettingValue(OTHERS);
+
+
 
 	
 	private OperationFuntionSettingValue(int order) {
@@ -111,6 +131,22 @@ public static final String MY_URI = EchonetOntology.NAMESPACE + "OperationFuntio
 			return Hybrid;
 		case SYSTEM_LINKED:
 			return SystemLinked;
+		case FLUORESCENT_LIGHTS:
+			return FluorescentLight;
+		case LED:
+			return Led;
+		case NON_FLUOROCARBON_INVETER:
+			return NonFluorocarbonInverter;
+		case INVERTER:
+			return Inverter;
+		case NO_LIGHTING:
+			return NoLight;
+		case SEPERATE_TYPE:
+			return SeperateType;
+		case BUILT_IN_TYPE:
+			return BuiltInType;
+		case OTHERS:
+			return Others;
 			
 			
 		default:
@@ -125,7 +161,7 @@ public static final String MY_URI = EchonetOntology.NAMESPACE + "OperationFuntio
 		if (name.startsWith(EchonetOntology.NAMESPACE))
 			name = name.substring(EchonetOntology.NAMESPACE.length());
 
-		for (int i = NO_SETTING; i <= SYSTEM_LINKED; i++)
+		for (int i = NO_SETTING; i <= OTHERS; i++)
 			if (names[i].equals(name))
 				return getAirconditionerSpecialFuntionSettingValueByOrder(i);
 		return null;

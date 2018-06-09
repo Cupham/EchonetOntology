@@ -13,7 +13,7 @@ import org.universAAL.ontology.echonet.values.OperationStatusValue;
 
 public class ElectricHotWaterPot extends EchonetSuperDevice{
 	public static final String MY_URI = EchonetOntology.NAMESPACE + "ElectricHotWaterPot";
-	public static final String PROPERTY_HAS_CORVER_OPEN_CLOSE_STATUS= EchonetOntology.NAMESPACE + "HasCoverOpenCloseStatus";
+	public static final String PROPERTY_HAS_COVER_OPEN_CLOSE_STATUS= EchonetOntology.NAMESPACE + "HasCoverOpenCloseStatus";
 	public static final String PROPERTY_HAS_NO_WATER_WARNING = EchonetOntology.NAMESPACE + "HasNoWaterWarning";
 	public static final String PROPERTY_HAS_BOIL_UP_SETTING = EchonetOntology.NAMESPACE + "HasBoilUpSetting";
 	public static final String PROPERTY_HAS_BOIL_UP_WARMER_MODE_SETTING = EchonetOntology.NAMESPACE + "HasBoilUpWarmerModeSetting";
@@ -64,15 +64,13 @@ public class ElectricHotWaterPot extends EchonetSuperDevice{
 			changeProperty(PROPERTY_HAS_NO_WATER_WARNING, msg);	
 	}
 	public OperationStateSettingValue getCoverOpenCloseStatus() {
-		return (OperationStateSettingValue) getProperty(PROPERTY_HAS_CORVER_OPEN_CLOSE_STATUS);	
+		return (OperationStateSettingValue) getProperty(PROPERTY_HAS_COVER_OPEN_CLOSE_STATUS);	
 	}
 	public void setCoverOpenCloseStatus(OperationStateSettingValue msg) {
 		if(msg !=null) 
-			changeProperty(PROPERTY_HAS_CORVER_OPEN_CLOSE_STATUS, msg);	
+			changeProperty(PROPERTY_HAS_COVER_OPEN_CLOSE_STATUS, msg);	
 	}
 
-	
-	
 	public ElectricHotWaterPot() {
 		super();
 		setClassGroupCode(EchonetDeviceGroupCodeValue.CookingHouseholdRelatedDevice);

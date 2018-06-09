@@ -19,7 +19,7 @@ public static final String MY_URI = EchonetOntology.NAMESPACE + "OperationModeSe
 	public static final int COOLING_MODE = 11;
 	public static final int HEATING_MODE = 12;
 	public static final int DEHUMIDIFICATION_MODE = 13;
-	public static final int AIR_CIRCULATOR_MODE = 14;
+	public static final int CIRCULATOR_MODE = 14;
 	public static final int OTHER = 15;
 	public static final int THROAT_DRY_PREVENTION_MODE = 16;
 	public static final int QUIET_OPERATION_MODE = 17;
@@ -46,7 +46,29 @@ public static final String MY_URI = EchonetOntology.NAMESPACE + "OperationModeSe
 	public static final int NIGHT_LIGHTING_MODE = 38;
 	public static final int COLOR_LIGHTING_MODE= 39;
 	public static final int CITRIC_ACID_CLEANING_MODE= 40;
-	
+	public static final int QUICK_MODE= 41;
+	public static final int MICROWAVE_HEATING_MODE= 42;
+	public static final int DEFROSTING_MODE = 43;
+	public static final int OVEN_MODE = 44;
+	public static final int GRILL_MODE= 45;
+	public static final int TOASTER_MODE= 46;
+	public static final int FERMENTING_MODE= 47;
+	public static final int STEWING_MODE= 48;
+	public static final int STEAMING_MODE = 49;
+	public static final int TWO_STAGE_MICROWAVE_HEATING = 50;
+	public static final int CONVECTION_MODE= 51;
+	public static final int HYBRID_MODE = 52;
+	public static final int POWER_CONTROL_MODE = 53;
+	public static final int DEEP_FRYING_MODE = 54;
+	public static final int WATER_HEATING_MODE= 55;
+	public static final int RICE_BOILING_MODE = 56;
+	public static final int STIR_FRYING_MODE= 57;
+	public static final int WASHING_MODE = 58;
+	public static final int RINSING_MODE = 59;
+	public static final int SPIN_DRYING_MODE= 60;
+	public static final int SUSPENDED_MODE = 61;
+	public static final int WORKING_CYCLE_STOPPED_COMPLETED= 62;
+	public static final int NON_COOLING_MODE = 63;
 
 	
 	
@@ -54,12 +76,17 @@ public static final String MY_URI = EchonetOntology.NAMESPACE + "OperationModeSe
 										   "StanardMode","ExtraMode","AutomaticAirFlowDirectionControlModeMode", 
 										   "NonAutomaticAirFlowDirectionControlMode", "AutomaticAirFlowVerticalDirectionMode", 
 										   "AutomaticAirFlowHorizontalDirectionMode","AutomaticMode", "CoolingMode", "HeatingMode", 
-										   "DehumidificationMode", "AirCiculatorMode", "Other","ThroatDryPreventionMode", "QuiteOperationMode",
+										   "DehumidificationMode", "CiculatorMode", "Other","ThroatDryPreventionMode", "QuiteOperationMode",
 										   "PowerSavingMode","RoomHeatingOnMode","RoomHeatingOffMode","TimerMode","NoSetting",
 										   "OverCoolPreventionMode","VentilationMode","PreWarmMode","DryerMode","Stop",
 										   "ModestOperationMode","HighPowerOperationMode","RapidCharginMode","ChargingMode",
 										   "DischargingMode","StandbyMode","TestMode","RestartMode","RecalculationMode",
-										   "MainLightingMode","NightLightingMode","ColorLightingMode","CitricAcidCleaningMode"};
+										   "MainLightingMode","NightLightingMode","ColorLightingMode","CitricAcidCleaningMode",
+										   "QuickMode","MicrowaveHeatingMode","DefrostingMode","OvenMode","GrillMode","ToasterMode",
+										   "FermentingMode","StewingMode","SteamingMode","TwoStageMicrowaveHeatingMode",
+										   "ConvectionMode","HybridMode","PowerControlMode","DeepFryingMode","WaterHeatingMode",
+										   "RiceBoilingMode","StirFryingMode","WashingMode","RinsingMode","SpinDryingMode","SuspendedMode",
+										   "WorkingCycleStoppedCompletedMode","NonCoolingMode"};
 	
 	public static final OperationModeSettingValue NormalMode = new OperationModeSettingValue(NORMAL_OPERATION);
 	public static final OperationModeSettingValue HighSpeedMode = new OperationModeSettingValue(HIGH_SPEED_OPERATION);
@@ -74,7 +101,7 @@ public static final String MY_URI = EchonetOntology.NAMESPACE + "OperationModeSe
 	public static final OperationModeSettingValue CoolingMode = new OperationModeSettingValue(COOLING_MODE);
 	public static final OperationModeSettingValue HeatingMode = new OperationModeSettingValue(HEATING_MODE);
 	public static final OperationModeSettingValue DehumidificationMode = new OperationModeSettingValue(DEHUMIDIFICATION_MODE);
-	public static final OperationModeSettingValue AirCiculatorMode = new OperationModeSettingValue(AIR_CIRCULATOR_MODE);
+	public static final OperationModeSettingValue CiculatorMode = new OperationModeSettingValue(CIRCULATOR_MODE);
 	public static final OperationModeSettingValue Other = new OperationModeSettingValue(OTHER);
 	public static final OperationModeSettingValue ThroatDryPreventionMode = new OperationModeSettingValue(THROAT_DRY_PREVENTION_MODE);
 	public static final OperationModeSettingValue QuiteOperationMode = new OperationModeSettingValue(QUIET_OPERATION_MODE);
@@ -101,7 +128,34 @@ public static final String MY_URI = EchonetOntology.NAMESPACE + "OperationModeSe
 	public static final OperationModeSettingValue NightLightingMode = new OperationModeSettingValue(NIGHT_LIGHTING_MODE);
 	public static final OperationModeSettingValue ColorLightingMode = new OperationModeSettingValue(COLOR_LIGHTING_MODE);
 	public static final OperationModeSettingValue CitricAcidCleaningMode = new OperationModeSettingValue(CITRIC_ACID_CLEANING_MODE);
+	public static final OperationModeSettingValue QuickMode = new OperationModeSettingValue(QUICK_MODE);
+	public static final OperationModeSettingValue MicrowaveHeatingMode = new OperationModeSettingValue(MICROWAVE_HEATING_MODE);
+	public static final OperationModeSettingValue DefrostingMode = new OperationModeSettingValue(DEFROSTING_MODE);
+	public static final OperationModeSettingValue OvenMode = new OperationModeSettingValue(OVEN_MODE);
+	public static final OperationModeSettingValue GrillMode = new OperationModeSettingValue(GRILL_MODE);
+	public static final OperationModeSettingValue ToasterMode = new OperationModeSettingValue(TOASTER_MODE);
+	public static final OperationModeSettingValue FermentingMode = new OperationModeSettingValue(FERMENTING_MODE);
+	public static final OperationModeSettingValue StewingMode = new OperationModeSettingValue(STEWING_MODE);
+	public static final OperationModeSettingValue SteamingMode = new OperationModeSettingValue(STEAMING_MODE);
+	public static final OperationModeSettingValue TwoStageMicrowaveHeatingMode = new OperationModeSettingValue(TWO_STAGE_MICROWAVE_HEATING);
+	public static final OperationModeSettingValue ConvectionMode = new OperationModeSettingValue(CONVECTION_MODE);
+	public static final OperationModeSettingValue HybridMode = new OperationModeSettingValue(HYBRID_MODE);
+	public static final OperationModeSettingValue PowerControlMode = new OperationModeSettingValue(POWER_CONTROL_MODE);
+	public static final OperationModeSettingValue DeepFryingMode = new OperationModeSettingValue(DEEP_FRYING_MODE);
+	public static final OperationModeSettingValue WaterHeatingMode = new OperationModeSettingValue(WATER_HEATING_MODE);
+	public static final OperationModeSettingValue RiceBoilingMode = new OperationModeSettingValue(RICE_BOILING_MODE);
+	public static final OperationModeSettingValue StirFryingMode = new OperationModeSettingValue(STIR_FRYING_MODE);
+	public static final OperationModeSettingValue WashingMode = new OperationModeSettingValue(WASHING_MODE);
+	public static final OperationModeSettingValue RinsingMode = new OperationModeSettingValue(RINSING_MODE);
+	public static final OperationModeSettingValue SpinDryingMode = new OperationModeSettingValue(SPIN_DRYING_MODE);
+	public static final OperationModeSettingValue SuspendedMode = new OperationModeSettingValue(SUSPENDED_MODE);
+	public static final OperationModeSettingValue WorkingCycleStoppedCompletedMode = new OperationModeSettingValue(WORKING_CYCLE_STOPPED_COMPLETED);
+	public static final OperationModeSettingValue NonCoolingMode = new OperationModeSettingValue(NON_COOLING_MODE);
 	
+	
+
+
+
 	private OperationModeSettingValue(int order) {
 		super(EchonetOntology.NAMESPACE + names[order]);
 		this.order = order;
@@ -135,8 +189,8 @@ public static final String MY_URI = EchonetOntology.NAMESPACE + "OperationModeSe
 			return HeatingMode;
 		case DEHUMIDIFICATION_MODE:
 			return DehumidificationMode;
-		case AIR_CIRCULATOR_MODE:
-			return AirCiculatorMode;
+		case CIRCULATOR_MODE:
+			return CiculatorMode;
 		case OTHER:
 			return Other;
 		case THROAT_DRY_PREVENTION_MODE:
@@ -189,6 +243,52 @@ public static final String MY_URI = EchonetOntology.NAMESPACE + "OperationModeSe
 			return ColorLightingMode;
 		case CITRIC_ACID_CLEANING_MODE:
 			return CitricAcidCleaningMode;
+		case QUICK_MODE:
+			return QuickMode;
+		case MICROWAVE_HEATING_MODE:
+			return MicrowaveHeatingMode;
+		case DEFROSTING_MODE:
+			return DefrostingMode;
+		case OVEN_MODE:
+			return OvenMode;
+		case GRILL_MODE:
+			return GrillMode;
+		case TOASTER_MODE:
+			return ToasterMode;
+		case FERMENTING_MODE:
+			return FermentingMode;
+		case STEWING_MODE:
+			return StewingMode;
+		case STEAMING_MODE:
+			return SteamingMode;
+		case TWO_STAGE_MICROWAVE_HEATING:
+			return TwoStageMicrowaveHeatingMode;
+		case CONVECTION_MODE:
+			return ConvectionMode;
+		case HYBRID_MODE:
+			return HybridMode;
+		case POWER_CONTROL_MODE:
+			return PowerControlMode;
+		case DEEP_FRYING_MODE:
+			return DeepFryingMode;
+		case WATER_HEATING_MODE:
+			return WaterHeatingMode;
+		case RICE_BOILING_MODE:
+			return RiceBoilingMode;
+		case STIR_FRYING_MODE:
+			return StirFryingMode;
+		case WASHING_MODE:
+			return WashingMode;
+		case RINSING_MODE:
+			return RinsingMode;
+		case SPIN_DRYING_MODE:
+			return SpinDryingMode;
+		case SUSPENDED_MODE:
+			return SuspendedMode;
+		case WORKING_CYCLE_STOPPED_COMPLETED:
+			return WorkingCycleStoppedCompletedMode;
+		case NON_COOLING_MODE:
+			return NonCoolingMode;	
 		default:
 			return null;
 		}
@@ -201,7 +301,7 @@ public static final String MY_URI = EchonetOntology.NAMESPACE + "OperationModeSe
 		if (name.startsWith(EchonetOntology.NAMESPACE))
 			name = name.substring(EchonetOntology.NAMESPACE.length());
 
-		for (int i = NORMAL_OPERATION; i <= CITRIC_ACID_CLEANING_MODE; i++)
+		for (int i = NORMAL_OPERATION; i <= NON_COOLING_MODE; i++)
 			if (names[i].equals(name))
 				return getOperationModeSettingValueByOrder(i);
 		return null;

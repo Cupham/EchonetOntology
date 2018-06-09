@@ -35,14 +35,17 @@ public final class EchonetOntology extends Ontology {
 	public void create() {
 		Resource r = getInfo();
 		r.setResourceComment(
-				"The ontology defining the most general concepts dealing with light sources and their control.");
-		r.setResourceLabel("Lighting");
+				"The ontology defining the most general concepts of Echonet protocol");
+		r.setResourceLabel("Echonet");
 		addImport(DataRepOntology.NAMESPACE);
 		addImport(ServiceBusOntology.NAMESPACE);
 		addImport(LocationOntology.NAMESPACE);
 		addImport(PhThingOntology.NAMESPACE);
 
 		OntClassInfoSetup oci;
+		
+		oci = createNewAbstractOntClassInfo(EchonetSuperDevice.MY_URI);
+		
 
 	}
 }
