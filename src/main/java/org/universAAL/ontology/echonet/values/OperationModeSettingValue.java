@@ -69,14 +69,16 @@ public static final String MY_URI = EchonetOntology.NAMESPACE + "OperationModeSe
 	public static final int SUSPENDED_MODE = 61;
 	public static final int WORKING_CYCLE_STOPPED_COMPLETED= 62;
 	public static final int NON_COOLING_MODE = 63;
+	public static final int CONTINOUS_MODE = 64;
+	public static final int INTERMITTENT_MODE = 65;
 
 	
 	
 	private static final String[] names = {"NormalMode", "HighSpeedMode", "SilentMode",
-										   "StanardMode","ExtraMode","AutomaticAirFlowDirectionControlModeMode", 
+										   "StandardMode","ExtraMode","AutomaticAirFlowDirectionControlMode", 
 										   "NonAutomaticAirFlowDirectionControlMode", "AutomaticAirFlowVerticalDirectionMode", 
 										   "AutomaticAirFlowHorizontalDirectionMode","AutomaticMode", "CoolingMode", "HeatingMode", 
-										   "DehumidificationMode", "CiculatorMode", "Other","ThroatDryPreventionMode", "QuiteOperationMode",
+										   "DehumidificationMode", "CiculatorMode", "Other","ThroatDryPreventionMode", "QuietOperationMode",
 										   "PowerSavingMode","RoomHeatingOnMode","RoomHeatingOffMode","TimerMode","NoSetting",
 										   "OverCoolPreventionMode","VentilationMode","PreWarmMode","DryerMode","Stop",
 										   "ModestOperationMode","HighPowerOperationMode","RapidCharginMode","ChargingMode",
@@ -86,7 +88,7 @@ public static final String MY_URI = EchonetOntology.NAMESPACE + "OperationModeSe
 										   "FermentingMode","StewingMode","SteamingMode","TwoStageMicrowaveHeatingMode",
 										   "ConvectionMode","HybridMode","PowerControlMode","DeepFryingMode","WaterHeatingMode",
 										   "RiceBoilingMode","StirFryingMode","WashingMode","RinsingMode","SpinDryingMode","SuspendedMode",
-										   "WorkingCycleStoppedCompletedMode","NonCoolingMode"};
+										   "WorkingCycleStoppedCompletedMode","NonCoolingMode","ContinousMode", "IntermitentMode"};
 	
 	public static final OperationModeSettingValue NormalMode = new OperationModeSettingValue(NORMAL_OPERATION);
 	public static final OperationModeSettingValue HighSpeedMode = new OperationModeSettingValue(HIGH_SPEED_OPERATION);
@@ -104,7 +106,7 @@ public static final String MY_URI = EchonetOntology.NAMESPACE + "OperationModeSe
 	public static final OperationModeSettingValue CiculatorMode = new OperationModeSettingValue(CIRCULATOR_MODE);
 	public static final OperationModeSettingValue Other = new OperationModeSettingValue(OTHER);
 	public static final OperationModeSettingValue ThroatDryPreventionMode = new OperationModeSettingValue(THROAT_DRY_PREVENTION_MODE);
-	public static final OperationModeSettingValue QuiteOperationMode = new OperationModeSettingValue(QUIET_OPERATION_MODE);
+	public static final OperationModeSettingValue QuietOperationMode = new OperationModeSettingValue(QUIET_OPERATION_MODE);
 	public static final OperationModeSettingValue PowerSavingMode = new OperationModeSettingValue(SAVING_MODE);
 	public static final OperationModeSettingValue RoomHeatingOnMode = new OperationModeSettingValue(ROOM_HEATING_ON_MODE);
 	public static final OperationModeSettingValue RoomHeatingOffMode = new OperationModeSettingValue(ROOM_HEATING_OFF_MODE);
@@ -151,7 +153,9 @@ public static final String MY_URI = EchonetOntology.NAMESPACE + "OperationModeSe
 	public static final OperationModeSettingValue SuspendedMode = new OperationModeSettingValue(SUSPENDED_MODE);
 	public static final OperationModeSettingValue WorkingCycleStoppedCompletedMode = new OperationModeSettingValue(WORKING_CYCLE_STOPPED_COMPLETED);
 	public static final OperationModeSettingValue NonCoolingMode = new OperationModeSettingValue(NON_COOLING_MODE);
-	
+	public static final OperationModeSettingValue ContinousMode = new OperationModeSettingValue(CONTINOUS_MODE);
+	public static final OperationModeSettingValue IntermitentMode = new OperationModeSettingValue(INTERMITTENT_MODE);
+
 	
 
 
@@ -196,7 +200,7 @@ public static final String MY_URI = EchonetOntology.NAMESPACE + "OperationModeSe
 		case THROAT_DRY_PREVENTION_MODE:
 			return ThroatDryPreventionMode;
 		case QUIET_OPERATION_MODE:
-			return QuiteOperationMode;
+			return QuietOperationMode;
 		case SAVING_MODE:
 			return PowerSavingMode;
 		case ROOM_HEATING_ON_MODE:
@@ -289,6 +293,10 @@ public static final String MY_URI = EchonetOntology.NAMESPACE + "OperationModeSe
 			return WorkingCycleStoppedCompletedMode;
 		case NON_COOLING_MODE:
 			return NonCoolingMode;	
+		case CONTINOUS_MODE:
+			return ContinousMode;
+		case INTERMITTENT_MODE:
+			return IntermitentMode;	
 		default:
 			return null;
 		}
@@ -301,7 +309,7 @@ public static final String MY_URI = EchonetOntology.NAMESPACE + "OperationModeSe
 		if (name.startsWith(EchonetOntology.NAMESPACE))
 			name = name.substring(EchonetOntology.NAMESPACE.length());
 
-		for (int i = NORMAL_OPERATION; i <= NON_COOLING_MODE; i++)
+		for (int i = NORMAL_OPERATION; i <= INTERMITTENT_MODE; i++)
 			if (names[i].equals(name))
 				return getOperationModeSettingValueByOrder(i);
 		return null;

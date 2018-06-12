@@ -9,6 +9,8 @@ import org.universAAL.ontology.echonet.values.OccurenceStatusValue;
 import org.universAAL.ontology.echonet.values.OperationStatusValue;
 public class AirConditionerVentilationFan extends EchonetSuperDevice{
 	public static final String MY_URI = EchonetOntology.NAMESPACE + "AirConditionerVentilationFan";
+	public static final String PROPERTY_HAS_SETTING_ROOM_RELATIVE_HUMIDITY = EchonetOntology.NAMESPACE + "AirConditionerVentilationFanHasSettingRoomHumidity";
+
 	public static final String PROPERTY_HAS_RELATIVE_HUMIDITY_IN_VENTILATION_MODE = EchonetOntology.NAMESPACE +
 																					"AirConditionerVentilationHasRelativeHumidityInAutoVentilationMode";
 	public static final String PROPERTY_HAS_VENTILATION_AUTO_SETTING = EchonetOntology.NAMESPACE + "AirConditionerVentilationHasVentilationAutoSetting";
@@ -32,6 +34,13 @@ public class AirConditionerVentilationFan extends EchonetSuperDevice{
 	public void setSmokeDetectionStatus(OccurenceStatusValue msg) {
 		if(msg !=null)
 			changeProperty(PROPERTY_HAS_SMOKE_DETECTION_STATUS,msg);	
+	}
+	public MeasuredValue getSettingRoomHumidity() {
+		return (MeasuredValue) getProperty(PROPERTY_HAS_SETTING_ROOM_RELATIVE_HUMIDITY);	
+	}
+	public void setSettingRoomHumidity(MeasuredValue msg) {
+		if(msg !=null)
+			changeProperty(PROPERTY_HAS_SETTING_ROOM_RELATIVE_HUMIDITY,msg);	
 	}
 	public MeasuredValue getCO2ConcentrationMeasuredValue() {
 		return (MeasuredValue) getProperty(PROPERTY_HAS_MEASURED_VALUE_OF_CO2_CONCENTRATION);	

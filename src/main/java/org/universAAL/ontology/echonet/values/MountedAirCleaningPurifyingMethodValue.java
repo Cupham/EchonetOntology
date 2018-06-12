@@ -10,15 +10,15 @@ public class MountedAirCleaningPurifyingMethodValue extends ManagedIndividual{
 
 	public MountedAirCleaningPurifyingMethodValue() {
 		super();
-		setDustCollectionMethodMounting(MethodMountedValue.NotMounted);
-		setClusterIonMethodMounting(MethodMountedValue.NotMounted);
+		setDustCollectionMethodMounting(OperationStateSettingValue.UnMountedState);
+		setClusterIonMethodMounting(OperationStateSettingValue.UnMountedState);
 	}
 	public MountedAirCleaningPurifyingMethodValue(String uri) {
 		super(uri);
-		setDustCollectionMethodMounting(MethodMountedValue.NotMounted);
-		setClusterIonMethodMounting(MethodMountedValue.NotMounted);
+		setDustCollectionMethodMounting(OperationStateSettingValue.UnMountedState);
+		setClusterIonMethodMounting(OperationStateSettingValue.UnMountedState);
 	}
-	public MountedAirCleaningPurifyingMethodValue(String uri, MethodMountedValue electricalDustCollectionMethodMouting,MethodMountedValue clusterIonMethodMouting ) {
+	public MountedAirCleaningPurifyingMethodValue(String uri, OperationStateSettingValue electricalDustCollectionMethodMouting,OperationStateSettingValue clusterIonMethodMouting ) {
 		super(uri);
 		setDustCollectionMethodMounting(electricalDustCollectionMethodMouting);
 		setClusterIonMethodMounting(clusterIonMethodMouting);
@@ -31,17 +31,17 @@ public class MountedAirCleaningPurifyingMethodValue extends ManagedIndividual{
 	public int getPropSerializationType(String arg0) {
 		return PROP_SERIALIZATION_OPTIONAL;
 	}
-	public MethodMountedValue getDustCollectionMethodMounting() {
-		return (MethodMountedValue) getProperty(PROPERTY_HAS_ELECTRICAL_DUST_COLLECTION_METHOD_MOUTING);
+	public OperationStateSettingValue getDustCollectionMethodMounting() {
+		return (OperationStateSettingValue) getProperty(PROPERTY_HAS_ELECTRICAL_DUST_COLLECTION_METHOD_MOUTING);
 	}
-	public void setDustCollectionMethodMounting(MethodMountedValue msg) {
+	public void setDustCollectionMethodMounting(OperationStateSettingValue msg) {
 		if(msg != null)
 			changeProperty(PROPERTY_HAS_ELECTRICAL_DUST_COLLECTION_METHOD_MOUTING,msg);
 	}
-	public MethodMountedValue getClusterIonMethodMounting() {
-		return (MethodMountedValue) getProperty(PROPERTY_HAS_CLUSTER_ION_METHOD_MOUTING);
+	public OperationStateSettingValue getClusterIonMethodMounting() {
+		return (OperationStateSettingValue) getProperty(PROPERTY_HAS_CLUSTER_ION_METHOD_MOUTING);
 	}
-	public void setClusterIonMethodMounting(MethodMountedValue msg) {
+	public void setClusterIonMethodMounting(OperationStateSettingValue msg) {
 		if(msg != null)
 			changeProperty(PROPERTY_HAS_CLUSTER_ION_METHOD_MOUTING,msg);
 	}

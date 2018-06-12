@@ -11,11 +11,11 @@ public class EarthquakeSensor extends EchonetSuperDevice{
 	public static final String MY_URI = EchonetOntology.NAMESPACE + "EarthquakeSensor";
 	public static final String PROPERTY_HAS_DETECTION_THRESHOLD_LEVEL = EchonetOntology.NAMESPACE + "EarthquakeSensorSensorHasDectectionThresholdLevel";
 	public static final String PROPERTY_HAS_EARTHQUAKE_OCCURENCE_STATUS = EchonetOntology.NAMESPACE + "EarthquakeSensorHasEarthquakeOccurenceStatus";
-	public static final String PROPERTY_HAS_EARTHQUAKE_OCCURENCE_STATUS_RESETTING = EchonetOntology.NAMESPACE + "ResetEarthquakeSensorHasEarthquakeOccurenceStatus";
+	public static final String PROPERTY_RESETTING_EARTHQUAKE_OCCURENCE_STATUS = EchonetOntology.NAMESPACE + "ResettingEarthquakeSensorHasEarthquakeOccurenceStatus";
 	public static final String PROPERTY_HAS_SI_VALUE = EchonetOntology.NAMESPACE + "EarthquakeSensorHasSIValue";
 	public static final String PROPERTY_RESETTING_SI_VALUE = EchonetOntology.NAMESPACE + "ResettingEarthquakeSensorSIValue";
 	public static final String PROPERTY_HAS_COLLAPSE_OCCURENCE_STATUS = EchonetOntology.NAMESPACE + "EarthquakeSensorHasCollapseOccurenceStatus";
-	public static final String PROPERTY_HAS_COLLAPSE_OCCURENCE_STATUS_RESETTING = EchonetOntology.NAMESPACE + "ResetEarthquakeSensorHasCollapseOccurenceStatus";
+	public static final String PROPERTY_RESETTING_COLLAPSE_OCCURENCE_STATUS = EchonetOntology.NAMESPACE + "ResettingEarthquakeSensorHasCollapseOccurenceStatus";
 	
 	public EarthquakeSensor() {
 		super();

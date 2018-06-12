@@ -10,15 +10,15 @@ public class MountedAirRefreshingMethodValue extends ManagedIndividual{
 
 	public MountedAirRefreshingMethodValue() {
 		super();
-		setMinusIonMethodMounting(MethodMountedValue.NotMounted);
-		setClusterIonMethodMounting(MethodMountedValue.NotMounted);
+		setMinusIonMethodMounting(OperationStateSettingValue.UnMountedState);
+		setClusterIonMethodMounting(OperationStateSettingValue.UnMountedState);
 	}
 	public MountedAirRefreshingMethodValue(String uri) {
 		super(uri);
-		setMinusIonMethodMounting(MethodMountedValue.NotMounted);
-		setClusterIonMethodMounting(MethodMountedValue.NotMounted);
+		setMinusIonMethodMounting(OperationStateSettingValue.UnMountedState);
+		setClusterIonMethodMounting(OperationStateSettingValue.UnMountedState);
 	}
-	public MountedAirRefreshingMethodValue(String uri, MethodMountedValue minusIonMethodMouting,MethodMountedValue clusterIonMethodMouting ) {
+	public MountedAirRefreshingMethodValue(String uri, OperationStateSettingValue minusIonMethodMouting,OperationStateSettingValue clusterIonMethodMouting ) {
 		super(uri);
 		setMinusIonMethodMounting(minusIonMethodMouting);
 		setClusterIonMethodMounting(clusterIonMethodMouting);
@@ -31,17 +31,17 @@ public class MountedAirRefreshingMethodValue extends ManagedIndividual{
 	public int getPropSerializationType(String arg0) {
 		return PROP_SERIALIZATION_OPTIONAL;
 	}
-	public MethodMountedValue getMinusIonMethodMounting() {
-		return (MethodMountedValue) getProperty(PROPERTY_HAS_MINUS_ION_METHOD_MOUTING);
+	public OperationStateSettingValue getMinusIonMethodMounting() {
+		return (OperationStateSettingValue) getProperty(PROPERTY_HAS_MINUS_ION_METHOD_MOUTING);
 	}
-	public void setMinusIonMethodMounting(MethodMountedValue msg) {
+	public void setMinusIonMethodMounting(OperationStateSettingValue msg) {
 		if(msg != null)
 			changeProperty(PROPERTY_HAS_MINUS_ION_METHOD_MOUTING,msg);
 	}
-	public MethodMountedValue getClusterIonMethodMounting() {
-		return (MethodMountedValue) getProperty(PROPERTY_HAS_CLUSTER_ION_METHOD_MOUTING);
+	public OperationStateSettingValue getClusterIonMethodMounting() {
+		return (OperationStateSettingValue) getProperty(PROPERTY_HAS_CLUSTER_ION_METHOD_MOUTING);
 	}
-	public void setClusterIonMethodMounting(MethodMountedValue msg) {
+	public void setClusterIonMethodMounting(OperationStateSettingValue msg) {
 		if(msg != null)
 			changeProperty(PROPERTY_HAS_CLUSTER_ION_METHOD_MOUTING,msg);
 	}

@@ -5,7 +5,7 @@ package org.universAAL.ontology.echonet.housingFacilitiesRelatedDevices;
 import org.universAAL.ontology.echonet.EchonetOntology;
 import org.universAAL.ontology.echonet.EchonetSuperDevice;
 import org.universAAL.ontology.echonet.values.MeasuredValue;
-import org.universAAL.ontology.echonet.values.OperationFuntionSettingValue;
+import org.universAAL.ontology.echonet.values.OperationFunctionSettingValue;
 import org.universAAL.ontology.echonet.values.EchonetDeviceGroupCodeValue;
 import org.universAAL.ontology.echonet.values.OperationStatusValue;
 
@@ -119,10 +119,10 @@ public class HouseHoldSmallWindTurbinePowerGeneration extends EchonetSuperDevice
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_MEASURED_INSTANTANEOUS_GENERATED_ELECTRICITY_AMOUNT, msg);	
 	}
-	public OperationFuntionSettingValue getSystemInterconnectionStatus() {
-		return (OperationFuntionSettingValue) getProperty(PROPERTY_HAS_SYSTEM_INTERCONNECTION_STATUS);	
+	public OperationFunctionSettingValue getSystemInterconnectionStatus() {
+		return (OperationFunctionSettingValue) getProperty(PROPERTY_HAS_SYSTEM_INTERCONNECTION_STATUS);	
 	}
-	public void setSystemInterconnectionStatus(OperationFuntionSettingValue msg) {
+	public void setSystemInterconnectionStatus(OperationFunctionSettingValue msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_SYSTEM_INTERCONNECTION_STATUS, msg);	
 	}

@@ -14,8 +14,11 @@ public static final String MY_URI = EchonetOntology.NAMESPACE + "DetectionDirect
 	public static final int OUT_LEFT_DIRECTION = 5;
 	public static final int LEFT_DIRECTION = 6;
 	public static final int IN_LEFT_DIRECTION = 7;
+	public static final int NO_DETECTION = 8;
+	public static final int DETECED_DIRECTION_UNKNOWN = 9;
 	private static final String[] names = {"InDirection", "In_RightDirection", "RightDirection", "Out_RightDirection", 
-										   "OutDirection", "OutLeftDirection", "LeftDirection", "In_LeftDirection"};
+										   "OutDirection", "Out_LeftDirection", "LeftDirection", "In_LeftDirection",
+										   "NoDetection","Detected_DirectionUnknown"};
 	
 	public static final DetectionDirectionValue InDirection = new DetectionDirectionValue(IN_DIRECTION);
 	public static final DetectionDirectionValue In_RightDirection = new DetectionDirectionValue(IN_RIGHT_DIRECTION);
@@ -25,6 +28,8 @@ public static final String MY_URI = EchonetOntology.NAMESPACE + "DetectionDirect
 	public static final DetectionDirectionValue Out_LeftDirection = new DetectionDirectionValue(OUT_LEFT_DIRECTION);
 	public static final DetectionDirectionValue LeftDirection = new DetectionDirectionValue(LEFT_DIRECTION);
 	public static final DetectionDirectionValue In_LeftDirection = new DetectionDirectionValue(IN_LEFT_DIRECTION);
+	public static final DetectionDirectionValue NoDetection = new DetectionDirectionValue(NO_DETECTION);
+	public static final DetectionDirectionValue Detected_DirectionUnknown = new DetectionDirectionValue(DETECED_DIRECTION_UNKNOWN);
 
 	private DetectionDirectionValue(int order) {
 		super(EchonetOntology.NAMESPACE + names[order]);
@@ -48,7 +53,11 @@ public static final String MY_URI = EchonetOntology.NAMESPACE + "DetectionDirect
 		case LEFT_DIRECTION:
 			return LeftDirection;
 		case IN_LEFT_DIRECTION:
-			return In_LeftDirection;		
+			return In_LeftDirection;
+		case NO_DETECTION:
+			return NoDetection;
+		case DETECED_DIRECTION_UNKNOWN:
+			return Detected_DirectionUnknown;
 		default:
 			return null;
 		}
@@ -61,7 +70,7 @@ public static final String MY_URI = EchonetOntology.NAMESPACE + "DetectionDirect
 		if (name.startsWith(EchonetOntology.NAMESPACE))
 			name = name.substring(EchonetOntology.NAMESPACE.length());
 
-		for (int i = IN_DIRECTION; i <= IN_LEFT_DIRECTION; i++)
+		for (int i = IN_DIRECTION; i <= DETECED_DIRECTION_UNKNOWN; i++)
 			if (names[i].equals(name))
 				return getDetectionDirectionValueByOrder(i);
 		return null;

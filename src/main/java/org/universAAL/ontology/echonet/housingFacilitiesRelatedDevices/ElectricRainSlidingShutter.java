@@ -7,11 +7,10 @@ import org.universAAL.ontology.echonet.EchonetSuperDevice;
 import org.universAAL.ontology.echonet.values.MeasuredValue;
 import org.universAAL.ontology.echonet.values.EchonetDeviceGroupCodeValue;
 import org.universAAL.ontology.echonet.values.ElectricDeviceFaultDesciptionValue;
-import org.universAAL.ontology.echonet.values.OperationFuntionSettingValue;
+import org.universAAL.ontology.echonet.values.OperationFunctionSettingValue;
 import org.universAAL.ontology.echonet.values.OperationStateSettingValue;
 import org.universAAL.ontology.echonet.values.OperationStatusValue;
 import org.universAAL.ontology.echonet.values.SelectiveOpeningOperationSettingValue;
-import org.universAAL.ontology.echonet.values.OperationModeSettingValue;
 import org.universAAL.ontology.echonet.values.ThresholdLevelValue;
 
 public class ElectricRainSlidingShutter extends EchonetSuperDevice{
@@ -32,17 +31,18 @@ public class ElectricRainSlidingShutter extends EchonetSuperDevice{
 	public static final String PROPERTY_HAS_SLIT_DEGREE_OF_OPENING_SETTING = EchonetOntology.NAMESPACE + "HasSlitDegreeOfOpeningSetting";
 	public static final String PROPERTY_HAS_ONE_TIME_OPENING_SPEED_SETTING = EchonetOntology.NAMESPACE + "HasOneTimeOpeningSpeedSetting";
 	public static final String PROPERTY_HAS_ONE_TIME_CLOSING_SPEED_SETTING = EchonetOntology.NAMESPACE + "HasOneTimeClosingSpeedSetting";
-	public OperationModeSettingValue getOneTimeClosingSpeedSetting() {
-		return (OperationModeSettingValue) getProperty(PROPERTY_HAS_ONE_TIME_CLOSING_SPEED_SETTING);	
+	
+	public ThresholdLevelValue getOneTimeClosingSpeedSetting() {
+		return (ThresholdLevelValue) getProperty(PROPERTY_HAS_ONE_TIME_CLOSING_SPEED_SETTING);	
 	}
-	public void setOneTimeClosingSpeedSetting(OperationModeSettingValue msg) {
+	public void setOneTimeClosingSpeedSetting(ThresholdLevelValue msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_ONE_TIME_CLOSING_SPEED_SETTING, msg);	
 	}
-	public OperationModeSettingValue getOneTimeOpeningSpeedSetting() {
-		return (OperationModeSettingValue) getProperty(PROPERTY_HAS_ONE_TIME_OPENING_SPEED_SETTING);	
+	public ThresholdLevelValue getOneTimeOpeningSpeedSetting() {
+		return (ThresholdLevelValue) getProperty(PROPERTY_HAS_ONE_TIME_OPENING_SPEED_SETTING);	
 	}
-	public void setOneTimeOpeningSpeedSetting(OperationModeSettingValue msg) {
+	public void setOneTimeOpeningSpeedSetting(ThresholdLevelValue msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_ONE_TIME_OPENING_SPEED_SETTING, msg);	
 	}
@@ -81,10 +81,10 @@ public class ElectricRainSlidingShutter extends EchonetSuperDevice{
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_ELECTRIC_LOCK_SETTING, msg);	
 	}
-	public OperationModeSettingValue getOpeningClosingSpeedSetting() {
-		return (OperationModeSettingValue) getProperty(PROPERTY_HAS_OPENING_CLOSING_SPEED_SETTING);	
+	public ThresholdLevelValue getOpeningClosingSpeedSetting() {
+		return (ThresholdLevelValue) getProperty(PROPERTY_HAS_OPENING_CLOSING_SPEED_SETTING);	
 	}
-	public void setOpeningClosingSpeedSetting(OperationModeSettingValue msg) {
+	public void setOpeningClosingSpeedSetting(ThresholdLevelValue msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_OPENING_CLOSING_SPEED_SETTING, msg);	
 	}
@@ -102,31 +102,31 @@ public class ElectricRainSlidingShutter extends EchonetSuperDevice{
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_DEGREE_OF_OPENING_LEVEL, msg);	
 	}
-	public OperationFuntionSettingValue getOpenCloseSetting() {
-		return (OperationFuntionSettingValue) getProperty(PROPERTY_HAS_OPEN_CLOSE_SETTING);	
+	public OperationFunctionSettingValue getOpenCloseSetting() {
+		return (OperationFunctionSettingValue) getProperty(PROPERTY_HAS_OPEN_CLOSE_SETTING);	
 	}
-	public void setOpenCloseSetting(OperationFuntionSettingValue msg) {
+	public void setOpenCloseSetting(OperationFunctionSettingValue msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_OPEN_CLOSE_SETTING, msg);	
 	}
-	public Date getOperationTime() {
-		return (Date) getProperty(PROPERTY_HAS_OPERATION_TIME);	
+	public MeasuredValue getOperationTime() {
+		return (MeasuredValue) getProperty(PROPERTY_HAS_OPERATION_TIME);	
 	}
 	public void setOperationTime(Date msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_OPERATION_TIME, msg);	
 	}
-	public OperationModeSettingValue getClosingSpeedSetting() {
-		return (OperationModeSettingValue) getProperty(PROPERTY_HAS_CLOSING_SPEED_SETTING);	
+	public ThresholdLevelValue getClosingSpeedSetting() {
+		return (ThresholdLevelValue) getProperty(PROPERTY_HAS_CLOSING_SPEED_SETTING);	
 	}
-	public void setClosingSpeedSetting(OperationModeSettingValue msg) {
+	public void setClosingSpeedSetting(ThresholdLevelValue msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_CLOSING_SPEED_SETTING, msg);	
 	}
-	public OperationModeSettingValue getOpeningSpeedSetting() {
-		return (OperationModeSettingValue) getProperty(PROPERTY_HAS_OPENING_SPEED_SETTING);	
+	public ThresholdLevelValue getOpeningSpeedSetting() {
+		return (ThresholdLevelValue) getProperty(PROPERTY_HAS_OPENING_SPEED_SETTING);	
 	}
-	public void setOpeningSpeedSetting(OperationModeSettingValue msg) {
+	public void setOpeningSpeedSetting(ThresholdLevelValue msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_OPENING_SPEED_SETTING, msg);	
 	}

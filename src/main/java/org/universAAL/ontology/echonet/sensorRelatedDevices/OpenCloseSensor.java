@@ -2,7 +2,6 @@ package org.universAAL.ontology.echonet.sensorRelatedDevices;
 
 import org.universAAL.ontology.echonet.EchonetOntology;
 import org.universAAL.ontology.echonet.EchonetSuperDevice;
-import org.universAAL.ontology.echonet.values.DegreeOfOpeningDetectionStatusValue;
 import org.universAAL.ontology.echonet.values.EchonetDeviceGroupCodeValue;
 import org.universAAL.ontology.echonet.values.ThresholdLevelValue;
 
@@ -40,17 +39,17 @@ public class OpenCloseSensor extends EchonetSuperDevice{
 		if(msg !=null)
 			changeProperty(PROPERTY_HAS_DETECTION_THRESHOLD_LEVEL,msg);	
 	}
-	public DegreeOfOpeningDetectionStatusValue getDegreeOfOpenningDetectionStatus1() {
-		return (DegreeOfOpeningDetectionStatusValue) getProperty(PROPERTY_HAS_DEGREE_OF_OPENNING_DETECTION_STATUS_1);	
+	public ThresholdLevelValue getDegreeOfOpenningDetectionStatus1() {
+		return (ThresholdLevelValue) getProperty(PROPERTY_HAS_DEGREE_OF_OPENNING_DETECTION_STATUS_1);	
 	}
-	public void setDegreeOfOpenningDetectionStatus1(DegreeOfOpeningDetectionStatusValue msg) {
+	public void setDegreeOfOpenningDetectionStatus1(ThresholdLevelValue msg) {
 		if(msg !=null)	
 			changeProperty(PROPERTY_HAS_DEGREE_OF_OPENNING_DETECTION_STATUS_1,msg);	
 	}
-	public DegreeOfOpeningDetectionStatusValue getDegreeOfOpenningDetectionStatus2() {
-		return (DegreeOfOpeningDetectionStatusValue) getProperty(PROPERTY_HAS_DEGREE_OF_OPENNING_DETECTION_STATUS_2);	
+	public ThresholdLevelValue getDegreeOfOpenningDetectionStatus2() {
+		return (ThresholdLevelValue) getProperty(PROPERTY_HAS_DEGREE_OF_OPENNING_DETECTION_STATUS_2);	
 	}
-	public void setDegreeOfOpenningDetectionStatus2(DegreeOfOpeningDetectionStatusValue msg) {
+	public void setDegreeOfOpenningDetectionStatus2(ThresholdLevelValue msg) {
 		if(msg !=null)	
 			changeProperty(PROPERTY_HAS_DEGREE_OF_OPENNING_DETECTION_STATUS_2,msg);	
 	}

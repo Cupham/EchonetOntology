@@ -4,6 +4,7 @@ package org.universAAL.ontology;
 import org.universAAL.middleware.rdf.Resource;
 import org.universAAL.middleware.rdf.ResourceFactory;
 import org.universAAL.ontology.device.TemperatureSensor;
+import org.universAAL.ontology.echonet.EchonetSuperDevice;
 import org.universAAL.ontology.echonet.airconditionerRelatedDevices.AirCleaner;
 import org.universAAL.ontology.echonet.airconditionerRelatedDevices.AirConditionerVentilationFan;
 import org.universAAL.ontology.echonet.airconditionerRelatedDevices.ElectricHeater;
@@ -45,25 +46,25 @@ import org.universAAL.ontology.echonet.housingFacilitiesRelatedDevices.EngineCog
 import org.universAAL.ontology.echonet.housingFacilitiesRelatedDevices.FloorHeater;
 import org.universAAL.ontology.echonet.housingFacilitiesRelatedDevices.FuelCell;
 import org.universAAL.ontology.echonet.housingFacilitiesRelatedDevices.GardenSprinkler;
-import org.universAAL.ontology.echonet.housingFacilitiesRelatedDevices.GasMetter;
+import org.universAAL.ontology.echonet.housingFacilitiesRelatedDevices.GasMeter;
 import org.universAAL.ontology.echonet.housingFacilitiesRelatedDevices.GeneralLighting;
 import org.universAAL.ontology.echonet.housingFacilitiesRelatedDevices.HighVoltageSmartElectricEnergy;
 import org.universAAL.ontology.echonet.housingFacilitiesRelatedDevices.HouseHoldSmallWindTurbinePowerGeneration;
 import org.universAAL.ontology.echonet.housingFacilitiesRelatedDevices.HouseHoldSolarPowerGeneration;
 import org.universAAL.ontology.echonet.housingFacilitiesRelatedDevices.InstantaneousWaterHeater;
-import org.universAAL.ontology.echonet.housingFacilitiesRelatedDevices.KeroseneMetter;
-import org.universAAL.ontology.echonet.housingFacilitiesRelatedDevices.LPGasMetter;
+import org.universAAL.ontology.echonet.housingFacilitiesRelatedDevices.KeroseneMeter;
+import org.universAAL.ontology.echonet.housingFacilitiesRelatedDevices.LPGasMeter;
 import org.universAAL.ontology.echonet.housingFacilitiesRelatedDevices.LightingSystem;
 import org.universAAL.ontology.echonet.housingFacilitiesRelatedDevices.LowVoltageSmartElectricEnergy;
 import org.universAAL.ontology.echonet.housingFacilitiesRelatedDevices.MonoFunctionLighting;
 import org.universAAL.ontology.echonet.housingFacilitiesRelatedDevices.PowerDistributionBoardMetering;
-import org.universAAL.ontology.echonet.housingFacilitiesRelatedDevices.SmartGasMetter;
-import org.universAAL.ontology.echonet.housingFacilitiesRelatedDevices.SmartKeroseneMetter;
+import org.universAAL.ontology.echonet.housingFacilitiesRelatedDevices.SmartGasMeter;
+import org.universAAL.ontology.echonet.housingFacilitiesRelatedDevices.SmartKeroseneMeter;
 import org.universAAL.ontology.echonet.housingFacilitiesRelatedDevices.StorageBattery;
 import org.universAAL.ontology.echonet.housingFacilitiesRelatedDevices.VehicleCharger;
-import org.universAAL.ontology.echonet.housingFacilitiesRelatedDevices.WaterFlowmetter;
+import org.universAAL.ontology.echonet.housingFacilitiesRelatedDevices.WaterFlowMeter;
 import org.universAAL.ontology.echonet.housingFacilitiesRelatedDevices.WaterHeater;
-import org.universAAL.ontology.echonet.housingFacilitiesRelatedDevices.WattHourMetter;
+import org.universAAL.ontology.echonet.housingFacilitiesRelatedDevices.WattHourMeter;
 import org.universAAL.ontology.echonet.managementOperationRelatedDevices.Controller;
 import org.universAAL.ontology.echonet.managementOperationRelatedDevices.ParallelProcessingCombinationTypePowerControl;
 import org.universAAL.ontology.echonet.managementOperationRelatedDevices.Switch;
@@ -120,9 +121,116 @@ public class EchonetFactory implements ResourceFactory {
 	// + LightingFactory.class.hashCode();
 	
 	public static final int ACTIVITY_AMOUNT_SENSOR = 0;
-	public static final int AIR_POLLUTION_SENSOR = 0;
+	public static final int AIR_POLLUTION_SENSOR = 1;
+	public static final int AIR_PRESSURE_SENSOR = 2;
+	public static final int BATH_HEATING_STATUS_SENSOR = 3;
+	public static final int BATH_WATER_LEVEL_SENSOR = 4;
+	public static final int BED_PRESENCE_SENSOR = 5;
+	public static final int CALL_SENSOR = 6;
+	public static final int CO2_SENSOR = 7;
+	public static final int CONDENSATION_SENSOR = 8;
+	public static final int CRIME_PREVENTION_SENSOR = 9;
+	public static final int CURRENT_VALUE_SENSOR = 10;
+	public static final int EARTHQUAKE_SENSOR = 11;
+	public static final int ELECTRIC_ENERGY_SENSOR = 12;
+	public static final int ELECTRIC_LEAK_SENSOR = 13;
+	public static final int EMERGENCY_BUTTON = 14;
+	public static final int FIRE_SENSOR = 15;
+	public static final int FIRST_AID_SENSOR = 16;
+	public static final int FLAME_SENSOR = 17;
+	public static final int GAS_LEAK_SENSOR = 18;
+	public static final int GAS_SENSOR = 19;
+	public static final int HUMAN_BODY_LOCATION_SENSOR = 20;
+	public static final int HUMAN_DETECTION_SENSOR = 21;
+	public static final int HUMIDITY_SENSOR = 22;
+	public static final int ILLUMINANCE_SENSOR = 23;
+	public static final int MAILING_SENSOR = 24;
+	public static final int MICROMOTION_SENSOR = 25;
+	public static final int ODOR_SENSOR = 26;
+	public static final int OPEN_CLOSE_SENSOR = 27;
+	public static final int OXYGEN_SENSOR = 28;
+	public static final int PASSAGE_SENSOR = 29;
+	public static final int PRESSURE_SENSOR = 30;
+	public static final int RAIN_SENSOR = 31;
+	public static final int SMOKE_SENSOR = 32;
+	public static final int SOUND_SENSOR = 33;
+	public static final int TEMPERATURE_SENSOR = 34;
+	public static final int VISITOR_SENSOR = 35;
+	public static final int VOC_SENSOR = 36;
+	public static final int WATER_FLOW_RATE_SENSOR = 37;
+	public static final int WATER_LEAK_SENSOR = 38;
+	public static final int WATER_LEVEL_SENSOR = 39;
+	public static final int WATER_OVER_FLOW_SENSOR = 40;
+	public static final int WEIGHT_SENSOR = 41;
+	public static final int AIR_SPEED_SENSOR = 42;
+	public static final int SNOW_SENSOR = 43;
+	public static final int AIR_CLEANER = 44;
+	public static final int AIR_CONDITIONER_VENTILATION_FAN = 45;
+	public static final int ELECTRIC_HEATER = 46;
+	public static final int ELECTRIC_STORAGE_HEATER = 47;
+	public static final int FAN_HEATER = 48;
+	public static final int HOME_AIR_CONDITIONER = 49;
+	public static final int HUMIDIFIER = 50;
+	public static final int PACKAGE_TYPE_COMMERCIAL_AIR_CONDITIONER_INDOOR_UNIT = 51;
+	public static final int PACKAGE_TYPE_COMMERCIAL_AIR_CONDITIONER_OUTDOOR_UNIT = 52;
+	public static final int VENTILATION_FAN = 53;
+	public static final int BATH_ROOM_HEATER_DRYER = 54;
+	public static final int BUZZER = 55;
+	public static final int COLD_HOT_WATER_HEAT_SOURCE_EQUIPMENT = 56;
+	public static final int ELECTRIC_BLIND = 57;
+	public static final int ELECTRIC_GATE = 58;
+	public static final int ELECTRIC_LOCK = 59;
+	public static final int ELECTRIC_RAIN_SLIDING_SHUTTER = 60;
+	public static final int ELECTRIC_SHUTTER = 61;
+	public static final int ELECTRIC_SLIDING_DOOR = 62;
+	public static final int ELECTRIC_TOILET_SEAT = 63;
+	public static final int ELECTRIC_VEHICLE_CHARGER_DISCHAGER = 64;
+	public static final int ELECTRIC_WINDOW = 65;
+	public static final int ENGINE_COGENERATION = 66;
+	public static final int FLOOR_HEATER = 67;
+	public static final int FUEL_CELL = 68;
+	public static final int GARDEN_SPRINKLER = 69;
+	public static final int GAS_METER = 70;
+	public static final int GENERAL_LIGHTING = 71;
+	public static final int HIGH_VOLTAGE_SMART_ELECTRIC_ENERGY = 72;
+	public static final int HOUSE_HOLD_SMALL_WIND_TURBINE_POWER_GENERATION = 73;
+	public static final int HOUSE_HOLD_SOLAR_POWER_GENERATION = 74;
+	public static final int INSTANTANEOUS_WATER_HEATER = 75;
+	public static final int KEROSENE_METER = 76;
+	public static final int LIGHTING_SYSTEM = 77;
+	public static final int LOW_VOLTAGE_SMART_ELECTRIC_ENERGY = 78;
+	public static final int LP_GAS_METER = 79;
+	public static final int MONO_FUNCTION_LIGHTING = 80;
+	public static final int POWER_DISTRIBUTION_BOARD_METERING = 81;
+	public static final int SMART_GAS_METER = 82;
+	public static final int SMART_KEROSENE_METER = 83;
+	public static final int STORAGE_BATTERY = 84;
+	public static final int VEHICLE_CHARGER = 85;
+	public static final int WATER_FLOW_METER = 86;
+	public static final int WATER_HEATER = 87;
+	public static final int WATT_HOUR_METER = 88;
+	public static final int CLOTHES_DRYER = 89;
+	public static final int COMBINATION_MICROWAVE_OVEN = 90;
+	public static final int COMMERCIAL_SHOWCASE = 91;
+	public static final int COMMERCIAL_SHOWCASE_OUTDOOR_UNIT = 92;
+	public static final int COOKING_HEATER = 93;
+	public static final int ELECTRIC_HOT_WATER_POT = 94;
+	public static final int REFRIGERATOR = 95;
+	public static final int RICE_COOKER = 96;
+	public static final int WASHER_DRYER = 97;
+	public static final int WASHING_MACHINE = 98;
+	public static final int WEIGHING_MACHINE = 99;
+	public static final int CONTROLLER = 100;
+	public static final int PARALLEL_PROCESSING_COMBINATION_TYPE_POWER_CONTROL = 101;
+	public static final int SWITCH = 102;
+	public static final int AUDIO = 103;
+	public static final int DISPLAY = 104;
+	public static final int NETWORK_CAMERA = 105;
+	public static final int TELEVISION = 106;
+	
+
+	
 	public EchonetFactory() {
-		super();
 	}
 
 	public Resource createInstance(String classURI, String instanceURI, int factoryIndex) {
@@ -131,223 +239,223 @@ public class EchonetFactory implements ResourceFactory {
 		//Sensor device
 			case ACTIVITY_AMOUNT_SENSOR:
 				return new ActivityMountSensor(instanceURI);
-			case 1:
+			case AIR_POLLUTION_SENSOR:
 				return new AirPollutionSensor(instanceURI);
-			case 2:
+			case AIR_PRESSURE_SENSOR:
 				return new AirPressureSensor(instanceURI);
-			case 3:
-				return new BathHeatingStatusSensor(instanceURI);
-			case 4:
-				return new BathWaterLevelSensor(instanceURI);
-			case 5:
-				return new BedPresenceSensor(instanceURI);
-			case 6:
-				return new CallSensor(instanceURI);
-			case 7:
-				return new CO2Sensor(instanceURI);
-			case 8:
-				return new CondensationSensor(instanceURI);
-			case 9:
-				return new CrimePreventionSensor(instanceURI);
-			case 10:
-				return new CurrentValueSensor(instanceURI);
-			case 11:
-				return new EarthquakeSensor(instanceURI);
-			case 12:
-				return new ElectricEnergySensor(instanceURI);		
-			case 13:
-				return new ElectricLeakSensor(instanceURI);
-			case 14:
-				return new EmergencyButton(instanceURI);
-			case 15:
-				return new FireSensor(instanceURI);
-			case 16:
-				return new FirstAidSensor(instanceURI);
-			case 17:
-				return new FlameSensor(instanceURI);
-			case 18:
-				return new GasLeakSensor(instanceURI);
-			case 19:
-				return new GasSensor(instanceURI);
-			case 20:
-				return new HumanBodyLocationSensor(instanceURI);
-			case 21:
-				return new HumanDetectionSensor(instanceURI);
-			case 22:
-				return new HumiditySensor(instanceURI);
-			case 23:
-				return new IlluminanceSensor(instanceURI);
-			case 24:
-				return new MailingSensor(instanceURI);
-			case 25:
-				return new MicromotionSensor(instanceURI);
-			case 26:
-				return new OdorSensor(instanceURI);
-			case 27:
-				return new OpenCloseSensor(instanceURI);
-			case 28:
-				return new OxygenSensor(instanceURI);
-			case 29:
-				return new PassageSensor(instanceURI);
-			case 30:
-				return new PressureSensor(instanceURI);	
-			case 31:
-				return new RainSensor(instanceURI);
-			case 32:
-				return new SmokeSensor(instanceURI);
-			case 33:
-				return new SoundSensor(instanceURI);
-			case 34:
-				return new TemperatureSensor(instanceURI);
-			case 35:
-				return new VisitorSensor(instanceURI);
-			case 36:
-				return new VOCSensor(instanceURI);
-			case 37:
-				return new WaterFlowRateSensor(instanceURI);
-			case 38:
-				return new WaterLeakSensor(instanceURI);
-			case 39:
-				return new WaterLevelSensor(instanceURI);
-			case 40:
-				return new WaterOverflowSensor(instanceURI);
-			case 41:
-				return new WeightSensor(instanceURI);
-			case 42:
+			case AIR_SPEED_SENSOR:
 				return new AirSpeedSensor(instanceURI);
-			case 43:
+			case BATH_HEATING_STATUS_SENSOR:
+				return new BathHeatingStatusSensor(instanceURI);
+			case BATH_WATER_LEVEL_SENSOR:
+				return new BathWaterLevelSensor(instanceURI);
+			case BED_PRESENCE_SENSOR:
+				return new BedPresenceSensor(instanceURI);
+			case CALL_SENSOR:
+				return new CallSensor(instanceURI);
+			case CO2_SENSOR:
+				return new CO2Sensor(instanceURI);
+			case CONDENSATION_SENSOR:
+				return new CondensationSensor(instanceURI);
+			case CRIME_PREVENTION_SENSOR:
+				return new CrimePreventionSensor(instanceURI);
+			case CURRENT_VALUE_SENSOR:
+				return new CurrentValueSensor(instanceURI);
+			case EARTHQUAKE_SENSOR:
+				return new EarthquakeSensor(instanceURI);
+			case ELECTRIC_ENERGY_SENSOR:
+				return new ElectricEnergySensor(instanceURI);		
+			case ELECTRIC_LEAK_SENSOR:
+				return new ElectricLeakSensor(instanceURI);
+			case EMERGENCY_BUTTON:
+				return new EmergencyButton(instanceURI);
+			case FIRE_SENSOR:
+				return new FireSensor(instanceURI);
+			case FIRST_AID_SENSOR:
+				return new FirstAidSensor(instanceURI);
+			case FLAME_SENSOR:
+				return new FlameSensor(instanceURI);
+			case GAS_LEAK_SENSOR:
+				return new GasLeakSensor(instanceURI);
+			case GAS_SENSOR:
+				return new GasSensor(instanceURI);
+			case HUMAN_BODY_LOCATION_SENSOR:
+				return new HumanBodyLocationSensor(instanceURI);
+			case HUMAN_DETECTION_SENSOR:
+				return new HumanDetectionSensor(instanceURI);
+			case HUMIDITY_SENSOR:
+				return new HumiditySensor(instanceURI);
+			case ILLUMINANCE_SENSOR:
+				return new IlluminanceSensor(instanceURI);
+			case MAILING_SENSOR:
+				return new MailingSensor(instanceURI);
+			case MICROMOTION_SENSOR:
+				return new MicromotionSensor(instanceURI);
+			case ODOR_SENSOR:
+				return new OdorSensor(instanceURI);
+			case OPEN_CLOSE_SENSOR:
+				return new OpenCloseSensor(instanceURI);
+			case OXYGEN_SENSOR:
+				return new OxygenSensor(instanceURI);
+			case PASSAGE_SENSOR:
+				return new PassageSensor(instanceURI);
+			case PRESSURE_SENSOR:
+				return new PressureSensor(instanceURI);	
+			case RAIN_SENSOR:
+				return new RainSensor(instanceURI);
+			case SMOKE_SENSOR:
+				return new SmokeSensor(instanceURI);
+			case SOUND_SENSOR:
+				return new SoundSensor(instanceURI);
+			case TEMPERATURE_SENSOR:
+				return new TemperatureSensor(instanceURI);
+			case VISITOR_SENSOR:
+				return new VisitorSensor(instanceURI);
+			case VOC_SENSOR:
+				return new VOCSensor(instanceURI);
+			case WATER_FLOW_RATE_SENSOR:
+				return new WaterFlowRateSensor(instanceURI);
+			case WATER_LEAK_SENSOR:
+				return new WaterLeakSensor(instanceURI);
+			case WATER_LEVEL_SENSOR:
+				return new WaterLevelSensor(instanceURI);
+			case WATER_OVER_FLOW_SENSOR:
+				return new WaterOverflowSensor(instanceURI);
+			case WEIGHT_SENSOR:
+				return new WeightSensor(instanceURI);
+			case SNOW_SENSOR:
 				return new SnowSensor(instanceURI);			
 		//Airconditioner Related Devices
-			case 44:
+			case AIR_CLEANER:
 				return new AirCleaner(instanceURI);
-			case 45:
+			case AIR_CONDITIONER_VENTILATION_FAN:
 				return new AirConditionerVentilationFan(instanceURI);
-			case 46:
+			case ELECTRIC_HEATER:
 				return new ElectricHeater(instanceURI);
-			case 47:
+			case ELECTRIC_STORAGE_HEATER:
 				return new ElectricStorageHeater(instanceURI);
-			case 48:
+			case FAN_HEATER:
 				return new FanHeater(instanceURI);
-			case 49:
+			case HOME_AIR_CONDITIONER:
 				return new HomeAirConditioner(instanceURI);
-			case 50:
+			case HUMIDIFIER:
 				return new Humidifier(instanceURI);
-			case 51:
+			case PACKAGE_TYPE_COMMERCIAL_AIR_CONDITIONER_INDOOR_UNIT:
 				return new PackageTypeCommercialAirConditionerIndoorUnit(instanceURI);
-			case 52:
+			case PACKAGE_TYPE_COMMERCIAL_AIR_CONDITIONER_OUTDOOR_UNIT:
 				return new PackageTypeCommercialAirConditionerOutdoorUnit(instanceURI);
-			case 53:
+			case VENTILATION_FAN:
 				return new VentilationFan(instanceURI);
 				//Housing facilities Related devices	
-			case 54:
+			case BATH_ROOM_HEATER_DRYER:
 				return new BathRoomHeaterDryer(instanceURI);
-			case 55:
+			case BUZZER:
 				return new Buzzer(instanceURI);
-			case 56:
+			case COLD_HOT_WATER_HEAT_SOURCE_EQUIPMENT:
 				return new ColdHotWaterHeatSourceEquipment(instanceURI);
-			case 57:
+			case ELECTRIC_BLIND:
 				return new ElectricBlind(instanceURI);
-			case 58:
+			case ELECTRIC_GATE:
 				return new ElectricGate(instanceURI);
-			case 59:
+			case ELECTRIC_LOCK:
 				return new ElectricLock(instanceURI);
-			case 60:
+			case ELECTRIC_RAIN_SLIDING_SHUTTER:
 				return new ElectricRainSlidingShutter(instanceURI);
-			case 61:
+			case ELECTRIC_SHUTTER:
 				return new ElectricShutter(instanceURI);
-			case 62:
+			case ELECTRIC_SLIDING_DOOR:
 				return new ElectricSlidingDoor(instanceURI);
-			case 63:
+			case ELECTRIC_TOILET_SEAT:
 				return new ElectricToiletSeat(instanceURI);
-			case 64:
+			case ELECTRIC_VEHICLE_CHARGER_DISCHAGER:
 				return new ElectricVehicleChargerDischager(instanceURI);
-			case 65:
+			case ELECTRIC_WINDOW:
 				return new ElectricWindow(instanceURI);
-			case 66:
+			case ENGINE_COGENERATION:
 				return new EngineCogeneration(instanceURI);
-			case 67:
+			case FLOOR_HEATER:
 				return new FloorHeater(instanceURI);
-			case 68:
+			case FUEL_CELL:
 				return new FuelCell(instanceURI);
-			case 69:
+			case GARDEN_SPRINKLER:
 				return new GardenSprinkler(instanceURI);
-			case 70:
-				return new GasMetter(instanceURI);
-			case 71:
+			case GAS_METER:
+				return new GasMeter(instanceURI);
+			case GENERAL_LIGHTING:
 				return new GeneralLighting(instanceURI);
-			case 72:
+			case HIGH_VOLTAGE_SMART_ELECTRIC_ENERGY:
 				return new HighVoltageSmartElectricEnergy(instanceURI);
-			case 73:
+			case HOUSE_HOLD_SMALL_WIND_TURBINE_POWER_GENERATION:
 				return new HouseHoldSmallWindTurbinePowerGeneration(instanceURI);
-			case 74:
+			case HOUSE_HOLD_SOLAR_POWER_GENERATION:
 				return new HouseHoldSolarPowerGeneration(instanceURI);
-			case 75:
+			case INSTANTANEOUS_WATER_HEATER:
 				return new InstantaneousWaterHeater(instanceURI);
-			case 76:
-				return new KeroseneMetter(instanceURI);
-			case 77:
+			case KEROSENE_METER:
+				return new KeroseneMeter(instanceURI);
+			case LIGHTING_SYSTEM:
 				return new LightingSystem(instanceURI);
-			case 78:
+			case LOW_VOLTAGE_SMART_ELECTRIC_ENERGY:
 				return new LowVoltageSmartElectricEnergy(instanceURI);
-			case 79:
-				return new LPGasMetter(instanceURI);
-			case 80: 
+			case LP_GAS_METER:
+				return new LPGasMeter(instanceURI);
+			case MONO_FUNCTION_LIGHTING: 
 				return new MonoFunctionLighting(instanceURI);
-			case 81:
+			case POWER_DISTRIBUTION_BOARD_METERING:
 				return new PowerDistributionBoardMetering(instanceURI);
-			case 82:
-				return new SmartGasMetter(instanceURI);
-			case 83:
-				return new SmartKeroseneMetter(instanceURI);
-			case 84:
+			case SMART_GAS_METER:
+				return new SmartGasMeter(instanceURI);
+			case SMART_KEROSENE_METER:
+				return new SmartKeroseneMeter(instanceURI);
+			case STORAGE_BATTERY:
 				return new StorageBattery(instanceURI);
-			case 85:
+			case VEHICLE_CHARGER:
 				return new VehicleCharger(instanceURI);
-			case 86:
-				return new WaterFlowmetter(instanceURI);
-			case 87:
+			case WATER_FLOW_METER:
+				return new WaterFlowMeter(instanceURI);
+			case WATER_HEATER:
 				return new WaterHeater(instanceURI);
-			case 88:
-				return new WattHourMetter(instanceURI);
+			case WATT_HOUR_METER:
+				return new WattHourMeter(instanceURI);
 			//Cooking Household Related Devices	
-			case 89:
+			case CLOTHES_DRYER:
 				return new ClothesDryer(instanceURI);
-			case 90: 
+			case COMBINATION_MICROWAVE_OVEN: 
 				return new CombinationMicrowaveOven(instanceURI);
-			case 91:
+			case COMMERCIAL_SHOWCASE:
 				return new CommercialShowcase(instanceURI);
-			case 92:
+			case COMMERCIAL_SHOWCASE_OUTDOOR_UNIT:
 				return new CommercialShowcaseOutdoorUnit(instanceURI);
-			case 93:
+			case COOKING_HEATER:
 				return new CookingHeater(instanceURI);
-			case 94:
+			case ELECTRIC_HOT_WATER_POT:
 				return new ElectricHotWaterPot(instanceURI);
-			case 95:
+			case REFRIGERATOR:
 				return new Refrigerator(instanceURI);
-			case 96:
+			case RICE_COOKER:
 				return new RiceCooker(instanceURI);
-			case 97:
+			case WASHER_DRYER:
 				return new WasherDryer(instanceURI);
-			case 98:
+			case WASHING_MACHINE:
 				return new WashingMachine(instanceURI);
-			//Health Relared Devices	
-			case 99:
+			//Health Related Devices	
+			case WEIGHING_MACHINE:
 				return new WeighingMachine(instanceURI);
 			//Management Operation Related Devices
-			case 100:
+			case CONTROLLER:
 				return new Controller(instanceURI);
-			case 101:
+			case PARALLEL_PROCESSING_COMBINATION_TYPE_POWER_CONTROL:
 				return new ParallelProcessingCombinationTypePowerControl(instanceURI);
-			case 102:
+			case SWITCH:
 				return new Switch(instanceURI);
 			// Audiovisual Related Devices
-			case 103:
+			case AUDIO:
 				return new Audio(instanceURI);
-			case 104:
+			case DISPLAY:
 				return new Display(instanceURI);
-			case 105:
+			case NETWORK_CAMERA:
 				return new NetworkCamera(instanceURI);
-			case 106:
+			case TELEVISION:
 				return new Television(instanceURI);
 		}
 

@@ -53,19 +53,21 @@ public static final String MY_URI = EchonetOntology.NAMESPACE + "OperationStateS
 	public static final int DELETED_STATE = 44;
 	public static final int STARTED_RESTARTED_STATE = 45;
 	public static final int SUSPENDED_STATE = 46;
+	public static final int MOUNTED_STATE = 47;
+	public static final int UNMOUNTED_STATED = 48;
 	
 	
 	private static final String[] names = {"NormalOperation", "SpecialState","DefrostingState","PreHeatingState","HeatRemovalState",
 										   "AutomaticAirFlowSwingNotUsed", "AutomaticAirFlowSwingVerticalUsed", "AutomaticAirFlowSwingHorizontalUsed",
-										   "AutomaticAirFlowSwingVerticalAndHorizontalUsed","FullyOpen","FullyClose","Open", "Close", "StopHalfway",
-										   "NonPriorityState","Locked","Unlocked","OrdinaryLevel","NotificationOfBatteryReplacementState",
+										   "AutomaticAirFlowSwingVerticalAndHorizontalUsed","FullyOpened","FullyClosed","Opened", "Closed", "StopHalfway",
+										   "NonPriorityState","Locked","UnLocked","OrdinaryLevel","NotificationOfBatteryReplacementState",
 										   "SupplyingHotWaterState","KeepingBathTemperatureState","Stopped","Generating","Starting","Stopping",
 										   "Idling","UndeterminedState","VehicleNotConnectedState","VehicleConnectedNotChargeableNotDischargableState",
 										   "VehicleConnectedChargeableNotDischargableState","VehicleConnectedNotChargeableDischargableState",
 										   "VehicleConnectedChargeableDischargableState","VehicleConnectedChargeableState",
-										   "VehicleConnectedNotChargableState","ReadyState","BusyState","ImplementedState","NotImplementedState",
+										   "VehicleConnectedNotChargeableState","ReadyState","BusyState","ImplementedState","NotImplementedState",
 										   "EnableState","DisableState","TemporaryDisableState","ConnectedState","DisconnectedState","NotRegisteredState",
-										   "DeletedState","StartedRestartedState","SuspendedState"};
+										   "DeletedState","StartedRestartedState","SuspendedState","MountedState","UnMountedState"};
 	
 	
 	public static final OperationStateSettingValue NormalOperation = new OperationStateSettingValue(NORMAL_OPERATION_STATE);
@@ -115,10 +117,9 @@ public static final String MY_URI = EchonetOntology.NAMESPACE + "OperationStateS
 	public static final OperationStateSettingValue DeletedState = new OperationStateSettingValue(DELETED_STATE);
 	public static final OperationStateSettingValue StartedRestartedState = new OperationStateSettingValue(STARTED_RESTARTED_STATE);
 	public static final OperationStateSettingValue SuspendedState = new OperationStateSettingValue(SUSPENDED_STATE);
+	public static final OperationStateSettingValue MountedState = new OperationStateSettingValue(MOUNTED_STATE);
+	public static final OperationStateSettingValue UnMountedState = new OperationStateSettingValue(UNMOUNTED_STATED);
 
-
-	
-	
 	private OperationStateSettingValue(int order) {
 		super(EchonetOntology.NAMESPACE + names[order]);
 		this.order = order;
@@ -220,6 +221,11 @@ public static final String MY_URI = EchonetOntology.NAMESPACE + "OperationStateS
 			return StartedRestartedState;
 		case SUSPENDED_STATE:
 			return SuspendedState;
+		case MOUNTED_STATE:
+			return MountedState;
+		case UNMOUNTED_STATED:
+			return UnMountedState;
+					
 		default:
 			return null;
 		}
@@ -232,7 +238,7 @@ public static final String MY_URI = EchonetOntology.NAMESPACE + "OperationStateS
 		if (name.startsWith(EchonetOntology.NAMESPACE))
 			name = name.substring(EchonetOntology.NAMESPACE.length());
 
-		for (int i = NORMAL_OPERATION_STATE; i <= SUSPENDED_STATE; i++)
+		for (int i = NORMAL_OPERATION_STATE; i <= UNMOUNTED_STATED; i++)
 			if (names[i].equals(name))
 				return getOperationStateSettingValueValueByOrder(i);
 		return null;

@@ -8,7 +8,7 @@ import org.universAAL.ontology.echonet.values.EchonetDeviceGroupCodeValue;
 import org.universAAL.ontology.echonet.values.MeasuredValue;
 import org.universAAL.ontology.echonet.values.MeasurementUnit;
 
-public class WattHourMetter extends EchonetSuperDevice{
+public class WattHourMeter extends EchonetSuperDevice{
 	public static final String MY_URI = EchonetOntology.NAMESPACE + "WattHourMetter";
 	
 	public static final String PROPERTY_HAS_MEASURED_CUMMULATIVE_ELECTRIC_ENERGY_AMOUNT = EchonetOntology.NAMESPACE + "HasMeasuredCummulativeElectricEnergyAmount";
@@ -47,11 +47,11 @@ public class WattHourMetter extends EchonetSuperDevice{
 	}
 
 	
-	public WattHourMetter() {
+	public WattHourMeter() {
 		super();
 		setClassGroupCode(EchonetDeviceGroupCodeValue.HousingFacilityRelatedDevice);
 	}
-	public WattHourMetter(String uri) {
+	public WattHourMeter(String uri) {
 		super(uri);
 		setClassGroupCode(EchonetDeviceGroupCodeValue.HousingFacilityRelatedDevice);
 	}

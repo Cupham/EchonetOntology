@@ -6,6 +6,7 @@ import org.universAAL.ontology.echonet.EchonetOntology;
 import org.universAAL.ontology.echonet.EchonetSuperDevice;
 import org.universAAL.ontology.echonet.values.EchonetDeviceGroupCodeValue;
 import org.universAAL.ontology.echonet.values.IntervalSettingValue;
+import org.universAAL.ontology.echonet.values.MeasuredValue;
 import org.universAAL.ontology.echonet.values.NumberOfSprinkleSettingValue;
 import org.universAAL.ontology.echonet.values.OperationStatusValue;
 
@@ -18,10 +19,10 @@ public class GardenSprinkler extends EchonetSuperDevice{
 	public static final String PROPERTY_HAS_SPRINKLE_TIME_SETTING_2 = EchonetOntology.NAMESPACE + "HasSprinkleTimeSetting2";
 	public static final String PROPERTY_HAS_SPRINKLE_DURATION_SETTING = EchonetOntology.NAMESPACE + "HasSprinkleDurationSetting";
 	
-	public Date getSprinkleDurationSetting() {
-		return (Date) getProperty(PROPERTY_HAS_SPRINKLE_DURATION_SETTING);	
+	public MeasuredValue getSprinkleDurationSetting() {
+		return (MeasuredValue) getProperty(PROPERTY_HAS_SPRINKLE_DURATION_SETTING);	
 	}
-	public void setSprinkleDurationSetting(Date msg) {
+	public void setSprinkleDurationSetting(MeasuredValue msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_SPRINKLE_DURATION_SETTING, msg);	
 	}

@@ -90,17 +90,17 @@ public class ElectricStorageHeater extends EchonetSuperDevice{
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_RADIATION_METHOD, msg);	
 	}
-	public Integer getMidnightPowerStartTimeSetting() {
-		return (Integer) getProperty(PROPERTY_HAS_MIDNIGHT_POWER_START_TIME_SETTING);	
+	public MeasuredValue getMidnightPowerStartTimeSetting() {
+		return (MeasuredValue) getProperty(PROPERTY_HAS_MIDNIGHT_POWER_START_TIME_SETTING);	
 	}
-	public void setMidnightPowerStartTimeSetting(Integer msg) {
+	public void setMidnightPowerStartTimeSetting(MeasuredValue msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_MIDNIGHT_POWER_START_TIME_SETTING, msg);	
 	}
-	public Integer getMidnightPowerDurationSetting() {
-		return (Integer) getProperty(PROPERTY_HAS_MIDNIGHT_POWER_DURATION_SETTING);	
+	public MeasuredValue getMidnightPowerDurationSetting() {
+		return (MeasuredValue) getProperty(PROPERTY_HAS_MIDNIGHT_POWER_DURATION_SETTING);	
 	}
-	public void setMidnightPowerDurationSetting(Integer msg) {
+	public void setMidnightPowerDurationSetting(MeasuredValue msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_MIDNIGHT_POWER_DURATION_SETTING, msg);	
 	}

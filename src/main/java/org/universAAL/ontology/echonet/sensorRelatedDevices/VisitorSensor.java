@@ -3,6 +3,7 @@ package org.universAAL.ontology.echonet.sensorRelatedDevices;
 import org.universAAL.ontology.echonet.EchonetOntology;
 import org.universAAL.ontology.echonet.EchonetSuperDevice;
 import org.universAAL.ontology.echonet.values.EchonetDeviceGroupCodeValue;
+import org.universAAL.ontology.echonet.values.MeasuredValue;
 import org.universAAL.ontology.echonet.values.OccurenceStatusValue;
 import org.universAAL.ontology.echonet.values.ThresholdLevelValue;
 
@@ -49,10 +50,10 @@ public class VisitorSensor extends EchonetSuperDevice{
 		if(msg !=null)
 			changeProperty(PROPERTY_HAS_VISITOR_DETECTION_STATUS,msg);	
 	}
-	public Short getVisitorDetectionHoldingTime() {
-		return (Short) getProperty(PROPERTY_HAS_VISITOR_DETECTION_HOLDING_TIME);	
+	public MeasuredValue getVisitorDetectionHoldingTime() {
+		return (MeasuredValue) getProperty(PROPERTY_HAS_VISITOR_DETECTION_HOLDING_TIME);	
 	}
-	public void setVisitorDetectionHoldingTime(Short msg) {
+	public void setVisitorDetectionHoldingTime(MeasuredValue msg) {
 		if(msg !=null)
 			changeProperty(PROPERTY_HAS_VISITOR_DETECTION_HOLDING_TIME,msg);	
 	}

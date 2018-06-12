@@ -10,15 +10,15 @@ public class MountedAirSelfCleaningMethodValue extends ManagedIndividual{
 
 	public MountedAirSelfCleaningMethodValue() {
 		super();
-		setOzoneCleaningMethodMounting(MethodMountedValue.NotMounted);
-		setDryingMethodMounting(MethodMountedValue.NotMounted);
+		setOzoneCleaningMethodMounting(OperationStateSettingValue.UnMountedState);
+		setDryingMethodMounting(OperationStateSettingValue.UnMountedState);
 	}
 	public MountedAirSelfCleaningMethodValue(String uri) {
 		super(uri);
-		setOzoneCleaningMethodMounting(MethodMountedValue.NotMounted);
-		setDryingMethodMounting(MethodMountedValue.NotMounted);
+		setOzoneCleaningMethodMounting(OperationStateSettingValue.UnMountedState);
+		setDryingMethodMounting(OperationStateSettingValue.UnMountedState);
 	}
-	public MountedAirSelfCleaningMethodValue(String uri, MethodMountedValue ozoneCleaningMethodMouting,MethodMountedValue dryingMethodMouting ) {
+	public MountedAirSelfCleaningMethodValue(String uri, OperationStateSettingValue ozoneCleaningMethodMouting,OperationStateSettingValue dryingMethodMouting ) {
 		super(uri);
 		setOzoneCleaningMethodMounting(ozoneCleaningMethodMouting);
 		setDryingMethodMounting(dryingMethodMouting);
@@ -31,17 +31,17 @@ public class MountedAirSelfCleaningMethodValue extends ManagedIndividual{
 	public int getPropSerializationType(String arg0) {
 		return PROP_SERIALIZATION_OPTIONAL;
 	}
-	public MethodMountedValue getOzoneCleaningMethodMounting() {
-		return (MethodMountedValue) getProperty(PROPERTY_HAS_OZONE_CLEANING_METHOD_MOUTING);
+	public OperationStateSettingValue getOzoneCleaningMethodMounting() {
+		return (OperationStateSettingValue) getProperty(PROPERTY_HAS_OZONE_CLEANING_METHOD_MOUTING);
 	}
-	public void setOzoneCleaningMethodMounting(MethodMountedValue msg) {
+	public void setOzoneCleaningMethodMounting(OperationStateSettingValue msg) {
 		if(msg != null)
 			changeProperty(PROPERTY_HAS_OZONE_CLEANING_METHOD_MOUTING,msg);
 	}
-	public MethodMountedValue getDryingMethodMounting() {
-		return (MethodMountedValue) getProperty(PROPERTY_HAS_DRYING_METHOD_MOUTING);
+	public OperationStateSettingValue getDryingMethodMounting() {
+		return (OperationStateSettingValue) getProperty(PROPERTY_HAS_DRYING_METHOD_MOUTING);
 	}
-	public void setDryingMethodMounting(MethodMountedValue msg) {
+	public void setDryingMethodMounting(OperationStateSettingValue msg) {
 		if(msg != null)
 			changeProperty(PROPERTY_HAS_DRYING_METHOD_MOUTING,msg);
 	}

@@ -2,7 +2,6 @@ package org.universAAL.ontology.echonet;
 
 import java.util.Date;
 
-import org.universAAL.ontology.echonet.values.EchonetDeviceClassCodeValue;
 import org.universAAL.ontology.echonet.values.EchonetDeviceGroupCodeValue;
 import org.universAAL.ontology.echonet.values.MeasuredValue;
 import org.universAAL.ontology.echonet.values.FaultDesciptionValue;
@@ -63,10 +62,10 @@ public class EchonetSuperDevice extends Device{
 			changeProperty(PROPERTY_HAS_GROUP_CODE, msg);
 		}
 	}
-	public EchonetDeviceClassCodeValue getClassCode() {
-		return (EchonetDeviceClassCodeValue) getProperty(PROPERTY_HAS_CLASS_CODE);
+	public Byte getClassCode() {
+		return (Byte) getProperty(PROPERTY_HAS_CLASS_CODE);
 	}
-	public void setClassCode(EchonetDeviceClassCodeValue msg) {
+	public void setClassCode(Byte msg) {
 		if(msg !=null) {
 			changeProperty(PROPERTY_HAS_CLASS_CODE, msg);
 		}

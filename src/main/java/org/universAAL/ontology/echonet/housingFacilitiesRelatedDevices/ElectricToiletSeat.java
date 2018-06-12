@@ -6,7 +6,7 @@ import org.universAAL.ontology.echonet.EchonetOntology;
 import org.universAAL.ontology.echonet.EchonetSuperDevice;
 import org.universAAL.ontology.echonet.values.EchonetDeviceGroupCodeValue;
 import org.universAAL.ontology.echonet.values.OccurenceStatusValue;
-import org.universAAL.ontology.echonet.values.OperationFuntionSettingValue;
+import org.universAAL.ontology.echonet.values.OperationFunctionSettingValue;
 import org.universAAL.ontology.echonet.values.OperationModeSettingValue;
 import org.universAAL.ontology.echonet.values.OperationStatusValue;
 import org.universAAL.ontology.echonet.values.ThresholdLevelValue;
@@ -17,7 +17,7 @@ public class ElectricToiletSeat extends EchonetSuperDevice{
 	public static final String PROPERTY_HAS_TOILET_SEAT_HEATER_SETTING = EchonetOntology.NAMESPACE + "HasToiletSeatHeaterSetting";
 	public static final String PROPERTY_HAS_TOILET_SEAT_TEMPORAL_HALT_SETTING = EchonetOntology.NAMESPACE + "HasToiletSeatTemporalHaltSetting";
 	public static final String PROPERTY_HAS_TOILET_SEAT_TEMPORAL_HALT_START_TIME = EchonetOntology.NAMESPACE + "HasToiletSeatTemporalHaltStartTime";
-	public static final String PROPERTY_HAS_TOILET_SEAT_TEMPORAL_HALT_STOP_TIME = EchonetOntology.NAMESPACE + "HasToiletSeatTemporalHaltStopTime";
+	public static final String PROPERTY_HAS_TOILET_SEAT_TEMPORAL_HALT_DURATION = EchonetOntology.NAMESPACE + "HasToiletSeatTemporalHaltDuration";
 	public static final String PROPERTY_HAS_ROOM_HEATING_TEMPERATURE_LEVEL_SETTING = EchonetOntology.NAMESPACE + "HasRoomHeatingTemeperatureLevelSetting";
 	public static final String PROPERTY_HAS_ROOM_HEATING_SETTING = EchonetOntology.NAMESPACE + "HasRoomHeatingSetting";
 	public static final String PROPERTY_HAS_ROOM_HEATING_STATUS = EchonetOntology.NAMESPACE + "HasRoomHeatingStatus";
@@ -83,12 +83,12 @@ public class ElectricToiletSeat extends EchonetSuperDevice{
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_ROOM_HEATING_TEMPERATURE_LEVEL_SETTING, msg);	
 	}
-	public Date getToiletSeatTemporalHaltStopTime() {
-		return (Date) getProperty(PROPERTY_HAS_TOILET_SEAT_TEMPORAL_HALT_STOP_TIME);	
+	public Date getToiletSeatTemporalHaltDuration() {
+		return (Date) getProperty(PROPERTY_HAS_TOILET_SEAT_TEMPORAL_HALT_DURATION);	
 	}
-	public void setToiletSeatTemporalHaltStopTime(Date msg) {
+	public void setToiletSeatTemporalHaltDuration(Date msg) {
 		if(msg !=null) 
-			changeProperty(PROPERTY_HAS_TOILET_SEAT_TEMPORAL_HALT_STOP_TIME, msg);	
+			changeProperty(PROPERTY_HAS_TOILET_SEAT_TEMPORAL_HALT_DURATION, msg);	
 	}
 	public Date getToiletSeatTemporalHaltStartTime() {
 		return (Date) getProperty(PROPERTY_HAS_TOILET_SEAT_TEMPORAL_HALT_START_TIME);	
@@ -97,10 +97,10 @@ public class ElectricToiletSeat extends EchonetSuperDevice{
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_TOILET_SEAT_TEMPORAL_HALT_START_TIME, msg);	
 	}
-	public OperationFuntionSettingValue getToiletSeatTemporalHaltSetting() {
-		return (OperationFuntionSettingValue) getProperty(PROPERTY_HAS_TOILET_SEAT_TEMPORAL_HALT_SETTING);	
+	public OperationFunctionSettingValue getToiletSeatTemporalHaltSetting() {
+		return (OperationFunctionSettingValue) getProperty(PROPERTY_HAS_TOILET_SEAT_TEMPORAL_HALT_SETTING);	
 	}
-	public void setToiletSeatTemporalHaltSetting(OperationFuntionSettingValue msg) {
+	public void setToiletSeatTemporalHaltSetting(OperationFunctionSettingValue msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_TOILET_SEAT_TEMPORAL_HALT_SETTING, msg);	
 	}

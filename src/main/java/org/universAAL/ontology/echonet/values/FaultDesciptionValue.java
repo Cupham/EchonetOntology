@@ -4,8 +4,13 @@ import org.universAAL.middleware.owl.ManagedIndividual;
 import org.universAAL.ontology.echonet.EchonetOntology;
 
 public class FaultDesciptionValue extends ManagedIndividual{
-public static final String MY_URI = EchonetOntology.NAMESPACE + "FaultDescriptionValue";
-public static final String HAS_FAULT_DESCRIPTION_DETAIL = EchonetOntology.NAMESPACE + "FaultDescriptionValueDetail";
+	
+	protected FaultDesciptionValue(String uri) {
+		super(uri);
+	}
+	
+	public static final String MY_URI = EchonetOntology.NAMESPACE + "FaultDescriptionValue";
+	//public static final String HAS_FAULT_DESCRIPTION_DETAIL = EchonetOntology.NAMESPACE + "FaultDescriptionValueDetail";
 	
 	public static final int NO_FAULT = 0;
 	public static final int RECOVERBLE_FAULT_1 = 1;
@@ -27,7 +32,7 @@ public static final String HAS_FAULT_DESCRIPTION_DETAIL = EchonetOntology.NAMESP
 	private static final String[] names = {"NoFault", "RecoverableFaultType1", "RecoverableFaultType2", "RecoverableFaultType3", 
 										   "RecoverableFaultType4", "RecoverableFaultType5", "RecoverableFaultType6", "RecoverableFaultType7",
 										   "RequireRepairFaultType1", "RequireRepairFaultType2", "RequireRepairFaultType3","RequireRepairFaultType4", 
-										   "RequireRepairFaultType5", "RequireRepairFaultType6", "Unknownfault"};
+										   "RequireRepairFaultType5", "RequireRepairFaultType6", "UnknownFault"};
 	
 	public static final FaultDesciptionValue NoFault = new FaultDesciptionValue(NO_FAULT);
 	public static final FaultDesciptionValue RecoverableFaultType1 = new FaultDesciptionValue(RECOVERBLE_FAULT_1);
@@ -37,18 +42,19 @@ public static final String HAS_FAULT_DESCRIPTION_DETAIL = EchonetOntology.NAMESP
 	public static final FaultDesciptionValue RecoverableFaultType5 = new FaultDesciptionValue(RECOVERBLE_FAULT_5);
 	public static final FaultDesciptionValue RecoverableFaultType6 = new FaultDesciptionValue(RECOVERBLE_FAULT_6);
 	public static final FaultDesciptionValue RecoverableFaultType7 = new FaultDesciptionValue(RECOVERBLE_FAULT_7);
-	public static final FaultDesciptionValue ReuireRepairFaultType1 = new FaultDesciptionValue(REQUIRE_REPAIR_FAULT_1);
-	public static final FaultDesciptionValue ReuireRepairFaultType2 = new FaultDesciptionValue(REQUIRE_REPAIR_FAULT_2);
-	public static final FaultDesciptionValue ReuireRepairFaultType3 = new FaultDesciptionValue(REQUIRE_REPAIR_FAULT_3);
-	public static final FaultDesciptionValue ReuireRepairFaultType4 = new FaultDesciptionValue(REQUIRE_REPAIR_FAULT_4);
-	public static final FaultDesciptionValue ReuireRepairFaultType5 = new FaultDesciptionValue(REQUIRE_REPAIR_FAULT_5);
-	public static final FaultDesciptionValue ReuireRepairFaultType6 = new FaultDesciptionValue(REQUIRE_REPAIR_FAULT_6);
+	public static final FaultDesciptionValue RequireRepairFaultType1 = new FaultDesciptionValue(REQUIRE_REPAIR_FAULT_1);
+	public static final FaultDesciptionValue RequireRepairFaultType2 = new FaultDesciptionValue(REQUIRE_REPAIR_FAULT_2);
+	public static final FaultDesciptionValue RequireRepairFaultType3 = new FaultDesciptionValue(REQUIRE_REPAIR_FAULT_3);
+	public static final FaultDesciptionValue RequireRepairFaultType4 = new FaultDesciptionValue(REQUIRE_REPAIR_FAULT_4);
+	public static final FaultDesciptionValue RequireRepairFaultType5 = new FaultDesciptionValue(REQUIRE_REPAIR_FAULT_5);
+	public static final FaultDesciptionValue RequireRepairFaultType6 = new FaultDesciptionValue(REQUIRE_REPAIR_FAULT_6);
 	public static final FaultDesciptionValue UnknownFault = new FaultDesciptionValue(UNKNOWN_FAULT);
 	private int order;
 	
 	private FaultDesciptionValue(int order) {
 		super(EchonetOntology.NAMESPACE + names[order]);
 		this.order = order;
+		/*
 		String msg ="";
 		switch (order) {
 		case NO_FAULT:
@@ -100,6 +106,7 @@ public static final String HAS_FAULT_DESCRIPTION_DETAIL = EchonetOntology.NAMESP
 			break;
 		}
 		setDescriptionsDetail(msg);
+		*/
 	}
 
 	public static FaultDesciptionValue getFaultDesciptionValueByOrder(int order) {
@@ -121,17 +128,17 @@ public static final String HAS_FAULT_DESCRIPTION_DETAIL = EchonetOntology.NAMESP
 		case RECOVERBLE_FAULT_7:
 			return RecoverableFaultType7;
 		case REQUIRE_REPAIR_FAULT_1:
-			return ReuireRepairFaultType1;
+			return RequireRepairFaultType1;
 		case REQUIRE_REPAIR_FAULT_2:
-			return ReuireRepairFaultType2;
+			return RequireRepairFaultType2;
 		case REQUIRE_REPAIR_FAULT_3:
-			return ReuireRepairFaultType3;
+			return RequireRepairFaultType3;
 		case REQUIRE_REPAIR_FAULT_4:
-			return ReuireRepairFaultType4;
+			return RequireRepairFaultType4;
 		case REQUIRE_REPAIR_FAULT_5:
-			return ReuireRepairFaultType5;
+			return RequireRepairFaultType5;
 		case REQUIRE_REPAIR_FAULT_6:
-			return ReuireRepairFaultType6;
+			return RequireRepairFaultType6;
 		case UNKNOWN_FAULT:
 			return UnknownFault;			
 		default:
@@ -169,6 +176,7 @@ public static final String HAS_FAULT_DESCRIPTION_DETAIL = EchonetOntology.NAMESP
 	public String getClassURI() {
 		return MY_URI;
 	}
+	/*
 	public void setDescriptionsDetail(String des) {
 		changeProperty(HAS_FAULT_DESCRIPTION_DETAIL, des);
 	}
@@ -179,6 +187,6 @@ public static final String HAS_FAULT_DESCRIPTION_DETAIL = EchonetOntology.NAMESP
 		} else {
 			return null;
 		}
-	}
+	} */
 
 }

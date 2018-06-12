@@ -17,30 +17,30 @@ public static final String PROPERTY_HAS_Z_COORDINATOR = EchonetOntology.NAMESPAC
 	public LocationValue(String uri) {
 		super(uri);
 	}
-	public LocationValue(String uri, Float x, Float y, Float z) {
+	public LocationValue(String uri, MeasuredValue x, MeasuredValue y, MeasuredValue z) {
 		super(uri);
 		setX(x);
 		setY(y);
 		setZ(z);
 	}
-	public Float getX() {
-		return (Float) getProperty(PROPERTY_HAS_X_COORDINATOR);
+	public MeasuredValue getX() {
+		return (MeasuredValue) getProperty(PROPERTY_HAS_X_COORDINATOR);
 	}
-	public void setX(Float msg) {
+	public void setX(MeasuredValue msg) {
 		if(msg != null) 
 			changeProperty(PROPERTY_HAS_X_COORDINATOR, msg);	
 	}
-	public Float getY() {
-		return (Float) getProperty(PROPERTY_HAS_Y_COORDINATOR);
+	public MeasuredValue getY() {
+		return (MeasuredValue) getProperty(PROPERTY_HAS_Y_COORDINATOR);
 	}
-	public void setY(Float msg) {
+	public void setY(MeasuredValue msg) {
 		if(msg != null) 
 			changeProperty(PROPERTY_HAS_Y_COORDINATOR, msg);	
 	}
-	public Float getZ() {
-		return (Float) getProperty(PROPERTY_HAS_Z_COORDINATOR);
+	public MeasuredValue getZ() {
+		return (MeasuredValue) getProperty(PROPERTY_HAS_Z_COORDINATOR);
 	}
-	public void setZ(Float msg) {
+	public void setZ(MeasuredValue msg) {
 		if(msg != null) 
 			changeProperty(PROPERTY_HAS_Z_COORDINATOR, msg);	
 	}

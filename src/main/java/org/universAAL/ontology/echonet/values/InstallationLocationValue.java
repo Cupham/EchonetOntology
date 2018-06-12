@@ -28,8 +28,8 @@ public static final String MY_URI = EchonetOntology.NAMESPACE + "InstallationLoc
 	
 	private static final String[] names = {"LivingRoom", "DinningRoom", "Kitchen", "Bathroom", "Lavatory","Washroom_ChangingRoom",
 										   "Passageway", "Room", "Stairway","FrontDoor", "Storeroom", "Garden_Perimeter", "Garare",
-										   "Veranta_balcony", "Others", "Free_definition", "InstallationLocationNotSpecified",
-										   "InstallationLocationIndefinite"};
+										   "Veranda_Balcony", "Others", "FreeDefinition", "InstallationLocationNotSpecified",
+										   "InstallationLocationIndefinited"};
 	
 	public static final InstallationLocationValue LivingRoom = new InstallationLocationValue(LIVING_ROOM);
 	public static final InstallationLocationValue DinningRoom = new InstallationLocationValue(DINNING_ROOM);
@@ -37,7 +37,7 @@ public static final String MY_URI = EchonetOntology.NAMESPACE + "InstallationLoc
 	public static final InstallationLocationValue Bathroom = new InstallationLocationValue(BATHROOM);
 	public static final InstallationLocationValue Lavatory = new InstallationLocationValue(LAVATORY);
 	public static final InstallationLocationValue Washroom_ChangingRoom = new InstallationLocationValue(WASHROOM_CHANGINGROOM);
-	public static final InstallationLocationValue Passsageway = new InstallationLocationValue(PASSAGEWAY);
+	public static final InstallationLocationValue Passageway = new InstallationLocationValue(PASSAGEWAY);
 	public static final InstallationLocationValue Room = new InstallationLocationValue(ROOM);
 	public static final InstallationLocationValue Stairway = new InstallationLocationValue(STAIRWAY);
 	public static final InstallationLocationValue FrontDoor = new InstallationLocationValue(FRONT_DOOR);
@@ -71,7 +71,7 @@ public static final String MY_URI = EchonetOntology.NAMESPACE + "InstallationLoc
 		case WASHROOM_CHANGINGROOM:
 			return Washroom_ChangingRoom;
 		case PASSAGEWAY:
-			return Passsageway;
+			return Passageway;
 		case ROOM:
 			return Room;
 		case STAIRWAY:

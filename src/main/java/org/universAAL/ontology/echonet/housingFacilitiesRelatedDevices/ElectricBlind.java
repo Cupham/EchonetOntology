@@ -1,6 +1,5 @@
 package org.universAAL.ontology.echonet.housingFacilitiesRelatedDevices;
 
-import java.util.Date;
 
 import org.universAAL.ontology.echonet.EchonetOntology;
 import org.universAAL.ontology.echonet.EchonetSuperDevice;
@@ -8,10 +7,11 @@ import org.universAAL.ontology.echonet.values.MeasuredValue;
 import org.universAAL.ontology.echonet.values.EchonetDeviceGroupCodeValue;
 import org.universAAL.ontology.echonet.values.ElectricDeviceFaultDesciptionValue;
 import org.universAAL.ontology.echonet.values.OccurenceStatusValue;
-import org.universAAL.ontology.echonet.values.OperationFuntionSettingValue;
+import org.universAAL.ontology.echonet.values.OperationFunctionSettingValue;
 import org.universAAL.ontology.echonet.values.OperationStateSettingValue;
 import org.universAAL.ontology.echonet.values.OperationStatusValue;
 import org.universAAL.ontology.echonet.values.SelectiveOpeningOperationSettingValue;
+import org.universAAL.ontology.echonet.values.ThresholdLevelValue;
 import org.universAAL.ontology.echonet.values.OperationModeSettingValue;
 
 public class ElectricBlind extends EchonetSuperDevice{
@@ -35,15 +35,15 @@ public class ElectricBlind extends EchonetSuperDevice{
 	public static final String PROPERTY_HAS_ONE_TIME_OPENING_SPEED_SETTING = EchonetOntology.NAMESPACE + "HasOneTimeOpeningSpeedSetting";
 	public static final String PROPERTY_HAS_ONE_TIME_CLOSING_SPEED_SETTING = EchonetOntology.NAMESPACE + "HasOneTimeClosingSpeedSetting";
 	
-	public OperationModeSettingValue getOneTimeClosingSpeedSetting() {
-		return (OperationModeSettingValue) getProperty(PROPERTY_HAS_ONE_TIME_CLOSING_SPEED_SETTING);	
+	public ThresholdLevelValue getOneTimeClosingSpeedSetting() {
+		return (ThresholdLevelValue) getProperty(PROPERTY_HAS_ONE_TIME_CLOSING_SPEED_SETTING);	
 	}
-	public void setOneTimeClosingSpeedSetting(OperationModeSettingValue msg) {
+	public void setOneTimeClosingSpeedSetting(ThresholdLevelValue msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_ONE_TIME_CLOSING_SPEED_SETTING, msg);	
 	}
-	public OperationModeSettingValue getOneTimeOpeningSpeedSetting() {
-		return (OperationModeSettingValue) getProperty(PROPERTY_HAS_ONE_TIME_OPENING_SPEED_SETTING);	
+	public ThresholdLevelValue getOneTimeOpeningSpeedSetting() {
+		return (ThresholdLevelValue) getProperty(PROPERTY_HAS_ONE_TIME_OPENING_SPEED_SETTING);	
 	}
 	public void setOneTimeOpeningSpeedSetting(OperationModeSettingValue msg) {
 		if(msg !=null) 
@@ -77,10 +77,10 @@ public class ElectricBlind extends EchonetSuperDevice{
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_ELECTRIC_LOCK_SETTING, msg);	
 	}
-	public OperationModeSettingValue getCloseSpeed() {
-		return (OperationModeSettingValue) getProperty(PROPERTY_HAS_OPEN_CLOSE_SPEED);	
+	public ThresholdLevelValue getCloseSpeed() {
+		return (ThresholdLevelValue) getProperty(PROPERTY_HAS_OPEN_CLOSE_SPEED);	
 	}
-	public void setCloseSpeed(OperationModeSettingValue msg) {
+	public void setCloseSpeed(ThresholdLevelValue msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_OPEN_CLOSE_SPEED, msg);	
 	}
@@ -98,10 +98,10 @@ public class ElectricBlind extends EchonetSuperDevice{
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_DEGREE_OF_OPENING_LEVEL, msg);	
 	}
-	public OperationFuntionSettingValue getOpenCloseSetting() {
-		return (OperationFuntionSettingValue) getProperty(PROPERTY_HAS_OPEN_CLOSE_SETTING);	
+	public OperationFunctionSettingValue getOpenCloseSetting() {
+		return (OperationFunctionSettingValue) getProperty(PROPERTY_HAS_OPEN_CLOSE_SETTING);	
 	}
-	public void setOpenCloseSetting(OperationFuntionSettingValue msg) {
+	public void setOpenCloseSetting(OperationFunctionSettingValue msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_OPEN_CLOSE_SETTING, msg);	
 	}
@@ -112,10 +112,10 @@ public class ElectricBlind extends EchonetSuperDevice{
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_AUTOMATIC_OPERATION_SETTING, msg);	
 	}
-	public Date getOperationTime() {
-		return (Date) getProperty(PROPERTY_HAS_OPERATION_TIME);	
+	public MeasuredValue getOperationTime() {
+		return (MeasuredValue) getProperty(PROPERTY_HAS_OPERATION_TIME);	
 	}
-	public void setOperationTime(Date msg) {
+	public void setOperationTime(MeasuredValue msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_OPERATION_TIME, msg);	
 	}

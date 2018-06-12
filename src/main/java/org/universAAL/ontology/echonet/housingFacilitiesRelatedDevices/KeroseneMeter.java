@@ -7,7 +7,7 @@ import org.universAAL.ontology.echonet.EchonetSuperDevice;
 import org.universAAL.ontology.echonet.values.EchonetDeviceGroupCodeValue;
 import org.universAAL.ontology.echonet.values.MeasuredValue;
 
-public class KeroseneMetter extends EchonetSuperDevice{
+public class KeroseneMeter extends EchonetSuperDevice{
 	public static final String MY_URI = EchonetOntology.NAMESPACE + "KeroseneMetter";
 	
 	public static final String PROPERTY_HAS_MEASURED_CUMMULATIVE_KEROSENE_CONSUMPTION_AMOUNT = EchonetOntology.NAMESPACE + "HasMeasuredCummulativeKeroseneConsumptionAmount";
@@ -29,11 +29,11 @@ public class KeroseneMetter extends EchonetSuperDevice{
 	}
 
 	
-	public KeroseneMetter() {
+	public KeroseneMeter() {
 		super();
 		setClassGroupCode(EchonetDeviceGroupCodeValue.HousingFacilityRelatedDevice);
 	}
-	public KeroseneMetter(String uri) {
+	public KeroseneMeter(String uri) {
 		super(uri);
 		setClassGroupCode(EchonetDeviceGroupCodeValue.HousingFacilityRelatedDevice);
 	}

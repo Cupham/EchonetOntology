@@ -15,7 +15,7 @@ public class WaterHeater extends EchonetSuperDevice{
 	public static final String MY_URI = EchonetOntology.NAMESPACE + "WaterHeater";
 	public static final String PROPERTY_HAS_AUTOMATIC_WATER_HEATING_SETTING = EchonetOntology.NAMESPACE + "HasAutomaticWaterHeatingSetting";
 	public static final String PROPERTY_HAS_AUTOMATIC_TEMPERATURE_CONTROL_SETTING = EchonetOntology.NAMESPACE + "HasAutomaticTemperatureControlSetting";
-	public static final String PROPERTY_HAS_AUTOMATIC_WATER_HEAT_STATUS = EchonetOntology.NAMESPACE + "HasAutomaticWaterHeatStatus";
+	public static final String PROPERTY_HAS_WATER_HEATER_STATUS = EchonetOntology.NAMESPACE + "HasWaterHeaterStatus";
 	public static final String PROPERTY_HAS_WATER_HEATING_TEMPERATURE_SETTING = EchonetOntology.NAMESPACE + "HasWaterHeatingTemperatureSetting";
 	public static final String PROPERTY_HAS_MANUAL_WATER_HEATING_STOP_DAY_SETTING = EchonetOntology.NAMESPACE + "HasManualWaterHeatingStopDaySetting";
 	public static final String PROPERTY_HAS_RELATIVE_TIME_FOR_MANUAL_WATER_HEATING_OFF_SETTING = EchonetOntology.NAMESPACE + "HasRelativeTimeForManualWaterHeatingOffSetting";
@@ -42,6 +42,7 @@ public class WaterHeater extends EchonetSuperDevice{
 	public static final String PROPERTY_HAS_BATH_WATER_VOLUME_SETTING_4 = EchonetOntology.NAMESPACE + "HasBathWaterVolumeSetting4";
 	public static final String PROPERTY_HAS_BATH_WATER_VOLUME_SETTING_4_MAXIMUM_SETABLE_LEVEL = EchonetOntology.NAMESPACE + "HasBathWaterVolumeSetting4MaximumSettableLevel";
 	public static final String PROPERTY_HAS_ON_TIMER_RESERVATION_SETTING = EchonetOntology.NAMESPACE + "HasOnTimerReservationSetting";
+	public static final String PROPERTY_HAS_ON_TIMER_SETTING = EchonetOntology.NAMESPACE + "HasOnTimerSetting";
 	public static final String PROPERTY_HAS_VOLUME_SETTING = EchonetOntology.NAMESPACE + "HasVolumeSetting";
 	public static final String PROPERTY_HAS_MUTE_SETTING = EchonetOntology.NAMESPACE + "HasMuteSetting";
 	public static final String PROPERTY_HAS_REMAINING_HOT_WATER_VOLUME = EchonetOntology.NAMESPACE + "HasRemainingHotWaterVolume";
@@ -102,10 +103,10 @@ public class WaterHeater extends EchonetSuperDevice{
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_DATETIME_HEATING_SHIFT_TIME_1, msg);	
 	}
-	public Integer getNumberOfEnergyShifts() {
-		return (Integer) getProperty(PROPERTY_HAS_NUMBER_OF_ENERGY_SHIFTS);	
+	public MeasuredValue getNumberOfEnergyShifts() {
+		return (MeasuredValue) getProperty(PROPERTY_HAS_NUMBER_OF_ENERGY_SHIFTS);	
 	}
-	public void setNumberOfEnergyShifts(Integer msg) {
+	public void setNumberOfEnergyShifts(MeasuredValue msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_NUMBER_OF_ENERGY_SHIFTS, msg);	
 	}
@@ -172,17 +173,24 @@ public class WaterHeater extends EchonetSuperDevice{
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_VOLUME_SETTING, msg);	
 	}
-	public Date getOnTimerReservationSetting() {
-		return (Date) getProperty(PROPERTY_HAS_ON_TIMER_RESERVATION_SETTING);	
+	public Date getOnTimerSetting() {
+		return (Date) getProperty(PROPERTY_HAS_ON_TIMER_SETTING);	
 	}
-	public void setOnTimerReservationSetting(Date msg) {
+	public void setOnTimerSetting(Date msg) {
+		if(msg !=null) 
+			changeProperty(PROPERTY_HAS_ON_TIMER_SETTING, msg);	
+	}
+	public OperationStatusValue getOnTimerReservationSetting() {
+		return (OperationStatusValue) getProperty(PROPERTY_HAS_ON_TIMER_RESERVATION_SETTING);	
+	}
+	public void setOnTimerReservationSetting(OperationStatusValue msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_ON_TIMER_RESERVATION_SETTING, msg);	
 	}
-	public Integer getBathWaterVolumeSetting4MaximumSettableLevel() {
-		return (Integer) getProperty(PROPERTY_HAS_BATH_WATER_VOLUME_SETTING_4_MAXIMUM_SETABLE_LEVEL);	
+	public MeasuredValue getBathWaterVolumeSetting4MaximumSettableLevel() {
+		return (MeasuredValue) getProperty(PROPERTY_HAS_BATH_WATER_VOLUME_SETTING_4_MAXIMUM_SETABLE_LEVEL);	
 	}
-	public void setBathWaterVolumeSetting4MaximumSettableLevel(Integer msg) {
+	public void setBathWaterVolumeSetting4MaximumSettableLevel(MeasuredValue msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_BATH_WATER_VOLUME_SETTING_4_MAXIMUM_SETABLE_LEVEL, msg);	
 	}
@@ -355,12 +363,12 @@ public class WaterHeater extends EchonetSuperDevice{
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_WATER_HEATING_TEMPERATURE_SETTING, msg);	
 	}
-	public OperationStatusValue getAutomaticWaterHeatStatus() {
-		return (OperationStatusValue) getProperty(PROPERTY_HAS_AUTOMATIC_WATER_HEAT_STATUS);	
+	public OperationStatusValue PROPERTY_HAS_WATER_HEAT_STATUS() {
+		return (OperationStatusValue) getProperty(PROPERTY_HAS_WATER_HEATER_STATUS);	
 	}
-	public void setAutomaticWaterHeatStatus(OperationStatusValue msg) {
+	public void setWaterHeaterStatus(OperationStatusValue msg) {
 		if(msg !=null) 
-			changeProperty(PROPERTY_HAS_AUTOMATIC_WATER_HEAT_STATUS, msg);	
+			changeProperty(PROPERTY_HAS_WATER_HEATER_STATUS, msg);	
 	}
 	public OperationStatusValue getAutomaticTemperatureControlSetting() {
 		return (OperationStatusValue) getProperty(PROPERTY_HAS_AUTOMATIC_TEMPERATURE_CONTROL_SETTING);	

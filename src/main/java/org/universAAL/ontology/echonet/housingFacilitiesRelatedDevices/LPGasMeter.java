@@ -10,7 +10,7 @@ import org.universAAL.ontology.echonet.values.OperationStateSettingValue;
 import org.universAAL.ontology.echonet.values.OperationStatusValue;
 import org.universAAL.ontology.echonet.values.ThresholdLevelValue;
 
-public class LPGasMetter extends EchonetSuperDevice{
+public class LPGasMeter extends EchonetSuperDevice{
 	public static final String MY_URI = EchonetOntology.NAMESPACE + "LPGasMetter";
 	public static final String PROPERTY_HAS_MEASURED_CUMMULATIVE_GAS_CONSUMPTION_METERING_DATA_1 = EchonetOntology.NAMESPACE + "HasMeasuredCummulativeGasConsumptionMeteringData1";
 	public static final String PROPERTY_HAS_MEASURED_CUMMULATIVE_GAS_CONSUMPTION_METERING_DATA_2 = EchonetOntology.NAMESPACE + "HasMeasuredCummulativeGasConsumptionMeteringData2";
@@ -212,11 +212,11 @@ public class LPGasMetter extends EchonetSuperDevice{
 
 
 	
-	public LPGasMetter() {
+	public LPGasMeter() {
 		super();
 		setClassGroupCode(EchonetDeviceGroupCodeValue.HousingFacilityRelatedDevice);
 	}
-	public LPGasMetter(String uri) {
+	public LPGasMeter(String uri) {
 		super(uri);
 		setClassGroupCode(EchonetDeviceGroupCodeValue.HousingFacilityRelatedDevice);
 	}

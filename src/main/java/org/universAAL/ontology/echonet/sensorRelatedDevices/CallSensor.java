@@ -3,6 +3,7 @@ package org.universAAL.ontology.echonet.sensorRelatedDevices;
 import org.universAAL.ontology.echonet.EchonetOntology;
 import org.universAAL.ontology.echonet.EchonetSuperDevice;
 import org.universAAL.ontology.echonet.values.EchonetDeviceGroupCodeValue;
+import org.universAAL.ontology.echonet.values.MeasuredValue;
 import org.universAAL.ontology.echonet.values.OccurenceStatusValue;
 import org.universAAL.ontology.echonet.values.ThresholdLevelValue;
 
@@ -47,10 +48,10 @@ public class CallSensor extends EchonetSuperDevice{
 		if(msg !=null)
 			changeProperty(PROPERTY_HAS_CALL_STATUS,msg);	
 	}
-	public Short getCallHoldingTime() {
-		return (Short) getProperty(PROPERTY_HAS_CALL_HOLDING_TIME);	
+	public MeasuredValue getCallHoldingTime() {
+		return (MeasuredValue) getProperty(PROPERTY_HAS_CALL_HOLDING_TIME);	
 	}
-	public void setCallHoldingTime(Short msg) {
+	public void setCallHoldingTime(MeasuredValue msg) {
 		if(msg !=null)
 			changeProperty(PROPERTY_HAS_CALL_HOLDING_TIME,msg);	
 	}

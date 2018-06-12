@@ -6,7 +6,7 @@ import org.universAAL.ontology.echonet.EchonetOntology;
 import org.universAAL.ontology.echonet.EchonetSuperDevice;
 import org.universAAL.ontology.echonet.values.EchonetDeviceGroupCodeValue;
 import org.universAAL.ontology.echonet.values.MeasuredValue;
-import org.universAAL.ontology.echonet.values.OperationFuntionSettingValue;
+import org.universAAL.ontology.echonet.values.OperationFunctionSettingValue;
 import org.universAAL.ontology.echonet.values.OperationModeSettingValue;
 import org.universAAL.ontology.echonet.values.OperationStateSettingValue;
 import org.universAAL.ontology.echonet.values.OperationStatusValue;
@@ -50,10 +50,10 @@ public class CommercialShowcase extends EchonetSuperDevice{
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_SHOWCASE_SHAPE_INFORMATION, msg);	
 	}
-	public OperationFuntionSettingValue getShowcaseConfigurationInformation() {
-		return (OperationFuntionSettingValue) getProperty(PROPERTY_HAS_SHOWCASE_CONFIGURATION_INFORMATION);	
+	public OperationFunctionSettingValue getShowcaseConfigurationInformation() {
+		return (OperationFunctionSettingValue) getProperty(PROPERTY_HAS_SHOWCASE_CONFIGURATION_INFORMATION);	
 	}
-	public void setShowcaseConfigurationInformation(OperationFuntionSettingValue msg) {
+	public void setShowcaseConfigurationInformation(OperationFunctionSettingValue msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_SHOWCASE_CONFIGURATION_INFORMATION, msg);	
 	}
@@ -64,10 +64,10 @@ public class CommercialShowcase extends EchonetSuperDevice{
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_DOOR_TYPE_INFORMATION, msg);	
 	}
-	public OperationFuntionSettingValue getShowCaseTypeInformation() {
-		return (OperationFuntionSettingValue) getProperty(PROPERTY_HAS_SHOWCASE_TYPE_INFORMATION);	
+	public OperationFunctionSettingValue getShowCaseTypeInformation() {
+		return (OperationFunctionSettingValue) getProperty(PROPERTY_HAS_SHOWCASE_TYPE_INFORMATION);	
 	}
-	public void setShowCaseTypeInformation(OperationFuntionSettingValue msg) {
+	public void setShowCaseTypeInformation(OperationFunctionSettingValue msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_SHOWCASE_TYPE_INFORMATION, msg);	
 	}
@@ -92,17 +92,17 @@ public class CommercialShowcase extends EchonetSuperDevice{
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_INSIDE_THE_SHOWCASE_LIGHTING_ILLUMINANCE_LEVEL, msg);	
 	}
-	public OperationFuntionSettingValue getOutsideTheShowcaseLightingType() {
-		return (OperationFuntionSettingValue) getProperty(PROPERTY_HAS_INSIDE_THE_SHOWCASE_LIGHTING_ILLUMINANCE_LEVEL);	
+	public OperationFunctionSettingValue getOutsideTheShowcaseLightingType() {
+		return (OperationFunctionSettingValue) getProperty(PROPERTY_HAS_INSIDE_THE_SHOWCASE_LIGHTING_ILLUMINANCE_LEVEL);	
 	}
-	public void setOutsideTheCaseLightingType(OperationFuntionSettingValue msg) {
+	public void setOutsideTheCaseLightingType(OperationFunctionSettingValue msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_INSIDE_THE_SHOWCASE_LIGHTING_ILLUMINANCE_LEVEL, msg);	
 	}
-	public OperationFuntionSettingValue getInsideTheShowcaseLightingType() {
-		return (OperationFuntionSettingValue) getProperty(PROPERTY_HAS_INSIDE_THE_SHOWCASE_LIGHTING_TYPE);	
+	public OperationFunctionSettingValue getInsideTheShowcaseLightingType() {
+		return (OperationFunctionSettingValue) getProperty(PROPERTY_HAS_INSIDE_THE_SHOWCASE_LIGHTING_TYPE);	
 	}
-	public void setInsideTheShowcaseLightingType(OperationFuntionSettingValue msg) {
+	public void setInsideTheShowcaseLightingType(OperationFunctionSettingValue msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_INSIDE_THE_SHOWCASE_LIGHTING_TYPE, msg);	
 	}

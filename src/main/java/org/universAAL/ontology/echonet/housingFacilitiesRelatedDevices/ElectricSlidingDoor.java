@@ -6,12 +6,12 @@ import org.universAAL.ontology.echonet.EchonetOntology;
 import org.universAAL.ontology.echonet.EchonetSuperDevice;
 import org.universAAL.ontology.echonet.values.EchonetDeviceGroupCodeValue;
 import org.universAAL.ontology.echonet.values.ElectricDeviceFaultDesciptionValue;
-import org.universAAL.ontology.echonet.values.OperationFuntionSettingValue;
+import org.universAAL.ontology.echonet.values.OperationFunctionSettingValue;
 import org.universAAL.ontology.echonet.values.OperationStateSettingValue;
 import org.universAAL.ontology.echonet.values.OperationStatusValue;
 import org.universAAL.ontology.echonet.values.MeasuredValue;
 import org.universAAL.ontology.echonet.values.SelectiveOpeningOperationSettingValue;
-import org.universAAL.ontology.echonet.values.OperationModeSettingValue;
+import org.universAAL.ontology.echonet.values.ThresholdLevelValue;
 
 public class ElectricSlidingDoor extends EchonetSuperDevice{
 	public static final String MY_URI = EchonetOntology.NAMESPACE + "ElectricGate";
@@ -29,17 +29,17 @@ public class ElectricSlidingDoor extends EchonetSuperDevice{
 	public static final String PROPERTY_HAS_ONE_TIME_OPENING_SPEED_SETTING = EchonetOntology.NAMESPACE + "HasOneTimeOpeningSpeedSetting";
 	public static final String PROPERTY_HAS_ONE_TIME_CLOSING_SPEED_SETTING = EchonetOntology.NAMESPACE + "HasOneTimeClosingSpeedSetting";
 	
-	public OperationModeSettingValue getOneTimeClosingSpeedSetting() {
-		return (OperationModeSettingValue) getProperty(PROPERTY_HAS_ONE_TIME_CLOSING_SPEED_SETTING);	
+	public ThresholdLevelValue getOneTimeClosingSpeedSetting() {
+		return (ThresholdLevelValue) getProperty(PROPERTY_HAS_ONE_TIME_CLOSING_SPEED_SETTING);	
 	}
-	public void setOneTimeClosingSpeedSetting(OperationModeSettingValue msg) {
+	public void setOneTimeClosingSpeedSetting(ThresholdLevelValue msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_ONE_TIME_CLOSING_SPEED_SETTING, msg);	
 	}
-	public OperationModeSettingValue getOneTimeOpeningSpeedSetting() {
-		return (OperationModeSettingValue) getProperty(PROPERTY_HAS_ONE_TIME_OPENING_SPEED_SETTING);	
+	public ThresholdLevelValue getOneTimeOpeningSpeedSetting() {
+		return (ThresholdLevelValue) getProperty(PROPERTY_HAS_ONE_TIME_OPENING_SPEED_SETTING);	
 	}
-	public void setOneTimeOpeningSpeedSetting(OperationModeSettingValue msg) {
+	public void setOneTimeOpeningSpeedSetting(ThresholdLevelValue msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_ONE_TIME_OPENING_SPEED_SETTING, msg);	
 	}
@@ -64,10 +64,10 @@ public class ElectricSlidingDoor extends EchonetSuperDevice{
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_REMOTE_OPERATION_SETTING_STATUS, msg);	
 	}
-	public OperationModeSettingValue getOpeningClosingSpeedSetting() {
-		return (OperationModeSettingValue) getProperty(PROPERTY_HAS_OPENING_CLOSING_SPEED_SETTING);	
+	public ThresholdLevelValue getOpeningClosingSpeedSetting() {
+		return (ThresholdLevelValue) getProperty(PROPERTY_HAS_OPENING_CLOSING_SPEED_SETTING);	
 	}
-	public void setOpeningClosingSpeedSetting(OperationModeSettingValue msg) {
+	public void setOpeningClosingSpeedSetting(ThresholdLevelValue msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_OPENING_CLOSING_SPEED_SETTING, msg);	
 	}
@@ -78,10 +78,10 @@ public class ElectricSlidingDoor extends EchonetSuperDevice{
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_DEGREE_OF_OPENING_SETTING, msg);	
 	}
-	public OperationFuntionSettingValue getOpeningClosingOperationSetting() {
-		return (OperationFuntionSettingValue) getProperty(PROPERTY_HAS_OPENING_CLOSING_OPERATION_SETTING);	
+	public OperationFunctionSettingValue getOpeningClosingOperationSetting() {
+		return (OperationFunctionSettingValue) getProperty(PROPERTY_HAS_OPENING_CLOSING_OPERATION_SETTING);	
 	}
-	public void setOpeningClosingOperationSetting(OperationFuntionSettingValue msg) {
+	public void setOpeningClosingOperationSetting(OperationFunctionSettingValue msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_OPENING_CLOSING_OPERATION_SETTING, msg);	
 	}
@@ -92,24 +92,24 @@ public class ElectricSlidingDoor extends EchonetSuperDevice{
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_OPENING_TIME_SETTING, msg);	
 	}
-	public Date getOperationTimeSettingValue() {
-		return (Date) getProperty(PROPERTY_HAS_OPERATION_TIME_SETTING_VALUE);	
+	public MeasuredValue getOperationTimeSettingValue() {
+		return (MeasuredValue) getProperty(PROPERTY_HAS_OPERATION_TIME_SETTING_VALUE);	
 	}
-	public void setOperationTimeSettingValue(Date msg) {
+	public void setOperationTimeSettingValue(MeasuredValue msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_OPERATION_TIME_SETTING_VALUE, msg);	
 	}
-	public OperationModeSettingValue getClosingSpeedSetting() {
-		return (OperationModeSettingValue) getProperty(PROPERTY_HAS_CLOSING_SPEED_SETTING);	
+	public ThresholdLevelValue getClosingSpeedSetting() {
+		return (ThresholdLevelValue) getProperty(PROPERTY_HAS_CLOSING_SPEED_SETTING);	
 	}
-	public void setClosingSpeedSetting(OperationModeSettingValue msg) {
+	public void setClosingSpeedSetting(ThresholdLevelValue msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_CLOSING_SPEED_SETTING, msg);	
 	}
-	public OperationModeSettingValue getOpeningSpeedSetting() {
-		return (OperationModeSettingValue) getProperty(PROPERTY_HAS_OPENING_SPEED_SETTING);	
+	public ThresholdLevelValue getOpeningSpeedSetting() {
+		return (ThresholdLevelValue) getProperty(PROPERTY_HAS_OPENING_SPEED_SETTING);	
 	}
-	public void setOpeningSpeedSetting(OperationModeSettingValue msg) {
+	public void setOpeningSpeedSetting(ThresholdLevelValue msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_OPENING_SPEED_SETTING, msg);	
 	}

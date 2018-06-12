@@ -28,11 +28,14 @@ public static final String MY_URI = EchonetOntology.NAMESPACE + "ThresholdLevelV
 	public static final int LOW = 19;
 	public static final int AUTOMATIC_CONTROL = 20;
 	public static final int STANDARD = 21;
+	public static final int CONTINOUS_OPERATION = 22;
+	public static final int INTERMITTENT_OPERATION = 23;
 	
 	
 	private static final String[] names = { "MinumumLevel","Level1", "Level2", "Level3", "Level4", "Level5", "Level6", "Level7", 
 											"Level8", "Level9","Level10","Level11", "Level12","Level13", "Level14","Level15",
-											"MaximumLevel","High","Medium","Low","AutomaticControl","Standard"};
+											"MaximumLevel","High","Medium","Low","AutomaticControl","Standard","ContinousOperation",
+											"IntermittentOperation"};
 	
 	public static final ThresholdLevelValue MinumumLevel = new ThresholdLevelValue(MINIMUM_LEVEL);
 	public static final ThresholdLevelValue Level_1 = new ThresholdLevelValue(LEVEL_1);
@@ -57,6 +60,8 @@ public static final String MY_URI = EchonetOntology.NAMESPACE + "ThresholdLevelV
 	public static final ThresholdLevelValue Low = new ThresholdLevelValue(LOW);
 	public static final ThresholdLevelValue AutomaticControl = new ThresholdLevelValue(AUTOMATIC_CONTROL);
 	public static final ThresholdLevelValue Standard = new ThresholdLevelValue(STANDARD);
+	public static final ThresholdLevelValue ContinousOperation = new ThresholdLevelValue(CONTINOUS_OPERATION);
+	public static final ThresholdLevelValue IntermittentOperation = new ThresholdLevelValue(INTERMITTENT_OPERATION);
 
 	private int order;
 

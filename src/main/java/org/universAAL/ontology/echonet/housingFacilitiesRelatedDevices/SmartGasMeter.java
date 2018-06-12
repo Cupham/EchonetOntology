@@ -11,7 +11,7 @@ import org.universAAL.ontology.echonet.values.OccurenceStatusValue;
 import org.universAAL.ontology.echonet.values.OperationStatusValue;
 import org.universAAL.ontology.echonet.values.TypeClassificationValue;
 
-public class SmartGasMetter extends EchonetSuperDevice{
+public class SmartGasMeter extends EchonetSuperDevice{
 	public static final String MY_URI = EchonetOntology.NAMESPACE + "SmartGasMetter";
 	public static final String PROPERTY_HAS_GAS_METTER_CLASSIFICATION_SETTING = EchonetOntology.NAMESPACE + "HasGasMetterClassificationSetting";
 	public static final String PROPERTY_HAS_OWNER_CLASSIFICATION = EchonetOntology.NAMESPACE + "HasOwnerClassification";
@@ -158,11 +158,11 @@ public class SmartGasMetter extends EchonetSuperDevice{
 
 
 	
-	public SmartGasMetter() {
+	public SmartGasMeter() {
 		super();
 		setClassGroupCode(EchonetDeviceGroupCodeValue.HousingFacilityRelatedDevice);
 	}
-	public SmartGasMetter(String uri) {
+	public SmartGasMeter(String uri) {
 		super(uri);
 		setClassGroupCode(EchonetDeviceGroupCodeValue.HousingFacilityRelatedDevice);
 	}

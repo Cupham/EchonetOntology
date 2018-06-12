@@ -5,7 +5,7 @@ package org.universAAL.ontology.echonet.housingFacilitiesRelatedDevices;
 import org.universAAL.ontology.echonet.EchonetOntology;
 import org.universAAL.ontology.echonet.EchonetSuperDevice;
 import org.universAAL.ontology.echonet.values.MeasuredValue;
-import org.universAAL.ontology.echonet.values.OperationFuntionSettingValue;
+import org.universAAL.ontology.echonet.values.OperationFunctionSettingValue;
 import org.universAAL.ontology.echonet.values.ChargerDischargerTypeValue;
 import org.universAAL.ontology.echonet.values.EchonetDeviceGroupCodeValue;
 import org.universAAL.ontology.echonet.values.OperationModeSettingValue;
@@ -121,10 +121,10 @@ public class ElectricVehicleChargerDischager extends EchonetSuperDevice{
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_REMAINING_STORED_ELECTRIC_1, msg);	
 	}
-	public OperationFuntionSettingValue getSystemInterconnectType() {
-		return (OperationFuntionSettingValue) getProperty(PROPERTY_HAS_SYSTEM_INTERCONNECT_TYPE);	
+	public OperationFunctionSettingValue getSystemInterconnectType() {
+		return (OperationFunctionSettingValue) getProperty(PROPERTY_HAS_SYSTEM_INTERCONNECT_TYPE);	
 	}
-	public void setSystemInterconnectType(OperationFuntionSettingValue msg) {
+	public void setSystemInterconnectType(OperationFunctionSettingValue msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_SYSTEM_INTERCONNECT_TYPE, msg);	
 	}

@@ -29,18 +29,18 @@ public static final String MY_URI = EchonetOntology.NAMESPACE + "IdentificationN
 										   "IPV6_Ethernet", "IPV6_6LoWPAN", "ManufacturerDefinedProtocol","RandomlyGeneratedProtocol",
 										   "IdentificationNotSet"};
 	
-	public static final IdentificationNumberValue LowerCommunicationProtocol = new IdentificationNumberValue(LOWER_LAYER_COMMUNICATION_PROTOCOL);
-	public static final IdentificationNumberValue PowerLineCommunicationProtocolA_D = new IdentificationNumberValue(POWER_LINE_COMMUNICATION_PROTOCOL_A_D);
+	public static final IdentificationNumberValue LowerLayerCommunicationProtocol = new IdentificationNumberValue(LOWER_LAYER_COMMUNICATION_PROTOCOL);
+	public static final IdentificationNumberValue PowerLineCommunicationProtocol_A_D = new IdentificationNumberValue(POWER_LINE_COMMUNICATION_PROTOCOL_A_D);
 	public static final IdentificationNumberValue LowPowerRadioCommunicationProtocol = new IdentificationNumberValue(LOW_POWER_RADIO_COMMUNICATION_PROTOCOL);
 	public static final IdentificationNumberValue ExtendedHBS = new IdentificationNumberValue(EXTENDED_HBS);
 	public static final IdentificationNumberValue IrDA = new IdentificationNumberValue(IRDA);
 	public static final IdentificationNumberValue LonTalk = new IdentificationNumberValue(LON_TALK);
 	public static final IdentificationNumberValue Bluetooth = new IdentificationNumberValue(BLUETOOTH);
 	public static final IdentificationNumberValue Ethernet = new IdentificationNumberValue(ETHERNET);
-	public static final IdentificationNumberValue Ieee802_11_11B = new IdentificationNumberValue(IEEE802_11_11_B);
-	public static final IdentificationNumberValue PowerLineCommunicationProtocolC = new IdentificationNumberValue(POWER_LINE_COMMUNICATION_PROTOCOL_C);
-	public static final IdentificationNumberValue IPv6Ethernet = new IdentificationNumberValue(IPV6_ETHERNET);
-	public static final IdentificationNumberValue IPv66Lowpan = new IdentificationNumberValue(IPV6_6LOWPAN);
+	public static final IdentificationNumberValue IEEE802_11_11B = new IdentificationNumberValue(IEEE802_11_11_B);
+	public static final IdentificationNumberValue PowerLineCommunicationProtocol_C = new IdentificationNumberValue(POWER_LINE_COMMUNICATION_PROTOCOL_C);
+	public static final IdentificationNumberValue IPV6_Ethernet = new IdentificationNumberValue(IPV6_ETHERNET);
+	public static final IdentificationNumberValue IPV6_6LoWPAN = new IdentificationNumberValue(IPV6_6LOWPAN);
 	public static final IdentificationNumberValue ManufacturerDefinedProtocol = new IdentificationNumberValue(MANUFACTURER_DEFINED_PROTOCOL);
 	public static final IdentificationNumberValue RandomlyGeneratedProtocol = new IdentificationNumberValue(RAMDONLY_GENERATED_PROTOCOL);
 	public static final IdentificationNumberValue IdentificationNotSet = new IdentificationNumberValue(IDENTIFICATION_NOT_SET);
@@ -54,9 +54,9 @@ public static final String MY_URI = EchonetOntology.NAMESPACE + "IdentificationN
 	public static IdentificationNumberValue getIdentificationNumberValueByOrder(int order) {
 		switch (order) {
 		case LOWER_LAYER_COMMUNICATION_PROTOCOL:
-			return LowerCommunicationProtocol;
+			return LowerLayerCommunicationProtocol;
 		case POWER_LINE_COMMUNICATION_PROTOCOL_A_D:
-			return PowerLineCommunicationProtocolA_D;
+			return PowerLineCommunicationProtocol_A_D;
 		case LOW_POWER_RADIO_COMMUNICATION_PROTOCOL:
 			return LowPowerRadioCommunicationProtocol;
 		case EXTENDED_HBS:
@@ -70,13 +70,13 @@ public static final String MY_URI = EchonetOntology.NAMESPACE + "IdentificationN
 		case ETHERNET:
 			return Ethernet;
 		case IEEE802_11_11_B:
-			return Ieee802_11_11B;
+			return IEEE802_11_11B;
 		case POWER_LINE_COMMUNICATION_PROTOCOL_C:
-			return PowerLineCommunicationProtocolC;
+			return PowerLineCommunicationProtocol_C;
 		case IPV6_ETHERNET:
-			return IPv6Ethernet;
+			return IPV6_Ethernet;
 		case IPV6_6LOWPAN:
-			return IPv66Lowpan;
+			return IPV6_6LoWPAN;
 		case MANUFACTURER_DEFINED_PROTOCOL:
 			return ManufacturerDefinedProtocol;
 		case RAMDONLY_GENERATED_PROTOCOL:

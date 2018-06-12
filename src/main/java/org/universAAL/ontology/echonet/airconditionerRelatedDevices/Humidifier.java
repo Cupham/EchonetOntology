@@ -20,6 +20,7 @@ public class Humidifier extends EchonetSuperDevice{
 	public static final String PROPERTY_HAS_OFF_TIMER_RESERVATION_SETTING = EchonetOntology.NAMESPACE + "HumidifierHasOFFTimerReservationSetting";
 	public static final String PROPERTY_HAS_OFF_TIMER_RESERVATION_RELATIVE_TIME_VALUE = EchonetOntology.NAMESPACE + "HumidifierHasOFFTimerReservationRelativeTimeValue";
 	public static final String PROPERTY_HAS_ION_EMISSION_SETTING = EchonetOntology.NAMESPACE + "HumidifierHasIonEmissionSetting";
+	public static final String PROPERTY_HAS_IMPLEMENTED_ION_EMISSION_METHOD = EchonetOntology.NAMESPACE + "HumidifierHasImplementedIonEmissionMethod";
 	public static final String PROPERTY_HAS_SPECIAL_OPERATION_MODE_SETTING = EchonetOntology.NAMESPACE + "HumidifierHasSpecialOperationModeSetting";
 	public static final String PROPERTY_HAS_WATER_AMOUNT_LEVEL = EchonetOntology.NAMESPACE + "HumidifierHasWaterAmountLevel";
 	
@@ -37,13 +38,22 @@ public class Humidifier extends EchonetSuperDevice{
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_SPECIAL_OPERATION_MODE_SETTING, msg);	
 	}
-	public IonEmissionMethodValue getIonEmissionSetting() {
-		return (IonEmissionMethodValue) getProperty(PROPERTY_HAS_ION_EMISSION_SETTING);	
+	public IonEmissionMethodValue getImplementedIonEmissionMethod() {
+		return (IonEmissionMethodValue) getProperty(PROPERTY_HAS_IMPLEMENTED_ION_EMISSION_METHOD);	
 	}
-	public void setIonEmissionSetting(IonEmissionMethodValue msg) {
+	public void setImplementedIonEmissionMethod(IonEmissionMethodValue msg) {
+		if(msg !=null) 
+			changeProperty(PROPERTY_HAS_IMPLEMENTED_ION_EMISSION_METHOD, msg);	
+	}
+	public OperationStatusValue getIonEmissionSetting() {
+		return (OperationStatusValue) getProperty(PROPERTY_HAS_ION_EMISSION_SETTING);	
+	}
+	public void setIonEmissionSetting(OperationStatusValue msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_ION_EMISSION_SETTING, msg);	
 	}
+	
+	
 	public Date getOFFTimerReservationRelativeTimeValue() {
 		return (Date) getProperty(PROPERTY_HAS_OFF_TIMER_RESERVATION_RELATIVE_TIME_VALUE);	
 	}

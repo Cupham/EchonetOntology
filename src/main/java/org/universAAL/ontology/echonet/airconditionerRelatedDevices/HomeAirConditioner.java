@@ -5,10 +5,9 @@ import java.util.Date;
 
 import org.universAAL.ontology.echonet.EchonetOntology;
 import org.universAAL.ontology.echonet.EchonetSuperDevice;
-import org.universAAL.ontology.echonet.values.AirFlowHorizontalDirectionSettingValue;
-import org.universAAL.ontology.echonet.values.AirFlowVerticalDirectionSettingValue;
+import org.universAAL.ontology.echonet.values.AirFlowDirectionSettingValue;
 import org.universAAL.ontology.echonet.values.AirconditionerComponentOperationStatus;
-import org.universAAL.ontology.echonet.values.OperationFuntionSettingValue;
+import org.universAAL.ontology.echonet.values.OperationFunctionSettingValue;
 import org.universAAL.ontology.echonet.values.OperationModeSettingValue;
 import org.universAAL.ontology.echonet.values.OperationStateSettingValue;
 import org.universAAL.ontology.echonet.values.MeasuredValue;
@@ -20,7 +19,6 @@ import org.universAAL.ontology.echonet.values.OperationStatusValue;
 import org.universAAL.ontology.echonet.values.RatedPowerConsumptionInModeValue;
 import org.universAAL.ontology.echonet.values.ThermostatSettingOverrideFunctionValue;
 import org.universAAL.ontology.echonet.values.ThresholdLevelValue;
-import org.universAAL.ontology.echonet.values.VentilationAirFlowRateSettingValue;
 
 public class HomeAirConditioner extends EchonetSuperDevice{
 	public static final String MY_URI = EchonetOntology.NAMESPACE + "HomeAirConditioner";
@@ -49,6 +47,7 @@ public class HomeAirConditioner extends EchonetSuperDevice{
 	public static final String PROPERTY_HAS_SPECIAL_STATE = EchonetOntology.NAMESPACE + "HomeAirConditionerHasSpecialState";
 	public static final String PROPERTY_HAS_NON_PRIORITY_STATE = EchonetOntology.NAMESPACE + "HomeAirConditionerHasNonPriorityState";
 	public static final String PROPERTY_HAS_VENTILATION_FUNCTION_SETTING = EchonetOntology.NAMESPACE + "HomeAirConditionerHasVentilationFunctionSetting";
+	public static final String PROPERTY_HAS_HUMIDIFIER_FUNCTION_SETTING = EchonetOntology.NAMESPACE + "HomeAirConditionerHasHumidifierFunctionSetting";
 	public static final String PROPERTY_HAS_VENTILATION_AIR_FLOW_RATE_SETTING = EchonetOntology.NAMESPACE + "HomeAirConditionerHasVentilationAirFlowRateSetting";
 	public static final String PROPERTY_HAS_DEGREE_OF_HUMIDIFICATION_SETTING = EchonetOntology.NAMESPACE + "HomeAirConditionerHasDegreeOfHumidificationSetting";
 	public static final String PROPERTY_HAS_MOUNTED_AIR_CLEANING_METHOD = EchonetOntology.NAMESPACE + "HomeAirConditionerHasMountedAirCleaningMethod";
@@ -141,10 +140,10 @@ public class HomeAirConditioner extends EchonetSuperDevice{
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_OPERATION_STATUS_OF_COMPONENTS, msg);	
 	}
-	public OperationFuntionSettingValue getSpecialFunctionSetting() {
-		return (OperationFuntionSettingValue) getProperty(PROPERTY_HAS_SPECIAL_FUNCTION_SETTING);	
+	public OperationFunctionSettingValue getSpecialFunctionSetting() {
+		return (OperationFunctionSettingValue) getProperty(PROPERTY_HAS_SPECIAL_FUNCTION_SETTING);	
 	}
-	public void setSpecialFunctionSetting(OperationFuntionSettingValue msg) {
+	public void setSpecialFunctionSetting(OperationFunctionSettingValue msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_SPECIAL_FUNCTION_SETTING, msg);	
 	}
@@ -198,12 +197,19 @@ public class HomeAirConditioner extends EchonetSuperDevice{
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_DEGREE_OF_HUMIDIFICATION_SETTING, msg);	
 	}
-	public VentilationAirFlowRateSettingValue getVentilationAirFlowRateSetting() {
-		return (VentilationAirFlowRateSettingValue) getProperty(PROPERTY_HAS_VENTILATION_AIR_FLOW_RATE_SETTING);	
+	public ThresholdLevelValue getVentilationAirFlowRateSetting() {
+		return (ThresholdLevelValue) getProperty(PROPERTY_HAS_VENTILATION_AIR_FLOW_RATE_SETTING);	
 	}
-	public void setVentilationAirFlowRateSetting(VentilationAirFlowRateSettingValue msg) {
+	public void setVentilationAirFlowRateSetting(ThresholdLevelValue msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_VENTILATION_AIR_FLOW_RATE_SETTING, msg);	
+	}
+	public OperationStatusValue getHumidifierFunctionSetting() {
+		return (OperationStatusValue) getProperty(PROPERTY_HAS_HUMIDIFIER_FUNCTION_SETTING);	
+	}
+	public void setHumidifierFunctionSetting(OperationStatusValue msg) {
+		if(msg !=null) 
+			changeProperty(PROPERTY_HAS_HUMIDIFIER_FUNCTION_SETTING, msg);	
 	}
 	public OperationStatusValue getVentilationFunctionSetting() {
 		return (OperationStatusValue) getProperty(PROPERTY_HAS_VENTILATION_FUNCTION_SETTING);	
@@ -352,17 +358,17 @@ public class HomeAirConditioner extends EchonetSuperDevice{
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_AUTOMATIC_SWING_OF_AIR_FLOW_SETTING, msg);	
 	}
-	public AirFlowVerticalDirectionSettingValue getAirFlowVerticalDirectionSetting() {
-		return (AirFlowVerticalDirectionSettingValue) getProperty(PROPERTY_HAS_AIRFLOW_VERTICAL_DIRECTION_SETTING);	
+	public AirFlowDirectionSettingValue getAirFlowVerticalDirectionSetting() {
+		return (AirFlowDirectionSettingValue) getProperty(PROPERTY_HAS_AIRFLOW_VERTICAL_DIRECTION_SETTING);	
 	}
-	public void setAirFlowVerticalDirectionSetting(AirFlowVerticalDirectionSettingValue msg) {
+	public void setAirFlowVerticalDirectionSetting(AirFlowDirectionSettingValue msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_AIRFLOW_VERTICAL_DIRECTION_SETTING, msg);	
 	}
-	public AirFlowHorizontalDirectionSettingValue getAirFlowHorizontalDirectionSetting() {
-		return (AirFlowHorizontalDirectionSettingValue) getProperty(PROPERTY_HAS_AIRFLOW_HORIZONTAL_DIRECTION_SETTING);	
+	public AirFlowDirectionSettingValue getAirFlowHorizontalDirectionSetting() {
+		return (AirFlowDirectionSettingValue) getProperty(PROPERTY_HAS_AIRFLOW_HORIZONTAL_DIRECTION_SETTING);	
 	}
-	public void setAirFlowHorizontalDirectionSetting(AirFlowHorizontalDirectionSettingValue msg) {
+	public void setAirFlowHorizontalDirectionSetting(AirFlowDirectionSettingValue msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_AIRFLOW_HORIZONTAL_DIRECTION_SETTING, msg);	
 	}

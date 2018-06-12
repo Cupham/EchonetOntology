@@ -7,16 +7,16 @@ import org.universAAL.ontology.echonet.values.MeasuredValue;
 
 public class ElectricEnergySensor extends EchonetSuperDevice{
 	public static final String MY_URI = EchonetOntology.NAMESPACE + "ElectricEnergySensor";
-	public static final String PROPERTY_HAS_CUMMULATIVE_AMOUNT_OF_ELECTRIC_ENERGY = 
-			EchonetOntology.NAMESPACE + "ElectricEnergySensorHasCummulativeAmountOfElectriceEnergy";
+	public static final String PROPERTY_HAS_CUMULATIVE_AMOUNT_OF_ELECTRIC_ENERGY = 
+			EchonetOntology.NAMESPACE + "ElectricEnergySensorHasCumulativeAmountOfElectriceEnergy";
 	public static final String PROPERTY_HAS_MEDIUM_CAPACITY_SENSOR_INSTANTANEOUS_ELECTRIC_ENERGY = 
 			EchonetOntology.NAMESPACE + "ElectricEnergySensorHasMediumCapacitySensorInstantaneousElectricEnergy";
 	public static final String PROPERTY_HAS_SMALL_CAPACITY_SENSOR_INSTANTANEOUS_ELECTRIC_ENERGY = 
 			EchonetOntology.NAMESPACE + "EElectricEnergySensorHasSmallCapacitySensorInstantaneousElectricEnergy";
 	public static final String PROPERTY_HAS_LARGE_CAPACITY_SENSOR_INSTANTANEOUS_ELECTRIC_ENERGY = 
 			EchonetOntology.NAMESPACE + "ElectricEnergySensorHasLargeCapacitySensorInstantaneousElectricEnergy";
-	public static final String PROPERTY_HAS_CUMMULATIVE_AMOUNT_OF_ELECTRIC_ENERGY_MEASUREMENT_LOG = 
-			EchonetOntology.NAMESPACE + "ElectricEnergySensorHasCummulativeAmountOfElectriceEnergyMeasurementLog";
+	public static final String PROPERTY_HAS_CUMULATIVE_AMOUNT_OF_ELECTRIC_ENERGY_MEASUREMENT_LOG = 
+			EchonetOntology.NAMESPACE + "ElectricEnergySensorHasCumulativeAmountOfElectriceEnergyMeasurementLog";
 	public static final String PROPERTY_HAS_EFFECTIVE_VOLTAGE_VALUE = 
 			EchonetOntology.NAMESPACE + "ElectricEnergySensorHasEffectiveMeasuredValue";
 	public ElectricEnergySensor() {
@@ -41,12 +41,12 @@ public class ElectricEnergySensor extends EchonetSuperDevice{
 		return true;
 	}
 	
-	public MeasuredValue getCummulativeAmountOfElectriceEnergy() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_CUMMULATIVE_AMOUNT_OF_ELECTRIC_ENERGY);	
+	public MeasuredValue getCumulativeAmountOfElectriceEnergy() {
+		return (MeasuredValue) getProperty(PROPERTY_HAS_CUMULATIVE_AMOUNT_OF_ELECTRIC_ENERGY);	
 	}
-	public void setCummulativeAmountOfElectriceEnergy(MeasuredValue msg) {
+	public void setCumulativeAmountOfElectriceEnergy(MeasuredValue msg) {
 		if (msg != null)
-			changeProperty(PROPERTY_HAS_CUMMULATIVE_AMOUNT_OF_ELECTRIC_ENERGY,msg);	
+			changeProperty(PROPERTY_HAS_CUMULATIVE_AMOUNT_OF_ELECTRIC_ENERGY,msg);	
 	}
 	public MeasuredValue getMediumCapacitySensorInstantaneousElectricEnergy() {
 		return (MeasuredValue) getProperty(PROPERTY_HAS_MEDIUM_CAPACITY_SENSOR_INSTANTANEOUS_ELECTRIC_ENERGY);	
@@ -69,12 +69,12 @@ public class ElectricEnergySensor extends EchonetSuperDevice{
 		if (msg != null)
 			changeProperty(PROPERTY_HAS_LARGE_CAPACITY_SENSOR_INSTANTANEOUS_ELECTRIC_ENERGY,msg);	
 	}
-	public MeasuredValue getCummulativeAmountOfElectriceEnergyMeasurementLog() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_CUMMULATIVE_AMOUNT_OF_ELECTRIC_ENERGY_MEASUREMENT_LOG);	
+	public MeasuredValue getCumulativeAmountOfElectriceEnergyMeasurementLog() {
+		return (MeasuredValue) getProperty(PROPERTY_HAS_CUMULATIVE_AMOUNT_OF_ELECTRIC_ENERGY_MEASUREMENT_LOG);	
 	}
-	public void setCummulativeAmountOfElectriceEnergyMeasurementLog(MeasuredValue msg) {
+	public void setCumulativeAmountOfElectriceEnergyMeasurementLog(MeasuredValue msg) {
 		if (msg != null)
-			changeProperty(PROPERTY_HAS_CUMMULATIVE_AMOUNT_OF_ELECTRIC_ENERGY_MEASUREMENT_LOG,msg);	
+			changeProperty(PROPERTY_HAS_CUMULATIVE_AMOUNT_OF_ELECTRIC_ENERGY_MEASUREMENT_LOG,msg);	
 	}
 	public MeasuredValue getEffectiveMeasuredValue() {
 		return (MeasuredValue) getProperty(PROPERTY_HAS_EFFECTIVE_VOLTAGE_VALUE);	

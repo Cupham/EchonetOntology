@@ -11,7 +11,7 @@ import org.universAAL.ontology.echonet.values.OccurenceStatusValue;
 import org.universAAL.ontology.echonet.values.ThresholdLevelValue;
 import org.universAAL.ontology.echonet.values.TypeClassificationValue;
 
-public class SmartKeroseneMetter extends EchonetSuperDevice{
+public class SmartKeroseneMeter extends EchonetSuperDevice{
 	
 	public static final String MY_URI = EchonetOntology.NAMESPACE + "SmartKeroseneMetter";
 	public static final String PROPERTY_HAS_OWNER_CLASSIFICATION = EchonetOntology.NAMESPACE + "HasOwnerClassification";
@@ -146,11 +146,11 @@ public class SmartKeroseneMetter extends EchonetSuperDevice{
 			changeProperty(PROPERTY_HAS_OWNER_CLASSIFICATION, msg);	
 	}
 	
-	public SmartKeroseneMetter() {
+	public SmartKeroseneMeter() {
 		super();
 		setClassGroupCode(EchonetDeviceGroupCodeValue.HousingFacilityRelatedDevice);
 	}
-	public SmartKeroseneMetter(String uri) {
+	public SmartKeroseneMeter(String uri) {
 		super(uri);
 		setClassGroupCode(EchonetDeviceGroupCodeValue.HousingFacilityRelatedDevice);
 	}

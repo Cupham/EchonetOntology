@@ -10,7 +10,7 @@ import org.universAAL.ontology.echonet.values.MeasurementUnit;
 import org.universAAL.ontology.echonet.values.OccurenceStatusValue;
 import org.universAAL.ontology.echonet.values.TypeClassificationValue;
 
-public class WaterFlowmetter extends EchonetSuperDevice{
+public class WaterFlowMeter extends EchonetSuperDevice{
 	public static final String MY_URI = EchonetOntology.NAMESPACE + "WaterFlowmetter";
 	public static final String PROPERTY_HAS_WATER_FLOW_METTER_CLASSIFICATION = EchonetOntology.NAMESPACE + "HasWaterFlowMetterClassification";
 	public static final String PROPERTY_HAS_OWNER_CLASSIFICATION = EchonetOntology.NAMESPACE + "HasOwnerClassification";
@@ -88,11 +88,11 @@ public class WaterFlowmetter extends EchonetSuperDevice{
 
 
 	
-	public WaterFlowmetter() {
+	public WaterFlowMeter() {
 		super();
 		setClassGroupCode(EchonetDeviceGroupCodeValue.HousingFacilityRelatedDevice);
 	}
-	public WaterFlowmetter(String uri) {
+	public WaterFlowMeter(String uri) {
 		super(uri);
 		setClassGroupCode(EchonetDeviceGroupCodeValue.HousingFacilityRelatedDevice);
 	}

@@ -7,7 +7,7 @@ import org.universAAL.ontology.echonet.EchonetOntology;
 import org.universAAL.ontology.echonet.EchonetSuperDevice;
 import org.universAAL.ontology.echonet.values.EchonetDeviceGroupCodeValue;
 import org.universAAL.ontology.echonet.values.MeasurementMethodValue;
-import org.universAAL.ontology.echonet.values.OperationFuntionSettingValue;
+import org.universAAL.ontology.echonet.values.OperationFunctionSettingValue;
 import org.universAAL.ontology.echonet.values.OperationModeSettingValue;
 import org.universAAL.ontology.echonet.values.OperationStatusValue;
 import org.universAAL.ontology.echonet.values.RatedPowerConsumptionInModeValue;
@@ -106,10 +106,10 @@ public class ColdHotWaterHeatSourceEquipment extends EchonetSuperDevice{
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_DAILY_TIMER_SETTING_1, msg);	
 	}
-	public OperationFuntionSettingValue getDailyTimerSettingStatus() {
-		return (OperationFuntionSettingValue) getProperty(PROPERTY_HAS_DAILY_TIMER_SETTING_STATUS);	
+	public OperationFunctionSettingValue getDailyTimerSettingStatus() {
+		return (OperationFunctionSettingValue) getProperty(PROPERTY_HAS_DAILY_TIMER_SETTING_STATUS);	
 	}
-	public void setDailyTimerSettingStatus(OperationFuntionSettingValue msg) {
+	public void setDailyTimerSettingStatus(OperationFunctionSettingValue msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_DAILY_TIMER_SETTING_STATUS, msg);	
 	}

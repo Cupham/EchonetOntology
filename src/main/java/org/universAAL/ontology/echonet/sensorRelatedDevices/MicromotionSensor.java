@@ -52,17 +52,17 @@ public class MicromotionSensor extends EchonetSuperDevice{
 		if(msg !=null)
 			changeProperty(PROPERTY_HAS_MICROMOTION_DETECTION_STATUS,msg);	
 	}
-	public Short getDetectionCounter() {
-		return (Short) getProperty(PROPERTY_HAS_DETECTION_COUNTER);	
+	public MeasuredValue getDetectionCounter() {
+		return (MeasuredValue) getProperty(PROPERTY_HAS_DETECTION_COUNTER);	
 	}
-	public void setDetectionCounter(Short msg) {
+	public void setDetectionCounter(MeasuredValue msg) {
 		if(msg !=null)
 			changeProperty(PROPERTY_HAS_DETECTION_COUNTER,msg);	
 	}
-	public Short getSamplingCount() {
-		return (Short) getProperty(PROPERTY_HAS_MICROMOTION_SAMPLING_COUNT);	
+	public MeasuredValue getSamplingCount() {
+		return (MeasuredValue) getProperty(PROPERTY_HAS_MICROMOTION_SAMPLING_COUNT);	
 	}
-	public void setSamplingCount(Short msg) {
+	public void setSamplingCount(MeasuredValue msg) {
 		if(msg !=null)
 			changeProperty(PROPERTY_HAS_MICROMOTION_SAMPLING_COUNT,msg);	
 	}

@@ -6,6 +6,7 @@ import org.universAAL.ontology.echonet.EchonetOntology;
 import org.universAAL.ontology.echonet.EchonetSuperDevice;
 import org.universAAL.ontology.echonet.values.EchonetDeviceGroupCodeValue;
 import org.universAAL.ontology.echonet.values.LocationValue;
+import org.universAAL.ontology.echonet.values.MeasuredValue;
 public class HumanBodyLocationSensor extends EchonetSuperDevice{
 	public static final String MY_URI = EchonetOntology.NAMESPACE + "HumanBodyLocationSensor";
 	public static final String PROPERTY_HAS_HUMAN_DETECTION_LOCATION_1 = EchonetOntology.NAMESPACE + "HumanBodyLocationSensorHasHumanBodyDetectionLocation1";
@@ -48,10 +49,10 @@ public class HumanBodyLocationSensor extends EchonetSuperDevice{
 		if(msg !=null)
 			changeProperty(PROPERTY_HAS_HUMAN_DETECTION_LOCATION_2,msg);	
 	}
-	public Short getMaxNumberofHumanBodyID() {
-		return (Short) getProperty(PROPERTY_HAS_MAX_NUMBER_OF_HUMAN_BODY_ID);
+	public MeasuredValue getMaxNumberofHumanBodyID() {
+		return (MeasuredValue) getProperty(PROPERTY_HAS_MAX_NUMBER_OF_HUMAN_BODY_ID);
 	}
-	public void getMaxNumberofHumanBodyID(Short msg) {
+	public void getMaxNumberofHumanBodyID(MeasuredValue msg) {
 		if(msg!=null)
 			changeProperty(PROPERTY_HAS_MAX_NUMBER_OF_HUMAN_BODY_ID, msg);	
 	}
