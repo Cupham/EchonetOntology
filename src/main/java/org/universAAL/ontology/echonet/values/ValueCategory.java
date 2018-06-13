@@ -7,6 +7,7 @@ public class ValueCategory extends ManagedIndividual{
 
 	public static final String MY_URI = EchonetOntology.NAMESPACE + "ValueCategory";
 	private int order;
+	public static final int UNDEFINED = 0;
 	public static final int SI_VALUE = 1;
 	public static final int ILLUMINANCE_LEVEL_VALUE = 2;
 	public static final int TEMPERATURE_VALUE = 3;
@@ -22,10 +23,12 @@ public class ValueCategory extends ManagedIndividual{
 	public static final int TIME_VALUE = 13;
 	public static final int ANGLE_VALUE = 14;
 	public static final int FIRST_AID_OCCURENCE_STATUS_NOT_FOUND = 100;
-	private static final String[] names = { "SIValue","IlluminanceLevelValue","TemperatureValue","PercentageValue",
+	private static final String[] names = { "Undefined","SIValue","IlluminanceLevelValue","TemperatureValue","PercentageValue",
 											"WaterLevelValue","ConcentrationValue","PressureValue","AirSpeedValue",
 											"ElectricEnergyValue","VoltageValue","CurrentValue", "FlowRateValue",
 											"TimeValue","AngleValue"};
+	public static final ValueCategory Undefined = new ValueCategory(UNDEFINED);
+	// in Lux/kLux
 	//in Kine
 	public static final ValueCategory SIValue = new ValueCategory(SI_VALUE);
 	// in Lux/kLux
@@ -62,6 +65,8 @@ public class ValueCategory extends ManagedIndividual{
 
 	public static ValueCategory getValueTypeByOrder(int order) {
 		switch (order) {
+		case UNDEFINED:
+			return Undefined;
 		case SI_VALUE:
 			return SIValue;
 		case ILLUMINANCE_LEVEL_VALUE:
@@ -102,7 +107,7 @@ public class ValueCategory extends ManagedIndividual{
 		if (name.startsWith(EchonetOntology.NAMESPACE))
 			name = name.substring(EchonetOntology.NAMESPACE.length());
 
-		for (int i = SI_VALUE; i <= FIRST_AID_OCCURENCE_STATUS_NOT_FOUND; i++)
+		for (int i = UNDEFINED; i <= FIRST_AID_OCCURENCE_STATUS_NOT_FOUND; i++)
 			if (names[i].equals(name))
 				return getValueTypeByOrder(i);
 		return null;

@@ -21,10 +21,10 @@ public class ElectricHotWaterPot extends EchonetSuperDevice{
 	public static final String PROPERTY_HAS_HOT_WATER_DISCHARGE_STATUS = EchonetOntology.NAMESPACE + "HasHotWaterDischargeStatus";
 	public static final String PROPERTY_HAS_LOCK_STATUS = EchonetOntology.NAMESPACE + "HasLockStatus";
 	
-	public OccurenceStatusValue getLockStatus() {
-		return (OccurenceStatusValue) getProperty(PROPERTY_HAS_LOCK_STATUS);	
+	public OperationStateSettingValue getLockStatus() {
+		return (OperationStateSettingValue) getProperty(PROPERTY_HAS_LOCK_STATUS);	
 	}
-	public void setLockStatus(OccurenceStatusValue msg) {
+	public void setLockStatus(OperationStateSettingValue msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_LOCK_STATUS, msg);	
 	}

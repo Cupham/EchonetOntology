@@ -6,7 +6,6 @@ import org.universAAL.ontology.echonet.EchonetOntology;
 import org.universAAL.ontology.echonet.EchonetSuperDevice;
 import org.universAAL.ontology.echonet.values.EchonetDeviceGroupCodeValue;
 import org.universAAL.ontology.echonet.values.MeasuredValue;
-import org.universAAL.ontology.echonet.values.MeasurementUnit;
 import org.universAAL.ontology.echonet.values.OccurenceStatusValue;
 import org.universAAL.ontology.echonet.values.TypeClassificationValue;
 
@@ -57,10 +56,10 @@ public class WaterFlowMeter extends EchonetSuperDevice{
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_MEASURED_CUMMULATIVE_FLOWING_WATER_AMOUNT_HISTORICAL_DATA, msg);	
 	}
-	public MeasurementUnit getMeasuredCummulativeFlowingWaterAmountUnit() {
-		return (MeasurementUnit) getProperty(PROPERTY_HAS_MEASURED_CUMMULATIVE_FLOWING_WATER_AMOUNT_UNIT);	
+	public String getMeasuredCummulativeFlowingWaterAmountUnit() {
+		return (String) getProperty(PROPERTY_HAS_MEASURED_CUMMULATIVE_FLOWING_WATER_AMOUNT_UNIT);	
 	}
-	public void setMeasuredCummulativeFlowingWaterAmountUnit(MeasurementUnit msg) {
+	public void setMeasuredCummulativeFlowingWaterAmountUnit(String msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_MEASURED_CUMMULATIVE_FLOWING_WATER_AMOUNT_UNIT, msg);	
 	}

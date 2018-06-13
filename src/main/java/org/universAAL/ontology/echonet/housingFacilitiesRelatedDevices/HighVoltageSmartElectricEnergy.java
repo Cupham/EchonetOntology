@@ -8,7 +8,6 @@ import org.universAAL.ontology.echonet.EchonetOntology;
 import org.universAAL.ontology.echonet.EchonetSuperDevice;
 import org.universAAL.ontology.echonet.values.EchonetDeviceGroupCodeValue;
 import org.universAAL.ontology.echonet.values.MeasuredValue;
-import org.universAAL.ontology.echonet.values.MeasurementUnit;
 
 public class HighVoltageSmartElectricEnergy extends EchonetSuperDevice{
 	public static final String MY_URI = EchonetOntology.NAMESPACE + "HighVoltageSmartElectricEnergy";
@@ -46,17 +45,17 @@ public class HighVoltageSmartElectricEnergy extends EchonetSuperDevice{
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_MEASURED_CUMULATIVE_REACTIVE_ELECTRIC_POWER_CONSUMPTION_FOR_POWER_FACTOR_MEASUREMENT_HISTORICAL_DATA, msg);	
 	}
-	public MeasurementUnit getMeasuredCumulativeReactiveElectricPowerConsumptionAmountUnit() {
-		return (MeasurementUnit) getProperty(PROPERTY_HAS_MEASURED_CUMULATIVE_REACTIVE_ELECTRIC_POWER_CONSUMPTION_AMOUNT_UNIT);	
+	public String getMeasuredCumulativeReactiveElectricPowerConsumptionAmountUnit() {
+		return (String) getProperty(PROPERTY_HAS_MEASURED_CUMULATIVE_REACTIVE_ELECTRIC_POWER_CONSUMPTION_AMOUNT_UNIT);	
 	}
-	public void setMeasuredCumulativeReactiveElectricPowerConsumptionAmountUnit(MeasurementUnit msg) {
+	public void setMeasuredCumulativeReactiveElectricPowerConsumptionAmountUnit(String msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_MEASURED_CUMULATIVE_REACTIVE_ELECTRIC_POWER_CONSUMPTION_AMOUNT_UNIT, msg);	
 	}
-	public MeasuredValue getNumberOfEffectiveDigitsForMeasuredCumulativeReactiveElectricPowerConsumptionForPowerFactorMeasurement() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_NUMBER_OF_EFFECTIVE_DIGITS_FOR_MEASURED_CUMULATIVE_REACTIVE_ELECTRIC_POWER_CONSUMPTION_FOR_POWER_FACTOR_MEASUREMENT);	
+	public Integer getNumberOfEffectiveDigitsForMeasuredCumulativeReactiveElectricPowerConsumptionForPowerFactorMeasurement() {
+		return (Integer) getProperty(PROPERTY_HAS_NUMBER_OF_EFFECTIVE_DIGITS_FOR_MEASURED_CUMULATIVE_REACTIVE_ELECTRIC_POWER_CONSUMPTION_FOR_POWER_FACTOR_MEASUREMENT);	
 	}
-	public void setNumberOfEffectiveDigitsForMeasuredCumulativeReactiveElectricPowerConsumptionForPowerFactorMeasurement(MeasuredValue msg) {
+	public void setNumberOfEffectiveDigitsForMeasuredCumulativeReactiveElectricPowerConsumptionForPowerFactorMeasurement(Integer msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_NUMBER_OF_EFFECTIVE_DIGITS_FOR_MEASURED_CUMULATIVE_REACTIVE_ELECTRIC_POWER_CONSUMPTION_FOR_POWER_FACTOR_MEASUREMENT, msg);	
 	}
@@ -74,10 +73,10 @@ public class HighVoltageSmartElectricEnergy extends EchonetSuperDevice{
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_MEASURED_REACTIVE_ELECTRIC_POWER_CONSUMPTION_FOR_POWER_FACTOR_MEASUREMENT, msg);	
 	}
-	public MeasurementUnit getCumulativeMaximumElectricPowerDemandUnit() {
-		return (MeasurementUnit) getProperty(PROPERTY_HAS_CUMULATIVE_MAXIMUM_ELECTRIC_POWER_DEMAND_UNIT);	
+	public String getCumulativeMaximumElectricPowerDemandUnit() {
+		return (String) getProperty(PROPERTY_HAS_CUMULATIVE_MAXIMUM_ELECTRIC_POWER_DEMAND_UNIT);	
 	}
-	public void setCumulativeMaximumElectricPowerDemandUnit(MeasurementUnit msg) {
+	public void setCumulativeMaximumElectricPowerDemandUnit(String msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_CUMULATIVE_MAXIMUM_ELECTRIC_POWER_DEMAND_UNIT, msg);	
 	}
@@ -88,17 +87,17 @@ public class HighVoltageSmartElectricEnergy extends EchonetSuperDevice{
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_MEASURED_ELECTRIC_POWER_DEMAND_HISTORICAL_DATA, msg);	
 	}
-	public MeasurementUnit getElectricPowerDemandUnit() {
-		return (MeasurementUnit) getProperty(PROPERTY_HAS_ELECTRIC_POWER_DEMAND_UNIT);	
+	public String getElectricPowerDemandUnit() {
+		return (String) getProperty(PROPERTY_HAS_ELECTRIC_POWER_DEMAND_UNIT);	
 	}
-	public void setElectricPowerDemandUnit(MeasurementUnit msg) {
+	public void setElectricPowerDemandUnit(String msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_ELECTRIC_POWER_DEMAND_UNIT, msg);	
 	}
-	public MeasuredValue getNumberOfEffectiveDigitsForElectricPowerDemand() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_NUMBER_OF_EFFECTIVE_DIGITS_FOR_ELECTRIC_POWER_DEMAND);	
+	public Integer getNumberOfEffectiveDigitsForElectricPowerDemand() {
+		return (Integer) getProperty(PROPERTY_HAS_NUMBER_OF_EFFECTIVE_DIGITS_FOR_ELECTRIC_POWER_DEMAND);	
 	}
-	public void setNumberOfEffectiveDigitsForElectricPowerDemand(MeasuredValue msg) {
+	public void setNumberOfEffectiveDigitsForElectricPowerDemand(Integer msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_NUMBER_OF_EFFECTIVE_DIGITS_FOR_ELECTRIC_POWER_DEMAND, msg);	
 	}
@@ -130,10 +129,10 @@ public class HighVoltageSmartElectricEnergy extends EchonetSuperDevice{
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_MEASURED_CUMULATIVE_ACTIVE_ELECTRIC_ENERGY_AMOUNT_HISTORICAL_DATA, msg);	
 	}
-	public MeasurementUnit getMeasuredCumulativeActiveElectricEnergyAmountUnit() {
-		return (MeasurementUnit) getProperty(PROPERTY_HAS_CUMULATIVE_ACTIVE_ELECTRIC_ENERGY_AMOUNT_UNIT);	
+	public String getMeasuredCumulativeActiveElectricEnergyAmountUnit() {
+		return (String) getProperty(PROPERTY_HAS_CUMULATIVE_ACTIVE_ELECTRIC_ENERGY_AMOUNT_UNIT);	
 	}
-	public void setMeasuredCumulativeActiveElectricEnergyAmountUnit(MeasurementUnit msg) {
+	public void setMeasuredCumulativeActiveElectricEnergyAmountUnit(String msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_CUMULATIVE_ACTIVE_ELECTRIC_ENERGY_AMOUNT_UNIT, msg);	
 	}
@@ -179,10 +178,10 @@ public class HighVoltageSmartElectricEnergy extends EchonetSuperDevice{
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_FIXED_DAY, msg);	
 	}
-	public MeasurementUnit getMultiplyingFactorForCoefficient() {
-		return (MeasurementUnit) getProperty(PROPERTY_HAS_MULTIPLYING_FACTOR_FOR_COEFFICIENT);	
+	public MeasuredValue getMultiplyingFactorForCoefficient() {
+		return (MeasuredValue) getProperty(PROPERTY_HAS_MULTIPLYING_FACTOR_FOR_COEFFICIENT);	
 	}
-	public void setMultiplyingFactorForCoefficient(MeasurementUnit msg) {
+	public void setMultiplyingFactorForCoefficient(MeasuredValue msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_MULTIPLYING_FACTOR_FOR_COEFFICIENT, msg);	
 	}

@@ -25,7 +25,7 @@ public class CombinationMicrowaveOven extends EchonetSuperDevice{
 	public static final String PROPERTY_HAS_AUTOMATIC_HEATING_LEVEL_SETTING= EchonetOntology.NAMESPACE + "HasAutomaticHeatingLevelSetting";
 	public static final String PROPERTY_HAS_AUTOMATIC_HEATING_MENU_SETTING= EchonetOntology.NAMESPACE + "HasAutomaticHeatingMenuSetting";
 	public static final String PROPERTY_HAS_OVEN_MODE_SETTING= EchonetOntology.NAMESPACE + "HasOvenModeSetting";
-	public static final String PROPERTY_HAS_OVEN_PREHEATING__SETTING= EchonetOntology.NAMESPACE + "HasOvenPreheatingSetting";
+	public static final String PROPERTY_HAS_OVEN_PREHEATING_SETTING= EchonetOntology.NAMESPACE + "HasOvenPreheatingSetting";
 	public static final String PROPERTY_HAS_FERMENTING_MODE_SETTING= EchonetOntology.NAMESPACE + "HasFermentingModeSetting";
 	public static final String PROPERTY_HAS_CHAMPER_TEMPERATURE_SETTING= EchonetOntology.NAMESPACE + "HasChamperTemperatureSetting";
 	public static final String PROPERTY_HAS_FOOD_TEMPERATURE_SETTING= EchonetOntology.NAMESPACE + "HasFoodTemperatureSetting";
@@ -130,11 +130,11 @@ public class CombinationMicrowaveOven extends EchonetSuperDevice{
 			changeProperty(PROPERTY_HAS_FERMENTING_MODE_SETTING, msg);	
 	}
 	public OperationStatusValue getOvenPreheatingSetting() {
-		return (OperationStatusValue) getProperty(PROPERTY_HAS_OVEN_PREHEATING__SETTING);	
+		return (OperationStatusValue) getProperty(PROPERTY_HAS_OVEN_PREHEATING_SETTING);	
 	}
 	public void setOvenPreheatingSetting(OperationStatusValue msg) {
 		if(msg !=null) 
-			changeProperty(PROPERTY_HAS_OVEN_PREHEATING__SETTING, msg);	
+			changeProperty(PROPERTY_HAS_OVEN_PREHEATING_SETTING, msg);	
 	}
 	public OperationModeSettingValue getOvenModeSetting() {
 		return (OperationModeSettingValue) getProperty(PROPERTY_HAS_OVEN_MODE_SETTING);	

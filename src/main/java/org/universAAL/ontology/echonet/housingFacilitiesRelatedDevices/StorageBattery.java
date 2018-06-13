@@ -5,6 +5,7 @@ package org.universAAL.ontology.echonet.housingFacilitiesRelatedDevices;
 import org.universAAL.ontology.echonet.EchonetOntology;
 import org.universAAL.ontology.echonet.EchonetSuperDevice;
 import org.universAAL.ontology.echonet.values.MeasuredValue;
+import org.universAAL.ontology.echonet.values.MinMaxSettingValue;
 import org.universAAL.ontology.echonet.values.OperationFunctionSettingValue;
 import org.universAAL.ontology.echonet.values.EchonetDeviceGroupCodeValue;
 import org.universAAL.ontology.echonet.values.OperationModeSettingValue;
@@ -20,8 +21,8 @@ public class StorageBattery extends EchonetSuperDevice{
 	public static final String PROPERTY_HAS_AC_DISCHARGEABLE_ELECTRIC_ENERGY = EchonetOntology.NAMESPACE + "HasACDischargableElectricEnergy";
 	public static final String PROPERTY_HAS_AC_CHARGE_UPPER_LIMIT_SETTING = EchonetOntology.NAMESPACE + "HasACChargeUpperLimitSetting";
 	public static final String PROPERTY_HAS_AC_DISCHARGE_LOWER_LIMIT_SETTING = EchonetOntology.NAMESPACE + "HasACDischargeLowerLimitSetting";
-	public static final String PROPERTY_HAS_AC_MEASURE_CUMMULATIVE_CHARGING_ELECTRIC_ENERGY = EchonetOntology.NAMESPACE + "HasACMeasuredCummulativeChargingElectricEnergy";
-	public static final String PROPERTY_HAS_AC_MEASURE_CUMMULATIVE_DISCHARGING_ELECTRIC_ENERGY = EchonetOntology.NAMESPACE + "HasACMeasuredCummulativeDischargingElectricEnergy";
+	public static final String PROPERTY_HAS_AC_MEASURED_CUMULATIVE_CHARGING_ELECTRIC_ENERGY = EchonetOntology.NAMESPACE + "HasACMeasuredCumulativeChargingElectricEnergy";
+	public static final String PROPERTY_HAS_AC_MEASURED_CUMULATIVE_DISCHARGING_ELECTRIC_ENERGY = EchonetOntology.NAMESPACE + "HasACMeasuredCumulativeDischargingElectricEnergy";
 	public static final String PROPERTY_HAS_AC_CHARGE_AMOUNT_SETTING_VALUE = EchonetOntology.NAMESPACE + "HasACChargeAmountSettingValue";
 	public static final String PROPERTY_HAS_AC_DISCHARGE_AMOUNT_SETTING_VALUE = EchonetOntology.NAMESPACE + "HasACDishargeAmountSettingValue";
 	public static final String PROPERTY_HAS_MINIMUM_MAXIMUM_CHARGING_ELECTRIC_POWER = EchonetOntology.NAMESPACE + "HasMinimumMaximumChargingElectricPower";
@@ -39,14 +40,17 @@ public class StorageBattery extends EchonetSuperDevice{
 	public static final String PROPERTY_HAS_MEASURED_INSTANTANEOUS_CHARGING_DISCHARGING_ELECTRIC_POWER = EchonetOntology.NAMESPACE + "HasMeasuredInstantaneousChargingDischargingElectricPower";
 	public static final String PROPERTY_HAS_MEASURED_INSTANTANEOUS_CHARGING_DISCHARGING_ELECTRIC_CURRENT = EchonetOntology.NAMESPACE + "HasMeasuredInstantaneousChargingDischargingElectricCurrent";
 	public static final String PROPERTY_HAS_MEASURED_INSTANTANEOUS_CHARGING_DISCHARGING_ELECTRIC_VOLTAGE = EchonetOntology.NAMESPACE + "HasMeasuredInstantaneousChargingDischargingElectricVoltage";
-	public static final String PROPERTY_HAS_MEASURED_CUMMULATIVE_CHARGING_ELECTRIC_ENERGY = EchonetOntology.NAMESPACE + "HasMeasuredCummulativeChargingElectricEnergy";
-	public static final String PROPERTY_RESET_MEASURED_CUMMULATIVE_CHARGING_ELECTRIC_ENERGY = EchonetOntology.NAMESPACE + "ResettingMeasuredCummulativeChargingDischargingElectricEnergy";
-	public static final String PROPERTY_HAS_MEASURED_CUMMULATIVE_DISCHARGING_ELECTRIC_ENERGY = EchonetOntology.NAMESPACE + "HasMeasuredCummulativeDischargingElectricEnergy";
-	public static final String PROPERTY_RESET_MEASURED_CUMMULATIVE_DISCHARGING_ELECTRIC_ENERGY = EchonetOntology.NAMESPACE + "ResettingMeasuredCummulativeDischargingDischargingElectricEnergy";
+	public static final String PROPERTY_HAS_MEASURED_CUMULATIVE_CHARGING_ELECTRIC_ENERGY = EchonetOntology.NAMESPACE + "HasMeasuredCumulativeChargingElectricEnergy";
+	public static final String PROPERTY_RESET_MEASURED_CUMULATIVE_CHARGING_ELECTRIC_ENERGY = EchonetOntology.NAMESPACE + "ResettingMeasuredCumulativeChargingDischargingElectricEnergy";
+	public static final String PROPERTY_HAS_MEASURED_CUMULATIVE_DISCHARGING_ELECTRIC_ENERGY = EchonetOntology.NAMESPACE + "HasMeasuredCumulativeDischargingElectricEnergy";
+	public static final String PROPERTY_RESET_MEASURED_CUMULATIVE_DISCHARGING_ELECTRIC_ENERGY = EchonetOntology.NAMESPACE + "ResettingMeasuredCumulativeDischargingDischargingElectricEnergy";
 	public static final String PROPERTY_HAS_OPERATION_MODE_SETTING = EchonetOntology.NAMESPACE + "HasOperationModeSetting";
 	public static final String PROPERTY_HAS_SYSTEM_INTERCONNECT_TYPE = EchonetOntology.NAMESPACE + "HasSystemInterconnectType";
 	public static final String PROPERTY_HAS_MINIMUM_MAXIMUM_CHARGING_ELECTRIC_POWER_INDEPENDENT = EchonetOntology.NAMESPACE + "HasMinimumMaximumChargingElectricPowerIndependent";
 	public static final String PROPERTY_HAS_MINIMUM_MAXIMUM_CHARGING_ELECTRIC_CURRENT_INDEPENDENT = EchonetOntology.NAMESPACE + "HasMinimumMaximumChargingElectricCurrentIndependent";
+	public static final String PROPERTY_HAS_MINIMUM_MAXIMUM_DISCHARGING_ELECTRIC_POWER_INDEPENDENT = EchonetOntology.NAMESPACE + "HasMinimumMaximumDisChargingElectricPowerIndependent";
+	public static final String PROPERTY_HAS_MINIMUM_MAXIMUM_DISCHARGING_ELECTRIC_CURRENT_INDEPENDENT = EchonetOntology.NAMESPACE + "HasMinimumMaximumDisChargingElectricCurrentIndependent";
+	
 	public static final String PROPERTY_HAS_CHARGING_DISCHARGING_AMOUNT_SETTING_1 = EchonetOntology.NAMESPACE + "HasChargingDischargingAmountSetting1";
 	public static final String PROPERTY_HAS_CHARGING_DISCHARGING_AMOUNT_SETTING_2 = EchonetOntology.NAMESPACE + "HasChargingDischargingAmountSetting2";
 	public static final String PROPERTY_HAS_REMAINING_STORED_ELECTRIC_1 = EchonetOntology.NAMESPACE + "HasRemainingStoredElectric1";
@@ -127,10 +131,10 @@ public class StorageBattery extends EchonetSuperDevice{
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_CHARGING_AMOUNT_SETTING_1, msg);	
 	}
-	public MeasuredValue getBatteryType() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_BATTERY_TYPE);	
+	public String getBatteryType() {
+		return (String) getProperty(PROPERTY_HAS_BATTERY_TYPE);	
 	}
-	public void setBatteryType(MeasuredValue msg) {
+	public void setBatteryType(String msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_BATTERY_TYPE, msg);	
 	}
@@ -176,17 +180,31 @@ public class StorageBattery extends EchonetSuperDevice{
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_CHARGING_DISCHARGING_AMOUNT_SETTING_1, msg);	
 	}
-	public String getMinimumMaximumChargingElectricCurrentIndependent() {
-		return (String) getProperty(PROPERTY_HAS_MINIMUM_MAXIMUM_CHARGING_ELECTRIC_CURRENT_INDEPENDENT);	
+	public MinMaxSettingValue getMinimumMaximumDisChargingElectricCurrentIndependent() {
+		return (MinMaxSettingValue) getProperty(PROPERTY_HAS_MINIMUM_MAXIMUM_DISCHARGING_ELECTRIC_CURRENT_INDEPENDENT);	
 	}
-	public void setMinimumMaximumChargingElectricCurrentIndependent(String msg) {
+	public void setMinimumMaximumDisChargingElectricCurrentIndependent(MinMaxSettingValue msg) {
+		if(msg !=null) 
+			changeProperty(PROPERTY_HAS_MINIMUM_MAXIMUM_DISCHARGING_ELECTRIC_CURRENT_INDEPENDENT, msg);	
+	}
+	public MinMaxSettingValue getMinimumMaximumDisChargingElectricPowerIndependent() {
+		return (MinMaxSettingValue) getProperty(PROPERTY_HAS_MINIMUM_MAXIMUM_DISCHARGING_ELECTRIC_POWER_INDEPENDENT);	
+	}
+	public void setMinimumMaximumDisChargingElectricPowerIndependent(MinMaxSettingValue msg) {
+		if(msg !=null) 
+			changeProperty(PROPERTY_HAS_MINIMUM_MAXIMUM_DISCHARGING_ELECTRIC_POWER_INDEPENDENT, msg);	
+	}
+	public MinMaxSettingValue getMinimumMaximumChargingElectricCurrentIndependent() {
+		return (MinMaxSettingValue) getProperty(PROPERTY_HAS_MINIMUM_MAXIMUM_CHARGING_ELECTRIC_CURRENT_INDEPENDENT);	
+	}
+	public void setMinimumMaximumChargingElectricCurrentIndependent(MinMaxSettingValue msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_MINIMUM_MAXIMUM_CHARGING_ELECTRIC_CURRENT_INDEPENDENT, msg);	
 	}
-	public String getMinimumMaximumChargingElectricPowerIndependent() {
-		return (String) getProperty(PROPERTY_HAS_MINIMUM_MAXIMUM_CHARGING_ELECTRIC_POWER_INDEPENDENT);	
+	public MinMaxSettingValue getMinimumMaximumChargingElectricPowerIndependent() {
+		return (MinMaxSettingValue) getProperty(PROPERTY_HAS_MINIMUM_MAXIMUM_CHARGING_ELECTRIC_POWER_INDEPENDENT);	
 	}
-	public void setMinimumMaximumChargingElectricPowerIndependent(String msg) {
+	public void setMinimumMaximumChargingElectricPowerIndependent(MinMaxSettingValue msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_MINIMUM_MAXIMUM_CHARGING_ELECTRIC_POWER_INDEPENDENT, msg);	
 	}
@@ -204,19 +222,19 @@ public class StorageBattery extends EchonetSuperDevice{
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_OPERATION_MODE_SETTING, msg);	
 	}
-	public MeasuredValue getMeasuredCummulativeChargingElectricEnergy() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_MEASURED_CUMMULATIVE_CHARGING_ELECTRIC_ENERGY);	
+	public MeasuredValue getMeasuredCumulativeChargingElectricEnergy() {
+		return (MeasuredValue) getProperty(PROPERTY_HAS_MEASURED_CUMULATIVE_CHARGING_ELECTRIC_ENERGY);	
 	}
-	public void setMeasuredCummulativeChargingElectricEnergy(MeasuredValue msg) {
+	public void setMeasuredCumulativeChargingElectricEnergy(MeasuredValue msg) {
 		if(msg !=null) 
-			changeProperty(PROPERTY_HAS_MEASURED_CUMMULATIVE_CHARGING_ELECTRIC_ENERGY, msg);	
+			changeProperty(PROPERTY_HAS_MEASURED_CUMULATIVE_CHARGING_ELECTRIC_ENERGY, msg);	
 	}
-	public MeasuredValue getMeasuredCummulativeDischargingElectricEnergy() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_MEASURED_CUMMULATIVE_DISCHARGING_ELECTRIC_ENERGY);	
+	public MeasuredValue getMeasuredCumulativeDischargingElectricEnergy() {
+		return (MeasuredValue) getProperty(PROPERTY_HAS_MEASURED_CUMULATIVE_DISCHARGING_ELECTRIC_ENERGY);	
 	}
-	public void setMeasuredCummulativeDischargingElectricEnergy(MeasuredValue msg) {
+	public void setMeasuredCumulativeDischargingElectricEnergy(MeasuredValue msg) {
 		if(msg !=null) 
-			changeProperty(PROPERTY_HAS_MEASURED_CUMMULATIVE_DISCHARGING_ELECTRIC_ENERGY, msg);	
+			changeProperty(PROPERTY_HAS_MEASURED_CUMULATIVE_DISCHARGING_ELECTRIC_ENERGY, msg);	
 	}
 	
 	public MeasuredValue getMeasuredInstantaneousChargingDischargingElectricVoltage() {
@@ -298,31 +316,31 @@ public class StorageBattery extends EchonetSuperDevice{
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_RE_INTERCONNECTION_PERMISSION_SETTING, msg);	
 	}
-	public String getMinimumMaximumDischargingCurrent() {
-		return (String) getProperty(PROPERTY_HAS_MINIMUM_MAXIMUM_DISCHARGING_CURRENT);	
+	public MinMaxSettingValue getMinimumMaximumDischargingCurrent() {
+		return (MinMaxSettingValue) getProperty(PROPERTY_HAS_MINIMUM_MAXIMUM_DISCHARGING_CURRENT);	
 	}
-	public void setMinimumMaximumDischargingCurrent(String msg) {
+	public void setMinimumMaximumDischargingCurrent(MinMaxSettingValue msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_MINIMUM_MAXIMUM_DISCHARGING_CURRENT, msg);	
 	}
-	public String getMinimumMaximumChargingCurrent() {
-		return (String) getProperty(PROPERTY_HAS_MINIMUM_MAXIMUM_CHARGING_CURRENT);	
+	public MinMaxSettingValue getMinimumMaximumChargingCurrent() {
+		return (MinMaxSettingValue) getProperty(PROPERTY_HAS_MINIMUM_MAXIMUM_CHARGING_CURRENT);	
 	}
-	public void setMinimumMaximumChargingCurrent(String msg) {
+	public void setMinimumMaximumChargingCurrent(MinMaxSettingValue msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_MINIMUM_MAXIMUM_CHARGING_CURRENT, msg);	
 	}
-	public String getMinimumMaximumDischargingElectricPower() {
-		return (String) getProperty(PROPERTY_HAS_MINIMUM_MAXIMUM_DISCHARGING_ELECTRIC_POWER);	
+	public MinMaxSettingValue getMinimumMaximumDischargingElectricPower() {
+		return (MinMaxSettingValue) getProperty(PROPERTY_HAS_MINIMUM_MAXIMUM_DISCHARGING_ELECTRIC_POWER);	
 	}
-	public void setMinimumMaximumDischargingElectricPower(String msg) {
+	public void setMinimumMaximumDischargingElectricPower(MinMaxSettingValue msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_MINIMUM_MAXIMUM_DISCHARGING_ELECTRIC_POWER, msg);	
 	}
-	public String getMinimumMaximumChargingElectricPower() {
-		return (String) getProperty(PROPERTY_HAS_MINIMUM_MAXIMUM_CHARGING_ELECTRIC_POWER);	
+	public MinMaxSettingValue getMinimumMaximumChargingElectricPower() {
+		return (MinMaxSettingValue) getProperty(PROPERTY_HAS_MINIMUM_MAXIMUM_CHARGING_ELECTRIC_POWER);	
 	}
-	public void setMinimumMaximumChargingElectricPower(String msg) {
+	public void setMinimumMaximumChargingElectricPower(MinMaxSettingValue msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_MINIMUM_MAXIMUM_CHARGING_ELECTRIC_POWER, msg);	
 	}
@@ -340,19 +358,19 @@ public class StorageBattery extends EchonetSuperDevice{
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_AC_CHARGE_AMOUNT_SETTING_VALUE, msg);	
 	}
-	public MeasuredValue getACMeasuredCummulativeDischargingElectricEnergy() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_AC_MEASURE_CUMMULATIVE_DISCHARGING_ELECTRIC_ENERGY);	
+	public MeasuredValue getACMeasuredCumulativeDischargingElectricEnergy() {
+		return (MeasuredValue) getProperty(PROPERTY_HAS_AC_MEASURED_CUMULATIVE_DISCHARGING_ELECTRIC_ENERGY);	
 	}
-	public void setACMeasuredCummulativeDischargingElectricEnergy(MeasuredValue msg) {
+	public void setACMeasuredCumulativeDischargingElectricEnergy(MeasuredValue msg) {
 		if(msg !=null) 
-			changeProperty(PROPERTY_HAS_AC_MEASURE_CUMMULATIVE_DISCHARGING_ELECTRIC_ENERGY, msg);	
+			changeProperty(PROPERTY_HAS_AC_MEASURED_CUMULATIVE_DISCHARGING_ELECTRIC_ENERGY, msg);	
 	}
-	public MeasuredValue getACMeasuredCummulativeChargingElectricEnergy() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_AC_MEASURE_CUMMULATIVE_CHARGING_ELECTRIC_ENERGY);	
+	public MeasuredValue getACMeasuredCumulativeChargingElectricEnergy() {
+		return (MeasuredValue) getProperty(PROPERTY_HAS_AC_MEASURED_CUMULATIVE_CHARGING_ELECTRIC_ENERGY);	
 	}
-	public void setACMeasuredCummulativeChargingElectricEnergy(MeasuredValue msg) {
+	public void setACMeasuredCumulativeChargingElectricEnergy(MeasuredValue msg) {
 		if(msg !=null) 
-			changeProperty(PROPERTY_HAS_AC_MEASURE_CUMMULATIVE_CHARGING_ELECTRIC_ENERGY, msg);	
+			changeProperty(PROPERTY_HAS_AC_MEASURED_CUMULATIVE_CHARGING_ELECTRIC_ENERGY, msg);	
 	}
 	public MeasuredValue getACDischargeLowerLimitSetting() {
 		return (MeasuredValue) getProperty(PROPERTY_HAS_AC_DISCHARGE_LOWER_LIMIT_SETTING);	

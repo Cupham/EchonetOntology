@@ -27,7 +27,7 @@ public class LPGasMeter extends EchonetSuperDevice{
 	public static final String PROPERTY_HAS_RESIDUAL_VOLUME_CONTROL_WARNING_LEVEL_3_VALUE= EchonetOntology.NAMESPACE + "HasResidualVolumeControlWarningLevel3Value";
 	public static final String PROPERTY_HAS_SLIGHT_LEAK_TIMER_VALUE_GAS_FLOW_CONTINUATION= EchonetOntology.NAMESPACE + "HasSlightLeakTimerValueGasFlowContinuation";
 	public static final String PROPERTY_HAS_SLIGHT_LEAK_TIMER_VALUE_WITHOUT_PRESSURE_INCREASE= EchonetOntology.NAMESPACE + "HasSlightLeakTimerValueWithoutPressureInscrease";
-	public static final String PROPERTY_HAS_SHUT_OFF_REASON_LOG= EchonetOntology.NAMESPACE + "HasShutOffReasonLog";
+	public static final String PROPERTY_HAS_SHUTOFF_REASON_LOG= EchonetOntology.NAMESPACE + "HasShutOffReasonLog";
 	public static final String PROPERTY_HAS_MAXIMUM_VALUE_OF_SUPPLY_PRESSURE_DATA= EchonetOntology.NAMESPACE + "HasMaximumValueOfSupplyPressureData";
 	public static final String PROPERTY_HAS_MINIMUM_VALUE_OF_SUPPLY_PRESSURE_DATA= EchonetOntology.NAMESPACE + "HasMinimumValueOfSupplyPressureData";
 	public static final String PROPERTY_HAS_CURRENT_VALUE_OF_SUPPLY_PRESSURE_DATA= EchonetOntology.NAMESPACE + "HasCurrentValueOfSupplyPressureData";
@@ -97,11 +97,11 @@ public class LPGasMeter extends EchonetSuperDevice{
 	}
 	
 	public String getShutOffReasonLog() {
-		return (String) getProperty(PROPERTY_HAS_SHUT_OFF_REASON_LOG);	
+		return (String) getProperty(PROPERTY_HAS_SHUTOFF_REASON_LOG);	
 	}	
 	public void setShutOffReasonLog(String msg) {
 		if(msg !=null) 
-			changeProperty(PROPERTY_HAS_SHUT_OFF_REASON_LOG, msg);	
+			changeProperty(PROPERTY_HAS_SHUTOFF_REASON_LOG, msg);	
 	}
 	public MeasuredValue getSlightLeakTimerValueWithoutPressureInscrease() {
 		return (MeasuredValue) getProperty(PROPERTY_HAS_SLIGHT_LEAK_TIMER_VALUE_WITHOUT_PRESSURE_INCREASE);	

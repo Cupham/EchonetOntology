@@ -6,7 +6,6 @@ import org.universAAL.ontology.echonet.EchonetOntology;
 import org.universAAL.ontology.echonet.EchonetSuperDevice;
 import org.universAAL.ontology.echonet.values.EchonetDeviceGroupCodeValue;
 import org.universAAL.ontology.echonet.values.MeasuredValue;
-import org.universAAL.ontology.echonet.values.MeasurementUnit;
 
 public class LowVoltageSmartElectricEnergy extends EchonetSuperDevice{
 	public static final String MY_URI = EchonetOntology.NAMESPACE + "LowVoltageSmartElectricEnergy";
@@ -23,8 +22,7 @@ public class LowVoltageSmartElectricEnergy extends EchonetSuperDevice{
 	public static final String PROPERTY_HAS_MEASURED_INSTANTANEOUS_CURRENT= EchonetOntology.NAMESPACE + "HasMeasuredInstantanenousCurrent";
 	public static final String PROPERTY_HAS_CUMULATIVE_ELECTRIC_ENERGY_AMOUNT_MEASURED_AT_FIXED_TIME_NORMAL_DIRECTION = EchonetOntology.NAMESPACE + "HasCumulativeElectricEnergyAmountMeasuredAtFixedTime_NormalDirection";
 	public static final String PROPERTY_HAS_CUMULATIVE_ELECTRIC_ENERGY_AMOUNT_MEASURED_AT_FIXED_TIME_REVERSED_DIRECTION = EchonetOntology.NAMESPACE + "HasCumulativeElectricEnergyAmountMeasuredAtFixedTime_ReversedDirection";
-	public static final String PROPERTY_HAS_MEASURED_CUMULATIVE_ELECTRIC_ENERGY_AMOUNT_HISTORICAL_DATA_2_NORMAL_DIRECTION = EchonetOntology.NAMESPACE + "HasMeasuredCumulativeElectricEnergyAmountHistoricalData2_NormalDirection";
-	public static final String PROPERTY_HAS_MEASURED_CUMULATIVE_ELECTRIC_ENERGY_AMOUNT_HISTORICAL_DATA_2_REVERSE_DIRECTION = EchonetOntology.NAMESPACE + "HasMeasuredCumulativeElectricEnergyAmountHistoricalData2_ReversedDirection";
+	public static final String PROPERTY_HAS_MEASURED_CUMULATIVE_ELECTRIC_ENERGY_AMOUNT_HISTORICAL_DATA_2 = EchonetOntology.NAMESPACE + "HasMeasuredCumulativeElectricEnergyAmountHistoricalData2";
 	public static final String PROPERTY_HAS_DAY_TO_RETRIVE_MEASURED_CUMULATIVE_ELECTRIC_ENERGY_2 = EchonetOntology.NAMESPACE + "HasDayToRetrieveMeasuredCumulativeElectricEnergy2";
 
 	public MeasuredValue getDayToRetrieveMeasuredCumulativeElectricEnergy2() {
@@ -34,19 +32,12 @@ public class LowVoltageSmartElectricEnergy extends EchonetSuperDevice{
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_DAY_TO_RETRIVE_MEASURED_CUMULATIVE_ELECTRIC_ENERGY_2, msg);	
 	}
-	public MeasuredValue getMeasuredCumulativeElectricEnergyAmountHistoricalData2_ReversedDirection() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_MEASURED_CUMULATIVE_ELECTRIC_ENERGY_AMOUNT_HISTORICAL_DATA_2_REVERSE_DIRECTION);	
+	public MeasuredValue getMeasuredCumulativeElectricEnergyAmountHistoricalData2() {
+		return (MeasuredValue) getProperty(PROPERTY_HAS_MEASURED_CUMULATIVE_ELECTRIC_ENERGY_AMOUNT_HISTORICAL_DATA_2);	
 	}
-	public void setMeasuredCumulativeElectricEnergyAmountHistoricalData2_ReversedDirection(MeasuredValue msg) {
+	public void setMeasuredCumulativeElectricEnergyAmountHistoricalData2(MeasuredValue msg) {
 		if(msg !=null) 
-			changeProperty(PROPERTY_HAS_MEASURED_CUMULATIVE_ELECTRIC_ENERGY_AMOUNT_HISTORICAL_DATA_2_REVERSE_DIRECTION, msg);	
-	}
-	public MeasuredValue getMeasuredCumulativeElectricEnergyAmountHistoricalData2_NormalDirection() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_MEASURED_CUMULATIVE_ELECTRIC_ENERGY_AMOUNT_HISTORICAL_DATA_2_NORMAL_DIRECTION);	
-	}
-	public void setMeasuredCumulativeElectricEnergyAmountHistoricalData2_NormalDirection(MeasuredValue msg) {
-		if(msg !=null) 
-			changeProperty(PROPERTY_HAS_MEASURED_CUMULATIVE_ELECTRIC_ENERGY_AMOUNT_HISTORICAL_DATA_2_NORMAL_DIRECTION, msg);	
+			changeProperty(PROPERTY_HAS_MEASURED_CUMULATIVE_ELECTRIC_ENERGY_AMOUNT_HISTORICAL_DATA_2, msg);	
 	}
 	public MeasuredValue getCumulativeElectricEnergyAmountMeasuredAtFixedTime_ReversedDirection() {
 		return (MeasuredValue) getProperty(PROPERTY_HAS_CUMULATIVE_ELECTRIC_ENERGY_AMOUNT_MEASURED_AT_FIXED_TIME_REVERSED_DIRECTION);	
@@ -104,10 +95,10 @@ public class LowVoltageSmartElectricEnergy extends EchonetSuperDevice{
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_MEASURED_CUMULATIVE_ELECTRIC_ENERGY_AMOUNT_HISTORICAL_DATA_NORMAL_DIRECTION, msg);	
 	}
-	public MeasurementUnit getMeasuredCumulativeElectricEnergyAmountUnit() {
-		return (MeasurementUnit) getProperty(PROPERTY_HAS_CUMULATIVE_ELECTRIC_ENERGY_AMOUNT_UNIT);	
+	public String getMeasuredCumulativeElectricEnergyAmountUnit() {
+		return (String) getProperty(PROPERTY_HAS_CUMULATIVE_ELECTRIC_ENERGY_AMOUNT_UNIT);	
 	}
-	public void setMeasuredCumulativeElectricEnergyAmountUnit(MeasurementUnit msg) {
+	public void setMeasuredCumulativeElectricEnergyAmountUnit(String msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_CUMULATIVE_ELECTRIC_ENERGY_AMOUNT_UNIT, msg);	
 	}

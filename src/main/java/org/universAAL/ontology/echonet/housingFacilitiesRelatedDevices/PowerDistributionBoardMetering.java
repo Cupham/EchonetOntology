@@ -6,7 +6,6 @@ import org.universAAL.ontology.echonet.EchonetOntology;
 import org.universAAL.ontology.echonet.EchonetSuperDevice;
 import org.universAAL.ontology.echonet.values.EchonetDeviceGroupCodeValue;
 import org.universAAL.ontology.echonet.values.MeasuredValue;
-import org.universAAL.ontology.echonet.values.MeasurementUnit;
 
 public class PowerDistributionBoardMetering extends EchonetSuperDevice{
 	public static final String MY_URI = EchonetOntology.NAMESPACE + "PowerDistributionBoardMetering";
@@ -70,10 +69,8 @@ public class PowerDistributionBoardMetering extends EchonetSuperDevice{
 								EchonetOntology.NAMESPACE + "HasChannelRangeForCummulativeAmountOfElectricPowerConsumptionMeasurement_Duplex";
 	public static final String PROPERTY_HAS_MEASURED_CUMMULATIVE_AMOUNT_OF_ELECTRIC_POWER_CONSUMPTION_LIST_DUPLEX= 
 								EchonetOntology.NAMESPACE + "HasMeasuredCummulativeAmountOfElectricPowerConsumptionList_Duplex";
-	public static final String PROPERTY_HAS_CHANNEL_RANGE_FOR_INSTANTANEOUS_CURRENT_MEASUREMENT_DUPPLEX= 
-								EchonetOntology.NAMESPACE + "HasChannelRangeForInstantaneousCurrentMeasurement_Duplex";
 	public static final String PROPERTY_HAS_CHANNEL_RANGE_FOR_INSTANTANEOUS_CURRENT_MEASUREMENT_DUPLEX= 
-								EchonetOntology.NAMESPACE + "HasChannelRangeForInstantaneousCurrentMeasurement_dumplex";
+								EchonetOntology.NAMESPACE + "HasChannelRangeForInstantaneousCurrentMeasurement_Duplex";
 	public static final String PROPERTY_HAS_MEASURED_INSTANTANEOUS_CURRENT_LIST_DUPLEX= EchonetOntology.NAMESPACE + "HasMeasuredInstantaneousCurrentList_Duplex";
 	public static final String PROPERTY_HAS_CHANNEL_RANGE_FOR_INSTANTANEOUS_POWER_CONSUMPTION_MEASUREMENT_DUPLEX= 
 								EchonetOntology.NAMESPACE + "HasChannelRangeForInstantaneousPowerConsumptionMeasurement_Duplex";
@@ -114,13 +111,6 @@ public class PowerDistributionBoardMetering extends EchonetSuperDevice{
 	public void setChannelRangeForInstantaneousPowerConsumptionMeasurement_Duplex(MeasuredValue msg) {
 		if(msg !=null) 
 				changeProperty(PROPERTY_HAS_CHANNEL_RANGE_FOR_INSTANTANEOUS_POWER_CONSUMPTION_MEASUREMENT_DUPLEX, msg);	
-	}
-	public MeasuredValue getChannelRangeForInstantaneousCurrentMeasurement_Duplex() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_CHANNEL_RANGE_FOR_INSTANTANEOUS_CURRENT_MEASUREMENT_DUPPLEX);	
-	}
-	public void setChannelRangeForInstantaneousCurrentMeasurement_Duplex(MeasuredValue msg) {
-		if(msg !=null) 
-				changeProperty(PROPERTY_HAS_CHANNEL_RANGE_FOR_INSTANTANEOUS_CURRENT_MEASUREMENT_DUPPLEX, msg);	
 	}
 	public MeasuredValue getMeasuredCummulativeAmountOfElectricPowerConsumptionList_Duplex() {
 		return (MeasuredValue) getProperty(PROPERTY_HAS_MEASURED_CUMMULATIVE_AMOUNT_OF_ELECTRIC_POWER_CONSUMPTION_LIST_DUPLEX);	
@@ -462,10 +452,10 @@ public class PowerDistributionBoardMetering extends EchonetSuperDevice{
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_MEASURED_CUMMULATIVE_ELECTRIC_ENERGY_AMOUNT_HISTORICAL_DATA_NORMAL_DIRECTION, msg);	
 	}
-	public MeasurementUnit getMeasuredCummulativeElectricEnergyAmountUnit() {
-		return (MeasurementUnit) getProperty(PROPERTY_HAS_CUMMULATIVE_ELECTRIC_ENERGY_AMOUNT_UNIT);	
+	public String getMeasuredCummulativeElectricEnergyAmountUnit() {
+		return (String) getProperty(PROPERTY_HAS_CUMMULATIVE_ELECTRIC_ENERGY_AMOUNT_UNIT);	
 	}
-	public void setMeasuredCummulativeElectricEnergyAmountUnit(MeasurementUnit msg) {
+	public void setMeasuredCummulativeElectricEnergyAmountUnit(String msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_CUMMULATIVE_ELECTRIC_ENERGY_AMOUNT_UNIT, msg);	
 	}

@@ -78,7 +78,7 @@ public class CookingHeater extends EchonetSuperDevice{
 	public OperationStatusValue getHeatingStatus() {
 		return (OperationStatusValue) getProperty(PROPERTY_HAS_HEATING_STATUS);	
 	}
-	public void setHeatingStatus(OperationStatusValue msg) {
+	public void setHeatingStatus(OperationStateSettingValue msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_HEATING_STATUS, msg);	
 	}

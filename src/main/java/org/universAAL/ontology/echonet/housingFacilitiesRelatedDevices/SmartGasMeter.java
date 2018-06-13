@@ -6,7 +6,6 @@ import org.universAAL.ontology.echonet.EchonetOntology;
 import org.universAAL.ontology.echonet.EchonetSuperDevice;
 import org.universAAL.ontology.echonet.values.EchonetDeviceGroupCodeValue;
 import org.universAAL.ontology.echonet.values.MeasuredValue;
-import org.universAAL.ontology.echonet.values.MeasurementUnit;
 import org.universAAL.ontology.echonet.values.OccurenceStatusValue;
 import org.universAAL.ontology.echonet.values.OperationStatusValue;
 import org.universAAL.ontology.echonet.values.TypeClassificationValue;
@@ -15,10 +14,10 @@ public class SmartGasMeter extends EchonetSuperDevice{
 	public static final String MY_URI = EchonetOntology.NAMESPACE + "SmartGasMetter";
 	public static final String PROPERTY_HAS_GAS_METTER_CLASSIFICATION_SETTING = EchonetOntology.NAMESPACE + "HasGasMetterClassificationSetting";
 	public static final String PROPERTY_HAS_OWNER_CLASSIFICATION = EchonetOntology.NAMESPACE + "HasOwnerClassification";
-	public static final String PROPERTY_HAS_MEASURED_CUMMULATIVE_GAS_CONSUMPTION = EchonetOntology.NAMESPACE + "HasMeasuredCummulativeGasConsumption";
-	public static final String PROPERTY_HAS_MEASURED_CUMMULATIVE_GAS_CONSUMPTION_UNIT = EchonetOntology.NAMESPACE + "HasMeasuredCummulativeGasConsumptionUnit";
-	public static final String PROPERTY_HAS_MEASURED_CUMMULATIVE_GAS_CONSUMPTION_HISTORICAL_DATA = EchonetOntology.NAMESPACE + "HasMeasuredCummulativeGasConsumptionHistoricalData";
-	public static final String PROPERTY_HAS_DAY_TO_RETRIEVE_CUMMULATIVE_GAS_CONSUMPTION_HISTORICAL_DATA = EchonetOntology.NAMESPACE + "HasDayToRetrieveMeasuredCummulativeGasConsumptionHistoricalData";
+	public static final String PROPERTY_HAS_MEASURED_CUMULATIVE_GAS_CONSUMPTION = EchonetOntology.NAMESPACE + "HasMeasuredCumulativeGasConsumption";
+	public static final String PROPERTY_HAS_MEASURED_CUMULATIVE_GAS_CONSUMPTION_UNIT = EchonetOntology.NAMESPACE + "HasMeasuredCumulativeGasConsumptionUnit";
+	public static final String PROPERTY_HAS_MEASURED_CUMULATIVE_GAS_CONSUMPTION_HISTORICAL_DATA = EchonetOntology.NAMESPACE + "HasMeasuredCumulativeGasConsumptionHistoricalData";
+	public static final String PROPERTY_HAS_DAY_TO_RETRIEVE_CUMULATIVE_GAS_CONSUMPTION_HISTORICAL_DATA = EchonetOntology.NAMESPACE + "HasDayToRetrieveMeasuredCumulativeGasConsumptionHistoricalData";
 	public static final String PROPERTY_HAS_DETECTION_OF_ABNORMAL_VALUE_IN_METERING_DATA = EchonetOntology.NAMESPACE + "HasDetectionOfAbnormalValueInMetterData";
 	public static final String PROPERTY_HAS_SECURITY_DATA_INFORMATION = EchonetOntology.NAMESPACE + "HasSecurityDataInformation";
 	public static final String PROPERTY_HAS_ID_NUMBER_SETTING = EchonetOntology.NAMESPACE + "HasIDNumberSetting";
@@ -28,23 +27,23 @@ public class SmartGasMeter extends EchonetSuperDevice{
 	public static final String PROPERTY_HAS_EMERGENCY_CLOSURE_OF_SHUTOFF_VALVE = EchonetOntology.NAMESPACE + "HasEmergencyClosureOfShutoffValve";
 	public static final String PROPERTY_HAS_SHUTOFF_VALVE_STATUS = EchonetOntology.NAMESPACE + "HasShutoffValveStatus";
 	public static final String PROPERTY_HAS_HISTORICAL_DATA_OF_SHUTOFF_REASONS = EchonetOntology.NAMESPACE + "HasHistoricalDataOfShutoffReasons";
-	public static final String PROPERTY_HAS_MEASURED_CUMMULATIVE_GAS_CONSUMPTION_INFORMATION_DATE_TIME_INCLUDED = EchonetOntology.NAMESPACE + "HasMeasuredCummulativeGasConsumptionInformationDateTimeIncluded";
-	public static final String PROPERTY_HAS_MEASURED_CUMMULATIVE_GAS_CONSUMPTION_HISTORICAL_INFORMATION_DATE_TIME_INCLUDED = EchonetOntology.NAMESPACE + "HasMeasuredCummulativeGasConsumptionHistoricalInformationDateTimeIncluded";
+	public static final String PROPERTY_HAS_MEASURED_CUMULATIVE_GAS_CONSUMPTION_INFORMATION_DATE_TIME_INCLUDED = EchonetOntology.NAMESPACE + "HasMeasuredCumulativeGasConsumptionInformationDateTimeIncluded";
+	public static final String PROPERTY_HAS_MEASURED_CUMULATIVE_GAS_CONSUMPTION_HISTORICAL_INFORMATION_DATE_TIME_INCLUDED = EchonetOntology.NAMESPACE + "HasMeasuredCumulativeGasConsumptionHistoricalInformationDateTimeIncluded";
 	
 	
-	public MeasuredValue getMeasuredCummulativeGasConsumptionHistoricalInformationDateTimeIncluded() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_MEASURED_CUMMULATIVE_GAS_CONSUMPTION_HISTORICAL_INFORMATION_DATE_TIME_INCLUDED);	
+	public MeasuredValue getMeasuredCumulativeGasConsumptionHistoricalInformationDateTimeIncluded() {
+		return (MeasuredValue) getProperty(PROPERTY_HAS_MEASURED_CUMULATIVE_GAS_CONSUMPTION_HISTORICAL_INFORMATION_DATE_TIME_INCLUDED);	
 	}
-	public void setMeasuredCummulativeGasConsumptionHistoricalInformationDateTimeIncluded(MeasuredValue msg) {
+	public void setMeasuredCumulativeGasConsumptionHistoricalInformationDateTimeIncluded(MeasuredValue msg) {
 		if(msg !=null) 
-			changeProperty(PROPERTY_HAS_MEASURED_CUMMULATIVE_GAS_CONSUMPTION_HISTORICAL_INFORMATION_DATE_TIME_INCLUDED, msg);	
+			changeProperty(PROPERTY_HAS_MEASURED_CUMULATIVE_GAS_CONSUMPTION_HISTORICAL_INFORMATION_DATE_TIME_INCLUDED, msg);	
 	}
-	public MeasuredValue getMeasuredCummulativeGasConsumptionInformationDateTimeIncluded() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_MEASURED_CUMMULATIVE_GAS_CONSUMPTION_INFORMATION_DATE_TIME_INCLUDED);	
+	public MeasuredValue getMeasuredCumulativeGasConsumptionInformationDateTimeIncluded() {
+		return (MeasuredValue) getProperty(PROPERTY_HAS_MEASURED_CUMULATIVE_GAS_CONSUMPTION_INFORMATION_DATE_TIME_INCLUDED);	
 	}
-	public void setMeasuredCummulativeGasConsumptionInformationDateTimeIncluded(MeasuredValue msg) {
+	public void setMeasuredCumulativeGasConsumptionInformationDateTimeIncluded(MeasuredValue msg) {
 		if(msg !=null) 
-			changeProperty(PROPERTY_HAS_MEASURED_CUMMULATIVE_GAS_CONSUMPTION_INFORMATION_DATE_TIME_INCLUDED, msg);	
+			changeProperty(PROPERTY_HAS_MEASURED_CUMULATIVE_GAS_CONSUMPTION_INFORMATION_DATE_TIME_INCLUDED, msg);	
 	}
 	public String getHistoricalDataOfShutoffReasons() {
 		return (String) getProperty(PROPERTY_HAS_HISTORICAL_DATA_OF_SHUTOFF_REASONS);	
@@ -111,33 +110,33 @@ public class SmartGasMeter extends EchonetSuperDevice{
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_DETECTION_OF_ABNORMAL_VALUE_IN_METERING_DATA, msg);	
 	}
-	public MeasuredValue getDayToRetrieveMeasuredCummulativeGasConsumptionHistoricalData() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_DAY_TO_RETRIEVE_CUMMULATIVE_GAS_CONSUMPTION_HISTORICAL_DATA);	
+	public MeasuredValue getDayToRetrieveMeasuredCumulativeGasConsumptionHistoricalData() {
+		return (MeasuredValue) getProperty(PROPERTY_HAS_DAY_TO_RETRIEVE_CUMULATIVE_GAS_CONSUMPTION_HISTORICAL_DATA);	
 	}
-	public void setDayToRetrieveMeasuredCummulativeGasConsumptionHistoricalData(MeasuredValue msg) {
+	public void setDayToRetrieveMeasuredCumulativeGasConsumptionHistoricalData(MeasuredValue msg) {
 		if(msg !=null) 
-			changeProperty(PROPERTY_HAS_DAY_TO_RETRIEVE_CUMMULATIVE_GAS_CONSUMPTION_HISTORICAL_DATA, msg);	
+			changeProperty(PROPERTY_HAS_DAY_TO_RETRIEVE_CUMULATIVE_GAS_CONSUMPTION_HISTORICAL_DATA, msg);	
 	}
-	public MeasuredValue getMeasuredCummulativeGasConsumptionHistoricalData() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_MEASURED_CUMMULATIVE_GAS_CONSUMPTION_HISTORICAL_DATA);	
+	public MeasuredValue getMeasuredCumulativeGasConsumptionHistoricalData() {
+		return (MeasuredValue) getProperty(PROPERTY_HAS_MEASURED_CUMULATIVE_GAS_CONSUMPTION_HISTORICAL_DATA);	
 	}
-	public void setMeasuredCummulativeGasConsumptionHistoricalData(MeasuredValue msg) {
+	public void setMeasuredCumulativeGasConsumptionHistoricalData(MeasuredValue msg) {
 		if(msg !=null) 
-			changeProperty(PROPERTY_HAS_MEASURED_CUMMULATIVE_GAS_CONSUMPTION_HISTORICAL_DATA, msg);	
+			changeProperty(PROPERTY_HAS_MEASURED_CUMULATIVE_GAS_CONSUMPTION_HISTORICAL_DATA, msg);	
 	}
-	public MeasurementUnit getMeasuredCummulativeGasConsumptionUnit() {
-		return (MeasurementUnit) getProperty(PROPERTY_HAS_MEASURED_CUMMULATIVE_GAS_CONSUMPTION_UNIT);	
+	public String getMeasuredCumulativeGasConsumptionUnit() {
+		return (String) getProperty(PROPERTY_HAS_MEASURED_CUMULATIVE_GAS_CONSUMPTION_UNIT);	
 	}
-	public void setMeasuredCummulativeGasConsumptionUnit(MeasurementUnit msg) {
+	public void setMeasuredCumulativeGasConsumptionUnit(String msg) {
 		if(msg !=null) 
-			changeProperty(PROPERTY_HAS_MEASURED_CUMMULATIVE_GAS_CONSUMPTION_UNIT, msg);	
+			changeProperty(PROPERTY_HAS_MEASURED_CUMULATIVE_GAS_CONSUMPTION_UNIT, msg);	
 	}
-	public MeasuredValue getMeasuredCummulativeGasConsumption() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_MEASURED_CUMMULATIVE_GAS_CONSUMPTION);	
+	public MeasuredValue getMeasuredCumulativeGasConsumption() {
+		return (MeasuredValue) getProperty(PROPERTY_HAS_MEASURED_CUMULATIVE_GAS_CONSUMPTION);	
 	}
-	public void setMeasuredCummulativeGasConsumption(MeasuredValue msg) {
+	public void setMeasuredCumulativeGasConsumption(MeasuredValue msg) {
 		if(msg !=null) 
-			changeProperty(PROPERTY_HAS_MEASURED_CUMMULATIVE_GAS_CONSUMPTION, msg);	
+			changeProperty(PROPERTY_HAS_MEASURED_CUMULATIVE_GAS_CONSUMPTION, msg);	
 	}
 	
 	

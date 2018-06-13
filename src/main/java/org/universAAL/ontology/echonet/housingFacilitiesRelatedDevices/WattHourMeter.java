@@ -6,7 +6,6 @@ import org.universAAL.ontology.echonet.EchonetOntology;
 import org.universAAL.ontology.echonet.EchonetSuperDevice;
 import org.universAAL.ontology.echonet.values.EchonetDeviceGroupCodeValue;
 import org.universAAL.ontology.echonet.values.MeasuredValue;
-import org.universAAL.ontology.echonet.values.MeasurementUnit;
 
 public class WattHourMeter extends EchonetSuperDevice{
 	public static final String MY_URI = EchonetOntology.NAMESPACE + "WattHourMetter";
@@ -31,10 +30,10 @@ public class WattHourMeter extends EchonetSuperDevice{
 			changeProperty(PROPERTY_HAS_CUMMULATIVE_ELECTRIC_ENERGY_MEASUREMENT_LOG_1, msg);	
 	}
 
-	public MeasurementUnit getCummulativeElectricEnergyAmountUnit() {
-		return (MeasurementUnit) getProperty(PROPERTY_HAS_CUMMULATIVE_ELECTRIC_ENERGY_AMOUNT_UNIT);	
+	public String getCummulativeElectricEnergyAmountUnit() {
+		return (String) getProperty(PROPERTY_HAS_CUMMULATIVE_ELECTRIC_ENERGY_AMOUNT_UNIT);	
 	}
-	public void setCummulativeElectricEnergyAmountUnit(MeasurementUnit msg) {
+	public void setCummulativeElectricEnergyAmountUnit(String msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_CUMMULATIVE_ELECTRIC_ENERGY_AMOUNT_UNIT, msg);	
 	}

@@ -47,7 +47,7 @@ public static final String PROPERTY_HAS_B_VALUE = EchonetOntology.NAMESPACE + "H
 		return true;
 	}
 	public int getPropSerializationType(String arg0) {
-		return PROP_SERIALIZATION_OPTIONAL;
+		return PROP_SERIALIZATION_FULL;
 	}
 	public String getClassURI() {
 		return MY_URI;

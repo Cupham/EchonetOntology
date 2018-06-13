@@ -6,7 +6,6 @@ import org.universAAL.ontology.echonet.EchonetOntology;
 import org.universAAL.ontology.echonet.EchonetSuperDevice;
 import org.universAAL.ontology.echonet.values.EchonetDeviceGroupCodeValue;
 import org.universAAL.ontology.echonet.values.MeasuredValue;
-import org.universAAL.ontology.echonet.values.MeasurementUnit;
 import org.universAAL.ontology.echonet.values.OccurenceStatusValue;
 import org.universAAL.ontology.echonet.values.ThresholdLevelValue;
 import org.universAAL.ontology.echonet.values.TypeClassificationValue;
@@ -31,10 +30,10 @@ public class SmartKeroseneMeter extends EchonetSuperDevice{
 	public static final String PROPERTY_HAS_MEASURED_CUMULATIVE_KEROSENE_CONSUMPTION_INFORMATION_DATE_TIME_INCLUDED = EchonetOntology.NAMESPACE + "HasMeasuredCumulativeKeroseneConsumptionInformationDateTimeIncluded";
 	public static final String PROPERTY_HAS_MEASURED_CUMULATIVE_KEROSENE_CONSUMPTION_HISTORICAL_INFORMATION_DATE_TIME_INCLUDED = EchonetOntology.NAMESPACE + "HasMeasuredCumulativeKeroseneConsumptionHistoricalInformationDateTimeIncluded";
 	
-	public MeasurementUnit getMeasuredCumulativeKeroseneConsumptionUnit() {
-		return (MeasurementUnit) getProperty(PROPERTY_HAS_MEASURED_CUMULATIVE_KEROSENE_CONSUMPTION_UNIT);	
+	public String getMeasuredCumulativeKeroseneConsumptionUnit() {
+		return (String) getProperty(PROPERTY_HAS_MEASURED_CUMULATIVE_KEROSENE_CONSUMPTION_UNIT);	
 	}
-	public void setMeasuredCumulativeKeroseneConsumptionUnit(MeasurementUnit msg) {
+	public void setMeasuredCumulativeKeroseneConsumptionUnit(String msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_MEASURED_CUMULATIVE_KEROSENE_CONSUMPTION_UNIT, msg);	
 	}

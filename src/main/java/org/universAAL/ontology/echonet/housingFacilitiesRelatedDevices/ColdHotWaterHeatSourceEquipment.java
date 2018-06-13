@@ -11,8 +11,8 @@ import org.universAAL.ontology.echonet.values.OperationFunctionSettingValue;
 import org.universAAL.ontology.echonet.values.OperationModeSettingValue;
 import org.universAAL.ontology.echonet.values.OperationStatusValue;
 import org.universAAL.ontology.echonet.values.RatedPowerConsumptionInModeValue;
+import org.universAAL.ontology.echonet.values.TemperatureInModeValue;
 import org.universAAL.ontology.echonet.values.MeasuredValue;
-import org.universAAL.ontology.echonet.values.TemperatureSettingValue;
 
 
 public class ColdHotWaterHeatSourceEquipment extends EchonetSuperDevice{
@@ -134,17 +134,17 @@ public class ColdHotWaterHeatSourceEquipment extends EchonetSuperDevice{
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_MEASURED_INWARD_WATER_TEMPERATURE, msg);	
 	}
-	public TemperatureSettingValue getWaterTemperatureSetting2() {
-		return (TemperatureSettingValue) getProperty(PROPERTY_HAS_WATER_TEMPERATURE_SETTING_2);	
+	public TemperatureInModeValue getWaterTemperatureSetting2() {
+		return (TemperatureInModeValue) getProperty(PROPERTY_HAS_WATER_TEMPERATURE_SETTING_2);	
 	}
-	public void setWaterTemperatureSetting2(TemperatureSettingValue msg) {
+	public void setWaterTemperatureSetting2(TemperatureInModeValue msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_WATER_TEMPERATURE_SETTING_2, msg);	
 	}
-	public TemperatureSettingValue getWaterTemperatureSetting1() {
-		return (TemperatureSettingValue) getProperty(PROPERTY_HAS_WATER_TEMPERATURE_SETTING_1);	
+	public MeasuredValue getWaterTemperatureSetting1() {
+		return (MeasuredValue) getProperty(PROPERTY_HAS_WATER_TEMPERATURE_SETTING_1);	
 	}
-	public void setWaterTemperatureSetting1(TemperatureSettingValue msg) {
+	public void setWaterTemperatureSetting1(MeasuredValue msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_WATER_TEMPERATURE_SETTING_1, msg);	
 	}

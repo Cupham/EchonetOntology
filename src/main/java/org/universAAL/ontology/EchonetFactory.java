@@ -4,7 +4,6 @@ package org.universAAL.ontology;
 import org.universAAL.middleware.rdf.Resource;
 import org.universAAL.middleware.rdf.ResourceFactory;
 import org.universAAL.ontology.device.TemperatureSensor;
-import org.universAAL.ontology.echonet.EchonetSuperDevice;
 import org.universAAL.ontology.echonet.airconditionerRelatedDevices.AirCleaner;
 import org.universAAL.ontology.echonet.airconditionerRelatedDevices.AirConditionerVentilationFan;
 import org.universAAL.ontology.echonet.airconditionerRelatedDevices.ElectricHeater;
@@ -40,9 +39,10 @@ import org.universAAL.ontology.echonet.housingFacilitiesRelatedDevices.ElectricR
 import org.universAAL.ontology.echonet.housingFacilitiesRelatedDevices.ElectricShutter;
 import org.universAAL.ontology.echonet.housingFacilitiesRelatedDevices.ElectricSlidingDoor;
 import org.universAAL.ontology.echonet.housingFacilitiesRelatedDevices.ElectricToiletSeat;
-import org.universAAL.ontology.echonet.housingFacilitiesRelatedDevices.ElectricVehicleChargerDischager;
+import org.universAAL.ontology.echonet.housingFacilitiesRelatedDevices.VehicleCharger;
 import org.universAAL.ontology.echonet.housingFacilitiesRelatedDevices.ElectricWindow;
 import org.universAAL.ontology.echonet.housingFacilitiesRelatedDevices.EngineCogeneration;
+import org.universAAL.ontology.echonet.housingFacilitiesRelatedDevices.ExtendedLightingSystem;
 import org.universAAL.ontology.echonet.housingFacilitiesRelatedDevices.FloorHeater;
 import org.universAAL.ontology.echonet.housingFacilitiesRelatedDevices.FuelCell;
 import org.universAAL.ontology.echonet.housingFacilitiesRelatedDevices.GardenSprinkler;
@@ -61,7 +61,7 @@ import org.universAAL.ontology.echonet.housingFacilitiesRelatedDevices.PowerDist
 import org.universAAL.ontology.echonet.housingFacilitiesRelatedDevices.SmartGasMeter;
 import org.universAAL.ontology.echonet.housingFacilitiesRelatedDevices.SmartKeroseneMeter;
 import org.universAAL.ontology.echonet.housingFacilitiesRelatedDevices.StorageBattery;
-import org.universAAL.ontology.echonet.housingFacilitiesRelatedDevices.VehicleCharger;
+import org.universAAL.ontology.echonet.housingFacilitiesRelatedDevices.ElectricVehicleChargerDischager;
 import org.universAAL.ontology.echonet.housingFacilitiesRelatedDevices.WaterFlowMeter;
 import org.universAAL.ontology.echonet.housingFacilitiesRelatedDevices.WaterHeater;
 import org.universAAL.ontology.echonet.housingFacilitiesRelatedDevices.WattHourMeter;
@@ -227,6 +227,7 @@ public class EchonetFactory implements ResourceFactory {
 	public static final int DISPLAY = 104;
 	public static final int NETWORK_CAMERA = 105;
 	public static final int TELEVISION = 106;
+	public static final int EXTENDED_LIGHTING_SYSTEM = 107;
 	
 
 	
@@ -395,6 +396,8 @@ public class EchonetFactory implements ResourceFactory {
 				return new KeroseneMeter(instanceURI);
 			case LIGHTING_SYSTEM:
 				return new LightingSystem(instanceURI);
+			case EXTENDED_LIGHTING_SYSTEM:
+				return new ExtendedLightingSystem(instanceURI);
 			case LOW_VOLTAGE_SMART_ELECTRIC_ENERGY:
 				return new LowVoltageSmartElectricEnergy(instanceURI);
 			case LP_GAS_METER:

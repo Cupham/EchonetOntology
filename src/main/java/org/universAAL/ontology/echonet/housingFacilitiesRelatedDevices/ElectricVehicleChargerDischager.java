@@ -5,6 +5,7 @@ package org.universAAL.ontology.echonet.housingFacilitiesRelatedDevices;
 import org.universAAL.ontology.echonet.EchonetOntology;
 import org.universAAL.ontology.echonet.EchonetSuperDevice;
 import org.universAAL.ontology.echonet.values.MeasuredValue;
+import org.universAAL.ontology.echonet.values.MinMaxSettingValue;
 import org.universAAL.ontology.echonet.values.OperationFunctionSettingValue;
 import org.universAAL.ontology.echonet.values.ChargerDischargerTypeValue;
 import org.universAAL.ontology.echonet.values.EchonetDeviceGroupCodeValue;
@@ -13,43 +14,47 @@ import org.universAAL.ontology.echonet.values.OperationStateSettingValue;
 
 public class ElectricVehicleChargerDischager extends EchonetSuperDevice{
 	public static final String MY_URI = EchonetOntology.NAMESPACE + "ElectricVehicleChargerDischager";
-	public static final String PROPERTY_HAS_DISCHARGEABLE_CAPACITY_OF_VEHICLE_MOUNTED_BATTERY_1 = EchonetOntology.NAMESPACE + "HasDischargableCapacityOfVehicleMountedBattery1";
-	public static final String PROPERTY_HAS_DISCHARGEABLE_CAPACITY_OF_VEHICLE_MOUNTED_BATTERY_2 = EchonetOntology.NAMESPACE + "HasDischargableCapacityOfVehicleMountedBattery2";
-	public static final String PROPERTY_HAS_REMAINING_DISCHARGEABLE_CAPACITY_OF_VEHICLE_MOUNTED_BATTERY_1 = EchonetOntology.NAMESPACE + "HasRemainingDischargableCapacityOfVehicleMountedBattery1";
-	public static final String PROPERTY_HAS_REMAINING_DISCHARGEABLE_CAPACITY_OF_VEHICLE_MOUNTED_BATTERY_2 = EchonetOntology.NAMESPACE + "HasRemainingDischargableCapacityOfVehicleMountedBattery2";
-	public static final String PROPERTY_HAS_REMAINING_DISCHARGEABLE_CAPACITY_OF_VEHICLE_MOUNTED_BATTERY_3 = EchonetOntology.NAMESPACE + "HasRemainingDischargableCapacityOfVehicleMountedBattery3";
+	public static final String PROPERTY_HAS_VEHICLE_MOUNTED_BATTERY_DISCHARGEABLE_CAPACITY_1 = EchonetOntology.NAMESPACE + "HasVehicleMountedBattery1_DischargeableCapacity";
+	public static final String PROPERTY_HAS_VEHICLE_MOUNTED_BATTERY_DISCHARGEABLE_CAPACITY_2 = EchonetOntology.NAMESPACE + "HasVehicleMountedBattery2_DischargeableCapacity";
+	public static final String PROPERTY_HAS_VEHICLE_MOUNTED_BATTERY_REMANING_DISCHARGEABLE_CAPACITY_1 = EchonetOntology.NAMESPACE + "HasVehicleMountedBattery1_RemainingDischargeableCapacity";
+	public static final String PROPERTY_HAS_VEHICLE_MOUNTED_BATTERY_REMANING_DISCHARGEABLE_CAPACITY_2 = EchonetOntology.NAMESPACE + "HasVehicleMountedBattery2_RemainingDischargeableCapacity";
+	public static final String PROPERTY_HAS_VEHICLE_MOUNTED_BATTERY_REMANING_DISCHARGEABLE_CAPACITY_3 = EchonetOntology.NAMESPACE + "HasVehicleMountedBattery3_RemainingDischargeableCapacity";
 	public static final String PROPERTY_HAS_RATED_CHARGE_CAPACITY = EchonetOntology.NAMESPACE + "HasRatedChargeCapacity";
 	public static final String PROPERTY_HAS_RATED_DISCHARGE_CAPACITY = EchonetOntology.NAMESPACE + "HasRatedDisChargeCapacity";
-	public static final String PROPERTY_HAS_VEHICLE_CONNECTION_CHARGEABLE_DISCHARGEABLE_STATUS = EchonetOntology.NAMESPACE + "HasVehicleConnectionChargeableDischargeableStatus";
+	public static final String PROPERTY_HAS_VEHICLE_CONNECTION_CHARGEABLE_STATUS = EchonetOntology.NAMESPACE + "HasVehicleConnectionChargeableStatus";
 	public static final String PROPERTY_HAS_MINIMUM_MAXIMUM_CHARGING_ELECTRIC_ENERGY = EchonetOntology.NAMESPACE + "HasMinimumMaximumChargingElectricEnergy";
-	public static final String PROPERTY_HAS_MINIMUM_MAXIMUM_DISCHARGING_ELECTRIC_ENERGY = EchonetOntology.NAMESPACE + "HasMinimumMaximumDisChargingElectricEnergy";
 	public static final String PROPERTY_HAS_MINIMUM_MAXIMUM_CHARGING_CURRENT = EchonetOntology.NAMESPACE + "HasMinimumMaximumChargingCurrent";
-	public static final String PROPERTY_HAS_MINIMUM_MAXIMUM_DISCHARGING_CURRENT = EchonetOntology.NAMESPACE + "HasMinimumMaximumDischargingCurrent";
-	public static final String PROPERTY_HAS_CHARGER_DISCHARGER_TYPE = EchonetOntology.NAMESPACE + "HasChargerDischargerType";
+	public static final String PROPERTY_HAS_MINIMUM_MAXIMUM_DISCHARGING_ELECTRIC_ENERGY = EchonetOntology.NAMESPACE + "HasMinimumMaximumDisChargingElectricEnergy";
+	public static final String PROPERTY_HAS_MINIMUM_MAXIMUM_DISCHARGING_CURRENT = EchonetOntology.NAMESPACE + "HasMinimumMaximumDisChargingCurrent";
+	public static final String PROPERTY_HAS_CHARGER_TYPE = EchonetOntology.NAMESPACE + "HasChargerType";
+	public static final String PROPERTY_VEHICLE_MOUNTED_BATTERY_CHARGEABLE_CAPACITY = EchonetOntology.NAMESPACE + "HasVehicleMountedBatteryChargeableCapacity";
+	public static final String PROPERTY_VEHICLE_MOUNTED_BATTERY_REMAINING_CHARGEABLE_CAPACITY = EchonetOntology.NAMESPACE + "HasVehicleMountedBatteryRemainingChargeableCapacity";
 	public static final String PROPERTY_SET_VEHICLE_CONNECTION_CONFIRMATION = EchonetOntology.NAMESPACE + "SetVehicleConnectionConfirmation";
 	public static final String PROPERTY_HAS_USED_CAPACITY_OF_VEHICLE_MOUNTED_BATTERY_1 = EchonetOntology.NAMESPACE + "HasUsedCapacityOfVehicleMountedBattery1";
 	public static final String PROPERTY_HAS_USED_CAPACITY_OF_VEHICLE_MOUNTED_BATTERY_2 = EchonetOntology.NAMESPACE + "HasUsedCapacityOfVehicleMountedBattery2";
 	public static final String PROPERTY_HAS_RATED_VOLTAGE = EchonetOntology.NAMESPACE + "HasRatedVoltage";
-	public static final String PROPERTY_HAS_MEASURED_INSTANTANEOUS_CHARGING_DISCHARGING_ELECTRIC_ENERGY = EchonetOntology.NAMESPACE + "HasMeasuredInstantaneousChargingDischargingElectricEnergy";
-	public static final String PROPERTY_HAS_MEASURED_INSTANTANEOUS_CHARGING_DISCHARGING_ELECTRIC_CURRENT = EchonetOntology.NAMESPACE + "HasMeasuredInstantaneousChargingDischargingElectricCurrent";
-	public static final String PROPERTY_HAS_MEASURED_INSTANTANEOUS_CHARGING_DISCHARGING_ELECTRIC_VOLTAGE = EchonetOntology.NAMESPACE + "HasMeasuredInstantaneousChargingDischargingElectricVoltage";
-	public static final String PROPERTY_HAS_MEASURED_CUMMULATIVE_DISCHARGING_ELECTRIC_ENERGY = EchonetOntology.NAMESPACE + "HasMeasuredCummulativeDischargingElectricEnergy";
-	public static final String PROPERTY_RESET_MEASURED_CUMMULATIVE_DISCHARGING_ELECTRIC_ENERGY = EchonetOntology.NAMESPACE + "ResettingMeasuredCummulativeDischargingDischargingElectricEnergy";
-	public static final String PROPERTY_HAS_MEASURED_CUMMULATIVE_CHARGING_ELECTRIC_ENERGY = EchonetOntology.NAMESPACE + "HasMeasuredCummulativeChargingElectricEnergy";
-	public static final String PROPERTY_RESET_MEASURED_CUMMULATIVE_CHARGING_ELECTRIC_ENERGY = EchonetOntology.NAMESPACE + "ResettingMeasuredCummulativeChargingDischargingElectricEnergy";
+	public static final String PROPERTY_HAS_MEASURED_INSTANTANEOUS_CHARGING_DISCHARGING_ELECTRIC_ENERGY = EchonetOntology.NAMESPACE + "HasMeasuredInstantaneousChargingDisChargingElectricEnergy";	
+	public static final String PROPERTY_HAS_MEASURED_INSTANTANEOUS_CHARGING_DISCHARGING_CURRENT = EchonetOntology.NAMESPACE + "HasMeasuredInstantaneousDisChargingChargingCurrent";	
+	public static final String PROPERTY_HAS_MEASURED_INSTANTANEOUS_CHARGING_DISCHARGING_VOLTAGE = EchonetOntology.NAMESPACE + "HasMeasuredInstantaneousDisChargingChargingVoltage";	
+	public static final String PROPERTY_HAS_MEASURED_CUMULATIVE_DISCHARGING_ELECTRIC_ENERGY = EchonetOntology.NAMESPACE + "HasMeasuredCumulativeDisChargingElectricEnergy";
+	public static final String PROPERTY_RESET_MEASURED_CUMULATIVE_DISCHARGING_ELECTRIC_ENERGY = EchonetOntology.NAMESPACE + "ResetMeasuredCumulativeDisChargingElectricEnergy";
+	public static final String PROPERTY_HAS_MEASURED_CUMULATIVE_CHARGING_ELECTRIC_ENERGY = EchonetOntology.NAMESPACE + "HasMeasuredCumulativeChargingElectricEnergy";
+	public static final String PROPERTY_RESET_MEASURED_CUMULATIVE_CHARGING_ELECTRIC_ENERGY = EchonetOntology.NAMESPACE + "ResettingMeasuredCumulativeChargingDischargingElectricEnergy";
 	public static final String PROPERTY_HAS_OPERATION_MODE_SETTING = EchonetOntology.NAMESPACE + "HasOperationModeSetting";
-	public static final String PROPERTY_HAS_SYSTEM_INTERCONNECT_TYPE = EchonetOntology.NAMESPACE + "HasSystemInterconnectType";
+	public static final String PROPERTY_HAS_SYSTEM_INTERCONNECTED_TYPE = EchonetOntology.NAMESPACE + "HasSystemInterconnectedType";
 	public static final String PROPERTY_HAS_REMAINING_STORED_ELECTRIC_1 = EchonetOntology.NAMESPACE + "HasRemainingStoredElectric1";
 	public static final String PROPERTY_HAS_REMAINING_STORED_ELECTRIC_2 = EchonetOntology.NAMESPACE + "HasRemainingStoredElectric2";
 	public static final String PROPERTY_HAS_REMAINING_STORED_ELECTRIC_3 = EchonetOntology.NAMESPACE + "HasRemainingStoredElectric3";
+	public static final String PROPERTY_HAS_VEHICLE_ID = EchonetOntology.NAMESPACE + "HasVehicleID";
 	public static final String PROPERTY_HAS_CHARGING_AMOUNT_SETTING_1 = EchonetOntology.NAMESPACE + "HasChargingAmountSetting1";
 	public static final String PROPERTY_HAS_CHARGING_AMOUNT_SETTING_2 = EchonetOntology.NAMESPACE + "HasChargingAmountSetting2";
+	public static final String PROPERTY_HAS_DISCHARGING_AMOUNT_SETTING = EchonetOntology.NAMESPACE + "HasDisChargingAmountSetting";
 	public static final String PROPERTY_HAS_CHARGING_ELECTRIC_ENERGY_SETTING = EchonetOntology.NAMESPACE + "HasChargingElectricEnergySetting";
-	public static final String PROPERTY_HAS_DISCHARGING_ELECTRIC_ENERGY_SETTING = EchonetOntology.NAMESPACE + "HasDischargingElectricEnergySetting";
 	public static final String PROPERTY_HAS_CHARGING_ELECTRIC_CURRENT_SETTING = EchonetOntology.NAMESPACE + "HasChargingElectricCurrentSetting";
-	public static final String PROPERTY_HAS_DISCHARGING_ELECTRIC_CURRENT_SETTING = EchonetOntology.NAMESPACE + "HasDischargingElectricCurrentSetting";
+	public static final String PROPERTY_HAS_DISCHARGING_ELECTRIC_ENERGY_SETTING = EchonetOntology.NAMESPACE + "HasDisChargingElectricEnergySetting";
+	public static final String PROPERTY_HAS_DISCHARGING_ELECTRIC_CURRENT_SETTING = EchonetOntology.NAMESPACE + "HasDisChargingElectricCurrentSetting";
 	public static final String PROPERTY_HAS_RATED_VOLTAGE_INDEPENDENT = EchonetOntology.NAMESPACE + "HasRatedVoltageIndependent";
-
+	
 	public MeasuredValue getRatedVoltageIndependent() {
 		return (MeasuredValue) getProperty(PROPERTY_HAS_RATED_VOLTAGE_INDEPENDENT);	
 	}
@@ -57,33 +62,26 @@ public class ElectricVehicleChargerDischager extends EchonetSuperDevice{
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_RATED_VOLTAGE_INDEPENDENT, msg);	
 	}
-	public MeasuredValue getDischargingElectricCurrentSetting() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_DISCHARGING_ELECTRIC_CURRENT_SETTING);	
-	}
-	public void setDischargingElectricCurrentSetting(MeasuredValue msg) {
-		if(msg !=null) 
-			changeProperty(PROPERTY_HAS_DISCHARGING_ELECTRIC_CURRENT_SETTING, msg);	
-	}
-	public MeasuredValue getChargingElectricCurrentSetting() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_CHARGING_ELECTRIC_CURRENT_SETTING);	
-	}
-	public void setChargingElectricCurrentSetting(MeasuredValue msg) {
-		if(msg !=null) 
-			changeProperty(PROPERTY_HAS_CHARGING_ELECTRIC_CURRENT_SETTING, msg);	
-	}
-	public MeasuredValue getDischargingElectricEnergySetting() {
+	public MeasuredValue getDisChargingElectricEnergySetting() {
 		return (MeasuredValue) getProperty(PROPERTY_HAS_DISCHARGING_ELECTRIC_ENERGY_SETTING);	
 	}
-	public void setDischargingElectricEnergySetting(MeasuredValue msg) {
+	public void setDisChargingElectricEnergySetting(MeasuredValue msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_DISCHARGING_ELECTRIC_ENERGY_SETTING, msg);	
 	}
-	public MeasuredValue getChargingElectricEnergySetting() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_CHARGING_ELECTRIC_ENERGY_SETTING);	
+	public MeasuredValue getDisChargingElectricCurrentSetting() {
+		return (MeasuredValue) getProperty(PROPERTY_HAS_DISCHARGING_ELECTRIC_CURRENT_SETTING);	
 	}
-	public void setChargingElectricEnergySetting(MeasuredValue msg) {
+	public void setDisChargingElectricCurrentSetting(MeasuredValue msg) {
 		if(msg !=null) 
-			changeProperty(PROPERTY_HAS_CHARGING_ELECTRIC_ENERGY_SETTING, msg);	
+			changeProperty(PROPERTY_HAS_DISCHARGING_ELECTRIC_CURRENT_SETTING, msg);	
+	}
+	public MeasuredValue getDisChargingAmountSetting() {
+		return (MeasuredValue) getProperty(PROPERTY_HAS_DISCHARGING_AMOUNT_SETTING);	
+	}
+	public void setDisChargingAmountSetting(MeasuredValue msg) {
+		if(msg !=null) 
+			changeProperty(PROPERTY_HAS_DISCHARGING_AMOUNT_SETTING, msg);	
 	}
 	public MeasuredValue getChargingAmountSetting2() {
 		return (MeasuredValue) getProperty(PROPERTY_HAS_CHARGING_AMOUNT_SETTING_2);	
@@ -99,13 +97,12 @@ public class ElectricVehicleChargerDischager extends EchonetSuperDevice{
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_CHARGING_AMOUNT_SETTING_1, msg);	
 	}
-	
-	public MeasuredValue getRemainingStoredElectric3() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_REMAINING_STORED_ELECTRIC_3);	
+	public String getVehicleID() {
+		return (String) getProperty(PROPERTY_HAS_VEHICLE_ID);	
 	}
-	public void setRemainingStoredElectric3(MeasuredValue msg) {
+	public void setVehicleID(String msg) {
 		if(msg !=null) 
-			changeProperty(PROPERTY_HAS_REMAINING_STORED_ELECTRIC_3, msg);	
+			changeProperty(PROPERTY_HAS_VEHICLE_ID, msg);	
 	}
 	public MeasuredValue getRemainingStoredElectric2() {
 		return (MeasuredValue) getProperty(PROPERTY_HAS_REMAINING_STORED_ELECTRIC_2);	
@@ -114,6 +111,114 @@ public class ElectricVehicleChargerDischager extends EchonetSuperDevice{
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_REMAINING_STORED_ELECTRIC_2, msg);	
 	}
+	public OperationFunctionSettingValue getSystemInterconnectedType() {
+		return (OperationFunctionSettingValue) getProperty(PROPERTY_HAS_SYSTEM_INTERCONNECTED_TYPE);	
+	}
+	public void setSystemInterconnectedType(OperationFunctionSettingValue msg) {
+		if(msg !=null) 
+			changeProperty(PROPERTY_HAS_SYSTEM_INTERCONNECTED_TYPE, msg);	
+	}
+	public MeasuredValue getMeasuredCumulativeDisChargingElectricEnergy() {
+		return (MeasuredValue) getProperty(PROPERTY_HAS_MEASURED_CUMULATIVE_DISCHARGING_ELECTRIC_ENERGY);	
+	}
+	public void setMeasuredCumulativeDisChargingElectricEnergy(MeasuredValue msg) {
+		if(msg !=null) 
+			changeProperty(PROPERTY_HAS_MEASURED_CUMULATIVE_DISCHARGING_ELECTRIC_ENERGY, msg);	
+	}
+	public MeasuredValue getMeasuredInstantaneousDisChargingChargingVoltage() {
+		return (MeasuredValue) getProperty(PROPERTY_HAS_MEASURED_INSTANTANEOUS_CHARGING_DISCHARGING_VOLTAGE);	
+	}
+	public void setMeasuredInstantaneousDisChargingChargingVoltage(MeasuredValue msg) {
+		if(msg !=null) 
+			changeProperty(PROPERTY_HAS_MEASURED_INSTANTANEOUS_CHARGING_DISCHARGING_VOLTAGE, msg);	
+	}
+	public MeasuredValue getMeasuredInstantaneousDisChargingChargingCurrent() {
+		return (MeasuredValue) getProperty(PROPERTY_HAS_MEASURED_INSTANTANEOUS_CHARGING_DISCHARGING_CURRENT);	
+	}
+	public void setMeasuredInstantaneousDisChargingChargingCurrent(MeasuredValue msg) {
+		if(msg !=null) 
+			changeProperty(PROPERTY_HAS_MEASURED_INSTANTANEOUS_CHARGING_DISCHARGING_CURRENT, msg);	
+	}
+	public MeasuredValue getMeasuredInstantaneousChargingDisChargingElectricEnergy() {
+		return (MeasuredValue) getProperty(PROPERTY_HAS_MEASURED_INSTANTANEOUS_CHARGING_DISCHARGING_ELECTRIC_ENERGY);	
+	}
+	public void setMeasuredInstantaneousChargingDisChargingElectricEnergy(MeasuredValue msg) {
+		if(msg !=null) 
+			changeProperty(PROPERTY_HAS_MEASURED_INSTANTANEOUS_CHARGING_DISCHARGING_ELECTRIC_ENERGY, msg);	
+	}
+	public MeasuredValue getVehicleMountedBatteryRemainingChargeableCapacity() {
+		return (MeasuredValue) getProperty(PROPERTY_VEHICLE_MOUNTED_BATTERY_REMAINING_CHARGEABLE_CAPACITY);	
+	}
+	public void setVehicleMountedBatteryRemainingChargeableCapacity(MeasuredValue msg) {
+		if(msg !=null) 
+			changeProperty(PROPERTY_VEHICLE_MOUNTED_BATTERY_REMAINING_CHARGEABLE_CAPACITY, msg);	
+	}
+	public MeasuredValue getVehicleMountedBatteryChargeableCapacity() {
+		return (MeasuredValue) getProperty(PROPERTY_VEHICLE_MOUNTED_BATTERY_CHARGEABLE_CAPACITY);	
+	}
+	public void setVehicleMountedBatteryChargeableCapacity(MeasuredValue msg) {
+		if(msg !=null) 
+			changeProperty(PROPERTY_VEHICLE_MOUNTED_BATTERY_CHARGEABLE_CAPACITY, msg);	
+	}
+	public MeasuredValue getVehicleMountedBattery3_RemainingDischargeableCapacity() {
+		return (MeasuredValue) getProperty(PROPERTY_HAS_VEHICLE_MOUNTED_BATTERY_REMANING_DISCHARGEABLE_CAPACITY_3);	
+	}
+	public void setVehicleMountedBattery3_RemainingDischargeableCapacity(MeasuredValue msg) {
+		if(msg !=null) 
+			changeProperty(PROPERTY_HAS_VEHICLE_MOUNTED_BATTERY_REMANING_DISCHARGEABLE_CAPACITY_3, msg);	
+	}
+	public MeasuredValue getVehicleMountedBattery2_RemainingDischargeableCapacity() {
+		return (MeasuredValue) getProperty(PROPERTY_HAS_VEHICLE_MOUNTED_BATTERY_REMANING_DISCHARGEABLE_CAPACITY_2);	
+	}
+	public void setVehicleMountedBattery2_RemainingDischargeableCapacity(MeasuredValue msg) {
+		if(msg !=null) 
+			changeProperty(PROPERTY_HAS_VEHICLE_MOUNTED_BATTERY_REMANING_DISCHARGEABLE_CAPACITY_2, msg);	
+	}
+	public MeasuredValue getVehicleMountedBattery1_RemainingDischargeableCapacity() {
+		return (MeasuredValue) getProperty(PROPERTY_HAS_VEHICLE_MOUNTED_BATTERY_REMANING_DISCHARGEABLE_CAPACITY_1);	
+	}
+	public void setVehicleMountedBattery1_RemainingDischargeableCapacity(MeasuredValue msg) {
+		if(msg !=null) 
+			changeProperty(PROPERTY_HAS_VEHICLE_MOUNTED_BATTERY_REMANING_DISCHARGEABLE_CAPACITY_1, msg);	
+	}
+	public MeasuredValue getVehicleMountedBattery2_DischargeableCapacity() {
+		return (MeasuredValue) getProperty(PROPERTY_HAS_VEHICLE_MOUNTED_BATTERY_DISCHARGEABLE_CAPACITY_2);	
+	}
+	public void setVehicleMountedBattery2_DischargeableCapacity(MeasuredValue msg) {
+		if(msg !=null) 
+			changeProperty(PROPERTY_HAS_VEHICLE_MOUNTED_BATTERY_DISCHARGEABLE_CAPACITY_2, msg);	
+	}
+	public MeasuredValue getVehicleMountedBattery1_DischargeableCapacity() {
+		return (MeasuredValue) getProperty(PROPERTY_HAS_VEHICLE_MOUNTED_BATTERY_DISCHARGEABLE_CAPACITY_1);	
+	}
+	public void setVehicleMountedBattery1_DischargeableCapacity(MeasuredValue msg) {
+		if(msg !=null) 
+			changeProperty(PROPERTY_HAS_VEHICLE_MOUNTED_BATTERY_DISCHARGEABLE_CAPACITY_1, msg);	
+	}
+	public MeasuredValue getChargingElectricCurrentSetting() {
+		return (MeasuredValue) getProperty(PROPERTY_HAS_CHARGING_ELECTRIC_CURRENT_SETTING);	
+	}
+	public void setChargingElectricCurrentSetting(MeasuredValue msg) {
+		if(msg !=null) 
+			changeProperty(PROPERTY_HAS_CHARGING_ELECTRIC_CURRENT_SETTING, msg);	
+	}
+	
+	public MeasuredValue getChargingElectricEnergySetting() {
+		return (MeasuredValue) getProperty(PROPERTY_HAS_CHARGING_ELECTRIC_ENERGY_SETTING);	
+	}
+	public void setChargingElectricEnergySetting(MeasuredValue msg) {
+		if(msg !=null) 
+			changeProperty(PROPERTY_HAS_CHARGING_ELECTRIC_ENERGY_SETTING, msg);	
+	}
+	
+	public MeasuredValue getRemainingStoredElectric3() {
+		return (MeasuredValue) getProperty(PROPERTY_HAS_REMAINING_STORED_ELECTRIC_3);	
+	}
+	public void setRemainingStoredElectric3(MeasuredValue msg) {
+		if(msg !=null) 
+			changeProperty(PROPERTY_HAS_REMAINING_STORED_ELECTRIC_3, msg);	
+	}
+	
 	public MeasuredValue getRemainingStoredElectric1() {
 		return (MeasuredValue) getProperty(PROPERTY_HAS_REMAINING_STORED_ELECTRIC_1);	
 	}
@@ -121,13 +226,7 @@ public class ElectricVehicleChargerDischager extends EchonetSuperDevice{
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_REMAINING_STORED_ELECTRIC_1, msg);	
 	}
-	public OperationFunctionSettingValue getSystemInterconnectType() {
-		return (OperationFunctionSettingValue) getProperty(PROPERTY_HAS_SYSTEM_INTERCONNECT_TYPE);	
-	}
-	public void setSystemInterconnectType(OperationFunctionSettingValue msg) {
-		if(msg !=null) 
-			changeProperty(PROPERTY_HAS_SYSTEM_INTERCONNECT_TYPE, msg);	
-	}
+	
 	public OperationModeSettingValue getOperationModeSetting() {
 		return (OperationModeSettingValue) getProperty(PROPERTY_HAS_OPERATION_MODE_SETTING);	
 	}
@@ -135,47 +234,28 @@ public class ElectricVehicleChargerDischager extends EchonetSuperDevice{
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_OPERATION_MODE_SETTING, msg);	
 	}
-	public MeasuredValue getMeasuredCummulativeChargingElectricEnergy() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_MEASURED_CUMMULATIVE_CHARGING_ELECTRIC_ENERGY);	
+	public MeasuredValue getMeasuredCumulativeChargingElectricEnergy() {
+		return (MeasuredValue) getProperty(PROPERTY_HAS_MEASURED_CUMULATIVE_CHARGING_ELECTRIC_ENERGY);	
 	}
-	public void setMeasuredCummulativeChargingElectricEnergy(MeasuredValue msg) {
+	public void setMeasuredCumulativeChargingElectricEnergy(MeasuredValue msg) {
 		if(msg !=null) 
-			changeProperty(PROPERTY_HAS_MEASURED_CUMMULATIVE_CHARGING_ELECTRIC_ENERGY, msg);	
+			changeProperty(PROPERTY_HAS_MEASURED_CUMULATIVE_CHARGING_ELECTRIC_ENERGY, msg);	
 	}
-	public MeasuredValue getMeasuredCummulativeDischargingElectricEnergy() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_MEASURED_CUMMULATIVE_DISCHARGING_ELECTRIC_ENERGY);	
-	}
-	public void setMeasuredCummulativeDischargingElectricEnergy(MeasuredValue msg) {
-		if(msg !=null) 
-			changeProperty(PROPERTY_HAS_MEASURED_CUMMULATIVE_DISCHARGING_ELECTRIC_ENERGY, msg);	
-	}
-	public MeasuredValue getMeasuredInstantaneousChargingDischargingElectricVoltage() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_MEASURED_INSTANTANEOUS_CHARGING_DISCHARGING_ELECTRIC_VOLTAGE);	
-	}
-	public void setMeasuredInstantaneousChargingDischargingElectricVoltage(MeasuredValue msg) {
-		if(msg !=null) 
-			changeProperty(PROPERTY_HAS_MEASURED_INSTANTANEOUS_CHARGING_DISCHARGING_ELECTRIC_VOLTAGE, msg);	
-	}
-	public MeasuredValue getMeasuredInstantaneousChargingDischargingElectricCurrent() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_MEASURED_INSTANTANEOUS_CHARGING_DISCHARGING_ELECTRIC_CURRENT);	
-	}
-	public void setMeasuredInstantaneousChargingDischargingElectricCurrent(MeasuredValue msg) {
-		if(msg !=null) 
-			changeProperty(PROPERTY_HAS_MEASURED_INSTANTANEOUS_CHARGING_DISCHARGING_ELECTRIC_CURRENT, msg);	
-	}
-	public MeasuredValue getMeasuredInstantaneousChargingDischargingElectricEnergy() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_MEASURED_INSTANTANEOUS_CHARGING_DISCHARGING_ELECTRIC_ENERGY);	
-	}
-	public void setMeasuredInstantaneousChargingDischargingElectricEnergy(MeasuredValue msg) {
-		if(msg !=null) 
-			changeProperty(PROPERTY_HAS_MEASURED_INSTANTANEOUS_CHARGING_DISCHARGING_ELECTRIC_ENERGY, msg);	
-	}
+	
 	public MeasuredValue getRatedVoltage() {
 		return (MeasuredValue) getProperty(PROPERTY_HAS_RATED_VOLTAGE);	
 	}
 	public void setRatedVoltage(MeasuredValue msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_RATED_VOLTAGE, msg);	
+	}
+	
+	public MeasuredValue getUsedCapacityOfVehicleMountedBattery1() {
+		return (MeasuredValue) getProperty(PROPERTY_HAS_USED_CAPACITY_OF_VEHICLE_MOUNTED_BATTERY_1);	
+	}
+	public void setUsedCapacityOfVehicleMountedBattery1(MeasuredValue msg) {
+		if(msg !=null) 
+			changeProperty(PROPERTY_HAS_USED_CAPACITY_OF_VEHICLE_MOUNTED_BATTERY_1, msg);	
 	}
 	public MeasuredValue getUsedCapacityOfVehicleMountedBattery2() {
 		return (MeasuredValue) getProperty(PROPERTY_HAS_USED_CAPACITY_OF_VEHICLE_MOUNTED_BATTERY_2);	
@@ -184,54 +264,47 @@ public class ElectricVehicleChargerDischager extends EchonetSuperDevice{
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_USED_CAPACITY_OF_VEHICLE_MOUNTED_BATTERY_2, msg);	
 	}
-	public MeasuredValue getUsedCapacityOfVehicleMountedBattery1() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_USED_CAPACITY_OF_VEHICLE_MOUNTED_BATTERY_1);	
+	public ChargerDischargerTypeValue getChargerType() {
+		return (ChargerDischargerTypeValue) getProperty(PROPERTY_HAS_CHARGER_TYPE);	
 	}
-	public void setUsedCapacityOfVehicleMountedBattery1(MeasuredValue msg) {
+	public void setChargerType(ChargerDischargerTypeValue msg) {
 		if(msg !=null) 
-			changeProperty(PROPERTY_HAS_USED_CAPACITY_OF_VEHICLE_MOUNTED_BATTERY_1, msg);	
+			changeProperty(PROPERTY_HAS_CHARGER_TYPE, msg);	
+	}	
+	public MinMaxSettingValue getMinimumMaximumDisChargingCurrent() {
+		return (MinMaxSettingValue) getProperty(PROPERTY_HAS_MINIMUM_MAXIMUM_DISCHARGING_CURRENT);	
 	}
-	public ChargerDischargerTypeValue getChargerDischargerType() {
-		return (ChargerDischargerTypeValue) getProperty(PROPERTY_HAS_CHARGER_DISCHARGER_TYPE);	
-	}
-	public void setChargerDischargerType(ChargerDischargerTypeValue msg) {
-		if(msg !=null) 
-			changeProperty(PROPERTY_HAS_CHARGER_DISCHARGER_TYPE, msg);	
-	}
-	public String getMinimumMaximumDischargingCurrent() {
-		return (String) getProperty(PROPERTY_HAS_MINIMUM_MAXIMUM_DISCHARGING_CURRENT);	
-	}
-	public void setMinimumMaximumDischargingCurrent(String msg) {
+	public void setMinimumMaximumDisChargingCurrent(MinMaxSettingValue msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_MINIMUM_MAXIMUM_DISCHARGING_CURRENT, msg);	
 	}
-	public String getMinimumMaximumChargingCurrent() {
-		return (String) getProperty(PROPERTY_HAS_MINIMUM_MAXIMUM_CHARGING_CURRENT);	
+	public MinMaxSettingValue getMinimumMaximumDisChargingElectricEnergy() {
+		return (MinMaxSettingValue) getProperty(PROPERTY_HAS_MINIMUM_MAXIMUM_DISCHARGING_ELECTRIC_ENERGY);	
 	}
-	public void setMinimumMaximumChargingCurrent(String msg) {
-		if(msg !=null) 
-			changeProperty(PROPERTY_HAS_MINIMUM_MAXIMUM_CHARGING_CURRENT, msg);	
-	}
-	public String getMinimumMaximumDischargingElectricEnergy() {
-		return (String) getProperty(PROPERTY_HAS_MINIMUM_MAXIMUM_DISCHARGING_ELECTRIC_ENERGY);	
-	}
-	public void setMinimumMaximumDischargingElectricEnergy(String msg) {
+	public void setMinimumMaximumDisChargingElectricEnergy(MinMaxSettingValue msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_MINIMUM_MAXIMUM_DISCHARGING_ELECTRIC_ENERGY, msg);	
 	}
-	public String getMinimumMaximumChargingElectricEnergy() {
-		return (String) getProperty(PROPERTY_HAS_MINIMUM_MAXIMUM_CHARGING_ELECTRIC_ENERGY);	
+	public MinMaxSettingValue getMinimumMaximumChargingCurrent() {
+		return (MinMaxSettingValue) getProperty(PROPERTY_HAS_MINIMUM_MAXIMUM_CHARGING_CURRENT);	
 	}
-	public void setMinimumMaximumChargingElectricEnergy(String msg) {
+	public void setMinimumMaximumChargingCurrent(MinMaxSettingValue msg) {
+		if(msg !=null) 
+			changeProperty(PROPERTY_HAS_MINIMUM_MAXIMUM_CHARGING_CURRENT, msg);	
+	}
+	public MinMaxSettingValue getMinimumMaximumChargingElectricEnergy() {
+		return (MinMaxSettingValue) getProperty(PROPERTY_HAS_MINIMUM_MAXIMUM_CHARGING_ELECTRIC_ENERGY);	
+	}
+	public void setMinimumMaximumChargingElectricEnergy(MinMaxSettingValue msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_MINIMUM_MAXIMUM_CHARGING_ELECTRIC_ENERGY, msg);	
 	}
-	public OperationStateSettingValue getVehicleConnectionChargeableDischargeableStatus() {
-		return (OperationStateSettingValue) getProperty(PROPERTY_HAS_VEHICLE_CONNECTION_CHARGEABLE_DISCHARGEABLE_STATUS);	
+	public OperationStateSettingValue getVehicleConnectionChargeableStatus() {
+		return (OperationStateSettingValue) getProperty(PROPERTY_HAS_VEHICLE_CONNECTION_CHARGEABLE_STATUS);	
 	}
-	public void setVehicleConnectionChargeableDischargeableStatus(OperationStateSettingValue msg) {
+	public void setVehicleConnectionChargeableStatus(OperationStateSettingValue msg) {
 		if(msg !=null) 
-			changeProperty(PROPERTY_HAS_VEHICLE_CONNECTION_CHARGEABLE_DISCHARGEABLE_STATUS, msg);	
+			changeProperty(PROPERTY_HAS_VEHICLE_CONNECTION_CHARGEABLE_STATUS, msg);	
 	}
 	public MeasuredValue getRatedDisChargeCapacity() {
 		return (MeasuredValue) getProperty(PROPERTY_HAS_RATED_DISCHARGE_CAPACITY);	
@@ -246,41 +319,6 @@ public class ElectricVehicleChargerDischager extends EchonetSuperDevice{
 	public void setRatedChargeCapacity(MeasuredValue msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_RATED_CHARGE_CAPACITY, msg);	
-	}
-	public MeasuredValue getRemainingDischargableCapacityOfVehicleMountedBattery3() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_REMAINING_DISCHARGEABLE_CAPACITY_OF_VEHICLE_MOUNTED_BATTERY_3);	
-	}
-	public void setRemainingDischargableCapacityOfVehicleMountedBattery3(MeasuredValue msg) {
-		if(msg !=null) 
-			changeProperty(PROPERTY_HAS_REMAINING_DISCHARGEABLE_CAPACITY_OF_VEHICLE_MOUNTED_BATTERY_3, msg);	
-	}
-	public MeasuredValue getRemainingDischargableCapacityOfVehicleMountedBattery2() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_REMAINING_DISCHARGEABLE_CAPACITY_OF_VEHICLE_MOUNTED_BATTERY_2);	
-	}
-	public void setRemainingDischargableCapacityOfVehicleMountedBattery2(MeasuredValue msg) {
-		if(msg !=null) 
-			changeProperty(PROPERTY_HAS_REMAINING_DISCHARGEABLE_CAPACITY_OF_VEHICLE_MOUNTED_BATTERY_2, msg);	
-	}
-	public MeasuredValue getRemainingDischargableCapacityOfVehicleMountedBattery1() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_REMAINING_DISCHARGEABLE_CAPACITY_OF_VEHICLE_MOUNTED_BATTERY_1);	
-	}
-	public void setRemainingDischargableCapacityOfVehicleMountedBattery1(MeasuredValue msg) {
-		if(msg !=null) 
-			changeProperty(PROPERTY_HAS_REMAINING_DISCHARGEABLE_CAPACITY_OF_VEHICLE_MOUNTED_BATTERY_1, msg);	
-	}
-	public MeasuredValue getDischargableCapacityOfVehicleMountedBattery2() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_DISCHARGEABLE_CAPACITY_OF_VEHICLE_MOUNTED_BATTERY_2);	
-	}
-	public void setDischargableCapacityOfVehicleMountedBattery2(MeasuredValue msg) {
-		if(msg !=null) 
-			changeProperty(PROPERTY_HAS_DISCHARGEABLE_CAPACITY_OF_VEHICLE_MOUNTED_BATTERY_2, msg);	
-	}
-	public MeasuredValue getDischargableCapacityOfVehicleMountedBattery1() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_DISCHARGEABLE_CAPACITY_OF_VEHICLE_MOUNTED_BATTERY_1);	
-	}
-	public void setDischargableCapacityOfVehicleMountedBattery1(MeasuredValue msg) {
-		if(msg !=null) 
-			changeProperty(PROPERTY_HAS_DISCHARGEABLE_CAPACITY_OF_VEHICLE_MOUNTED_BATTERY_1, msg);	
 	}
 
 	public ElectricVehicleChargerDischager() {

@@ -22,9 +22,10 @@ public class EngineCogeneration extends EchonetSuperDevice{
 	public static final String PROPERTY_HAS_MEASURED_CUMULATIVE_GAS_CONSUMPTION = EchonetOntology.NAMESPACE + "HasMeasuredCumulativeGasConsumption";
 	public static final String PROPERTY_RESET_MEASURED_CUMULATIVE_GAS_CONSUMPTION = EchonetOntology.NAMESPACE + "ResettingMeasuredCumulativeGasConsumption";
 	public static final String PROPERTY_HAS_POWER_GENERATION_SETTING = EchonetOntology.NAMESPACE + "HasPowerGenerationSetting";
-	public static final String PROPERTY_HAS_POWER_GENERATION_STATUS = EchonetOntology.NAMESPACE + "HasPowerGenerationStatus";
+	public static final String PROPERTY_HAS_POWER_GENERATION_STATUS= EchonetOntology.NAMESPACE + "HasPowerGenerationStatus";
 	public static final String PROPERTY_HAS_IN_HOUSE_MEASURED_INSTANTANEOUS_POWER_CONSUMPTION = EchonetOntology.NAMESPACE + "HasInHouseMeasuredInstantaneousPowerConsumption";
 	public static final String PROPERTY_HAS_IN_HOUSE_MEASURED_CUMULATIVE_POWER_CONSUMPTION = EchonetOntology.NAMESPACE + "HasInHouseMeasuredCumulativePowerConsumption";
+	public static final String PROPERTY_RESET_IN_HOUSE_MEASURED_CUMULATIVE_POWER_CONSUMPTION = EchonetOntology.NAMESPACE + "ResetInHouseMeasuredCumulativePowerConsumption";
 	public static final String PROPERTY_HAS_SYSTEM_INTERCONNECT_TYPE = EchonetOntology.NAMESPACE + "HasSystemInterconnectType";
 	public static final String PROPERTY_HAS_MEASURED_REMAINING_HOT_WATER_AMOUNT = EchonetOntology.NAMESPACE + "HasMeasuredRemainingHotWaterAmount";
 	public static final String PROPERTY_HAS_TANK_CAPACITY = EchonetOntology.NAMESPACE + "HasTankCapacity";
@@ -65,11 +66,11 @@ public class EngineCogeneration extends EchonetSuperDevice{
 			changeProperty(PROPERTY_HAS_IN_HOUSE_MEASURED_INSTANTANEOUS_POWER_CONSUMPTION, msg);	
 	}
 	public OperationStateSettingValue getPowerGenerationStatus() {
-		return (OperationStateSettingValue) getProperty(PROPERTY_HAS_POWER_GENERATION_SETTING);	
+		return (OperationStateSettingValue) getProperty(PROPERTY_HAS_POWER_GENERATION_STATUS);	
 	}
 	public void setPowerGenerationStatus(OperationStateSettingValue msg) {
 		if(msg !=null) 
-			changeProperty(PROPERTY_HAS_POWER_GENERATION_SETTING, msg);	
+			changeProperty(PROPERTY_HAS_POWER_GENERATION_STATUS, msg);	
 	}
 	public OperationStatusValue getPowerGenerationSetting() {
 		return (OperationStatusValue) getProperty(PROPERTY_HAS_POWER_GENERATION_SETTING);	

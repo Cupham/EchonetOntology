@@ -13,7 +13,6 @@ import org.universAAL.ontology.echonet.values.OperationStatusValue;
 import org.universAAL.ontology.echonet.values.RatedPowerConsumptionInModeValue;
 import org.universAAL.ontology.echonet.values.MeasuredValue;
 import org.universAAL.ontology.echonet.values.ThresholdLevelValue;
-import org.universAAL.ontology.echonet.values.TemperatureSettingValue;
 
 
 public class FloorHeater extends EchonetSuperDevice{
@@ -114,10 +113,10 @@ public class FloorHeater extends EchonetSuperDevice{
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_DAILY_TIMER_SETTING_STATUS, msg);	
 	}
-	public ThresholdLevelValue getZoneChangeSetting() {
-		return (ThresholdLevelValue) getProperty(PROPERTY_HAS_ZONE_CHANGE_SETTING);	
+	public String getZoneChangeSetting() {
+		return (String) getProperty(PROPERTY_HAS_ZONE_CHANGE_SETTING);	
 	}
-	public void setZoneChangeSetting(ThresholdLevelValue msg) {
+	public void setZoneChangeSetting(String msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_ZONE_CHANGE_SETTING, msg);	
 	}
@@ -142,17 +141,17 @@ public class FloorHeater extends EchonetSuperDevice{
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_MEASURED_ROOM_TEMPERATURE, msg);	
 	}
-	public TemperatureSettingValue getTemperatureSetting2() {
-		return (TemperatureSettingValue) getProperty(PROPERTY_HAS_TEMPERATURE_SETTING_2);	
+	public ThresholdLevelValue getTemperatureSetting2() {
+		return (ThresholdLevelValue) getProperty(PROPERTY_HAS_TEMPERATURE_SETTING_2);	
 	}
-	public void setTemperatureSetting2(TemperatureSettingValue msg) {
+	public void setTemperatureSetting2(ThresholdLevelValue msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_TEMPERATURE_SETTING_2, msg);	
 	}
-	public TemperatureSettingValue getTemperatureSetting1() {
-		return (TemperatureSettingValue) getProperty(PROPERTY_HAS_TEMPERATURE_SETTING_1);	
+	public MeasuredValue getTemperatureSetting1() {
+		return (MeasuredValue) getProperty(PROPERTY_HAS_TEMPERATURE_SETTING_1);	
 	}
-	public void setTemperatureSetting1(TemperatureSettingValue msg) {
+	public void setTemperatureSetting1(MeasuredValue msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_TEMPERATURE_SETTING_1, msg);	
 	}

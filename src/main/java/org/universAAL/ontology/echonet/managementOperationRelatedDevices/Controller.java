@@ -130,17 +130,17 @@ public class Controller extends EchonetSuperDevice{
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_DEVICE_ID, msg);	
 	}
-	public String getIndex() {
-		return (String) getProperty(PROPERTY_HAS_INDEX);	
+	public Integer getIndex() {
+		return (Integer) getProperty(PROPERTY_HAS_INDEX);	
 	}
-	public void setIndex(String msg) {
+	public void setIndex(Integer msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_INDEX, msg);	
 	}
-	public Short getNumberOfControlledDevices() {
-		return (Short) getProperty(PROPERTY_HAS_NUMBER_OF_CONTROLLED_DEVICES);	
+	public Integer getNumberOfControlledDevices() {
+		return (Integer) getProperty(PROPERTY_HAS_NUMBER_OF_CONTROLLED_DEVICES);	
 	}
-	public void setNumberOfControlledDevices(Short msg) {
+	public void setNumberOfControlledDevices(Integer msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_NUMBER_OF_CONTROLLED_DEVICES, msg);	
 	}
