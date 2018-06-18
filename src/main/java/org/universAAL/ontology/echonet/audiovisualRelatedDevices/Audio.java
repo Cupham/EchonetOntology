@@ -1,19 +1,34 @@
+/*******************************************************************************
+ * Copyright 2018 PHAM Van Cu, Tan laboratory, Japan Advanced Institute of Science and Technology (JAIST),
+ *  Japan as a part of the CARESSES project (http://www.caressesrobot.org/).
+ * 
+ * Licensed under the Apache License, Version 2.0 (the "License"); you may not
+ * use this file except in compliance with the License.  You may obtain a copy
+ * of the License at
+ * 
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+ * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.  See the
+ * License for the specific language governing permissions and limitations under
+ * the License.
+ ******************************************************************************/
 package org.universAAL.ontology.echonet.audiovisualRelatedDevices;
 
 
 
 import org.universAAL.ontology.echonet.EchonetOntology;
 import org.universAAL.ontology.echonet.EchonetSuperDevice;
-import org.universAAL.ontology.echonet.values.EchonetDeviceGroupCodeValue;
 import org.universAAL.ontology.echonet.values.InputSourceSettingValue;
 import org.universAAL.ontology.echonet.values.MeasuredValue;
 import org.universAAL.ontology.echonet.values.OperationStatusValue;
 
 public class Audio extends EchonetSuperDevice{
 	public static final String MY_URI = EchonetOntology.NAMESPACE + "Audio";
-	public static final String PROPERTY_HAS_VOLUME_SETTING= EchonetOntology.NAMESPACE + "HasVolumeSetting";
-	public static final String PROPERTY_HAS_MUTE_SETTING= EchonetOntology.NAMESPACE + "HasMuteSetting";
-	public static final String PROPERTY_HAS_INPUT_SOURCE_SETTING= EchonetOntology.NAMESPACE + "HasInputSourceSetting";
+	public static final String PROPERTY_HAS_VOLUME_SETTING= EchonetOntology.NAMESPACE + "hasVolumeSetting";
+	public static final String PROPERTY_HAS_MUTE_SETTING= EchonetOntology.NAMESPACE + "hasMuteSetting";
+	public static final String PROPERTY_HAS_INPUT_SOURCE_SETTING= EchonetOntology.NAMESPACE + "hasInputSourceSetting";
 	
 	public InputSourceSettingValue getInputSourceSetting() {
 		return (InputSourceSettingValue) getProperty(PROPERTY_HAS_INPUT_SOURCE_SETTING);	
@@ -41,11 +56,9 @@ public class Audio extends EchonetSuperDevice{
 	
 	public Audio() {
 		super();
-		setClassGroupCode(EchonetDeviceGroupCodeValue.AudiovisualRelatedDevice);
 	}
 	public Audio(String uri) {
 		super(uri);
-		setClassGroupCode(EchonetDeviceGroupCodeValue.AudiovisualRelatedDevice);
 	}
 	public String getClassURI() {
 		return MY_URI;

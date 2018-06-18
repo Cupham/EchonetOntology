@@ -1,17 +1,32 @@
+/*******************************************************************************
+ * Copyright 2018 PHAM Van Cu, Tan laboratory, Japan Advanced Institute of Science and Technology (JAIST),
+ *  Japan as a part of the CARESSES project (http://www.caressesrobot.org/).
+ * 
+ * Licensed under the Apache License, Version 2.0 (the "License"); you may not
+ * use this file except in compliance with the License.  You may obtain a copy
+ * of the License at
+ * 
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+ * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.  See the
+ * License for the specific language governing permissions and limitations under
+ * the License.
+ ******************************************************************************/
 package org.universAAL.ontology.echonet.airconditionerRelatedDevices;
 
 
-import java.util.Date;
 
 import org.universAAL.ontology.echonet.EchonetOntology;
 import org.universAAL.ontology.echonet.EchonetSuperDevice;
 import org.universAAL.ontology.echonet.values.AirFlowDirectionSettingValue;
 import org.universAAL.ontology.echonet.values.AirconditionerComponentOperationStatus;
+import org.universAAL.ontology.echonet.values.DateTimeValue;
 import org.universAAL.ontology.echonet.values.OperationFunctionSettingValue;
 import org.universAAL.ontology.echonet.values.OperationModeSettingValue;
 import org.universAAL.ontology.echonet.values.OperationStateSettingValue;
 import org.universAAL.ontology.echonet.values.MeasuredValue;
-import org.universAAL.ontology.echonet.values.EchonetDeviceGroupCodeValue;
 import org.universAAL.ontology.echonet.values.MountedAirCleaningPurifyingMethodValue;
 import org.universAAL.ontology.echonet.values.MountedAirRefreshingMethodValue;
 import org.universAAL.ontology.echonet.values.MountedAirSelfCleaningMethodValue;
@@ -22,72 +37,70 @@ import org.universAAL.ontology.echonet.values.ThresholdLevelValue;
 
 public class HomeAirConditioner extends EchonetSuperDevice{
 	public static final String MY_URI = EchonetOntology.NAMESPACE + "HomeAirConditioner";
-	public static final String PROPERTY_HAS_OPERATION_POWER_SAVING_MODE = EchonetOntology.NAMESPACE + "HomeAirConditionerHasOperationPowerSavingMode";
-	public static final String PROPERTY_HAS_OPERATION_MODE_SETTING = EchonetOntology.NAMESPACE + "HomeAirConditionerHasOperationModeSetting";
-	public static final String PROPERTY_HAS_AUTOMATIC_TEMPERATURE_CONTROL_SETTING = EchonetOntology.NAMESPACE + "HomeAirConditionerHasAutomaticTemperatureControlSetting";
-	public static final String PROPERTY_HAS_TYPE_OF_OPERATION_SETTING = EchonetOntology.NAMESPACE + "HomeAirConditionerHasTypeOfOperationSetting";
-	public static final String PROPERTY_HAS_CURRENT_SETTING_OF_TEMPERATURE = EchonetOntology.NAMESPACE + "HomeAirConditionerHasCurrentSettingOfTemperature";
-	public static final String PROPERTY_HAS_RELATIVE_HUMIDITY_IN_DEHUMIDIFICATION_MODE = EchonetOntology.NAMESPACE + "HomeAirConditionerHasRelativeHumidityInDehumidificationMode";
-	public static final String PROPERTY_HAS_SETTING_TEMPERATURE_IN_COOLING_MODE = EchonetOntology.NAMESPACE + "HomeAirConditionerHasSettingTemperatureInCoolingMode";
-	public static final String PROPERTY_HAS_SETTING_TEMPERATURE_IN_HEATING_MODE = EchonetOntology.NAMESPACE + "HomeAirConditionerHasSettingTemperatureInHeatingMode";
-	public static final String PROPERTY_HAS_SETTING_TEMPERATURE_IN_DEHUMIDICATION_MODE = EchonetOntology.NAMESPACE + "HomeAirConditionerHasSettingTemperatureInDehumidificationMode";
-	public static final String PROPERTY_HAS_RATED_POWER_CONSUMPTION_IN_MODES = EchonetOntology.NAMESPACE + "HomeAirConditionerHasRatedPowerConsumptionInModes";
-	public static final String PROPERTY_HAS_MEASURED_CURRENT_CONSUMPTION = EchonetOntology.NAMESPACE + "HomeAirConditionerHasMeasuredCurrentConsumption";
-	public static final String PROPERTY_HAS_MEASURED_ROOM_RELATIVE_HUMIDITY = EchonetOntology.NAMESPACE + "HomeAirConditionerHasMeasuredRoomHumidity";
-	public static final String PROPERTY_HAS_MEASURED_ROOM_TEMPERATURE = EchonetOntology.NAMESPACE + "HomeAirConditionerHasMeasuredRoomTemperature";
-	public static final String PROPERTY_HAS_CURRENT_TEMPERATER_SETTING_OF_REMOTE_CONTROL = EchonetOntology.NAMESPACE + "HomeAirConditionerHasCurrentTemperatureSettingOfRemoteControl";
-	public static final String PROPERTY_HAS_MEASURED_COOLED_AIR_TEMPERATURE = EchonetOntology.NAMESPACE + "HomeAirConditionerHasMeasuredCooledAirTemperature";
-	public static final String PROPERTY_HAS_MEASURED_OUTDOOR_AIR_TEMPERATURE = EchonetOntology.NAMESPACE + "HomeAirConditionerHasMeasuredOutdoorAirTemperature";
-	public static final String PROPERTY_HAS_RELATIVE_TEMPERATURE_SETTING = EchonetOntology.NAMESPACE + "HomeAirConditionerHasRelativeTemperatureSetting";
-	public static final String PROPERTY_HAS_AIR_FLOW_RATE_SETTING = EchonetOntology.NAMESPACE + "HomeAirConditionerHasAirFlowRateSetting";
-	public static final String PROPERTY_HAS_AUTOMATIC_CONTROL_OF_AIR_FLOW_DIRECTION_SETTING = EchonetOntology.NAMESPACE + "HomeAirConditionerHasAutomacticControlOfAirFlowDirectionSetting";
-	public static final String PROPERTY_HAS_AUTOMATIC_SWING_OF_AIR_FLOW_SETTING = EchonetOntology.NAMESPACE + "HomeAirConditionerHasAutomacticSwingOfAirFlowSetting";
-	public static final String PROPERTY_HAS_AIRFLOW_VERTICAL_DIRECTION_SETTING = EchonetOntology.NAMESPACE + "HomeAirConditionerHasAirFlowVerticalDirectionSetting";
-	public static final String PROPERTY_HAS_AIRFLOW_HORIZONTAL_DIRECTION_SETTING = EchonetOntology.NAMESPACE + "HomeAirConditionerHasAirFlowHorizontalDirectionSetting";
-	public static final String PROPERTY_HAS_SPECIAL_STATE = EchonetOntology.NAMESPACE + "HomeAirConditionerHasSpecialState";
-	public static final String PROPERTY_HAS_NON_PRIORITY_STATE = EchonetOntology.NAMESPACE + "HomeAirConditionerHasNonPriorityState";
-	public static final String PROPERTY_HAS_VENTILATION_FUNCTION_SETTING = EchonetOntology.NAMESPACE + "HomeAirConditionerHasVentilationFunctionSetting";
-	public static final String PROPERTY_HAS_HUMIDIFIER_FUNCTION_SETTING = EchonetOntology.NAMESPACE + "HomeAirConditionerHasHumidifierFunctionSetting";
-	public static final String PROPERTY_HAS_VENTILATION_AIR_FLOW_RATE_SETTING = EchonetOntology.NAMESPACE + "HomeAirConditionerHasVentilationAirFlowRateSetting";
-	public static final String PROPERTY_HAS_DEGREE_OF_HUMIDIFICATION_SETTING = EchonetOntology.NAMESPACE + "HomeAirConditionerHasDegreeOfHumidificationSetting";
-	public static final String PROPERTY_HAS_MOUNTED_AIR_CLEANING_METHOD = EchonetOntology.NAMESPACE + "HomeAirConditionerHasMountedAirCleaningMethod";
-	public static final String PROPERTY_HAS_MOUNTED_AIR_PURIFIER_FUNCTION_SETTING= EchonetOntology.NAMESPACE + "HomeAirConditionerHasMountedAirPurifierFunctionSetting";
-	public static final String PROPERTY_HAS_MOUNTED_AIR_REFRESH_METHOD= EchonetOntology.NAMESPACE + "HomeAirConditionerHasMountedAirRefreshMethod";
-	public static final String PROPERTY_HAS_MOUNTED_AIR_REFRESHER_FUNCTION_SETTING= EchonetOntology.NAMESPACE + "HomeAirConditionerHasMountedAirRefresherFunctionSetting";
-	public static final String PROPERTY_HAS_MOUNTED_SELF_CLEANING_METHOD= EchonetOntology.NAMESPACE + "HomeAirConditionerHasMountedSelfCleaningMethod";
-	public static final String PROPERTY_HAS_MOUNTED_SELF_CLEANING_FUNCTION_SETTING= EchonetOntology.NAMESPACE + "HomeAirConditionerHasMountedSelfCleaningFunctionSetting";
-	public static final String PROPERTY_HAS_SPECIAL_FUNCTION_SETTING= EchonetOntology.NAMESPACE + "HomeAirConditionerHasSpecialFunctionSetting";
-	public static final String PROPERTY_HAS_OPERATION_STATUS_OF_COMPONENTS= EchonetOntology.NAMESPACE + "HomeAirConditionerHasOperationStatusOfComponents";
-	public static final String PROPERTY_HAS_THERMOSTAT_SETTING_OVERRIDE_FUNCTION= EchonetOntology.NAMESPACE + "HomeAirConditionerHasThermostatSettingOverrideFunction";
-	public static final String PROPERTY_HAS_AIR_PURIFICATION_MODE_SETTING= EchonetOntology.NAMESPACE + "HomeAirConditionerHasPurificationModeSetting";
-	public static final String PROPERTY_HAS_BUZZER= EchonetOntology.NAMESPACE + "HomeAirConditionerHasBuzzer";
-	public static final String PROPERTY_HAS_ON_TIMER_BASED_RESERVATION_SETTING= EchonetOntology.NAMESPACE + "HomeAirConditionerHasONTimerBasedReservationSetting";
-	public static final String PROPERTY_HAS_ON_TIMER_SETTING_TIME= EchonetOntology.NAMESPACE + "HomeAirConditionerHasONTimerTimeSetting";
-	public static final String PROPERTY_HAS_ON_TIMER_SETTING_RELATIVE_TIME= EchonetOntology.NAMESPACE + "HomeAirConditionerHasONTimerRelativeTimeSetting";
-	public static final String PROPERTY_HAS_OFF_TIMER_BASED_RESERVATION_SETTING= EchonetOntology.NAMESPACE + "HomeAirConditionerHasOFFTimerBasedReservationSetting";
-	public static final String PROPERTY_HAS_OFF_TIMER_SETTING_TIME= EchonetOntology.NAMESPACE + "HomeAirConditionerHasOFFTimerTimeSetting";
-	public static final String PROPERTY_HAS_OFF_TIMER_SETTING_RELATIVE_TIME= EchonetOntology.NAMESPACE + "HomeAirConditionerHasOFFTimerRelativeTimeSetting";
+	public static final String PROPERTY_HAS_OPERATION_POWER_SAVING_MODE = EchonetOntology.NAMESPACE + "hasOperationPowerSavingMode";
+	public static final String PROPERTY_HAS_OPERATION_MODE_SETTING = EchonetOntology.NAMESPACE + "hasOperationModeSetting";
+	public static final String PROPERTY_HAS_AUTOMATIC_TEMPERATURE_CONTROL_SETTING = EchonetOntology.NAMESPACE + "hasAutomaticTemperatureControlSetting";
+	public static final String PROPERTY_HAS_TYPE_OF_OPERATION_SETTING = EchonetOntology.NAMESPACE + "hasTypeOfOperationSetting";
+	public static final String PROPERTY_HAS_CURRENT_SETTING_OF_TEMPERATURE = EchonetOntology.NAMESPACE + "hasCurrentSettingOfTemperature";
+	public static final String PROPERTY_HAS_RELATIVE_HUMIDITY_IN_DEHUMIDIFICATION_MODE = EchonetOntology.NAMESPACE + "hasRelativeHumidityInDehumidificationMode";
+	public static final String PROPERTY_HAS_SETTING_TEMPERATURE_IN_COOLING_MODE = EchonetOntology.NAMESPACE + "hasSettingTemperatureInCoolingMode";
+	public static final String PROPERTY_HAS_SETTING_TEMPERATURE_IN_HEATING_MODE = EchonetOntology.NAMESPACE + "hasSettingTemperatureInHeatingMode";
+	public static final String PROPERTY_HAS_SETTING_TEMPERATURE_IN_DEHUMIDICATION_MODE = EchonetOntology.NAMESPACE + "hasSettingTemperatureInDehumidificationMode";
+	public static final String PROPERTY_HAS_RATED_POWER_CONSUMPTION_IN_MODES = EchonetOntology.NAMESPACE + "hasRatedPowerConsumptionInModes";
+	public static final String PROPERTY_HAS_MEASURED_CURRENT_CONSUMPTION = EchonetOntology.NAMESPACE + "hasMeasuredCurrentConsumption";
+	public static final String PROPERTY_HAS_MEASURED_ROOM_RELATIVE_HUMIDITY = EchonetOntology.NAMESPACE + "hasMeasuredRoomHumidity";
+	public static final String PROPERTY_HAS_MEASURED_ROOM_TEMPERATURE = EchonetOntology.NAMESPACE + "hasMeasuredRoomTemperature";
+	public static final String PROPERTY_HAS_CURRENT_TEMPERATER_SETTING_OF_REMOTE_CONTROL = EchonetOntology.NAMESPACE + "hasCurrentTemperatureSettingOfRemoteControl";
+	public static final String PROPERTY_HAS_MEASURED_COOLED_AIR_TEMPERATURE = EchonetOntology.NAMESPACE + "hasMeasuredCooledAirTemperature";
+	public static final String PROPERTY_HAS_MEASURED_OUTDOOR_AIR_TEMPERATURE = EchonetOntology.NAMESPACE + "hasMeasuredOutdoorAirTemperature";
+	public static final String PROPERTY_HAS_RELATIVE_TEMPERATURE_SETTING = EchonetOntology.NAMESPACE + "hasRelativeTemperatureSetting";
+	public static final String PROPERTY_HAS_AIR_FLOW_RATE_SETTING = EchonetOntology.NAMESPACE + "hasAirFlowRateSetting";
+	public static final String PROPERTY_HAS_AUTOMATIC_CONTROL_OF_AIR_FLOW_DIRECTION_SETTING = EchonetOntology.NAMESPACE + "hasAutomacticControlOfAirFlowDirectionSetting";
+	public static final String PROPERTY_HAS_AUTOMATIC_SWING_OF_AIR_FLOW_SETTING = EchonetOntology.NAMESPACE + "hasAutomacticSwingOfAirFlowSetting";
+	public static final String PROPERTY_HAS_AIRFLOW_VERTICAL_DIRECTION_SETTING = EchonetOntology.NAMESPACE + "hasAirFlowVerticalDirectionSetting";
+	public static final String PROPERTY_HAS_AIRFLOW_HORIZONTAL_DIRECTION_SETTING = EchonetOntology.NAMESPACE + "hasAirFlowHorizontalDirectionSetting";
+	public static final String PROPERTY_HAS_SPECIAL_STATE = EchonetOntology.NAMESPACE + "hasSpecialState";
+	public static final String PROPERTY_HAS_NON_PRIORITY_STATE = EchonetOntology.NAMESPACE + "hasNonPriorityState";
+	public static final String PROPERTY_HAS_VENTILATION_FUNCTION_SETTING = EchonetOntology.NAMESPACE + "hasVentilationFunctionSetting";
+	public static final String PROPERTY_HAS_HUMIDIFIER_FUNCTION_SETTING = EchonetOntology.NAMESPACE + "hasHumidifierFunctionSetting";
+	public static final String PROPERTY_HAS_VENTILATION_AIR_FLOW_RATE_SETTING = EchonetOntology.NAMESPACE + "hasVentilationAirFlowRateSetting";
+	public static final String PROPERTY_HAS_DEGREE_OF_HUMIDIFICATION_SETTING = EchonetOntology.NAMESPACE + "hasDegreeOfHumidificationSetting";
+	public static final String PROPERTY_HAS_MOUNTED_AIR_CLEANING_METHOD = EchonetOntology.NAMESPACE + "hasMountedAirCleaningMethod";
+	public static final String PROPERTY_HAS_MOUNTED_AIR_PURIFIER_FUNCTION_SETTING= EchonetOntology.NAMESPACE + "hasMountedAirPurifierFunctionSetting";
+	public static final String PROPERTY_HAS_MOUNTED_AIR_REFRESH_METHOD= EchonetOntology.NAMESPACE + "hasMountedAirRefreshMethod";
+	public static final String PROPERTY_HAS_MOUNTED_AIR_REFRESHER_FUNCTION_SETTING= EchonetOntology.NAMESPACE + "hasMountedAirRefresherFunctionSetting";
+	public static final String PROPERTY_HAS_MOUNTED_SELF_CLEANING_METHOD= EchonetOntology.NAMESPACE + "hasMountedSelfCleaningMethod";
+	public static final String PROPERTY_HAS_MOUNTED_SELF_CLEANING_FUNCTION_SETTING= EchonetOntology.NAMESPACE + "hasMountedSelfCleaningFunctionSetting";
+	public static final String PROPERTY_HAS_SPECIAL_FUNCTION_SETTING= EchonetOntology.NAMESPACE + "hasSpecialFunctionSetting";
+	public static final String PROPERTY_HAS_OPERATION_STATUS_OF_COMPONENTS= EchonetOntology.NAMESPACE + "hasOperationStatusOfComponents";
+	public static final String PROPERTY_HAS_THERMOSTAT_SETTING_OVERRIDE_FUNCTION= EchonetOntology.NAMESPACE + "hasThermostatSettingOverrideFunction";
+	public static final String PROPERTY_HAS_AIR_PURIFICATION_MODE_SETTING= EchonetOntology.NAMESPACE + "hasPurificationModeSetting";
+	public static final String PROPERTY_HAS_BUZZER= EchonetOntology.NAMESPACE + "hasBuzzer";
+	public static final String PROPERTY_HAS_ON_TIMER_BASED_RESERVATION_SETTING= EchonetOntology.NAMESPACE + "hasONTimerBasedReservationSetting";
+	public static final String PROPERTY_HAS_ON_TIMER_SETTING_TIME= EchonetOntology.NAMESPACE + "hasONTimerTimeSetting";
+	public static final String PROPERTY_HAS_ON_TIMER_SETTING_RELATIVE_TIME= EchonetOntology.NAMESPACE + "hasONTimerRelativeTimeSetting";
+	public static final String PROPERTY_HAS_OFF_TIMER_BASED_RESERVATION_SETTING= EchonetOntology.NAMESPACE + "hasOFFTimerBasedReservationSetting";
+	public static final String PROPERTY_HAS_OFF_TIMER_SETTING_TIME= EchonetOntology.NAMESPACE + "hasOFFTimerTimeSetting";
+	public static final String PROPERTY_HAS_OFF_TIMER_SETTING_RELATIVE_TIME= EchonetOntology.NAMESPACE + "hasOFFTimerRelativeTimeSetting";
 	
 	public HomeAirConditioner() {
 		super();
-		setClassGroupCode(EchonetDeviceGroupCodeValue.AirConditionerRelatedDevice);
 	}
 	public HomeAirConditioner(String uri) {
 		super(uri);
-		setClassGroupCode(EchonetDeviceGroupCodeValue.AirConditionerRelatedDevice);
 	}
 
-	public Date getOFFTimerRelativeTimeSetting() {
-		return (Date) getProperty(PROPERTY_HAS_OFF_TIMER_SETTING_RELATIVE_TIME);	
+	public DateTimeValue getOFFTimerRelativeTimeSetting() {
+		return (DateTimeValue) getProperty(PROPERTY_HAS_OFF_TIMER_SETTING_RELATIVE_TIME);	
 	}
-	public void setOFFTimerRelativeTimeSetting(Date msg) {
+	public void setOFFTimerRelativeTimeSetting(DateTimeValue msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_OFF_TIMER_SETTING_RELATIVE_TIME, msg);	
 	}
-	public Date getOFFTimerTimeSetting() {
-		return (Date) getProperty(PROPERTY_HAS_OFF_TIMER_SETTING_TIME);	
+	public DateTimeValue getOFFTimerTimeSetting() {
+		return (DateTimeValue) getProperty(PROPERTY_HAS_OFF_TIMER_SETTING_TIME);	
 	}
-	public void setOFFTimerTimeSetting(Date msg) {
+	public void setOFFTimerTimeSetting(DateTimeValue msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_OFF_TIMER_SETTING_TIME, msg);	
 	}
@@ -98,17 +111,17 @@ public class HomeAirConditioner extends EchonetSuperDevice{
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_OFF_TIMER_BASED_RESERVATION_SETTING, msg);	
 	}
-	public Date getONTimerRelativeTimeSetting() {
-		return (Date) getProperty(PROPERTY_HAS_ON_TIMER_SETTING_RELATIVE_TIME);	
+	public DateTimeValue getONTimerRelativeTimeSetting() {
+		return (DateTimeValue) getProperty(PROPERTY_HAS_ON_TIMER_SETTING_RELATIVE_TIME);	
 	}
-	public void setONTimerRelativeTimeSetting(Date msg) {
+	public void setONTimerRelativeTimeSetting(DateTimeValue msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_ON_TIMER_SETTING_RELATIVE_TIME, msg);	
 	}
-	public Date getONTimerTimeSetting() {
-		return (Date) getProperty(PROPERTY_HAS_ON_TIMER_SETTING_TIME);	
+	public DateTimeValue getONTimerTimeSetting() {
+		return (DateTimeValue) getProperty(PROPERTY_HAS_ON_TIMER_SETTING_TIME);	
 	}
-	public void setONTimerTimeSetting(Date msg) {
+	public void setONTimerTimeSetting(DateTimeValue msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_ON_TIMER_SETTING_TIME, msg);	
 	}

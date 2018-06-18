@@ -1,23 +1,36 @@
+/*******************************************************************************
+ * Copyright 2018 PHAM Van Cu, Tan laboratory, Japan Advanced Institute of Science and Technology (JAIST),
+ *  Japan as a part of the CARESSES project (http://www.caressesrobot.org/).
+ * 
+ * Licensed under the Apache License, Version 2.0 (the "License"); you may not
+ * use this file except in compliance with the License.  You may obtain a copy
+ * of the License at
+ * 
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+ * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.  See the
+ * License for the specific language governing permissions and limitations under
+ * the License.
+ ******************************************************************************/
 package org.universAAL.ontology.echonet.sensorRelatedDevices;
 
 import org.universAAL.ontology.echonet.EchonetOntology;
 import org.universAAL.ontology.echonet.EchonetSuperDevice;
-import org.universAAL.ontology.echonet.values.EchonetDeviceGroupCodeValue;
 import org.universAAL.ontology.echonet.values.MeasuredValue;
 
 public class IlluminanceSensor extends EchonetSuperDevice{
 	public static final String MY_URI = EchonetOntology.NAMESPACE + "IlluminanceSensor";
-	public static final String PROPERTY_HAS_MEASURED_ILLUMINANCE_VALUE_1 = EchonetOntology.NAMESPACE + "IlluminanceSensorHasIlluminanceValue1";
-	public static final String PROPERTY_HAS_MEASURED_ILLUMINANCE_VALUE_2 = EchonetOntology.NAMESPACE + "IlluminanceSensorHasIlluminanceValue2";
+	public static final String PROPERTY_HAS_MEASURED_ILLUMINANCE_VALUE_1 = EchonetOntology.NAMESPACE + "hasIlluminanceValue1";
+	public static final String PROPERTY_HAS_MEASURED_ILLUMINANCE_VALUE_2 = EchonetOntology.NAMESPACE + "hasIlluminanceValue2";
 	
 	public IlluminanceSensor() {
 		super();
-		setClassGroupCode(EchonetDeviceGroupCodeValue.SensorRelatedDevice);
 	}
 
 	public IlluminanceSensor(String uri) {
 		super(uri);
-		setClassGroupCode(EchonetDeviceGroupCodeValue.SensorRelatedDevice);
 	}
 
 	public String getClassURI() {

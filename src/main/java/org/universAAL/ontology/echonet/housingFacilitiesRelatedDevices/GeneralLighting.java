@@ -1,13 +1,26 @@
+/*******************************************************************************
+ * Copyright 2018 PHAM Van Cu, Tan laboratory, Japan Advanced Institute of Science and Technology (JAIST),
+ *  Japan as a part of the CARESSES project (http://www.caressesrobot.org/).
+ * 
+ * Licensed under the Apache License, Version 2.0 (the "License"); you may not
+ * use this file except in compliance with the License.  You may obtain a copy
+ * of the License at
+ * 
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+ * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.  See the
+ * License for the specific language governing permissions and limitations under
+ * the License.
+ ******************************************************************************/
 package org.universAAL.ontology.echonet.housingFacilitiesRelatedDevices;
 
-
-
-import java.util.Date;
 
 import org.universAAL.ontology.echonet.EchonetOntology;
 import org.universAAL.ontology.echonet.EchonetSuperDevice;
 import org.universAAL.ontology.echonet.values.ColorValue;
-import org.universAAL.ontology.echonet.values.EchonetDeviceGroupCodeValue;
+import org.universAAL.ontology.echonet.values.DateTimeValue;
 import org.universAAL.ontology.echonet.values.LightingSettingValue;
 import org.universAAL.ontology.echonet.values.MeasuredValue;
 import org.universAAL.ontology.echonet.values.OperationModeSettingValue;
@@ -17,33 +30,33 @@ import org.universAAL.ontology.echonet.values.ThresholdLevelValue;
 
 public class GeneralLighting extends EchonetSuperDevice{
 	public static final String MY_URI = EchonetOntology.NAMESPACE + "GeneralLighting";	
-	public static final String PROPERTY_HAS_ILLUMINANCE_LEVEL = EchonetOntology.NAMESPACE + "HasIlluminanceLevel";
-	public static final String PROPERTY_HAS_LIGHTING_COLOR_SETTING = EchonetOntology.NAMESPACE + "HasLightingColorSetting";
-	public static final String PROPERTY_HAS_ILLUMINANCE_LEVEL_STEP_SETTING = EchonetOntology.NAMESPACE + "HasIlluminanceLevelStepSetting";
-	public static final String PROPERTY_HAS_LIGHT_COLOR_STEP_SETTING = EchonetOntology.NAMESPACE + "HasLightColorStepSetting";
-	public static final String PROPERTY_HAS_MAXIMUM_SPECIFIABLE_VALUES = EchonetOntology.NAMESPACE + "HasMaximumSpecifiableValues";
-	public static final String PROPERTY_HAS_MAXIMUM_SETABLE_LEVEL_FOR_NIGHT_LIGHTING_VALUES = EchonetOntology.NAMESPACE + "HasMaximumSetableLevelForNightLightingValue";
-	public static final String PROPERTY_HAS_LIGHTING_MODE_SETTING = EchonetOntology.NAMESPACE + "HasLightingModeSetting";
-	public static final String PROPERTY_HAS_ILLUMINANCE_LEVEL_FOR_MAIN_LIGHTING = EchonetOntology.NAMESPACE + "HasIlluminanceLevelForMainLighting";
-	public static final String PROPERTY_HAS_ILLUMINANCE_LEVEL_STEP_SETTING_FOR_MAIN_LIGHTING = EchonetOntology.NAMESPACE + "HasIlluminanceLevelStepSettingForMainLighting";
-	public static final String PROPERTY_HAS_ILLUMINANCE_LEVEL_FOR_NIGHT_LIGHTING = EchonetOntology.NAMESPACE + "HasIlluminanceLevelForNightLighting";
-	public static final String PROPERTY_HAS_ILLUMINANCE_LEVEL_STEP_SETTING_FOR_NIGHT_LIGHTING = EchonetOntology.NAMESPACE + "HasIlluminanceLevelStepSettingForNightLighting";
-	public static final String PROPERTY_HAS_LIGHT_COLOR_SETTING_FOR_MAIN_LIGHTING = EchonetOntology.NAMESPACE + "HasLightColorSettingForMainLighting";
-	public static final String PROPERTY_HAS_LIGHT_COLOR_LEVEL_STEP_SETTING_FOR_MAIN_LIGHTING = EchonetOntology.NAMESPACE + "HasLightColorLevelStepSettingForMainLighting";
-	public static final String PROPERTY_HAS_LIGHT_COLOR_SETTING_FOR_NIGHT_LIGHTING = EchonetOntology.NAMESPACE + "HasLightColorSettingForNightLighting";
-	public static final String PROPERTY_HAS_LIGHT_COLOR_LEVEL_STEP_SETTING_FOR_NIGHT_LIGHTING = EchonetOntology.NAMESPACE + "HasLightColorLevelStepSettingForNightLighting";
-	public static final String PROPERTY_HAS_LIGHTING_MODE_STATUS_IN_AUTO_MODE = EchonetOntology.NAMESPACE + "HasLightingModeStatusInAutoMode";
-	public static final String PROPERTY_HAS_RGB_SETTING_FOR_COLOR_LIGHTING = EchonetOntology.NAMESPACE + "HasRGBSettingForColorLighting";
-	public static final String PROPERTY_HAS_ON_TIMER_RESERVATION_SETTING = EchonetOntology.NAMESPACE + "HasOnTimerReservationSetting";
-	public static final String PROPERTY_HAS_ON_TIMER_SETTING = EchonetOntology.NAMESPACE + "HasOnTimerSetting";
-	public static final String PROPERTY_HAS_OFF_TIMER_RESERVATION_SETTING = EchonetOntology.NAMESPACE + "HasOffTimerReservationSetting";
-	public static final String PROPERTY_HAS_OFF_TIMER_SETTING = EchonetOntology.NAMESPACE + "HasOffTimerSetting";
+	public static final String PROPERTY_HAS_ILLUMINANCE_LEVEL = EchonetOntology.NAMESPACE + "hasIlluminanceLevel";
+	public static final String PROPERTY_HAS_LIGHTING_COLOR_SETTING = EchonetOntology.NAMESPACE + "hasLightingColorSetting";
+	public static final String PROPERTY_HAS_ILLUMINANCE_LEVEL_STEP_SETTING = EchonetOntology.NAMESPACE + "hasIlluminanceLevelStepSetting";
+	public static final String PROPERTY_HAS_LIGHT_COLOR_STEP_SETTING = EchonetOntology.NAMESPACE + "hasLightColorStepSetting";
+	public static final String PROPERTY_HAS_MAXIMUM_SPECIFIABLE_VALUES = EchonetOntology.NAMESPACE + "hasMaximumSpecifiableValues";
+	public static final String PROPERTY_HAS_MAXIMUM_SETABLE_LEVEL_FOR_NIGHT_LIGHTING_VALUES = EchonetOntology.NAMESPACE + "hasMaximumSetableLevelForNightLightingValue";
+	public static final String PROPERTY_HAS_LIGHTING_MODE_SETTING = EchonetOntology.NAMESPACE + "hasLightingModeSetting";
+	public static final String PROPERTY_HAS_ILLUMINANCE_LEVEL_FOR_MAIN_LIGHTING = EchonetOntology.NAMESPACE + "hasIlluminanceLevelForMainLighting";
+	public static final String PROPERTY_HAS_ILLUMINANCE_LEVEL_STEP_SETTING_FOR_MAIN_LIGHTING = EchonetOntology.NAMESPACE + "hasIlluminanceLevelStepSettingForMainLighting";
+	public static final String PROPERTY_HAS_ILLUMINANCE_LEVEL_FOR_NIGHT_LIGHTING = EchonetOntology.NAMESPACE + "hasIlluminanceLevelForNightLighting";
+	public static final String PROPERTY_HAS_ILLUMINANCE_LEVEL_STEP_SETTING_FOR_NIGHT_LIGHTING = EchonetOntology.NAMESPACE + "hasIlluminanceLevelStepSettingForNightLighting";
+	public static final String PROPERTY_HAS_LIGHT_COLOR_SETTING_FOR_MAIN_LIGHTING = EchonetOntology.NAMESPACE + "hasLightColorSettingForMainLighting";
+	public static final String PROPERTY_HAS_LIGHT_COLOR_LEVEL_STEP_SETTING_FOR_MAIN_LIGHTING = EchonetOntology.NAMESPACE + "hasLightColorLevelStepSettingForMainLighting";
+	public static final String PROPERTY_HAS_LIGHT_COLOR_SETTING_FOR_NIGHT_LIGHTING = EchonetOntology.NAMESPACE + "hasLightColorSettingForNightLighting";
+	public static final String PROPERTY_HAS_LIGHT_COLOR_LEVEL_STEP_SETTING_FOR_NIGHT_LIGHTING = EchonetOntology.NAMESPACE + "hasLightColorLevelStepSettingForNightLighting";
+	public static final String PROPERTY_HAS_LIGHTING_MODE_STATUS_IN_AUTO_MODE = EchonetOntology.NAMESPACE + "hasLightingModeStatusInAutoMode";
+	public static final String PROPERTY_HAS_RGB_SETTING_FOR_COLOR_LIGHTING = EchonetOntology.NAMESPACE + "hasRGBSettingForColorLighting";
+	public static final String PROPERTY_HAS_ON_TIMER_RESERVATION_SETTING = EchonetOntology.NAMESPACE + "hasOnTimerReservationSetting";
+	public static final String PROPERTY_HAS_ON_TIMER_SETTING = EchonetOntology.NAMESPACE + "hasOnTimerSetting";
+	public static final String PROPERTY_HAS_OFF_TIMER_RESERVATION_SETTING = EchonetOntology.NAMESPACE + "hasOffTimerReservationSetting";
+	public static final String PROPERTY_HAS_OFF_TIMER_SETTING = EchonetOntology.NAMESPACE + "hasOffTimerSetting";
 
 	
-	public Date getOffTimerSetting() {
-		return (Date) getProperty(PROPERTY_HAS_OFF_TIMER_SETTING);	
+	public DateTimeValue getOffTimerSetting() {
+		return (DateTimeValue) getProperty(PROPERTY_HAS_OFF_TIMER_SETTING);	
 	}
-	public void setOffTimerSetting(Date msg) {
+	public void setOffTimerSetting(DateTimeValue msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_OFF_TIMER_SETTING, msg);	
 	}	
@@ -55,10 +68,10 @@ public class GeneralLighting extends EchonetSuperDevice{
 			changeProperty(PROPERTY_HAS_OFF_TIMER_RESERVATION_SETTING, msg);	
 	}
 	
-	public Date getOnTimerSetting() {
-		return (Date) getProperty(PROPERTY_HAS_ON_TIMER_SETTING);	
+	public DateTimeValue getOnTimerSetting() {
+		return (DateTimeValue) getProperty(PROPERTY_HAS_ON_TIMER_SETTING);	
 	}
-	public void setOnTimerSetting(Date msg) {
+	public void setOnTimerSetting(DateTimeValue msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_ON_TIMER_SETTING, msg);	
 	}	
@@ -157,10 +170,10 @@ public class GeneralLighting extends EchonetSuperDevice{
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_MAXIMUM_SETABLE_LEVEL_FOR_NIGHT_LIGHTING_VALUES, msg);	
 	}
-	public LightingSettingValue HasMaximumSpecifiableValues() {
+	public LightingSettingValue getMaximumSpecifiableValues() {
 		return (LightingSettingValue) getProperty(PROPERTY_HAS_MAXIMUM_SPECIFIABLE_VALUES);	
 	}
-	public void HasMaximumSpecifiableValues(LightingSettingValue msg) {
+	public void setMaximumSpecifiableValues(LightingSettingValue msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_MAXIMUM_SPECIFIABLE_VALUES, msg);	
 	}
@@ -197,11 +210,9 @@ public class GeneralLighting extends EchonetSuperDevice{
 	
 	public GeneralLighting() {
 		super();
-		setClassGroupCode(EchonetDeviceGroupCodeValue.HousingFacilityRelatedDevice);
 	}
 	public GeneralLighting(String uri) {
 		super(uri);
-		setClassGroupCode(EchonetDeviceGroupCodeValue.HousingFacilityRelatedDevice);
 	}
 	public String getClassURI() {
 		return MY_URI;

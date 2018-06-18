@@ -1,3 +1,19 @@
+/*******************************************************************************
+ * Copyright 2018 PHAM Van Cu, Tan laboratory, Japan Advanced Institute of Science and Technology (JAIST),
+ *  Japan as a part of the CARESSES project (http://www.caressesrobot.org/).
+ * 
+ * Licensed under the Apache License, Version 2.0 (the "License"); you may not
+ * use this file except in compliance with the License.  You may obtain a copy
+ * of the License at
+ * 
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+ * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.  See the
+ * License for the specific language governing permissions and limitations under
+ * the License.
+ ******************************************************************************/
 package org.universAAL.ontology.echonet.values;
 
 import org.universAAL.middleware.owl.ManagedIndividual;
@@ -11,8 +27,8 @@ public static final String MY_URI = EchonetOntology.NAMESPACE + "SelectiveOpenin
 	public static final int OPERATION_TIME_SETTING_CLOSE = 2;
 	public static final int LOCAL_SETTING_POSITION = 3;
 	public static final int SLIT_DEGREE_OF_OPENNING_SETTING = 4;
-	private static final String[] names = {"DegreeOfSettingPositionOpen", "OperationTimeSettingValueOpen", 
-										   "OperationTimeSettingValueClose", "LocalSettingPosition","SlitDegreeOfOpeningSetting"};
+	private static final String[] names = {"degreeOfSettingPositionOpen", "operationTimeSettingValueOpen", 
+										   "operationTimeSettingValueClose", "localSettingPosition","slitDegreeOfOpeningSetting"};
 	
 	public static final SelectiveOpeningOperationSettingValue DegreeOfSettingPositionOpen = new SelectiveOpeningOperationSettingValue(DEGREE_OF_SETTING_POSITION_OPEN);
 	public static final SelectiveOpeningOperationSettingValue OperationTimeSettingValueOpen = new SelectiveOpeningOperationSettingValue(OPERATION_TIME_SETTING_OPEN);

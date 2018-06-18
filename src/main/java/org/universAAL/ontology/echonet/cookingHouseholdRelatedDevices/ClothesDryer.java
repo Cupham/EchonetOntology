@@ -1,38 +1,52 @@
+/*******************************************************************************
+ * Copyright 2018 PHAM Van Cu, Tan laboratory, Japan Advanced Institute of Science and Technology (JAIST),
+ *  Japan as a part of the CARESSES project (http://www.caressesrobot.org/).
+ * 
+ * Licensed under the Apache License, Version 2.0 (the "License"); you may not
+ * use this file except in compliance with the License.  You may obtain a copy
+ * of the License at
+ * 
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+ * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.  See the
+ * License for the specific language governing permissions and limitations under
+ * the License.
+ ******************************************************************************/
 package org.universAAL.ontology.echonet.cookingHouseholdRelatedDevices;
 
 
 
-import java.util.Date;
-
 import org.universAAL.ontology.echonet.EchonetOntology;
 import org.universAAL.ontology.echonet.EchonetSuperDevice;
-import org.universAAL.ontology.echonet.values.EchonetDeviceGroupCodeValue;
+import org.universAAL.ontology.echonet.values.DateTimeValue;
 import org.universAAL.ontology.echonet.values.OperationModeSettingValue;
 import org.universAAL.ontology.echonet.values.OperationStateSettingValue;
 import org.universAAL.ontology.echonet.values.OperationStatusValue;
 
 public class ClothesDryer extends EchonetSuperDevice{
 	public static final String MY_URI = EchonetOntology.NAMESPACE + "ClothesDryer";
-	public static final String PROPERTY_HAS_DOOR_COVER_OPEN_CLOSE_STATUS= EchonetOntology.NAMESPACE + "HasDoorCoverOpenCloseStatus";
-	public static final String PROPERTY_HAS_DRYING_SETTING= EchonetOntology.NAMESPACE + "HasDryingSetting";
-	public static final String PROPERTY_HAS_DRYING_STATUS= EchonetOntology.NAMESPACE + "HasDryingStatus";
-	public static final String PROPERTY_HAS_DRYING_REMAINING_TIME= EchonetOntology.NAMESPACE + "HasDryingRemainingTime";
-	public static final String PROPERTY_HAS_ON_TIMER_RESERVATION_SETTING= EchonetOntology.NAMESPACE + "HasOnTimerReservationSetting";
-	public static final String PROPERTY_HAS_ON_TIMER_SETTING= EchonetOntology.NAMESPACE + "HasOnTimerSetting";
-	public static final String PROPERTY_HAS_ON_TIMER_SETTING_RELATIVE_TIME= EchonetOntology.NAMESPACE + "HasOnTimerSetting_RelativeTime";
+	public static final String PROPERTY_HAS_DOOR_COVER_OPEN_CLOSE_STATUS= EchonetOntology.NAMESPACE + "hasDoorCoverOpenCloseStatus";
+	public static final String PROPERTY_HAS_DRYING_SETTING= EchonetOntology.NAMESPACE + "hasDryingSetting";
+	public static final String PROPERTY_HAS_DRYING_STATUS= EchonetOntology.NAMESPACE + "hasDryingStatus";
+	public static final String PROPERTY_HAS_DRYING_REMAINING_TIME= EchonetOntology.NAMESPACE + "hasDryingRemainingTime";
+	public static final String PROPERTY_HAS_ON_TIMER_RESERVATION_SETTING= EchonetOntology.NAMESPACE + "hasOnTimerReservationSetting";
+	public static final String PROPERTY_HAS_ON_TIMER_SETTING= EchonetOntology.NAMESPACE + "hasOnTimerSetting";
+	public static final String PROPERTY_HAS_ON_TIMER_SETTING_RELATIVE_TIME= EchonetOntology.NAMESPACE + "hasOnTimerSetting_RelativeTime";
 
 	
-	public Date getOnTimerSetting_RelativeTime() {
-		return (Date) getProperty(PROPERTY_HAS_ON_TIMER_SETTING_RELATIVE_TIME);	
+	public DateTimeValue getOnTimerSetting_RelativeTime() {
+		return (DateTimeValue) getProperty(PROPERTY_HAS_ON_TIMER_SETTING_RELATIVE_TIME);	
 	}
-	public void setOnTimerSetting_RelativeTime(Date msg) {
+	public void setOnTimerSetting_RelativeTime(DateTimeValue msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_ON_TIMER_SETTING_RELATIVE_TIME, msg);	
 	}
-	public Date getOnTimerSetting() {
-		return (Date) getProperty(PROPERTY_HAS_ON_TIMER_SETTING);	
+	public DateTimeValue getOnTimerSetting() {
+		return (DateTimeValue) getProperty(PROPERTY_HAS_ON_TIMER_SETTING);	
 	}
-	public void setOnTimerSetting(Date msg) {
+	public void setOnTimerSetting(DateTimeValue msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_ON_TIMER_SETTING, msg);	
 	}
@@ -43,10 +57,10 @@ public class ClothesDryer extends EchonetSuperDevice{
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_ON_TIMER_RESERVATION_SETTING, msg);	
 	}	
-	public Date getDryingRemainingTime() {
-		return (Date) getProperty(PROPERTY_HAS_DRYING_REMAINING_TIME);	
+	public DateTimeValue getDryingRemainingTime() {
+		return (DateTimeValue) getProperty(PROPERTY_HAS_DRYING_REMAINING_TIME);	
 	}
-	public void setDryingRemainingTime(Date msg) {
+	public void setDryingRemainingTime(DateTimeValue msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_DRYING_REMAINING_TIME, msg);	
 	}
@@ -76,11 +90,9 @@ public class ClothesDryer extends EchonetSuperDevice{
 	
 	public ClothesDryer() {
 		super();
-		setClassGroupCode(EchonetDeviceGroupCodeValue.CookingHouseholdRelatedDevice);
 	}
 	public ClothesDryer(String uri) {
 		super(uri);
-		setClassGroupCode(EchonetDeviceGroupCodeValue.CookingHouseholdRelatedDevice);
 	}
 	public String getClassURI() {
 		return MY_URI;

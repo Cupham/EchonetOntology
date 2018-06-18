@@ -1,34 +1,49 @@
+/*******************************************************************************
+ * Copyright 2018 PHAM Van Cu, Tan laboratory, Japan Advanced Institute of Science and Technology (JAIST),
+ *  Japan as a part of the CARESSES project (http://www.caressesrobot.org/).
+ * 
+ * Licensed under the Apache License, Version 2.0 (the "License"); you may not
+ * use this file except in compliance with the License.  You may obtain a copy
+ * of the License at
+ * 
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+ * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.  See the
+ * License for the specific language governing permissions and limitations under
+ * the License.
+ ******************************************************************************/
 package org.universAAL.ontology.echonet.housingFacilitiesRelatedDevices;
 
 
 
 import org.universAAL.ontology.echonet.EchonetOntology;
 import org.universAAL.ontology.echonet.EchonetSuperDevice;
-import org.universAAL.ontology.echonet.values.EchonetDeviceGroupCodeValue;
+import org.universAAL.ontology.echonet.values.DateTimeValue;
 import org.universAAL.ontology.echonet.values.MeasuredValue;
 
 public class LowVoltageSmartElectricEnergy extends EchonetSuperDevice{
-	public static final String MY_URI = EchonetOntology.NAMESPACE + "LowVoltageSmartElectricEnergy";
-	
-	public static final String PROPERTY_HAS_COEFFICIENT= EchonetOntology.NAMESPACE + "HasCoefficient";
-	public static final String PROPERTY_HAS_NUMBER_OF_EFFECTIVE_DIGITS_FOR_CUMULATIVE_ELECTRIC_ENERGY= EchonetOntology.NAMESPACE + "HasNumberOfEffectiveDigitsForCumulativeElectricEnergy";
-	public static final String PROPERTY_HAS_MEASURED_CUMULATIVE_ELECTRIC_ENERGY_AMOUNT_NORMAL_DIRECTION = EchonetOntology.NAMESPACE + "HasMeasuredCumulativeElectricEnergyAmount_NormalDirection";
-	public static final String PROPERTY_HAS_CUMULATIVE_ELECTRIC_ENERGY_AMOUNT_UNIT = EchonetOntology.NAMESPACE + "HasMeasuredCumulativeElectricEnergyAmountUnit";
-	public static final String PROPERTY_HAS_MEASURED_CUMULATIVE_ELECTRIC_ENERGY_AMOUNT_HISTORICAL_DATA_NORMAL_DIRECTION = EchonetOntology.NAMESPACE + "HasMeasuredCumulativeElectricEnergyAmountHistoricalData_NormalDirection";
-	public static final String PROPERTY_HAS_MEASURED_CUMULATIVE_ELECTRIC_ENERGY_AMOUNT_REVERSE_DIRECTION = EchonetOntology.NAMESPACE + "HasMeasuredCumulativeElectricEnergyAmount_ReverseDirection";
-	public static final String PROPERTY_HAS_MEASURED_CUMULATIVE_ELECTRIC_ENERGY_AMOUNT_HISTORICAL_DATA_REVERSE_DIRECTION = EchonetOntology.NAMESPACE + "HasMeasuredCumulativeElectricEnergyAmountHistoricalData_NormalDirection";
-	public static final String PROPERTY_HAS_DAY_TO_RETRIVE_MEASURED_CUMULATIVE_ELECTRIC_ENERGY = EchonetOntology.NAMESPACE + "HasDayToRetrieveMeasuredCumulativeElectricEnergy";
-	public static final String PROPERTY_HAS_MEASURED_INSTANTANEOUS_AMOUNT_OF_ELECTRIC_ENERGY= EchonetOntology.NAMESPACE + "HasMeasuredInstantanenousAmountOfElectricEnergy";
-	public static final String PROPERTY_HAS_MEASURED_INSTANTANEOUS_CURRENT= EchonetOntology.NAMESPACE + "HasMeasuredInstantanenousCurrent";
-	public static final String PROPERTY_HAS_CUMULATIVE_ELECTRIC_ENERGY_AMOUNT_MEASURED_AT_FIXED_TIME_NORMAL_DIRECTION = EchonetOntology.NAMESPACE + "HasCumulativeElectricEnergyAmountMeasuredAtFixedTime_NormalDirection";
-	public static final String PROPERTY_HAS_CUMULATIVE_ELECTRIC_ENERGY_AMOUNT_MEASURED_AT_FIXED_TIME_REVERSED_DIRECTION = EchonetOntology.NAMESPACE + "HasCumulativeElectricEnergyAmountMeasuredAtFixedTime_ReversedDirection";
-	public static final String PROPERTY_HAS_MEASURED_CUMULATIVE_ELECTRIC_ENERGY_AMOUNT_HISTORICAL_DATA_2 = EchonetOntology.NAMESPACE + "HasMeasuredCumulativeElectricEnergyAmountHistoricalData2";
-	public static final String PROPERTY_HAS_DAY_TO_RETRIVE_MEASURED_CUMULATIVE_ELECTRIC_ENERGY_2 = EchonetOntology.NAMESPACE + "HasDayToRetrieveMeasuredCumulativeElectricEnergy2";
+	public static final String MY_URI = EchonetOntology.NAMESPACE + "LowVoltageSmartElectricEnergy";	
+	public static final String PROPERTY_HAS_COEFFICIENT= EchonetOntology.NAMESPACE + "hasCoefficient";
+	public static final String PROPERTY_HAS_NUMBER_OF_EFFECTIVE_DIGITS_FOR_CUMULATIVE_ELECTRIC_ENERGY= EchonetOntology.NAMESPACE + "hasNumberOfEffectiveDigitsForCumulativeElectricEnergy";
+	public static final String PROPERTY_HAS_MEASURED_CUMULATIVE_ELECTRIC_ENERGY_AMOUNT_NORMAL_DIRECTION = EchonetOntology.NAMESPACE + "hasMeasuredCumulativeElectricEnergyAmount_NormalDirection";
+	public static final String PROPERTY_HAS_CUMULATIVE_ELECTRIC_ENERGY_AMOUNT_UNIT = EchonetOntology.NAMESPACE + "hasMeasuredCumulativeElectricEnergyAmountUnit";
+	public static final String PROPERTY_HAS_MEASURED_CUMULATIVE_ELECTRIC_ENERGY_AMOUNT_HISTORICAL_DATA_NORMAL_DIRECTION = EchonetOntology.NAMESPACE + "hasMeasuredCumulativeElectricEnergyAmountHistoricalData_NormalDirection";
+	public static final String PROPERTY_HAS_MEASURED_CUMULATIVE_ELECTRIC_ENERGY_AMOUNT_REVERSE_DIRECTION = EchonetOntology.NAMESPACE + "hasMeasuredCumulativeElectricEnergyAmount_ReverseDirection";
+	public static final String PROPERTY_HAS_MEASURED_CUMULATIVE_ELECTRIC_ENERGY_AMOUNT_HISTORICAL_DATA_REVERSE_DIRECTION = EchonetOntology.NAMESPACE + "hasMeasuredCumulativeElectricEnergyAmountHistoricalData_ReverseDirection";
+	public static final String PROPERTY_HAS_DAY_TO_RETRIVE_MEASURED_CUMULATIVE_ELECTRIC_ENERGY = EchonetOntology.NAMESPACE + "hasDayToRetrieveMeasuredCumulativeElectricEnergy";
+	public static final String PROPERTY_HAS_MEASURED_INSTANTANEOUS_AMOUNT_OF_ELECTRIC_ENERGY= EchonetOntology.NAMESPACE + "hasMeasuredInstantanenousAmountOfElectricEnergy";
+	public static final String PROPERTY_HAS_MEASURED_INSTANTANEOUS_CURRENT= EchonetOntology.NAMESPACE + "hasMeasuredInstantanenousCurrent";
+	public static final String PROPERTY_HAS_CUMULATIVE_ELECTRIC_ENERGY_AMOUNT_MEASURED_AT_FIXED_TIME_NORMAL_DIRECTION = EchonetOntology.NAMESPACE + "hasCumulativeElectricEnergyAmountMeasuredAtFixedTime_NormalDirection";
+	public static final String PROPERTY_HAS_CUMULATIVE_ELECTRIC_ENERGY_AMOUNT_MEASURED_AT_FIXED_TIME_REVERSED_DIRECTION = EchonetOntology.NAMESPACE + "hasCumulativeElectricEnergyAmountMeasuredAtFixedTime_ReversedDirection";
+	public static final String PROPERTY_HAS_MEASURED_CUMULATIVE_ELECTRIC_ENERGY_AMOUNT_HISTORICAL_DATA_2 = EchonetOntology.NAMESPACE + "hasMeasuredCumulativeElectricEnergyAmountHistoricalData2";
+	public static final String PROPERTY_HAS_DAY_TO_RETRIVE_MEASURED_CUMULATIVE_ELECTRIC_ENERGY_2 = EchonetOntology.NAMESPACE + "hasDayToRetrieveMeasuredCumulativeElectricEnergy2";
 
-	public MeasuredValue getDayToRetrieveMeasuredCumulativeElectricEnergy2() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_DAY_TO_RETRIVE_MEASURED_CUMULATIVE_ELECTRIC_ENERGY_2);	
+	public DateTimeValue getDayToRetrieveMeasuredCumulativeElectricEnergy2() {
+		return (DateTimeValue) getProperty(PROPERTY_HAS_DAY_TO_RETRIVE_MEASURED_CUMULATIVE_ELECTRIC_ENERGY_2);	
 	}
-	public void setDayToRetrieveMeasuredCumulativeElectricEnergy2(MeasuredValue msg) {
+	public void setDayToRetrieveMeasuredCumulativeElectricEnergy2(DateTimeValue msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_DAY_TO_RETRIVE_MEASURED_CUMULATIVE_ELECTRIC_ENERGY_2, msg);	
 	}
@@ -67,10 +82,10 @@ public class LowVoltageSmartElectricEnergy extends EchonetSuperDevice{
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_MEASURED_INSTANTANEOUS_AMOUNT_OF_ELECTRIC_ENERGY, msg);	
 	}
-	public MeasuredValue getDayToRetrieveMeasuredCumulativeElectricEnergy() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_DAY_TO_RETRIVE_MEASURED_CUMULATIVE_ELECTRIC_ENERGY);	
+	public DateTimeValue getDayToRetrieveMeasuredCumulativeElectricEnergy() {
+		return (DateTimeValue) getProperty(PROPERTY_HAS_DAY_TO_RETRIVE_MEASURED_CUMULATIVE_ELECTRIC_ENERGY);	
 	}
-	public void setDayToRetrieveMeasuredCumulativeElectricEnergy(MeasuredValue msg) {
+	public void setDayToRetrieveMeasuredCumulativeElectricEnergy(DateTimeValue msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_DAY_TO_RETRIVE_MEASURED_CUMULATIVE_ELECTRIC_ENERGY, msg);	
 	}
@@ -126,11 +141,9 @@ public class LowVoltageSmartElectricEnergy extends EchonetSuperDevice{
 	
 	public LowVoltageSmartElectricEnergy() {
 		super();
-		setClassGroupCode(EchonetDeviceGroupCodeValue.HousingFacilityRelatedDevice);
 	}
 	public LowVoltageSmartElectricEnergy(String uri) {
 		super(uri);
-		setClassGroupCode(EchonetDeviceGroupCodeValue.HousingFacilityRelatedDevice);
 	}
 	public String getClassURI() {
 		return MY_URI;

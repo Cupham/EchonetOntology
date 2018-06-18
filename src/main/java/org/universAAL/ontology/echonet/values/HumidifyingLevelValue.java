@@ -1,3 +1,19 @@
+/*******************************************************************************
+ * Copyright 2018 PHAM Van Cu, Tan laboratory, Japan Advanced Institute of Science and Technology (JAIST),
+ *  Japan as a part of the CARESSES project (http://www.caressesrobot.org/).
+ * 
+ * Licensed under the Apache License, Version 2.0 (the "License"); you may not
+ * use this file except in compliance with the License.  You may obtain a copy
+ * of the License at
+ * 
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+ * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.  See the
+ * License for the specific language governing permissions and limitations under
+ * the License.
+ ******************************************************************************/
 package org.universAAL.ontology.echonet.values;
 
 import org.universAAL.middleware.owl.ManagedIndividual;
@@ -14,8 +30,8 @@ public static final String MY_URI = EchonetOntology.NAMESPACE + "HumidifyingLeve
 	public static final int HUMIDIFYING_LEVEL3 = 5;
 	public static final int HUMIDIFYING_LEVEL4 = 6;
 	
-	private static final String[] names = {"Automatic", "ContinousOperation", "IntermitentOperation","HumidifyingLevel1",
-										   "HumidifyingLevel1","HumidifyingLevel2","HumidifyingLevel3","HumidifyingLevel4"};
+	private static final String[] names = {"automatic", "continousOperation", "intermitentOperation","humidifyingLevel1",
+										   "humidifyingLevel1","humidifyingLevel2","humidifyingLevel3","humidifyingLevel4"};
 	
 	public static final HumidifyingLevelValue Automatic = new HumidifyingLevelValue(AUTOMATIC);
 	public static final HumidifyingLevelValue ContinousOperation = new HumidifyingLevelValue(CONTINOUS_OPERATION);

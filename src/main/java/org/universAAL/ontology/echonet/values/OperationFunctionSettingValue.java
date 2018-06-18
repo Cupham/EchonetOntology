@@ -1,3 +1,19 @@
+/*******************************************************************************
+ * Copyright 2018 PHAM Van Cu, Tan laboratory, Japan Advanced Institute of Science and Technology (JAIST),
+ *  Japan as a part of the CARESSES project (http://www.caressesrobot.org/).
+ * 
+ * Licensed under the Apache License, Version 2.0 (the "License"); you may not
+ * use this file except in compliance with the License.  You may obtain a copy
+ * of the License at
+ * 
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+ * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.  See the
+ * License for the specific language governing permissions and limitations under
+ * the License.
+ ******************************************************************************/
 package org.universAAL.ontology.echonet.values;
 
 import org.universAAL.middleware.owl.ManagedIndividual;
@@ -40,15 +56,15 @@ public static final String MY_URI = EchonetOntology.NAMESPACE + "OperationFuntio
 	public static final int THERMOSTAT_OVERRIDE_FUNCTION_ON = 31;
 	public static final int THERMOSTAT_OVERRIDE_FUNCTION_OFF = 32;
 	
-	private static final String[] names = {"NoSetting", "ClothesDryerFunction", "MiteMoldControlFunction","ActiveDefrostingFunction",
-										   "Open", "Close", "Stop", "ContinousSetting","OneTimeSetting",
-										   "SystemInterconnectedReservePowerFlowAcceptable","Independent",
-										   "SystemInterconnectedReservePowerFlowNotAcceptable","TimerOff","Timer1_On","Timer2_On",
-										   "TimeAndRelativeTimeBasedRevervationON", "TimeAndRelativeTimeBasedRevervationOFF", 
-										   "TimeBasedRevervationON","RelativeTimeBasedRevervationON","Hybrid","SystemLinked",
-										   "FluorescentLight","Led","NoLight","NonFluorocarbonInverter","Inverter","BuiltInType",
-										   "SeperateType","Others","NormalSetting", "ThermostatOverrideFunctionON", 
-										   "ThermostatOverrideFunctionOFF"};
+	private static final String[] names = {"noSetting", "clothesDryerFunction", "condensationSuppressorFunction","miteMoldControlFunction","activeDefrostingFunction",
+										   "open", "close", "stop", "continousSetting","oneTimeSetting",
+										   "systemInterconnectedReservePowerFlowAcceptable","independent",
+										   "systemInterconnectedReservePowerFlowNotAcceptable","timerOff","timer1_On","timer2_On",
+										   "timeAndRelativeTimeBasedRevervationON", "timeAndRelativeTimeBasedRevervationOFF", 
+										   "timeBasedRevervationON","relativeTimeBasedRevervationON","hybrid","systemLinked",
+										   "fluorescentLight","led","noLight","nonFluorocarbonInverter","inverter","builtInType",
+										   "seperateType","others","normalSetting", "thermostatOverrideFunctionON", 
+										   "thermostatOverrideFunctionOFF"};
 	
 	public static final OperationFunctionSettingValue NoSetting = new OperationFunctionSettingValue(NO_SETTING);
 	public static final OperationFunctionSettingValue ClothesDryerFunction = new OperationFunctionSettingValue(CLOTHES_DRYER_FUNCTION);

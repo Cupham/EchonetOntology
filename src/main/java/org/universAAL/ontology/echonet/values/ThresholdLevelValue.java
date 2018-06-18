@@ -1,3 +1,19 @@
+/*******************************************************************************
+ * Copyright 2018 PHAM Van Cu, Tan laboratory, Japan Advanced Institute of Science and Technology (JAIST),
+ *  Japan as a part of the CARESSES project (http://www.caressesrobot.org/).
+ * 
+ * Licensed under the Apache License, Version 2.0 (the "License"); you may not
+ * use this file except in compliance with the License.  You may obtain a copy
+ * of the License at
+ * 
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+ * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.  See the
+ * License for the specific language governing permissions and limitations under
+ * the License.
+ ******************************************************************************/
 package org.universAAL.ontology.echonet.values;
 
 import org.universAAL.middleware.owl.ManagedIndividual;
@@ -22,7 +38,6 @@ public static final String MY_URI = EchonetOntology.NAMESPACE + "ThresholdLevelV
 	public static final int LEVEL_14 = 14;
 	public static final int LEVEL_15 = 15;
 	public static final int MAXIMUM_LEVEL = 16;
-	
 	public static final int HIGH = 17;
 	public static final int MEDIUM = 18;
 	public static final int LOW = 19;
@@ -32,10 +47,10 @@ public static final String MY_URI = EchonetOntology.NAMESPACE + "ThresholdLevelV
 	public static final int INTERMITTENT_OPERATION = 23;
 	
 	
-	private static final String[] names = { "MinumumLevel","Level1", "Level2", "Level3", "Level4", "Level5", "Level6", "Level7", 
-											"Level8", "Level9","Level10","Level11", "Level12","Level13", "Level14","Level15",
-											"MaximumLevel","High","Medium","Low","AutomaticControl","Standard","ContinousOperation",
-											"IntermittentOperation"};
+	private static final String[] names = { "minumumLevel","level1", "level2", "level3", "level4", "level5", "level6", "Level7", 
+											"level8", "level9","level10","level11", "level12","level13", "level14","level15",
+											"maximumLevel","high","medium","low","automaticControl","standard","continousOperation",
+											"intermittentOperation"};
 	
 	public static final ThresholdLevelValue MinumumLevel = new ThresholdLevelValue(MINIMUM_LEVEL);
 	public static final ThresholdLevelValue Level_1 = new ThresholdLevelValue(LEVEL_1);

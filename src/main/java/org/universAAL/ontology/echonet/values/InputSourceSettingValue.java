@@ -1,3 +1,19 @@
+/*******************************************************************************
+ * Copyright 2018 PHAM Van Cu, Tan laboratory, Japan Advanced Institute of Science and Technology (JAIST),
+ *  Japan as a part of the CARESSES project (http://www.caressesrobot.org/).
+ * 
+ * Licensed under the Apache License, Version 2.0 (the "License"); you may not
+ * use this file except in compliance with the License.  You may obtain a copy
+ * of the License at
+ * 
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+ * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.  See the
+ * License for the specific language governing permissions and limitations under
+ * the License.
+ ******************************************************************************/
 package org.universAAL.ontology.echonet.values;
 
 
@@ -9,7 +25,7 @@ public class InputSourceSettingValue extends ManagedIndividual{
 	protected InputSourceSettingValue(String uri) {
 		super(uri);
 	}
-	public static final String MY_URI = EchonetOntology.NAMESPACE + "ColorValue";
+	public static final String MY_URI = EchonetOntology.NAMESPACE + "InputSourceSettingValue";
 	
 	public static final int BUILT_INTO_TUNER = 0;
 	public static final int BUILT_INTO_OPTICAL_DISK = 1;
@@ -25,10 +41,10 @@ public class InputSourceSettingValue extends ManagedIndividual{
 	public static final int EQUIPMENT_UNIQUE_AREA =11;
 	public static final int PROHIBITED = 12;
 	public static final int NOT_SET = 13;
-	private static final String[] names = { "BuiltIntoTuner", "BuiltIntoOpticalDisk","BuiltIntoMD","BuiltIntoCassettle",
-											"ExternalInputAnalogDigitalInputTerminal","ExternalInputHDMI","ExternalInputUSB",
-											"BuiltInMemoryCardSlot","BuiltInMemoryStorage","DedicatedTerminalForPortablePlayer",
-											"NetworkRelatedInput","EquipmentUniqueArea","Prohibited","NotSet"};
+	private static final String[] names = { "builtIntoTuner", "builtIntoOpticalDisk","builtIntoMD","builtIntoCassettle",
+											"externalInputAnalogDigitalInputTerminal","externalInputHDMI","externalInputUSB",
+											"builtInMemoryCardSlot","builtInMemoryStorage","dedicatedTerminalForPortablePlayer",
+											"networkRelatedInput","equipmentUniqueArea","prohibited","notSet"};
 	
 	public static final InputSourceSettingValue BuiltIntoTuner = new InputSourceSettingValue(BUILT_INTO_TUNER);
 	public static final InputSourceSettingValue BuiltIntoOpticalDisk = new InputSourceSettingValue(BUILT_INTO_OPTICAL_DISK);

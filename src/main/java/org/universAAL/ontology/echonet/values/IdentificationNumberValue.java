@@ -1,3 +1,19 @@
+/*******************************************************************************
+ * Copyright 2018 PHAM Van Cu, Tan laboratory, Japan Advanced Institute of Science and Technology (JAIST),
+ *  Japan as a part of the CARESSES project (http://www.caressesrobot.org/).
+ * 
+ * Licensed under the Apache License, Version 2.0 (the "License"); you may not
+ * use this file except in compliance with the License.  You may obtain a copy
+ * of the License at
+ * 
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+ * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.  See the
+ * License for the specific language governing permissions and limitations under
+ * the License.
+ ******************************************************************************/
 package org.universAAL.ontology.echonet.values;
 
 import org.universAAL.middleware.owl.ManagedIndividual;
@@ -23,11 +39,11 @@ public static final String MY_URI = EchonetOntology.NAMESPACE + "IdentificationN
 	public static final int IDENTIFICATION_NOT_SET = 14;
 	
 	
-	private static final String[] names = {"LowerLayerCommunicationProtocol", "PowerLineCommunicationProtocol_A_D",
-										   "LowPowerRadioCommunicationProtocol", "ExtendedHBS", "IrDA","LonTalk",
-										   "Bluetooth", "Ethernet", "IEEE802_11_11B","PowerLineCommunicationProtocol_C",
-										   "IPV6_Ethernet", "IPV6_6LoWPAN", "ManufacturerDefinedProtocol","RandomlyGeneratedProtocol",
-										   "IdentificationNotSet"};
+	private static final String[] names = {"lowerLayerCommunicationProtocol", "powerLineCommunicationProtocol_A_D",
+										   "lowPowerRadioCommunicationProtocol", "extendedHBS", "irDA","lonTalk",
+										   "bluetooth", "ethernet", "ieee802_11_11B","powerLineCommunicationProtocol_C",
+										   "ipV6_Ethernet", "ipV6_6LoWPAN", "manufacturerDefinedProtocol","randomlyGeneratedProtocol",
+										   "identificationNotSet"};
 	
 	public static final IdentificationNumberValue LowerLayerCommunicationProtocol = new IdentificationNumberValue(LOWER_LAYER_COMMUNICATION_PROTOCOL);
 	public static final IdentificationNumberValue PowerLineCommunicationProtocol_A_D = new IdentificationNumberValue(POWER_LINE_COMMUNICATION_PROTOCOL_A_D);

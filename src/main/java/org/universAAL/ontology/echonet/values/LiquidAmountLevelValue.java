@@ -1,3 +1,19 @@
+/*******************************************************************************
+ * Copyright 2018 PHAM Van Cu, Tan laboratory, Japan Advanced Institute of Science and Technology (JAIST),
+ *  Japan as a part of the CARESSES project (http://www.caressesrobot.org/).
+ * 
+ * Licensed under the Apache License, Version 2.0 (the "License"); you may not
+ * use this file except in compliance with the License.  You may obtain a copy
+ * of the License at
+ * 
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+ * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.  See the
+ * License for the specific language governing permissions and limitations under
+ * the License.
+ ******************************************************************************/
 package org.universAAL.ontology.echonet.values;
 
 import org.universAAL.middleware.owl.ManagedIndividual;
@@ -13,8 +29,8 @@ public static final String MY_URI = EchonetOntology.NAMESPACE + "LiquidAmountLev
 	public static final int AMOUNT_LEVEL_60_PERCENT = 4;
 	public static final int AMOUNT_LEVEL_80_PERCENT = 5;
 	public static final int MAX_LEVEL = 6;
-	private static final String[] names = {"Empty", "MinimumLevel", "AmountLevel20Percent", "AmountLevel40Percent", 
-										   "AmountLevel60Percent", "AmountLevel80Percent", "MaxLevel"};
+	private static final String[] names = {"empty", "minimumLevel", "amountLevel20Percent", "amountLevel40Percent", 
+										   "amountLevel60Percent", "amountLevel80Percent", "maxLevel"};
 	
 	public static final LiquidAmountLevelValue Empty = new LiquidAmountLevelValue(EMPTY);
 	public static final LiquidAmountLevelValue MinimumLevel = new LiquidAmountLevelValue(MINIMUM_LEVEL);

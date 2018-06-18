@@ -1,10 +1,25 @@
+/*******************************************************************************
+ * Copyright 2018 PHAM Van Cu, Tan laboratory, Japan Advanced Institute of Science and Technology (JAIST),
+ *  Japan as a part of the CARESSES project (http://www.caressesrobot.org/).
+ * 
+ * Licensed under the Apache License, Version 2.0 (the "License"); you may not
+ * use this file except in compliance with the License.  You may obtain a copy
+ * of the License at
+ * 
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+ * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.  See the
+ * License for the specific language governing permissions and limitations under
+ * the License.
+ ******************************************************************************/
 package org.universAAL.ontology.echonet.housingFacilitiesRelatedDevices;
 
-import java.util.Date;
 
 import org.universAAL.ontology.echonet.EchonetOntology;
 import org.universAAL.ontology.echonet.EchonetSuperDevice;
-import org.universAAL.ontology.echonet.values.EchonetDeviceGroupCodeValue;
+import org.universAAL.ontology.echonet.values.DateTimeValue;
 import org.universAAL.ontology.echonet.values.MeasuredValue;
 import org.universAAL.ontology.echonet.values.OccurenceStatusValue;
 import org.universAAL.ontology.echonet.values.OperationStatusValue;
@@ -12,36 +27,36 @@ import org.universAAL.ontology.echonet.values.TypeClassificationValue;
 
 public class SmartGasMeter extends EchonetSuperDevice{
 	public static final String MY_URI = EchonetOntology.NAMESPACE + "SmartGasMetter";
-	public static final String PROPERTY_HAS_GAS_METTER_CLASSIFICATION_SETTING = EchonetOntology.NAMESPACE + "HasGasMetterClassificationSetting";
-	public static final String PROPERTY_HAS_OWNER_CLASSIFICATION = EchonetOntology.NAMESPACE + "HasOwnerClassification";
-	public static final String PROPERTY_HAS_MEASURED_CUMULATIVE_GAS_CONSUMPTION = EchonetOntology.NAMESPACE + "HasMeasuredCumulativeGasConsumption";
-	public static final String PROPERTY_HAS_MEASURED_CUMULATIVE_GAS_CONSUMPTION_UNIT = EchonetOntology.NAMESPACE + "HasMeasuredCumulativeGasConsumptionUnit";
-	public static final String PROPERTY_HAS_MEASURED_CUMULATIVE_GAS_CONSUMPTION_HISTORICAL_DATA = EchonetOntology.NAMESPACE + "HasMeasuredCumulativeGasConsumptionHistoricalData";
-	public static final String PROPERTY_HAS_DAY_TO_RETRIEVE_CUMULATIVE_GAS_CONSUMPTION_HISTORICAL_DATA = EchonetOntology.NAMESPACE + "HasDayToRetrieveMeasuredCumulativeGasConsumptionHistoricalData";
-	public static final String PROPERTY_HAS_DETECTION_OF_ABNORMAL_VALUE_IN_METERING_DATA = EchonetOntology.NAMESPACE + "HasDetectionOfAbnormalValueInMetterData";
-	public static final String PROPERTY_HAS_SECURITY_DATA_INFORMATION = EchonetOntology.NAMESPACE + "HasSecurityDataInformation";
-	public static final String PROPERTY_HAS_ID_NUMBER_SETTING = EchonetOntology.NAMESPACE + "HasIDNumberSetting";
-	public static final String PROPERTY_VERIFICATION_EXPIRATION_INFORMATION= EchonetOntology.NAMESPACE + "HasVerificationExpirationInformation";
-	public static final String PROPERTY_HAS_VALVE_CLOSURE_BY_THE_CENTER = EchonetOntology.NAMESPACE + "HasValveClosureByTheCenter";
-	public static final String PROPERTY_HAS_PERMISSION_FROM_THE_CENTER_TO_REOPEN_VALUE_CLOSED_BY_THE_CENTER = EchonetOntology.NAMESPACE + "HasPermissionFromTheCenterToReopenTheValveClosedByTheCenter";
-	public static final String PROPERTY_HAS_EMERGENCY_CLOSURE_OF_SHUTOFF_VALVE = EchonetOntology.NAMESPACE + "HasEmergencyClosureOfShutoffValve";
-	public static final String PROPERTY_HAS_SHUTOFF_VALVE_STATUS = EchonetOntology.NAMESPACE + "HasShutoffValveStatus";
-	public static final String PROPERTY_HAS_HISTORICAL_DATA_OF_SHUTOFF_REASONS = EchonetOntology.NAMESPACE + "HasHistoricalDataOfShutoffReasons";
-	public static final String PROPERTY_HAS_MEASURED_CUMULATIVE_GAS_CONSUMPTION_INFORMATION_DATE_TIME_INCLUDED = EchonetOntology.NAMESPACE + "HasMeasuredCumulativeGasConsumptionInformationDateTimeIncluded";
-	public static final String PROPERTY_HAS_MEASURED_CUMULATIVE_GAS_CONSUMPTION_HISTORICAL_INFORMATION_DATE_TIME_INCLUDED = EchonetOntology.NAMESPACE + "HasMeasuredCumulativeGasConsumptionHistoricalInformationDateTimeIncluded";
+	public static final String PROPERTY_HAS_GAS_METTER_CLASSIFICATION_SETTING = EchonetOntology.NAMESPACE + "hasGasMetterClassificationSetting";
+	public static final String PROPERTY_HAS_OWNER_CLASSIFICATION = EchonetOntology.NAMESPACE + "hasOwnerClassification";
+	public static final String PROPERTY_HAS_MEASURED_CUMULATIVE_GAS_CONSUMPTION = EchonetOntology.NAMESPACE + "hasMeasuredCumulativeGasConsumption";
+	public static final String PROPERTY_HAS_MEASURED_CUMULATIVE_GAS_CONSUMPTION_UNIT = EchonetOntology.NAMESPACE + "hasMeasuredCumulativeGasConsumptionUnit";
+	public static final String PROPERTY_HAS_MEASURED_CUMULATIVE_GAS_CONSUMPTION_HISTORICAL_DATA = EchonetOntology.NAMESPACE + "hasMeasuredCumulativeGasConsumptionHistoricalData";
+	public static final String PROPERTY_HAS_DAY_TO_RETRIEVE_CUMULATIVE_GAS_CONSUMPTION_HISTORICAL_DATA = EchonetOntology.NAMESPACE + "hasDayToRetrieveMeasuredCumulativeGasConsumptionHistoricalData";
+	public static final String PROPERTY_HAS_DETECTION_OF_ABNORMAL_VALUE_IN_METERING_DATA = EchonetOntology.NAMESPACE + "hasDetectionOfAbnormalValueInMetterData";
+	public static final String PROPERTY_HAS_SECURITY_DATA_INFORMATION = EchonetOntology.NAMESPACE + "hasSecurityDataInformation";
+	public static final String PROPERTY_HAS_ID_NUMBER_SETTING = EchonetOntology.NAMESPACE + "hasIDNumberSetting";
+	public static final String PROPERTY_VERIFICATION_EXPIRATION_INFORMATION= EchonetOntology.NAMESPACE + "hasVerificationExpirationInformation";
+	public static final String PROPERTY_HAS_VALVE_CLOSURE_BY_THE_CENTER = EchonetOntology.NAMESPACE + "hasValveClosureByTheCenter";
+	public static final String PROPERTY_HAS_PERMISSION_FROM_THE_CENTER_TO_REOPEN_VALUE_CLOSED_BY_THE_CENTER = EchonetOntology.NAMESPACE + "hasPermissionFromTheCenterToReopenTheValveClosedByTheCenter";
+	public static final String PROPERTY_HAS_EMERGENCY_CLOSURE_OF_SHUTOFF_VALVE = EchonetOntology.NAMESPACE + "hasEmergencyClosureOfShutoffValve";
+	public static final String PROPERTY_HAS_SHUTOFF_VALVE_STATUS = EchonetOntology.NAMESPACE + "hasShutoffValveStatus";
+	public static final String PROPERTY_HAS_HISTORICAL_DATA_OF_SHUTOFF_REASONS = EchonetOntology.NAMESPACE + "hasHistoricalDataOfShutoffReasons";
+	public static final String PROPERTY_HAS_MEASURED_CUMULATIVE_GAS_CONSUMPTION_INFORMATION_DATE_TIME_INCLUDED = EchonetOntology.NAMESPACE + "hasMeasuredCumulativeGasConsumptionInformationDateTimeValueTimeIncluded";
+	public static final String PROPERTY_HAS_MEASURED_CUMULATIVE_GAS_CONSUMPTION_HISTORICAL_INFORMATION_DATE_TIME_INCLUDED = EchonetOntology.NAMESPACE + "hasMeasuredCumulativeGasConsumptionHistoricalInformationDateTimeValueTimeIncluded";
 	
 	
-	public MeasuredValue getMeasuredCumulativeGasConsumptionHistoricalInformationDateTimeIncluded() {
+	public MeasuredValue getMeasuredCumulativeGasConsumptionHistoricalInformationDateTimeValueTimeIncluded() {
 		return (MeasuredValue) getProperty(PROPERTY_HAS_MEASURED_CUMULATIVE_GAS_CONSUMPTION_HISTORICAL_INFORMATION_DATE_TIME_INCLUDED);	
 	}
-	public void setMeasuredCumulativeGasConsumptionHistoricalInformationDateTimeIncluded(MeasuredValue msg) {
+	public void setMeasuredCumulativeGasConsumptionHistoricalInformationDateTimeValueTimeIncluded(MeasuredValue msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_MEASURED_CUMULATIVE_GAS_CONSUMPTION_HISTORICAL_INFORMATION_DATE_TIME_INCLUDED, msg);	
 	}
-	public MeasuredValue getMeasuredCumulativeGasConsumptionInformationDateTimeIncluded() {
+	public MeasuredValue getMeasuredCumulativeGasConsumptionInformationDateTimeValueTimeIncluded() {
 		return (MeasuredValue) getProperty(PROPERTY_HAS_MEASURED_CUMULATIVE_GAS_CONSUMPTION_INFORMATION_DATE_TIME_INCLUDED);	
 	}
-	public void setMeasuredCumulativeGasConsumptionInformationDateTimeIncluded(MeasuredValue msg) {
+	public void setMeasuredCumulativeGasConsumptionInformationDateTimeValueTimeIncluded(MeasuredValue msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_MEASURED_CUMULATIVE_GAS_CONSUMPTION_INFORMATION_DATE_TIME_INCLUDED, msg);	
 	}
@@ -82,10 +97,10 @@ public class SmartGasMeter extends EchonetSuperDevice{
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_VALVE_CLOSURE_BY_THE_CENTER, msg);	
 	}
-	public Date getVerificationExpirationInformation() {
-		return (Date) getProperty(PROPERTY_VERIFICATION_EXPIRATION_INFORMATION);	
+	public DateTimeValue getVerificationExpirationInformation() {
+		return (DateTimeValue) getProperty(PROPERTY_VERIFICATION_EXPIRATION_INFORMATION);	
 	}
-	public void setVerificationExpirationInformation(Date msg) {
+	public void setVerificationExpirationInformation(DateTimeValue msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_VERIFICATION_EXPIRATION_INFORMATION, msg);	
 	}
@@ -110,10 +125,10 @@ public class SmartGasMeter extends EchonetSuperDevice{
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_DETECTION_OF_ABNORMAL_VALUE_IN_METERING_DATA, msg);	
 	}
-	public MeasuredValue getDayToRetrieveMeasuredCumulativeGasConsumptionHistoricalData() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_DAY_TO_RETRIEVE_CUMULATIVE_GAS_CONSUMPTION_HISTORICAL_DATA);	
+	public DateTimeValue getDayToRetrieveMeasuredCumulativeGasConsumptionHistoricalData() {
+		return (DateTimeValue) getProperty(PROPERTY_HAS_DAY_TO_RETRIEVE_CUMULATIVE_GAS_CONSUMPTION_HISTORICAL_DATA);	
 	}
-	public void setDayToRetrieveMeasuredCumulativeGasConsumptionHistoricalData(MeasuredValue msg) {
+	public void setDayToRetrieveMeasuredCumulativeGasConsumptionHistoricalData(DateTimeValue msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_DAY_TO_RETRIEVE_CUMULATIVE_GAS_CONSUMPTION_HISTORICAL_DATA, msg);	
 	}
@@ -159,11 +174,9 @@ public class SmartGasMeter extends EchonetSuperDevice{
 	
 	public SmartGasMeter() {
 		super();
-		setClassGroupCode(EchonetDeviceGroupCodeValue.HousingFacilityRelatedDevice);
 	}
 	public SmartGasMeter(String uri) {
 		super(uri);
-		setClassGroupCode(EchonetDeviceGroupCodeValue.HousingFacilityRelatedDevice);
 	}
 	public String getClassURI() {
 		return MY_URI;

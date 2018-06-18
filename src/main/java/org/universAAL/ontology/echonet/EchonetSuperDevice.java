@@ -1,7 +1,23 @@
+/*******************************************************************************
+ * Copyright 2018 PHAM Van Cu, Tan laboratory, Japan Advanced Institute of Science and Technology (JAIST),
+ *  Japan as a part of the CARESSES project (http://www.caressesrobot.org/).
+ * 
+ * Licensed under the Apache License, Version 2.0 (the "License"); you may not
+ * use this file except in compliance with the License.  You may obtain a copy
+ * of the License at
+ * 
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+ * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.  See the
+ * License for the specific language governing permissions and limitations under
+ * the License.
+ ******************************************************************************/
 package org.universAAL.ontology.echonet;
 
-import java.util.Date;
 
+import org.universAAL.ontology.echonet.values.DateTimeValue;
 import org.universAAL.ontology.echonet.values.EchonetDeviceGroupCodeValue;
 import org.universAAL.ontology.echonet.values.MeasuredValue;
 import org.universAAL.ontology.echonet.values.FaultDesciptionValue;
@@ -17,31 +33,31 @@ import org.universAAL.ontology.phThing.Device;
 public class EchonetSuperDevice extends Device{
 	public static final String MY_URI = EchonetOntology.NAMESPACE + "EchonetSuperDevice";
 	
-	public static final String PROPERTY_HAS_NODE_IP_ADDRESS = EchonetOntology.NAMESPACE + "echonet_device_has_node_ip_address";
-	public static final String PROPERTY_HAS_GROUP_CODE = EchonetOntology.NAMESPACE + "echonet_device_has_group_code";
-	public static final String PROPERTY_HAS_CLASS_CODE = EchonetOntology.NAMESPACE + "echonet_device_has_class_code";
-	public static final String PROPERTY_HAS_INSTANCE_CODE = EchonetOntology.NAMESPACE + "echonet_device_has_instance_code";
-	public static final String PROPERTY_HAS_OPERATION_STATUS = EchonetOntology.NAMESPACE +"echonet_device_has_operation_status";
-	public static final String PROPERTY_HAS_INSTALLATION_LOCATION = EchonetOntology.NAMESPACE +"echonet_device_has_installation_ocation";
-	public static final String PROPERTY_STANDARD_VERSION_INFORMATION = EchonetOntology.NAMESPACE +"echonet_device_has_standard_version_information";
-	public static final String PROPERTY_HAS_FAULT_STATUS = EchonetOntology.NAMESPACE +"echonet_device_has_fault_status";
-	public static final String PROPERTY_HAS_FAULT_DESCRIPTION = EchonetOntology.NAMESPACE +"echonet_device_has_fault_description";
-	public static final String PROPERTY_HAS_MANUFACTURER_CODE = EchonetOntology.NAMESPACE +"echonet_device_has_manufacturer_code";
-	public static final String PROPERTY_HAS_BUSINESS_FACILITY_CODE = EchonetOntology.NAMESPACE +"echonet_device_has_business_facility_code";
-	public static final String PROPERTY_HAS_PRODUCT_CODE = EchonetOntology.NAMESPACE +"echonet_device_has_product_code";
-	public static final String PROPERTY_HAS_PRODUCTION_NUMBER = EchonetOntology.NAMESPACE +"echonet_device_has_production_number";
-	public static final String PROPERTY_HAS_PRODUCTION_DATE = EchonetOntology.NAMESPACE +"echonet_device_has_production_date";
-	public static final String PROPERTY_HAS_IDENTIFICATION_NUMBER = EchonetOntology.NAMESPACE +"echonet_device_has_identification_number";
-	public static final String PROPERTY_HAS_MANUFACTURER_FAULT_CODE = EchonetOntology.NAMESPACE +"echonet_device_has_manufacturer_fault_code";
-	public static final String PROPERTY_HAS_CURRENT_LIMIT_SETTING = EchonetOntology.NAMESPACE +"echonet_device_has_current_limit_setting";
-	public static final String PROPERTY_HAS_POWER_SAVING_OPERATION_SETTING = EchonetOntology.NAMESPACE +"echonet_device_has_power_saving_operation_setting";
-	public static final String PROPERTY_HAS_REMOTE_CONTROL_SETTING = EchonetOntology.NAMESPACE +"echonet_device_has_remote_control_setting";
-	public static final String PROPERTY_HAS_CUMULATIVE_OPERATING_TIME = EchonetOntology.NAMESPACE +"echonet_device_has_cumulative_operating_time";
-	public static final String PROPERTY_HAS_CURRENT_TIME_SETTING= EchonetOntology.NAMESPACE +"echonet_device_has_current_time_setting";
-	public static final String PROPERTY_HAS_CURRENT_DATE_SETTING= EchonetOntology.NAMESPACE +"echonet_device_has_current_date_setting";
-	public static final String PROPERTY_HAS_MEASURED_INSTANTANEOUS_POWER_CONSUMPTION = EchonetOntology.NAMESPACE +"echonet_device_has_measured_instantaneous_power_consumption";
-	public static final String PROPERTY_HAS_MEASURED_CUMULATIVE_POWER_CONSUMPTION = EchonetOntology.NAMESPACE +"echonet_device_has_measured_cumulative_power_consumption";
-	public static final String PROPERTY_HAS_POWER_LIMIT_SETTING = EchonetOntology.NAMESPACE +"echonet_device_has_power_limit_setting";
+	public static final String PROPERTY_HAS_NODE_IP_ADDRESS = EchonetOntology.NAMESPACE + "hasNodeIPAddress";
+	public static final String PROPERTY_HAS_GROUP_CODE = EchonetOntology.NAMESPACE + "hasGroupCode";
+	public static final String PROPERTY_HAS_CLASS_CODE = EchonetOntology.NAMESPACE + "hasClassCode";
+	public static final String PROPERTY_HAS_INSTANCE_CODE = EchonetOntology.NAMESPACE + "hasInstanceCode";
+	public static final String PROPERTY_HAS_OPERATION_STATUS = EchonetOntology.NAMESPACE +"hasOperationStatus";
+	public static final String PROPERTY_HAS_INSTALLATION_LOCATION = EchonetOntology.NAMESPACE +"hasInstallationLocation";
+	public static final String PROPERTY_STANDARD_VERSION_INFORMATION = EchonetOntology.NAMESPACE +"hasStandardVersionInformation";
+	public static final String PROPERTY_HAS_FAULT_STATUS = EchonetOntology.NAMESPACE +"hasFaultStatus";
+	public static final String PROPERTY_HAS_FAULT_DESCRIPTION = EchonetOntology.NAMESPACE +"hasFaultDescription";
+	public static final String PROPERTY_HAS_MANUFACTURER_CODE = EchonetOntology.NAMESPACE +"hasManufactureCode";
+	public static final String PROPERTY_HAS_BUSINESS_FACILITY_CODE = EchonetOntology.NAMESPACE +"hasBusinessFacilityCode";
+	public static final String PROPERTY_HAS_PRODUCT_CODE = EchonetOntology.NAMESPACE +"hasProductCode";
+	public static final String PROPERTY_HAS_PRODUCTION_NUMBER = EchonetOntology.NAMESPACE +"hasProductionNumber";
+	public static final String PROPERTY_HAS_PRODUCTION_DATE = EchonetOntology.NAMESPACE +"hasProductionDate";
+	public static final String PROPERTY_HAS_IDENTIFICATION_NUMBER = EchonetOntology.NAMESPACE +"hasIdentificationNumber";
+	public static final String PROPERTY_HAS_MANUFACTURER_FAULT_CODE = EchonetOntology.NAMESPACE +"hasManufactureFaultCode";
+	public static final String PROPERTY_HAS_CURRENT_LIMIT_SETTING = EchonetOntology.NAMESPACE +"hasCurrentLimitSetting";
+	public static final String PROPERTY_HAS_POWER_SAVING_OPERATION_SETTING = EchonetOntology.NAMESPACE +"hasPowerSavingOperationSetting";
+	public static final String PROPERTY_HAS_REMOTE_CONTROL_SETTING = EchonetOntology.NAMESPACE +"hasRemoteControlSetting";
+	public static final String PROPERTY_HAS_CUMULATIVE_OPERATING_TIME = EchonetOntology.NAMESPACE +"hasCumulativeOperatingTime";
+	public static final String PROPERTY_HAS_CURRENT_TIME_SETTING= EchonetOntology.NAMESPACE +"hasCurrentTimeSetting";
+	public static final String PROPERTY_HAS_CURRENT_DATE_SETTING= EchonetOntology.NAMESPACE +"hasCurrentDateSetting";
+	public static final String PROPERTY_HAS_MEASURED_INSTANTANEOUS_POWER_CONSUMPTION = EchonetOntology.NAMESPACE +"hasMeasuredInstantaneousPowerConsumption";
+	public static final String PROPERTY_HAS_MEASURED_CUMULATIVE_POWER_CONSUMPTION = EchonetOntology.NAMESPACE +"hasMeasuredCumulativePowerConsumption";
+	public static final String PROPERTY_HAS_POWER_LIMIT_SETTING = EchonetOntology.NAMESPACE +"hasPowerLimitSetting";
 	
 	public String getNodeIPAddress() {
 		Object pp = getProperty(PROPERTY_HAS_NODE_IP_ADDRESS);
@@ -62,10 +78,10 @@ public class EchonetSuperDevice extends Device{
 			changeProperty(PROPERTY_HAS_GROUP_CODE, msg);
 		}
 	}
-	public Byte getClassCode() {
-		return (Byte) getProperty(PROPERTY_HAS_CLASS_CODE);
+	public String getClassCode() {
+		return (String) getProperty(PROPERTY_HAS_CLASS_CODE);
 	}
-	public void setClassCode(Byte msg) {
+	public void setClassCode(String msg) {
 		if(msg !=null) {
 			changeProperty(PROPERTY_HAS_CLASS_CODE, msg);
 		}
@@ -145,10 +161,10 @@ public class EchonetSuperDevice extends Device{
 		if(msg != null) 
 			changeProperty(PROPERTY_HAS_PRODUCTION_NUMBER, msg);
 	}
-	public Date getProductionDate() {
-		return (Date) getProperty(PROPERTY_HAS_PRODUCTION_DATE);
+	public DateTimeValue getProductionDateTimeValue() {
+		return (DateTimeValue) getProperty(PROPERTY_HAS_PRODUCTION_DATE);
 	}
-	public  void setProductionDate(Date msg) {
+	public  void setProductionDateTimeValue(DateTimeValue msg) {
 		changeProperty(PROPERTY_HAS_PRODUCTION_DATE, msg);
 	}	
 	public IdentificationNumberValue getIdentificationNumber() {
@@ -198,17 +214,17 @@ public class EchonetSuperDevice extends Device{
 		if(msg !=null)
 			changeProperty(PROPERTY_HAS_CUMULATIVE_OPERATING_TIME, msg);
 	}
-	public Date getCurrentTimeSetting() {
-		return (Date) getProperty(PROPERTY_HAS_CURRENT_TIME_SETTING);
+	public DateTimeValue getCurrentTimeSetting() {
+		return (DateTimeValue) getProperty(PROPERTY_HAS_CURRENT_TIME_SETTING);
 	}
-	public  void setCurrentTimeSetting(Date msg) {
+	public  void setCurrentTimeSetting(DateTimeValue msg) {
 		if(msg !=null)
 			changeProperty(PROPERTY_HAS_CURRENT_TIME_SETTING, msg);
 	}
-	public Date getCurrentDateSetting() {
-		return (Date)getProperty(PROPERTY_HAS_CURRENT_DATE_SETTING);
+	public DateTimeValue getCurrentDateTimeValueSetting() {
+		return (DateTimeValue)getProperty(PROPERTY_HAS_CURRENT_DATE_SETTING);
 	}
-	public  void setCurrentDateSetting(Date msg) {
+	public  void setCurrentDateTimeValueSetting(DateTimeValue msg) {
 		if(msg !=null)
 			changeProperty(PROPERTY_HAS_CURRENT_DATE_SETTING, msg);
 	}

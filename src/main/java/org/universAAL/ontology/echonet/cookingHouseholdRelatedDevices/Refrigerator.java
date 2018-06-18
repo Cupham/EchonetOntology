@@ -1,10 +1,25 @@
+/*******************************************************************************
+ * Copyright 2018 PHAM Van Cu, Tan laboratory, Japan Advanced Institute of Science and Technology (JAIST),
+ *  Japan as a part of the CARESSES project (http://www.caressesrobot.org/).
+ * 
+ * Licensed under the Apache License, Version 2.0 (the "License"); you may not
+ * use this file except in compliance with the License.  You may obtain a copy
+ * of the License at
+ * 
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+ * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.  See the
+ * License for the specific language governing permissions and limitations under
+ * the License.
+ ******************************************************************************/
 package org.universAAL.ontology.echonet.cookingHouseholdRelatedDevices;
 
 
 
 import org.universAAL.ontology.echonet.EchonetOntology;
 import org.universAAL.ontology.echonet.EchonetSuperDevice;
-import org.universAAL.ontology.echonet.values.EchonetDeviceGroupCodeValue;
 import org.universAAL.ontology.echonet.values.MeasuredValue;
 import org.universAAL.ontology.echonet.values.OccurenceStatusValue;
 import org.universAAL.ontology.echonet.values.OperationModeSettingValue;
@@ -14,40 +29,40 @@ import org.universAAL.ontology.echonet.values.ThresholdLevelValue;
 
 public class Refrigerator extends EchonetSuperDevice{
 	public static final String MY_URI = EchonetOntology.NAMESPACE + "Refrigerator";
-	public static final String PROPERTY_HAS_DOOR_OPEN_CLOSE_STATUS = EchonetOntology.NAMESPACE + "HasDoorOpenCloseStatus";
-	public static final String PROPERTY_HAS_DOOR_OPEN_WARNING = EchonetOntology.NAMESPACE + "HasDoorOpenWarning";
-	public static final String PROPERTY_HAS_REFRIGERATOR_COMPARTMENT_DOOR_STATUS = EchonetOntology.NAMESPACE + "HasRefrigeratorCompartmentDoorStatus";
-	public static final String PROPERTY_HAS_FREEZER_COMPARTMENT_DOOR_STATUS = EchonetOntology.NAMESPACE + "HasFreezerCompartmentDoorStatus";
-	public static final String PROPERTY_HAS_ICE_COMPARTMENT_DOOR_STATUS = EchonetOntology.NAMESPACE + "HasIceCompartmentDoorStatus";
-	public static final String PROPERTY_HAS_VEGETABLE_COMPARTMENT_DOOR_STATUS = EchonetOntology.NAMESPACE + "HasVegetableCompartmentDoorStatus";
-	public static final String PROPERTY_HAS_MULTI_REFRIGERATING_MODE_COMPARTMENT_DOOR_STATUS = EchonetOntology.NAMESPACE + "HasMultiRefrigeratingModeCompartmentDoorStatus";
-	public static final String PROPERTY_HAS_MAXIMUM_ALLOWABLE_TEMEPRATURE_SETTING_LEVEL = EchonetOntology.NAMESPACE + "HasMaximumAllowableTemperatureSettingLevel";
-	public static final String PROPERTY_HAS_REFRIGERATOR_COMPARTMENT_TEMPERATURER_SETTING = EchonetOntology.NAMESPACE + "HasRefrigeratorCompartmentTemperatureSetting";
-	public static final String PROPERTY_HAS_FREEZER_COMPARTMENT_TEMPERATURER_SETTING = EchonetOntology.NAMESPACE + "HasFreezerCompartmentTemperatureSetting";
-	public static final String PROPERTY_HAS_ICE_COMPARTMENT_TEMPERATURER_SETTING = EchonetOntology.NAMESPACE + "HasIceCompartmentTemperatureSetting";
-	public static final String PROPERTY_HAS_VEGETABLE_COMPARTMENT_TEMPERATURER_SETTING = EchonetOntology.NAMESPACE + "HasVegetableCompartmentTemperatureSetting";
-	public static final String PROPERTY_HAS_MULTI_REFRIGERATOR_COMPARTMENT_TEMPERATURER_SETTING = EchonetOntology.NAMESPACE + "HasMultiRefrigeratorCompartmentTemperatureSetting";
-	public static final String PROPERTY_HAS_REFRIGERATOR_COMPARTMENT_TEMPERATURER_LEVEL_SETTING = EchonetOntology.NAMESPACE + "HasRefrigeratorCompartmentTemperatureLevelSetting";
-	public static final String PROPERTY_HAS_FREEZER_COMPARTMENT_TEMPERATURER_LEVEL_SETTING = EchonetOntology.NAMESPACE + "HasFreezerCompartmentTemperatureLevelSetting";
-	public static final String PROPERTY_HAS_ICE_COMPARTMENT_TEMPERATURER_LEVEL_SETTING = EchonetOntology.NAMESPACE + "HasIceCompartmentTemperatureLevelSetting";
-	public static final String PROPERTY_HAS_VEGETABLE_COMPARTMENT_TEMPERATURER_LEVEL_SETTING = EchonetOntology.NAMESPACE + "HasVegetableCompartmentTemperatureLevelSetting";
-	public static final String PROPERTY_HAS_MULTI_REFRIGERATOR_COMPARTMENT_TEMPERATURER_LEVEL_SETTING = EchonetOntology.NAMESPACE + "HasMultiRefrigeratorCompartmentTemperatureLevelSetting";
-	public static final String PROPERTY_HAS_MEASURED_REFRIGERATOR_COMPARTMENT_TEMPERATURER = EchonetOntology.NAMESPACE + "HasMeasuredRefrigeratorCompartmentTemperature";
-	public static final String PROPERTY_HAS_MEASURED_FREEZER_COMPARTMENT_TEMPERATURER = EchonetOntology.NAMESPACE + "HasMeasuredFreezerCompartmentTemperature";
-	public static final String PROPERTY_HAS_MEASURED_SUB_ZERO_FRESH_COMPARTMENT_TEMPERATURER = EchonetOntology.NAMESPACE + "HasMeasuredSubZeroFreshCompartmentTemperature";
-	public static final String PROPERTY_HAS_MEASURED_VEGETABLE_COMPARTMENT_TEMPERATURER = EchonetOntology.NAMESPACE + "HasMeasuredVegetableCompartmentTemperature";
-	public static final String PROPERTY_HAS_MEASURED_MULTI_REFRIGERATOR_COMPARTMENT_TEMPERATURER = EchonetOntology.NAMESPACE + "HasMeasuredMultiRefrigeratorCompartmentTemperature";
-	public static final String PROPERTY_HAS_COMPRESSOR_ROTATION_SPEED = EchonetOntology.NAMESPACE + "HasCompressorRotationSpeed";
-	public static final String PROPERTY_HAS_MEASURED_ELECTRIC_CURRENT_CONSUMPTION = EchonetOntology.NAMESPACE + "HasMeasuredElectricCurrentConsumption";
-	public static final String PROPERTY_HAS_RATED_POWER_CONSUMPTION = EchonetOntology.NAMESPACE + "HasRatedPowerConsumption";
-	public static final String PROPERTY_HAS_QUICK_FREEZE_FUNCTION_SETTING = EchonetOntology.NAMESPACE + "HasQuickFreezeFunctionSetting";
-	public static final String PROPERTY_HAS_QUICK_REFRIGERATION_FUNCTION_SETTING = EchonetOntology.NAMESPACE + "HasQuickRefrigerationFunctionSetting";
-	public static final String PROPERTY_HAS_ICE_MAKER_SETTING = EchonetOntology.NAMESPACE + "HasIceMakerSetting";
-	public static final String PROPERTY_HAS_ICE_MAKER_OPERATION_STATUS = EchonetOntology.NAMESPACE + "HasIceMakerOperationStatus";
-	public static final String PROPERTY_HAS_ICE_MAKER_WATER_TANK_STATUS = EchonetOntology.NAMESPACE + "HasIceMakerWaterTankStatus";
-	public static final String PROPERTY_HAS_REFRIGERATOR_COMPARTMENT_HUMIDIFICATION_FUNCTION_SETTING = EchonetOntology.NAMESPACE + "HasRefrigeratorCompartmentHumidificationFunctionSetting";
-	public static final String PROPERTY_HAS_VEGETABLE_COMPARTMENT_HUMIDIFICATION_FUNCTION_SETTING = EchonetOntology.NAMESPACE + "HasVegetableCompartmentHumidificationFunctionSetting";
-	public static final String PROPERTY_HAS_DEODORIZATION_FUNCTION_SETTING = EchonetOntology.NAMESPACE + "HasDeodorizationFunctionSetting";
+	public static final String PROPERTY_HAS_DOOR_OPEN_CLOSE_STATUS = EchonetOntology.NAMESPACE + "hasDoorOpenCloseStatus";
+	public static final String PROPERTY_HAS_DOOR_OPEN_WARNING = EchonetOntology.NAMESPACE + "hasDoorOpenWarning";
+	public static final String PROPERTY_HAS_REFRIGERATOR_COMPARTMENT_DOOR_STATUS = EchonetOntology.NAMESPACE + "hasRefrigeratorCompartmentDoorStatus";
+	public static final String PROPERTY_HAS_FREEZER_COMPARTMENT_DOOR_STATUS = EchonetOntology.NAMESPACE + "hasFreezerCompartmentDoorStatus";
+	public static final String PROPERTY_HAS_ICE_COMPARTMENT_DOOR_STATUS = EchonetOntology.NAMESPACE + "hasIceCompartmentDoorStatus";
+	public static final String PROPERTY_HAS_VEGETABLE_COMPARTMENT_DOOR_STATUS = EchonetOntology.NAMESPACE + "hasVegetableCompartmentDoorStatus";
+	public static final String PROPERTY_HAS_MULTI_REFRIGERATING_MODE_COMPARTMENT_DOOR_STATUS = EchonetOntology.NAMESPACE + "hasMultiRefrigeratingModeCompartmentDoorStatus";
+	public static final String PROPERTY_HAS_MAXIMUM_ALLOWABLE_TEMEPRATURE_SETTING_LEVEL = EchonetOntology.NAMESPACE + "hasMaximumAllowableTemperatureSettingLevel";
+	public static final String PROPERTY_HAS_REFRIGERATOR_COMPARTMENT_TEMPERATURER_SETTING = EchonetOntology.NAMESPACE + "hasRefrigeratorCompartmentTemperatureSetting";
+	public static final String PROPERTY_HAS_FREEZER_COMPARTMENT_TEMPERATURER_SETTING = EchonetOntology.NAMESPACE + "hasFreezerCompartmentTemperatureSetting";
+	public static final String PROPERTY_HAS_ICE_COMPARTMENT_TEMPERATURER_SETTING = EchonetOntology.NAMESPACE + "hasIceCompartmentTemperatureSetting";
+	public static final String PROPERTY_HAS_VEGETABLE_COMPARTMENT_TEMPERATURER_SETTING = EchonetOntology.NAMESPACE + "hasVegetableCompartmentTemperatureSetting";
+	public static final String PROPERTY_HAS_MULTI_REFRIGERATOR_COMPARTMENT_TEMPERATURER_SETTING = EchonetOntology.NAMESPACE + "hasMultiRefrigeratorCompartmentTemperatureSetting";
+	public static final String PROPERTY_HAS_REFRIGERATOR_COMPARTMENT_TEMPERATURER_LEVEL_SETTING = EchonetOntology.NAMESPACE + "hasRefrigeratorCompartmentTemperatureLevelSetting";
+	public static final String PROPERTY_HAS_FREEZER_COMPARTMENT_TEMPERATURER_LEVEL_SETTING = EchonetOntology.NAMESPACE + "hasFreezerCompartmentTemperatureLevelSetting";
+	public static final String PROPERTY_HAS_ICE_COMPARTMENT_TEMPERATURER_LEVEL_SETTING = EchonetOntology.NAMESPACE + "hasIceCompartmentTemperatureLevelSetting";
+	public static final String PROPERTY_HAS_VEGETABLE_COMPARTMENT_TEMPERATURER_LEVEL_SETTING = EchonetOntology.NAMESPACE + "hasVegetableCompartmentTemperatureLevelSetting";
+	public static final String PROPERTY_HAS_MULTI_REFRIGERATOR_COMPARTMENT_TEMPERATURER_LEVEL_SETTING = EchonetOntology.NAMESPACE + "hasMultiRefrigeratorCompartmentTemperatureLevelSetting";
+	public static final String PROPERTY_HAS_MEASURED_REFRIGERATOR_COMPARTMENT_TEMPERATURER = EchonetOntology.NAMESPACE + "hasMeasuredRefrigeratorCompartmentTemperature";
+	public static final String PROPERTY_HAS_MEASURED_FREEZER_COMPARTMENT_TEMPERATURER = EchonetOntology.NAMESPACE + "hasMeasuredFreezerCompartmentTemperature";
+	public static final String PROPERTY_HAS_MEASURED_SUB_ZERO_FRESH_COMPARTMENT_TEMPERATURER = EchonetOntology.NAMESPACE + "hasMeasuredSubZeroFreshCompartmentTemperature";
+	public static final String PROPERTY_HAS_MEASURED_VEGETABLE_COMPARTMENT_TEMPERATURER = EchonetOntology.NAMESPACE + "hasMeasuredVegetableCompartmentTemperature";
+	public static final String PROPERTY_HAS_MEASURED_MULTI_REFRIGERATOR_COMPARTMENT_TEMPERATURER = EchonetOntology.NAMESPACE + "hasMeasuredMultiRefrigeratorCompartmentTemperature";
+	public static final String PROPERTY_HAS_COMPRESSOR_ROTATION_SPEED = EchonetOntology.NAMESPACE + "hasCompressorRotationSpeed";
+	public static final String PROPERTY_HAS_MEASURED_ELECTRIC_CURRENT_CONSUMPTION = EchonetOntology.NAMESPACE + "hasMeasuredElectricCurrentConsumption";
+	public static final String PROPERTY_HAS_RATED_POWER_CONSUMPTION = EchonetOntology.NAMESPACE + "hasRatedPowerConsumption";
+	public static final String PROPERTY_HAS_QUICK_FREEZE_FUNCTION_SETTING = EchonetOntology.NAMESPACE + "hasQuickFreezeFunctionSetting";
+	public static final String PROPERTY_HAS_QUICK_REFRIGERATION_FUNCTION_SETTING = EchonetOntology.NAMESPACE + "hasQuickRefrigerationFunctionSetting";
+	public static final String PROPERTY_HAS_ICE_MAKER_SETTING = EchonetOntology.NAMESPACE + "hasIceMakerSetting";
+	public static final String PROPERTY_HAS_ICE_MAKER_OPERATION_STATUS = EchonetOntology.NAMESPACE + "hasIceMakerOperationStatus";
+	public static final String PROPERTY_HAS_ICE_MAKER_WATER_TANK_STATUS = EchonetOntology.NAMESPACE + "hasIceMakerWaterTankStatus";
+	public static final String PROPERTY_HAS_REFRIGERATOR_COMPARTMENT_HUMIDIFICATION_FUNCTION_SETTING = EchonetOntology.NAMESPACE + "hasRefrigeratorCompartmentHumidificationFunctionSetting";
+	public static final String PROPERTY_HAS_VEGETABLE_COMPARTMENT_HUMIDIFICATION_FUNCTION_SETTING = EchonetOntology.NAMESPACE + "hasVegetableCompartmentHumidificationFunctionSetting";
+	public static final String PROPERTY_HAS_DEODORIZATION_FUNCTION_SETTING = EchonetOntology.NAMESPACE + "hasDeodorizationFunctionSetting";
 
 	public OperationStatusValue getDeodorizationFunctionSetting() {
 		return (OperationStatusValue) getProperty(PROPERTY_HAS_DEODORIZATION_FUNCTION_SETTING);	
@@ -292,11 +307,9 @@ public class Refrigerator extends EchonetSuperDevice{
 	
 	public Refrigerator() {
 		super();
-		setClassGroupCode(EchonetDeviceGroupCodeValue.CookingHouseholdRelatedDevice);
 	}
 	public Refrigerator(String uri) {
 		super(uri);
-		setClassGroupCode(EchonetDeviceGroupCodeValue.CookingHouseholdRelatedDevice);
 	}
 	public String getClassURI() {
 		return MY_URI;

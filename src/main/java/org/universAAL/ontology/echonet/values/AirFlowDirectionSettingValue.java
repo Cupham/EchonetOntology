@@ -1,10 +1,26 @@
+/*******************************************************************************
+ * Copyright 2018 PHAM Van Cu, Tan laboratory, Japan Advanced Institute of Science and Technology (JAIST),
+ *  Japan as a part of the CARESSES project (http://www.caressesrobot.org/).
+ * 
+ * Licensed under the Apache License, Version 2.0 (the "License"); you may not
+ * use this file except in compliance with the License.  You may obtain a copy
+ * of the License at
+ * 
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+ * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.  See the
+ * License for the specific language governing permissions and limitations under
+ * the License.
+ ******************************************************************************/
 package org.universAAL.ontology.echonet.values;
 
 import org.universAAL.middleware.owl.ManagedIndividual;
 import org.universAAL.ontology.echonet.EchonetOntology;
 
 public class AirFlowDirectionSettingValue extends ManagedIndividual{
-public static final String MY_URI = EchonetOntology.NAMESPACE + "AirFlowVerticalDirectionSettingValue";
+public static final String MY_URI = EchonetOntology.NAMESPACE + "AirFlowDirectionSettingValue";
 	private int order;
 	public static final int RIGHTWARD = 0;
 	public static final int LEFTWARD = 1;
@@ -15,8 +31,8 @@ public static final String MY_URI = EchonetOntology.NAMESPACE + "AirFlowVertical
 	public static final int LOWERMOST = 6;
 	public static final int UPPERMOST_CENTRAL_MIDPOINT = 7;
 	public static final int LOWERMOST_CENTRAL_MIDPOINT = 8;
-	private static final String[] names = {"Rightward", "Leftward", "Central", "LeftCenter", "RightCenter", "Uppermost","Lowermost",
-											"Uppermost_CentralMidpoint", "Lowermost_CentralMidpoint"};
+	private static final String[] names = {"rightward", "leftward", "central", "leftCenter", "rightCenter", "uppermost","lowermost",
+											"uppermost_CentralMidpoint", "lowermost_CentralMidpoint"};
 	
 	public static final AirFlowDirectionSettingValue Rightward = new AirFlowDirectionSettingValue(RIGHTWARD);
 	public static final AirFlowDirectionSettingValue Leftward = new AirFlowDirectionSettingValue(LEFTWARD);

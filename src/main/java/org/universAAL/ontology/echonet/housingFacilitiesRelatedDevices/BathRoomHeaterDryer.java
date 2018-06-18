@@ -1,10 +1,25 @@
+/*******************************************************************************
+ * Copyright 2018 PHAM Van Cu, Tan laboratory, Japan Advanced Institute of Science and Technology (JAIST),
+ *  Japan as a part of the CARESSES project (http://www.caressesrobot.org/).
+ * 
+ * Licensed under the Apache License, Version 2.0 (the "License"); you may not
+ * use this file except in compliance with the License.  You may obtain a copy
+ * of the License at
+ * 
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+ * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.  See the
+ * License for the specific language governing permissions and limitations under
+ * the License.
+ ******************************************************************************/
 package org.universAAL.ontology.echonet.housingFacilitiesRelatedDevices;
 
-import java.util.Date;
 
 import org.universAAL.ontology.echonet.EchonetOntology;
 import org.universAAL.ontology.echonet.EchonetSuperDevice;
-import org.universAAL.ontology.echonet.values.EchonetDeviceGroupCodeValue;
+import org.universAAL.ontology.echonet.values.DateTimeValue;
 import org.universAAL.ontology.echonet.values.OccurenceStatusValue;
 import org.universAAL.ontology.echonet.values.OperationModeSettingValue;
 import org.universAAL.ontology.echonet.values.OperationStatusValue;
@@ -13,36 +28,36 @@ import org.universAAL.ontology.echonet.values.ThresholdLevelValue;
 
 public class BathRoomHeaterDryer extends EchonetSuperDevice{
 	public static final String MY_URI = EchonetOntology.NAMESPACE + "BathRoomHeaterDryer";
-	public static final String PROPERTY_HAS_OPERATION_MODE_SETTING = EchonetOntology.NAMESPACE + "HasOperationModeSetting";
-	public static final String PROPERTY_HAS_VENTILATION_OPERATION_SETTING = EchonetOntology.NAMESPACE + "HasVentilationOperationSetting";
-	public static final String PROPERTY_HAS_BATHROOM_PRE_WARM_OPERATION_SETTING = EchonetOntology.NAMESPACE + "HasBathroomPreWarmOperationSetting";
-	public static final String PROPERTY_HAS_BATHROOM_HEATER_OPERATION_SETTING = EchonetOntology.NAMESPACE + "HasBathroomHeaterOperationSetting";
-	public static final String PROPERTY_HAS_BATHROOM_DRYER_OPERATION_SETTING = EchonetOntology.NAMESPACE + "HasBathroomDryerOperationSetting";
-	public static final String PROPERTY_HAS_BATHROOM_AIR_CICURLATOR_OPERATION_SETTING = EchonetOntology.NAMESPACE + "HasBathroomAirCirculatorOperationSetting";
-	public static final String PROPERTY_HAS_MEASURED_BATHROOM_RELATIVE_HUMIDITY = EchonetOntology.NAMESPACE + "HasMeasuredBathroomHumidity";
-	public static final String PROPERTY_HAS_MEASURED_BATHROOM_TEMPERATURE = EchonetOntology.NAMESPACE + "HasMeasuredBathroomTemperature";
-	public static final String PROPERTY_HAS_VENTILATION_AIR_FLOW_RATE_SETTING = EchonetOntology.NAMESPACE + "HasVentilationAirFlowRateSetting";
-	public static final String PROPERTY_HAS_FILTER_CLEANING_REMINDER_SIGN_SETTING = EchonetOntology.NAMESPACE + "HasFilterCleaningReminderSignSetting";
-	public static final String PROPERTY_HAS_HUMAN_BODY_DETECTION_STATUS = EchonetOntology.NAMESPACE + "HasHumanBodyDetectionStatus";
-	public static final String PROPERTY_HAS_ON_TIMER_BASED_RESERVATION_SETTING_1 = EchonetOntology.NAMESPACE + "HasOnTimerBasedReservationSetting1";
-	public static final String PROPERTY_HAS_ON_TIMER_BASED_RESERVATION_SETTING_2 = EchonetOntology.NAMESPACE + "HasOnTimerBasedReservationSetting2";
-	public static final String PROPERTY_HAS_ON_TIMER_SETTING_TIME = EchonetOntology.NAMESPACE + "HasOnTimerSettingTime";
-	public static final String PROPERTY_HAS_ON_TIMER_SETTING_RELATIVE_TIME = EchonetOntology.NAMESPACE + "HasOnTimerSettingRelativeTime";
-	public static final String PROPERTY_HAS_OFF_TIMER_BASED_RESERVATION_SETTING = EchonetOntology.NAMESPACE + "HasOffTimerBasedReservationSetting";
-	public static final String PROPERTY_HAS_OFF_TIMER_SETTING_TIME = EchonetOntology.NAMESPACE + "HasOffTimerSettingTime";
-	public static final String PROPERTY_HAS_OFF_TIMER_SETTING_RELATIVE_TIME = EchonetOntology.NAMESPACE + "HasOffTimerSettingRelativeTime";
+	public static final String PROPERTY_HAS_OPERATION_MODE_SETTING = EchonetOntology.NAMESPACE + "hasOperationModeSetting";
+	public static final String PROPERTY_HAS_VENTILATION_OPERATION_SETTING = EchonetOntology.NAMESPACE + "hasVentilationOperationSetting";
+	public static final String PROPERTY_HAS_BATHROOM_PRE_WARM_OPERATION_SETTING = EchonetOntology.NAMESPACE + "hasBathroomPreWarmOperationSetting";
+	public static final String PROPERTY_HAS_BATHROOM_HEATER_OPERATION_SETTING = EchonetOntology.NAMESPACE + "hasBathroomHeaterOperationSetting";
+	public static final String PROPERTY_HAS_BATHROOM_DRYER_OPERATION_SETTING = EchonetOntology.NAMESPACE + "hasBathroomDryerOperationSetting";
+	public static final String PROPERTY_HAS_BATHROOM_AIR_CICURLATOR_OPERATION_SETTING = EchonetOntology.NAMESPACE + "hasBathroomAirCirculatorOperationSetting";
+	public static final String PROPERTY_HAS_MEASURED_BATHROOM_RELATIVE_HUMIDITY = EchonetOntology.NAMESPACE + "hasMeasuredBathroomHumidity";
+	public static final String PROPERTY_HAS_MEASURED_BATHROOM_TEMPERATURE = EchonetOntology.NAMESPACE + "hasMeasuredBathroomTemperature";
+	public static final String PROPERTY_HAS_VENTILATION_AIR_FLOW_RATE_SETTING = EchonetOntology.NAMESPACE + "hasVentilationAirFlowRateSetting";
+	public static final String PROPERTY_HAS_FILTER_CLEANING_REMINDER_SIGN_SETTING = EchonetOntology.NAMESPACE + "hasFilterCleaningReminderSignSetting";
+	public static final String PROPERTY_HAS_HUMAN_BODY_DETECTION_STATUS = EchonetOntology.NAMESPACE + "hasHumanBodyDetectionStatus";
+	public static final String PROPERTY_HAS_ON_TIMER_BASED_RESERVATION_SETTING_1 = EchonetOntology.NAMESPACE + "hasOnTimerBasedReservationSetting1";
+	public static final String PROPERTY_HAS_ON_TIMER_BASED_RESERVATION_SETTING_2 = EchonetOntology.NAMESPACE + "hasOnTimerBasedReservationSetting2";
+	public static final String PROPERTY_HAS_ON_TIMER_SETTING_TIME = EchonetOntology.NAMESPACE + "hasOnTimerSettingTime";
+	public static final String PROPERTY_HAS_ON_TIMER_SETTING_RELATIVE_TIME = EchonetOntology.NAMESPACE + "hasOnTimerSettingRelativeTime";
+	public static final String PROPERTY_HAS_OFF_TIMER_BASED_RESERVATION_SETTING = EchonetOntology.NAMESPACE + "hasOffTimerBasedReservationSetting";
+	public static final String PROPERTY_HAS_OFF_TIMER_SETTING_TIME = EchonetOntology.NAMESPACE + "hasOffTimerSettingTime";
+	public static final String PROPERTY_HAS_OFF_TIMER_SETTING_RELATIVE_TIME = EchonetOntology.NAMESPACE + "hasOffTimerSettingRelativeTime";
 	
-	public Date getOffTimerSettingRelativeTime() {
-		return (Date) getProperty(PROPERTY_HAS_OFF_TIMER_SETTING_RELATIVE_TIME);	
+	public DateTimeValue getOffTimerSettingRelativeTime() {
+		return (DateTimeValue) getProperty(PROPERTY_HAS_OFF_TIMER_SETTING_RELATIVE_TIME);	
 	}
-	public void setOffTimerSettingRelativeTime(Date msg) {
+	public void setOffTimerSettingRelativeTime(DateTimeValue msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_OFF_TIMER_SETTING_RELATIVE_TIME, msg);	
 	}
-	public Date getOffTimerSettingTime() {
-		return (Date) getProperty(PROPERTY_HAS_OFF_TIMER_SETTING_TIME);	
+	public DateTimeValue getOffTimerSettingTime() {
+		return (DateTimeValue) getProperty(PROPERTY_HAS_OFF_TIMER_SETTING_TIME);	
 	}
-	public void setOffTimerSettingTime(Date msg) {
+	public void setOffTimerSettingTime(DateTimeValue msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_OFF_TIMER_SETTING_TIME, msg);	
 	}
@@ -53,17 +68,17 @@ public class BathRoomHeaterDryer extends EchonetSuperDevice{
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_OFF_TIMER_BASED_RESERVATION_SETTING, msg);	
 	}
-	public Date getOnTimerSettingRelativeTime() {
-		return (Date) getProperty(PROPERTY_HAS_ON_TIMER_SETTING_RELATIVE_TIME);	
+	public DateTimeValue getOnTimerSettingRelativeTime() {
+		return (DateTimeValue) getProperty(PROPERTY_HAS_ON_TIMER_SETTING_RELATIVE_TIME);	
 	}
-	public void setOnTimerSettingRelativeTime(Date msg) {
+	public void setOnTimerSettingRelativeTime(DateTimeValue msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_ON_TIMER_SETTING_RELATIVE_TIME, msg);	
 	}
-	public Date getOnTimerSettingTime() {
-		return (Date) getProperty(PROPERTY_HAS_ON_TIMER_SETTING_TIME);	
+	public DateTimeValue getOnTimerSettingTime() {
+		return (DateTimeValue) getProperty(PROPERTY_HAS_ON_TIMER_SETTING_TIME);	
 	}
-	public void setOnTimerSettingTime(Date msg) {
+	public void setOnTimerSettingTime(DateTimeValue msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_ON_TIMER_SETTING_TIME, msg);	
 	}
@@ -163,11 +178,9 @@ public class BathRoomHeaterDryer extends EchonetSuperDevice{
 	
 	public BathRoomHeaterDryer() {
 		super();
-		setClassGroupCode(EchonetDeviceGroupCodeValue.HousingFacilityRelatedDevice);
 	}
 	public BathRoomHeaterDryer(String uri) {
 		super(uri);
-		setClassGroupCode(EchonetDeviceGroupCodeValue.HousingFacilityRelatedDevice);
 	}
 	public String getClassURI() {
 		return MY_URI;

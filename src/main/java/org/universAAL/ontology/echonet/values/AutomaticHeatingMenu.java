@@ -1,3 +1,19 @@
+/*******************************************************************************
+ * Copyright 2018 PHAM Van Cu, Tan laboratory, Japan Advanced Institute of Science and Technology (JAIST),
+ *  Japan as a part of the CARESSES project (http://www.caressesrobot.org/).
+ * 
+ * Licensed under the Apache License, Version 2.0 (the "License"); you may not
+ * use this file except in compliance with the License.  You may obtain a copy
+ * of the License at
+ * 
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+ * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.  See the
+ * License for the specific language governing permissions and limitations under
+ * the License.
+ ******************************************************************************/
 package org.universAAL.ontology.echonet.values;
 
 
@@ -36,10 +52,10 @@ public class AutomaticHeatingMenu extends ManagedIndividual{
 	public static final int USER_DEFINE = 22;
 	public static final int NOT_SPECIFIED = 23;
 
-	private static final String[] names = { "FullyAutomatic", "ReheatingBoiledRice","ReheatingCookedDish","WarmSake","WarmMilk","BoilingLeafyVegetables",
-											"BoilingFruitFlowerVegetables","BoilingRootVegetables","DefrostingMeat","DefrostingSashimi","GrillHamburgerSteak",
-											"BakeGratin","MakeChawanMushi","CookingRice","ReheatingFries","Fries","BakeSpongeCakes","BakeChiffonCakes",
-											"BakeCookies","BakeCreamPuffs","ToastBread","UserDefine","NotSpecified"};
+	private static final String[] names = { "fullyAutomatic", "reheatingBoiledRice","reheatingCookedDish","warmSake","warmMilk","boilingLeafyVegetables",
+											"boilingFruitFlowerVegetables","boilingRootVegetables","defrostingMeat","defrostingSashimi","grillHamburgerSteak",
+											"bakeGratin","makeChawanMushi","cookingRice","reheatingFries","fries","bakeSpongeCakes","bakeChiffonCakes",
+											"bakeCookies","bakeCreamPuffs","bakeRolls","toastBread","userDefine","notSpecified"};
 	
 	public static final AutomaticHeatingMenu FullyAutomatic = new AutomaticHeatingMenu(FULLY_AUTOMATIC);
 	public static final AutomaticHeatingMenu ReheatingBoiledRice = new AutomaticHeatingMenu(REHEATING_BOILED_RICE);

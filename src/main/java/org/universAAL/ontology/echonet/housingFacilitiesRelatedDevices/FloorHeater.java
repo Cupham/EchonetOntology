@@ -1,11 +1,26 @@
+/*******************************************************************************
+ * Copyright 2018 PHAM Van Cu, Tan laboratory, Japan Advanced Institute of Science and Technology (JAIST),
+ *  Japan as a part of the CARESSES project (http://www.caressesrobot.org/).
+ * 
+ * Licensed under the Apache License, Version 2.0 (the "License"); you may not
+ * use this file except in compliance with the License.  You may obtain a copy
+ * of the License at
+ * 
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+ * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.  See the
+ * License for the specific language governing permissions and limitations under
+ * the License.
+ ******************************************************************************/
 package org.universAAL.ontology.echonet.housingFacilitiesRelatedDevices;
 
 
 
-import java.util.Date;
 import org.universAAL.ontology.echonet.EchonetOntology;
 import org.universAAL.ontology.echonet.EchonetSuperDevice;
-import org.universAAL.ontology.echonet.values.EchonetDeviceGroupCodeValue;
+import org.universAAL.ontology.echonet.values.DateTimeValue;
 import org.universAAL.ontology.echonet.values.MeasurementMethodValue;
 import org.universAAL.ontology.echonet.values.OperationFunctionSettingValue;
 import org.universAAL.ontology.echonet.values.OperationModeSettingValue;
@@ -17,23 +32,23 @@ import org.universAAL.ontology.echonet.values.ThresholdLevelValue;
 
 public class FloorHeater extends EchonetSuperDevice{
 	public static final String MY_URI = EchonetOntology.NAMESPACE + "FloorHeater";
-	public static final String PROPERTY_HAS_TEMPERATURE_SETTING_1 = EchonetOntology.NAMESPACE + "HasTemperatureSetting1";
-	public static final String PROPERTY_HAS_TEMPERATURE_SETTING_2 = EchonetOntology.NAMESPACE + "HasTemperatureSetting2";
-	public static final String PROPERTY_HAS_MEASURED_ROOM_TEMPERATURE = EchonetOntology.NAMESPACE + "HasMeasuredRoomTemperature";
-	public static final String PROPERTY_HAS_MEASURED_FLOOR_TEMPERATURE = EchonetOntology.NAMESPACE + "HasMeasuredFloorTemperature";
-	public static final String PROPERTY_HAS_ZONE_CHANGE_SETTING = EchonetOntology.NAMESPACE + "HasZoneChangeSetting";
-	public static final String PROPERTY_HAS_SPECIAL_OPERATION_SETTING = EchonetOntology.NAMESPACE + "HasSpecialOperationSetting";
-	public static final String PROPERTY_HAS_DAILY_TIMER_SETTING_STATUS = EchonetOntology.NAMESPACE + "HasDailyTimerSettingStatus";
-	public static final String PROPERTY_HAS_DAILY_TIMER_SETTING_1 = EchonetOntology.NAMESPACE + "HasDailyTimerSetting1";
-	public static final String PROPERTY_HAS_DAILY_TIMER_SETTING_2 = EchonetOntology.NAMESPACE + "HasDailyTimerSetting2";
-	public static final String PROPERTY_HAS_ON_TIMER_RESERVATION_SETTING = EchonetOntology.NAMESPACE + "HasOnTimerReservationSetting";
-	public static final String PROPERTY_HAS_ON_TIMER_SETTING_TIME = EchonetOntology.NAMESPACE + "HasOnTimerSettingTime";
-	public static final String PROPERTY_HAS_ON_TIMER_SETTING_RELATIVE_TIME = EchonetOntology.NAMESPACE + "HasOnTimerSettingRelativeTime";
-	public static final String PROPERTY_HAS_OFF_TIMER_RESERVATION_SETTING = EchonetOntology.NAMESPACE + "HasOffTimerReservationSetting";
-	public static final String PROPERTY_HAS_OFF_TIMER_SETTING_TIME = EchonetOntology.NAMESPACE + "HasOffTimerSettingTime";
-	public static final String PROPERTY_HAS_OFF_TIMER_SETTING_RELATIVE_TIME = EchonetOntology.NAMESPACE + "HasOffTimerSettingRelativeTime";
-	public static final String PROPERTY_HAS_RATED_POWER_CONSUMPTION = EchonetOntology.NAMESPACE + "HasRatedPowerConsumption";
-	public static final String PROPERTY_HAS_POWER_CONSUMPTION_MEASUREMENT_METHOD = EchonetOntology.NAMESPACE + "HasPowerConsumptionMeasurementMethod";
+	public static final String PROPERTY_HAS_TEMPERATURE_SETTING_1 = EchonetOntology.NAMESPACE + "hasTemperatureSetting1";
+	public static final String PROPERTY_HAS_TEMPERATURE_SETTING_2 = EchonetOntology.NAMESPACE + "hasTemperatureSetting2";
+	public static final String PROPERTY_HAS_MEASURED_ROOM_TEMPERATURE = EchonetOntology.NAMESPACE + "hasMeasuredRoomTemperature";
+	public static final String PROPERTY_HAS_MEASURED_FLOOR_TEMPERATURE = EchonetOntology.NAMESPACE + "hasMeasuredFloorTemperature";
+	public static final String PROPERTY_HAS_ZONE_CHANGE_SETTING = EchonetOntology.NAMESPACE + "hasZoneChangeSetting";
+	public static final String PROPERTY_HAS_SPECIAL_OPERATION_SETTING = EchonetOntology.NAMESPACE + "hasSpecialOperationSetting";
+	public static final String PROPERTY_HAS_DAILY_TIMER_SETTING_STATUS = EchonetOntology.NAMESPACE + "hasDailyTimerSettingStatus";
+	public static final String PROPERTY_HAS_DAILY_TIMER_SETTING_1 = EchonetOntology.NAMESPACE + "hasDailyTimerSetting1";
+	public static final String PROPERTY_HAS_DAILY_TIMER_SETTING_2 = EchonetOntology.NAMESPACE + "hasDailyTimerSetting2";
+	public static final String PROPERTY_HAS_ON_TIMER_RESERVATION_SETTING = EchonetOntology.NAMESPACE + "hasOnTimerReservationSetting";
+	public static final String PROPERTY_HAS_ON_TIMER_SETTING_TIME = EchonetOntology.NAMESPACE + "hasOnTimerSettingTime";
+	public static final String PROPERTY_HAS_ON_TIMER_SETTING_RELATIVE_TIME = EchonetOntology.NAMESPACE + "hasOnTimerSettingRelativeTime";
+	public static final String PROPERTY_HAS_OFF_TIMER_RESERVATION_SETTING = EchonetOntology.NAMESPACE + "hasOffTimerReservationSetting";
+	public static final String PROPERTY_HAS_OFF_TIMER_SETTING_TIME = EchonetOntology.NAMESPACE + "hasOffTimerSettingTime";
+	public static final String PROPERTY_HAS_OFF_TIMER_SETTING_RELATIVE_TIME = EchonetOntology.NAMESPACE + "hasOffTimerSettingRelativeTime";
+	public static final String PROPERTY_HAS_RATED_POWER_CONSUMPTION = EchonetOntology.NAMESPACE + "hasRatedPowerConsumption";
+	public static final String PROPERTY_HAS_POWER_CONSUMPTION_MEASUREMENT_METHOD = EchonetOntology.NAMESPACE + "hasPowerConsumptionMeasurementMethod";
 
 	public MeasurementMethodValue getPowerConsumptionMeasurementMethod() {
 		return (MeasurementMethodValue) getProperty(PROPERTY_HAS_POWER_CONSUMPTION_MEASUREMENT_METHOD);	
@@ -49,17 +64,17 @@ public class FloorHeater extends EchonetSuperDevice{
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_RATED_POWER_CONSUMPTION, msg);	
 	}
-	public Date getOffTimerSettingRelativeTime() {
-		return (Date) getProperty(PROPERTY_HAS_OFF_TIMER_SETTING_RELATIVE_TIME);	
+	public DateTimeValue getOffTimerSettingRelativeTime() {
+		return (DateTimeValue) getProperty(PROPERTY_HAS_OFF_TIMER_SETTING_RELATIVE_TIME);	
 	}
-	public void setOffTimerSettingRelativeTime(Date msg) {
+	public void setOffTimerSettingRelativeTime(DateTimeValue msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_OFF_TIMER_SETTING_RELATIVE_TIME, msg);	
 	}
-	public Date getOffTimerSettingTime() {
-		return (Date) getProperty(PROPERTY_HAS_OFF_TIMER_SETTING_TIME);	
+	public DateTimeValue getOffTimerSettingTime() {
+		return (DateTimeValue) getProperty(PROPERTY_HAS_OFF_TIMER_SETTING_TIME);	
 	}
-	public void setOfTimerSettingTime(Date msg) {
+	public void setOfTimerSettingTime(DateTimeValue msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_OFF_TIMER_SETTING_TIME, msg);	
 	}
@@ -71,17 +86,17 @@ public class FloorHeater extends EchonetSuperDevice{
 			changeProperty(PROPERTY_HAS_OFF_TIMER_RESERVATION_SETTING, msg);	
 	}
 	
-	public Date getOnTimerSettingRelativeTime() {
-		return (Date) getProperty(PROPERTY_HAS_ON_TIMER_SETTING_RELATIVE_TIME);	
+	public DateTimeValue getOnTimerSettingRelativeTime() {
+		return (DateTimeValue) getProperty(PROPERTY_HAS_ON_TIMER_SETTING_RELATIVE_TIME);	
 	}
-	public void setOnTimerSettingRelativeTime(Date msg) {
+	public void setOnTimerSettingRelativeTime(DateTimeValue msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_ON_TIMER_SETTING_RELATIVE_TIME, msg);	
 	}
-	public Date getOnTimerSettingTime() {
-		return (Date) getProperty(PROPERTY_HAS_ON_TIMER_SETTING_TIME);	
+	public DateTimeValue getOnTimerSettingTime() {
+		return (DateTimeValue) getProperty(PROPERTY_HAS_ON_TIMER_SETTING_TIME);	
 	}
-	public void setOnTimerSettingTime(Date msg) {
+	public void setOnTimerSettingTime(DateTimeValue msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_ON_TIMER_SETTING_TIME, msg);	
 	}
@@ -159,11 +174,9 @@ public class FloorHeater extends EchonetSuperDevice{
 	
 	public FloorHeater() {
 		super();
-		setClassGroupCode(EchonetDeviceGroupCodeValue.HousingFacilityRelatedDevice);
 	}
 	public FloorHeater(String uri) {
 		super(uri);
-		setClassGroupCode(EchonetDeviceGroupCodeValue.HousingFacilityRelatedDevice);
 	}
 	public String getClassURI() {
 		return MY_URI;

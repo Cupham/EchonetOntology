@@ -1,3 +1,19 @@
+/*******************************************************************************
+ * Copyright 2018 PHAM Van Cu, Tan laboratory, Japan Advanced Institute of Science and Technology (JAIST),
+ *  Japan as a part of the CARESSES project (http://www.caressesrobot.org/).
+ * 
+ * Licensed under the Apache License, Version 2.0 (the "License"); you may not
+ * use this file except in compliance with the License.  You may obtain a copy
+ * of the License at
+ * 
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+ * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.  See the
+ * License for the specific language governing permissions and limitations under
+ * the License.
+ ******************************************************************************/
 package org.universAAL.ontology.echonet.values;
 
 import org.universAAL.middleware.owl.ManagedIndividual;
@@ -12,7 +28,7 @@ public static final String MY_URI = EchonetOntology.NAMESPACE + "IntervalSetting
 	public static final int EVERY_3_DAY = 3;
 	public static final int ONCE_A_WEEK = 4;
 	
-	private static final String[] names = {"Off","Daily","EveryOtherDay","Every3Day", "OnceAWeek"};
+	private static final String[] names = {"off","daily","everyOtherDay","every3Day", "onceAWeek"};
 	public static final IntervalSettingValue Off = new IntervalSettingValue(OFF);
 	public static final IntervalSettingValue Daily = new IntervalSettingValue(DAILY);
 	public static final IntervalSettingValue EveryOtherDay = new IntervalSettingValue(EVERY_OTHER_DAY);

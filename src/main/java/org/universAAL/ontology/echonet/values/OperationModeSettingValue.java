@@ -1,94 +1,111 @@
+/*******************************************************************************
+ * Copyright 2018 PHAM Van Cu, Tan laboratory, Japan Advanced Institute of Science and Technology (JAIST),
+ *  Japan as a part of the CARESSES project (http://www.caressesrobot.org/).
+ * 
+ * Licensed under the Apache License, Version 2.0 (the "License"); you may not
+ * use this file except in compliance with the License.  You may obtain a copy
+ * of the License at
+ * 
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+ * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.  See the
+ * License for the specific language governing permissions and limitations under
+ * the License.
+ ******************************************************************************/
 package org.universAAL.ontology.echonet.values;
 
 import org.universAAL.middleware.owl.ManagedIndividual;
 import org.universAAL.ontology.echonet.EchonetOntology;
 
 public class OperationModeSettingValue extends ManagedIndividual{
+	
 public static final String MY_URI = EchonetOntology.NAMESPACE + "OperationModeSettingValue";
 	private int order;
 	public static final int NORMAL_OPERATION = 0;
 	public static final int HIGH_SPEED_OPERATION = 1;
 	public static final int SILENT_OPERATION = 2;
 	public static final int STANDARD_MODE = 3;
-	public static final int EXTRA_MODE = 5;
-	public static final int AUTOMATIC_DIRECTION_CONTROL_MODE = 6;
-	public static final int NON_AUTOMATIC_DIRECTION_CONTROL_MODE = 7;
-	public static final int AUTOMATIC_VERTICAL_DIRECTION_CONTROL_MODE = 8;
-	public static final int AUTOMATIC_HORIZONTAL_DIRECTION_CONTROL_MODE = 9;
-	public static final int AUTOMATIC_MODE = 10;
-	public static final int COOLING_MODE = 11;
-	public static final int HEATING_MODE = 12;
-	public static final int DEHUMIDIFICATION_MODE = 13;
-	public static final int CIRCULATOR_MODE = 14;
-	public static final int OTHER = 15;
-	public static final int THROAT_DRY_PREVENTION_MODE = 16;
-	public static final int QUIET_OPERATION_MODE = 17;
-	public static final int SAVING_MODE = 18;
-	public static final int ROOM_HEATING_ON_MODE = 19;
-	public static final int ROOM_HEATING_OFF_MODE = 20;
-	public static final int TIMER_MODE = 21;
-	public static final int NO_SETTING = 22;
-	public static final int OVER_COOL_PREVENTION_MODE = 23;
-	public static final int VENTILATION_MODE = 24;
-	public static final int PRE_WARM_MODE = 25;
-	public static final int DRYER_MODE = 26;
-	public static final int STOP = 27;
-	public static final int MODEST_OPERATION_MODE = 28;
-	public static final int HIGH_POWER_OPERATION_MODE = 29;
-	public static final int RAPID_CHARGING_MODE = 30;
-	public static final int CHARGING_MODE = 31;
-	public static final int DISCHARGING_MODE = 32;
-	public static final int STANDBY_MODE = 33;
-	public static final int TEST_MODE = 34;
-	public static final int RESTART_MODE = 35;
-	public static final int RECALCULATION_MODE= 36;
-	public static final int MAIN_LIGHTING_MODE = 37;
-	public static final int NIGHT_LIGHTING_MODE = 38;
-	public static final int COLOR_LIGHTING_MODE= 39;
-	public static final int CITRIC_ACID_CLEANING_MODE= 40;
-	public static final int QUICK_MODE= 41;
-	public static final int MICROWAVE_HEATING_MODE= 42;
-	public static final int DEFROSTING_MODE = 43;
-	public static final int OVEN_MODE = 44;
-	public static final int GRILL_MODE= 45;
-	public static final int TOASTER_MODE= 46;
-	public static final int FERMENTING_MODE= 47;
-	public static final int STEWING_MODE= 48;
-	public static final int STEAMING_MODE = 49;
-	public static final int TWO_STAGE_MICROWAVE_HEATING = 50;
-	public static final int CONVECTION_MODE= 51;
-	public static final int HYBRID_MODE = 52;
-	public static final int POWER_CONTROL_MODE = 53;
-	public static final int DEEP_FRYING_MODE = 54;
-	public static final int WATER_HEATING_MODE= 55;
-	public static final int RICE_BOILING_MODE = 56;
-	public static final int STIR_FRYING_MODE= 57;
-	public static final int WASHING_MODE = 58;
-	public static final int RINSING_MODE = 59;
-	public static final int SPIN_DRYING_MODE= 60;
-	public static final int SUSPENDED_MODE = 61;
-	public static final int WORKING_CYCLE_STOPPED_COMPLETED= 62;
-	public static final int NON_COOLING_MODE = 63;
-	public static final int CONTINOUS_MODE = 64;
-	public static final int INTERMITTENT_MODE = 65;
+	public static final int EXTRA_MODE = 4;
+	public static final int AUTOMATIC_DIRECTION_CONTROL_MODE = 5;
+	public static final int NON_AUTOMATIC_DIRECTION_CONTROL_MODE = 6;
+	public static final int AUTOMATIC_VERTICAL_DIRECTION_CONTROL_MODE = 7;
+	public static final int AUTOMATIC_HORIZONTAL_DIRECTION_CONTROL_MODE = 8;
+	public static final int AUTOMATIC_MODE = 9;
+	public static final int COOLING_MODE = 10;
+	public static final int HEATING_MODE = 11;
+	public static final int DEHUMIDIFICATION_MODE = 12;
+	public static final int CIRCULATOR_MODE = 13;
+	public static final int OTHER = 14;
+	public static final int THROAT_DRY_PREVENTION_MODE = 15;
+	public static final int QUIET_OPERATION_MODE = 16;
+	public static final int SAVING_MODE = 17;
+	public static final int ROOM_HEATING_ON_MODE = 18;
+	public static final int ROOM_HEATING_OFF_MODE = 19;
+	public static final int TIMER_MODE = 20;
+	public static final int NO_SETTING = 21;
+	public static final int OVER_COOL_PREVENTION_MODE = 22;
+	public static final int VENTILATION_MODE = 23;
+	public static final int PRE_WARM_MODE = 24;
+	public static final int DRYER_MODE = 25;
+	public static final int STOP = 26;
+	public static final int MODEST_OPERATION_MODE = 27;
+	public static final int HIGH_POWER_OPERATION_MODE = 28;
+	public static final int RAPID_CHARGING_MODE = 29;
+	public static final int CHARGING_MODE = 30;
+	public static final int DISCHARGING_MODE = 31;
+	public static final int STANDBY_MODE = 32;
+	public static final int TEST_MODE = 33;
+	public static final int RESTART_MODE = 34;
+	public static final int RECALCULATION_MODE= 35;
+	public static final int MAIN_LIGHTING_MODE = 36;
+	public static final int NIGHT_LIGHTING_MODE = 37;
+	public static final int COLOR_LIGHTING_MODE= 38;
+	public static final int CITRIC_ACID_CLEANING_MODE= 39;
+	public static final int QUICK_MODE= 40;
+	public static final int MICROWAVE_HEATING_MODE= 41;
+	public static final int DEFROSTING_MODE = 42;
+	public static final int OVEN_MODE = 43;
+	public static final int GRILL_MODE= 44;
+	public static final int TOASTER_MODE= 45;
+	public static final int FERMENTING_MODE= 46;
+	public static final int STEWING_MODE= 47;
+	public static final int STEAMING_MODE = 48;
+	public static final int TWO_STAGE_MICROWAVE_HEATING = 49;
+	public static final int CONVECTION_MODE= 50;
+	public static final int HYBRID_MODE = 51;
+	public static final int POWER_CONTROL_MODE = 52;
+	public static final int DEEP_FRYING_MODE = 53;
+	public static final int WATER_HEATING_MODE= 54;
+	public static final int RICE_BOILING_MODE = 55;
+	public static final int STIR_FRYING_MODE= 56;
+	public static final int WASHING_MODE = 57;
+	public static final int RINSING_MODE = 58;
+	public static final int SPIN_DRYING_MODE= 59;
+	public static final int SUSPENDED_MODE = 60;
+	public static final int WORKING_CYCLE_STOPPED_COMPLETED= 61;
+	public static final int NON_COOLING_MODE = 62;
+	public static final int CONTINOUS_MODE = 63;
+	public static final int INTERMITTENT_MODE = 64;
 
 	
 	
-	private static final String[] names = {"NormalMode", "HighSpeedMode", "SilentMode",
-										   "StandardMode","ExtraMode","AutomaticAirFlowDirectionControlMode", 
-										   "NonAutomaticAirFlowDirectionControlMode", "AutomaticAirFlowVerticalDirectionMode", 
-										   "AutomaticAirFlowHorizontalDirectionMode","AutomaticMode", "CoolingMode", "HeatingMode", 
-										   "DehumidificationMode", "CiculatorMode", "Other","ThroatDryPreventionMode", "QuietOperationMode",
-										   "PowerSavingMode","RoomHeatingOnMode","RoomHeatingOffMode","TimerMode","NoSetting",
-										   "OverCoolPreventionMode","VentilationMode","PreWarmMode","DryerMode","Stop",
-										   "ModestOperationMode","HighPowerOperationMode","RapidCharginMode","ChargingMode",
-										   "DischargingMode","StandbyMode","TestMode","RestartMode","RecalculationMode",
-										   "MainLightingMode","NightLightingMode","ColorLightingMode","CitricAcidCleaningMode",
-										   "QuickMode","MicrowaveHeatingMode","DefrostingMode","OvenMode","GrillMode","ToasterMode",
-										   "FermentingMode","StewingMode","SteamingMode","TwoStageMicrowaveHeatingMode",
-										   "ConvectionMode","HybridMode","PowerControlMode","DeepFryingMode","WaterHeatingMode",
-										   "RiceBoilingMode","StirFryingMode","WashingMode","RinsingMode","SpinDryingMode","SuspendedMode",
-										   "WorkingCycleStoppedCompletedMode","NonCoolingMode","ContinousMode", "IntermitentMode"};
+	private static final String[] names = {"normalMode", "highSpeedMode", "silentMode",
+										   "standardMode","extraMode","automaticAirFlowDirectionControlMode", 
+										   "nonAutomaticAirFlowDirectionControlMode", "automaticAirFlowVerticalDirectionMode", 
+										   "automaticAirFlowHorizontalDirectionMode","automaticMode", "coolingMode", "heatingMode", 
+										   "dehumidificationMode", "ciculatorMode", "other","throatDryPreventionMode", "quietOperationMode",
+										   "powerSavingMode","roomHeatingOnMode","roomHeatingOffMode","timerMode","noSetting",
+										   "overCoolPreventionMode","ventilationMode","preWarmMode","dryerMode","stop",
+										   "modestOperationMode","highPowerOperationMode","rapidCharginMode","chargingMode",
+										   "dischargingMode","standbyMode","testMode","restartMode","recalculationMode",
+										   "mainLightingMode","nightLightingMode","colorLightingMode","citricAcidCleaningMode",
+										   "quickMode","microwaveHeatingMode","defrostingMode","ovenMode","grillMode","toasterMode",
+										   "fermentingMode","stewingMode","steamingMode","twoStageMicrowaveHeatingMode",
+										   "convectionMode","hybridMode","powerControlMode","deepFryingMode","waterHeatingMode",
+										   "riceBoilingMode","stirFryingMode","washingMode","rinsingMode","spinDryingMode","suspendedMode",
+										   "workingCycleStoppedCompletedMode","nonCoolingMode","continousMode", "intermitentMode"};
 	
 	public static final OperationModeSettingValue NormalMode = new OperationModeSettingValue(NORMAL_OPERATION);
 	public static final OperationModeSettingValue HighSpeedMode = new OperationModeSettingValue(HIGH_SPEED_OPERATION);

@@ -1,10 +1,25 @@
+/*******************************************************************************
+ * Copyright 2018 PHAM Van Cu, Tan laboratory, Japan Advanced Institute of Science and Technology (JAIST),
+ *  Japan as a part of the CARESSES project (http://www.caressesrobot.org/).
+ * 
+ * Licensed under the Apache License, Version 2.0 (the "License"); you may not
+ * use this file except in compliance with the License.  You may obtain a copy
+ * of the License at
+ * 
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+ * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.  See the
+ * License for the specific language governing permissions and limitations under
+ * the License.
+ ******************************************************************************/
 package org.universAAL.ontology.echonet.airconditionerRelatedDevices;
 
 
 import org.universAAL.ontology.echonet.EchonetOntology;
 import org.universAAL.ontology.echonet.EchonetSuperDevice;
 import org.universAAL.ontology.echonet.values.ComercialAirconditionerCurrentFunctionValue;
-import org.universAAL.ontology.echonet.values.EchonetDeviceGroupCodeValue;
 import org.universAAL.ontology.echonet.values.OperationModeSettingValue;
 import org.universAAL.ontology.echonet.values.OperationStatusValue;
 import org.universAAL.ontology.echonet.values.PowerConsumptionRange;
@@ -12,18 +27,12 @@ import org.universAAL.ontology.echonet.values.MeasuredValue;
 
 public class PackageTypeCommercialAirConditionerIndoorUnit extends EchonetSuperDevice{
 	public static final String MY_URI = EchonetOntology.NAMESPACE + "PackageTypeCommercialAirConditionerIndoorUnit";
-	public static final String PROPERTY_HAS_OPERATION_MODE_SETTING = EchonetOntology.NAMESPACE + 
-			"PackageTypeCommercialAirConditionerIndoorUnitHasOperationModeSetting";
-	public static final String PROPERTY_HAS_MEASURED_INDOOR_UNIT_TEMPERATURE = EchonetOntology.NAMESPACE + 
-			"PackageTypeCommercialAirConditionerIndoorUnitHasMeasuredIndoorUnitTemperature";
-	public static final String PROPERTY_HAS_THERMOSTAT_STATE= EchonetOntology.NAMESPACE + 
-			"PackageTypeCommercialAirConditionerIndoorUnitHasThermostatState";
-	public static final String PROPERTY_HAS_CURRENT_FUNCTION= EchonetOntology.NAMESPACE + 
-			"PackageTypeCommercialAirConditionerIndoorUnitHasCurrentFunction";
-	public static final String PROPERTY_HAS_GROUP_INFOMRATION= EchonetOntology.NAMESPACE + 
-			"PackageTypeCommercialAirConditionerIndoorUnitHasGroupInformation";
-	public static final String PROPERTY_HAS_POWER_CONSUMPTION_RANGE_INDOOR_UNIT= EchonetOntology.NAMESPACE + 
-			"PackageTypeCommercialAirConditionerIndoorUnitHasPowerConsumptionRangeIndoorUnit";
+	public static final String PROPERTY_HAS_OPERATION_MODE_SETTING = EchonetOntology.NAMESPACE + "hasOperationModeSetting";
+	public static final String PROPERTY_HAS_MEASURED_INDOOR_UNIT_TEMPERATURE = EchonetOntology.NAMESPACE + "hasMeasuredIndoorUnitTemperature";
+	public static final String PROPERTY_HAS_THERMOSTAT_STATE= EchonetOntology.NAMESPACE + "hasThermostatState";
+	public static final String PROPERTY_HAS_CURRENT_FUNCTION= EchonetOntology.NAMESPACE + "hasCurrentFunction";
+	public static final String PROPERTY_HAS_GROUP_INFOMRATION= EchonetOntology.NAMESPACE + "hasGroupInformation";
+	public static final String PROPERTY_HAS_POWER_CONSUMPTION_RANGE_INDOOR_UNIT= EchonetOntology.NAMESPACE + "hasPowerConsumptionRangeIndoorUnit";
 	
 	public PowerConsumptionRange getPowerConsumptionRangeIndoorUnit() {
 		return (PowerConsumptionRange) getProperty(PROPERTY_HAS_POWER_CONSUMPTION_RANGE_INDOOR_UNIT);	
@@ -70,11 +79,9 @@ public class PackageTypeCommercialAirConditionerIndoorUnit extends EchonetSuperD
 	
 	public PackageTypeCommercialAirConditionerIndoorUnit() {
 		super();
-		setClassGroupCode(EchonetDeviceGroupCodeValue.AirConditionerRelatedDevice);
 	}
 	public PackageTypeCommercialAirConditionerIndoorUnit(String uri) {
 		super(uri);
-		setClassGroupCode(EchonetDeviceGroupCodeValue.AirConditionerRelatedDevice);
 	}
 	
 	public String getClassURI() {

@@ -1,3 +1,19 @@
+/*******************************************************************************
+ * Copyright 2018 PHAM Van Cu, Tan laboratory, Japan Advanced Institute of Science and Technology (JAIST),
+ *  Japan as a part of the CARESSES project (http://www.caressesrobot.org/).
+ * 
+ * Licensed under the Apache License, Version 2.0 (the "License"); you may not
+ * use this file except in compliance with the License.  You may obtain a copy
+ * of the License at
+ * 
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+ * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.  See the
+ * License for the specific language governing permissions and limitations under
+ * the License.
+ ******************************************************************************/
 package org.universAAL.ontology.echonet.values;
 
 import org.universAAL.middleware.owl.ManagedIndividual;
@@ -16,8 +32,8 @@ public class AlarmStatusValue extends ManagedIndividual {
 	public static final int TAMPERED = 7;
 	// Alarm operation status
 
-	private static final String[] names = { "NoAlarm", "OutOfHotWater","WaterLeaking","WaterFrozen","BreakOpened","DoorOpened",
-											"ManualUnlocked","Tampered"};
+	private static final String[] names = { "noAlarm", "outOfHotWater","waterLeaking","waterFrozen","breakOpened","doorOpened",
+											"manualUnlocked","tampered"};
 	
 	public static final AlarmStatusValue NoAlarm = new AlarmStatusValue(NO_ALARM);
 	public static final AlarmStatusValue OutOfHotWater = new AlarmStatusValue(OUT_OF_HOT_WATER);

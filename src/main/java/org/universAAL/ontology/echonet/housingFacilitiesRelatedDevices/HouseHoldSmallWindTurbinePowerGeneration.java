@@ -1,3 +1,19 @@
+/*******************************************************************************
+ * Copyright 2018 PHAM Van Cu, Tan laboratory, Japan Advanced Institute of Science and Technology (JAIST),
+ *  Japan as a part of the CARESSES project (http://www.caressesrobot.org/).
+ * 
+ * Licensed under the Apache License, Version 2.0 (the "License"); you may not
+ * use this file except in compliance with the License.  You may obtain a copy
+ * of the License at
+ * 
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+ * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.  See the
+ * License for the specific language governing permissions and limitations under
+ * the License.
+ ******************************************************************************/
 package org.universAAL.ontology.echonet.housingFacilitiesRelatedDevices;
 
 
@@ -6,27 +22,26 @@ import org.universAAL.ontology.echonet.EchonetOntology;
 import org.universAAL.ontology.echonet.EchonetSuperDevice;
 import org.universAAL.ontology.echonet.values.MeasuredValue;
 import org.universAAL.ontology.echonet.values.OperationFunctionSettingValue;
-import org.universAAL.ontology.echonet.values.EchonetDeviceGroupCodeValue;
 import org.universAAL.ontology.echonet.values.OperationStatusValue;
 
 public class HouseHoldSmallWindTurbinePowerGeneration extends EchonetSuperDevice{
-	public static final String MY_URI = EchonetOntology.NAMESPACE + "StorageBattery";
-	public static final String PROPERTY_HAS_SYSTEM_INTERCONNECTION_STATUS = EchonetOntology.NAMESPACE + "HasSystemInterconnectionStatus";
-	public static final String PROPERTY_HAS_MEASURED_INSTANTANEOUS_GENERATED_ELECTRICITY_AMOUNT = EchonetOntology.NAMESPACE + "HasMeasuredInstantaneousGeneratedElectricityAmount";
-	public static final String PROPERTY_HAS_MEASURED_CUMULATIVE_GENERATED_ELECTRICITY_AMOUNT = EchonetOntology.NAMESPACE + "HasMeasuredCumulativeGeneratedElectricityAmount";
-	public static final String PROPERTY_RESET_MEASURED_CUMULATIVE_GENERATED_ELECTRICITY_AMOUNT = EchonetOntology.NAMESPACE + "ResettingMeasuredCumulativeGeneratedElectricityAmount";
-	public static final String PROPERTY_HAS_MEASURED_CUMULATIVE_SOLD_ELECTRICITY_AMOUNT = EchonetOntology.NAMESPACE + "HasMeasuredCumulativeSoldElectricityAmount";
-	public static final String PROPERTY_RESET_MEASURED_CUMULATIVE_SOLD_ELECTRICITY_AMOUNT = EchonetOntology.NAMESPACE + "ResettingMeasuredCumulativeGeneratedElectricityAmount";
-	public static final String PROPERTY_HAS_POWER_GENERATION_OUTPUT_LIMIT_SETTING_1 = EchonetOntology.NAMESPACE + "HasPowerGenerationOutputLimitSetting1";
-	public static final String PROPERTY_HAS_POWER_GENERATION_OUTPUT_LIMIT_SETTING_2 = EchonetOntology.NAMESPACE + "HasPowerGenerationOutputLimitSetting2";
-	public static final String PROPERTY_HAS_AMOUNT_OF_ELECTRICITY_SOLD_LIMIT_SETTING = EchonetOntology.NAMESPACE + "HasAmoundOfElectricitySoldLimitSetting";
-	public static final String PROPERTY_HAS_RATED_POWER = EchonetOntology.NAMESPACE + "HasRatedPower";
-	public static final String PROPERTY_HAS_MEASURED_WIND_SPEED = EchonetOntology.NAMESPACE + "HasMeasuredWindSpeed";
-	public static final String PROPERTY_HAS_RATED_WIND_SPEED = EchonetOntology.NAMESPACE + "HasRatedWindSpeed";
-	public static final String PROPERTY_HAS_CUT_IN_WIND_SPEED = EchonetOntology.NAMESPACE + "HasCutInWindSpeed";
-	public static final String PROPERTY_HAS_CUT_OUT_WIND_SPEED = EchonetOntology.NAMESPACE + "HasCutOutWindSpeed";
-	public static final String PROPERTY_HAS_EXTREME_WIND_SPEED = EchonetOntology.NAMESPACE + "HasExtremeWindSpeed";
-	public static final String PROPERTY_HAS_BARKING_STATUS = EchonetOntology.NAMESPACE + "HasBarkingStatus";
+	public static final String MY_URI = EchonetOntology.NAMESPACE + "HouseHoldSmallWindTurbinePowerGeneration";
+	public static final String PROPERTY_HAS_SYSTEM_INTERCONNECTION_STATUS = EchonetOntology.NAMESPACE + "hasSystemInterconnectionStatus";
+	public static final String PROPERTY_HAS_MEASURED_INSTANTANEOUS_GENERATED_ELECTRICITY_AMOUNT = EchonetOntology.NAMESPACE + "hasMeasuredInstantaneousGeneratedElectricityAmount";
+	public static final String PROPERTY_HAS_MEASURED_CUMULATIVE_GENERATED_ELECTRICITY_AMOUNT = EchonetOntology.NAMESPACE + "hasMeasuredCumulativeGeneratedElectricityAmount";
+	public static final String PROPERTY_RESET_MEASURED_CUMULATIVE_GENERATED_ELECTRICITY_AMOUNT = EchonetOntology.NAMESPACE + "resetMeasuredCumulativeGeneratedElectricityAmount";
+	public static final String PROPERTY_HAS_MEASURED_CUMULATIVE_SOLD_ELECTRICITY_AMOUNT = EchonetOntology.NAMESPACE + "hasMeasuredCumulativeSoldElectricityAmount";
+	public static final String PROPERTY_RESET_MEASURED_CUMULATIVE_SOLD_ELECTRICITY_AMOUNT = EchonetOntology.NAMESPACE + "resetMeasuredCumulativeSoldElectricityAmount";
+	public static final String PROPERTY_HAS_POWER_GENERATION_OUTPUT_LIMIT_SETTING_1 = EchonetOntology.NAMESPACE + "hasPowerGenerationOutputLimitSetting1";
+	public static final String PROPERTY_HAS_POWER_GENERATION_OUTPUT_LIMIT_SETTING_2 = EchonetOntology.NAMESPACE + "hasPowerGenerationOutputLimitSetting2";
+	public static final String PROPERTY_HAS_AMOUNT_OF_ELECTRICITY_SOLD_LIMIT_SETTING = EchonetOntology.NAMESPACE + "hasAmountOfElectricitySoldLimitSetting";
+	public static final String PROPERTY_HAS_RATED_POWER = EchonetOntology.NAMESPACE + "hasRatedPower";
+	public static final String PROPERTY_HAS_MEASURED_WIND_SPEED = EchonetOntology.NAMESPACE + "hasMeasuredWindSpeed";
+	public static final String PROPERTY_HAS_RATED_WIND_SPEED = EchonetOntology.NAMESPACE + "hasRatedWindSpeed";
+	public static final String PROPERTY_HAS_CUT_IN_WIND_SPEED = EchonetOntology.NAMESPACE + "hasCutInWindSpeed";
+	public static final String PROPERTY_HAS_CUT_OUT_WIND_SPEED = EchonetOntology.NAMESPACE + "hasCutOutWindSpeed";
+	public static final String PROPERTY_HAS_EXTREME_WIND_SPEED = EchonetOntology.NAMESPACE + "hasExtremeWindSpeed";
+	public static final String PROPERTY_HAS_BARKING_STATUS = EchonetOntology.NAMESPACE + "hasBarkingStatus";
 	
 	public OperationStatusValue getBarkingStatus() {
 		return (OperationStatusValue) getProperty(PROPERTY_HAS_BARKING_STATUS);	
@@ -130,11 +145,9 @@ public class HouseHoldSmallWindTurbinePowerGeneration extends EchonetSuperDevice
 	
 	public HouseHoldSmallWindTurbinePowerGeneration() {
 		super();
-		setClassGroupCode(EchonetDeviceGroupCodeValue.HousingFacilityRelatedDevice);
 	}
 	public HouseHoldSmallWindTurbinePowerGeneration(String uri) {
 		super(uri);
-		setClassGroupCode(EchonetDeviceGroupCodeValue.HousingFacilityRelatedDevice);
 	}
 	public String getClassURI() {
 		return MY_URI;

@@ -1,42 +1,55 @@
+/*******************************************************************************
+ * Copyright 2018 PHAM Van Cu, Tan laboratory, Japan Advanced Institute of Science and Technology (JAIST),
+ *  Japan as a part of the CARESSES project (http://www.caressesrobot.org/).
+ * 
+ * Licensed under the Apache License, Version 2.0 (the "License"); you may not
+ * use this file except in compliance with the License.  You may obtain a copy
+ * of the License at
+ * 
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+ * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.  See the
+ * License for the specific language governing permissions and limitations under
+ * the License.
+ ******************************************************************************/
 package org.universAAL.ontology.echonet.housingFacilitiesRelatedDevices;
 
 
-
-import java.util.Date;
-
 import org.universAAL.ontology.echonet.EchonetOntology;
 import org.universAAL.ontology.echonet.EchonetSuperDevice;
-import org.universAAL.ontology.echonet.values.EchonetDeviceGroupCodeValue;
+import org.universAAL.ontology.echonet.values.DateTimeValue;
 import org.universAAL.ontology.echonet.values.MeasuredValue;
 
 public class HighVoltageSmartElectricEnergy extends EchonetSuperDevice{
 	public static final String MY_URI = EchonetOntology.NAMESPACE + "HighVoltageSmartElectricEnergy";
-	public static final String PROPERTY_HAS_COEFFICIENT= EchonetOntology.NAMESPACE + "HasCoefficient";
-	public static final String PROPERTY_HAS_MULTIPLYING_FACTOR_FOR_COEFFICIENT= EchonetOntology.NAMESPACE + "HasMultiplyingFactorForCoefficient";
-	public static final String PROPERTY_HAS_FIXED_DAY= EchonetOntology.NAMESPACE + "HasFixedDay";
-	public static final String PROPERTY_HAS_DAY_TO_RETRIVE_MEASURED_CUMULATIVE_ELECTRIC_ENERGY_HISTORICAL_DATA = EchonetOntology.NAMESPACE + "HasDayToRetrieveMeasuredCumulativeElectricEnergyHistoricalData";
-	public static final String PROPERTY_HAS_MEASURED_CUMULATIVE_ACTIVE_ELECTRIC_ENERGY_AMOUNT = EchonetOntology.NAMESPACE + "HasMeasuredCumulativeActiveElectricEnergyAmount";
-	public static final String PROPERTY_HAS_CUMULATIVE_ACTIVE_ELECTRIC_ENERGY_AMOUNT_MEASURED_AT_FIXED_TIME = EchonetOntology.NAMESPACE + "HasCumulativeActiveElectricEnergyAmountMeasuredAtFixedTime";
-	public static final String PROPERTY_HAS_MEASURED_CUMULATIVE_ACTIVE_ELECTRIC_ENERGY_FOR_POWER_FACTOR_MEASUREMENT = EchonetOntology.NAMESPACE + "HasCumulativeActiveElectricEnergyForPowerFactorMeasurement";
-	public static final String PROPERTY_HAS_NUMBER_OF_EFFECTIVE_DIGITS_FOR_CUMULATIVE_ELECTRIC_ENERGY= EchonetOntology.NAMESPACE + "HasNumberOfEffectiveDigitsForCumulativeElectricEnergy";
-	public static final String PROPERTY_HAS_CUMULATIVE_ACTIVE_ELECTRIC_ENERGY_AMOUNT_UNIT = EchonetOntology.NAMESPACE + "HasMeasuredCumulativeActiveElectricEnergyAmountUnit";
-	public static final String PROPERTY_HAS_MEASURED_CUMULATIVE_ACTIVE_ELECTRIC_ENERGY_AMOUNT_HISTORICAL_DATA = EchonetOntology.NAMESPACE + "HasMeasuredCumulativeActiveElectricEnergyAmountHistoricalData";
-	public static final String PROPERTY_HAS_MONTHLY_MAXIMUM_ELECTRIC_POWER_DEMAND = EchonetOntology.NAMESPACE + "HasMonthlyMaximumElectricPowerDemand";
-	public static final String PROPERTY_HAS_CUMULATIVE_MAXIMUM_ELECTRIC_POWER_DEMAND = EchonetOntology.NAMESPACE + "HasCumulativeMaximumElectricPowerDemand";
-	public static final String PROPERTY_HAS_ELECTRIC_POWER_DEMAND_AT_FIXED_TIME = EchonetOntology.NAMESPACE + "HasElectricPowerDemandAtFixedTime";
-	public static final String PROPERTY_HAS_NUMBER_OF_EFFECTIVE_DIGITS_FOR_ELECTRIC_POWER_DEMAND= EchonetOntology.NAMESPACE + "HasNumberOfEffectiveDigitsForElectricPowerDemand";
-	public static final String PROPERTY_HAS_ELECTRIC_POWER_DEMAND_UNIT= EchonetOntology.NAMESPACE + "HasElectricPowerDemandUnit";
-	public static final String PROPERTY_HAS_MEASURED_ELECTRIC_POWER_DEMAND_HISTORICAL_DATA= EchonetOntology.NAMESPACE + "HasMeasuredElectricPowerDemandHistoricalData";
-	public static final String PROPERTY_HAS_CUMULATIVE_MAXIMUM_ELECTRIC_POWER_DEMAND_UNIT = EchonetOntology.NAMESPACE + "HasCumulativeMaximumElectricPowerDemandUnit";
+	public static final String PROPERTY_HAS_COEFFICIENT= EchonetOntology.NAMESPACE + "hasCoefficient";
+	public static final String PROPERTY_HAS_MULTIPLYING_FACTOR_FOR_COEFFICIENT= EchonetOntology.NAMESPACE + "hasMultiplyingFactorForCoefficient";
+	public static final String PROPERTY_HAS_FIXED_DAY= EchonetOntology.NAMESPACE + "hasFixedDay";
+	public static final String PROPERTY_HAS_DAY_TO_RETRIVE_MEASURED_CUMULATIVE_ELECTRIC_ENERGY_HISTORICAL_DATA = EchonetOntology.NAMESPACE + "hasDayToRetrieveMeasuredCumulativeElectricEnergyHistoricalData";
+	public static final String PROPERTY_HAS_MEASURED_CUMULATIVE_ACTIVE_ELECTRIC_ENERGY_AMOUNT = EchonetOntology.NAMESPACE + "hasMeasuredCumulativeActiveElectricEnergyAmount";
+	public static final String PROPERTY_HAS_CUMULATIVE_ACTIVE_ELECTRIC_ENERGY_AMOUNT_MEASURED_AT_FIXED_TIME = EchonetOntology.NAMESPACE + "hasCumulativeActiveElectricEnergyAmountMeasuredAtFixedTime";
+	public static final String PROPERTY_HAS_MEASURED_CUMULATIVE_ACTIVE_ELECTRIC_ENERGY_FOR_POWER_FACTOR_MEASUREMENT = EchonetOntology.NAMESPACE + "hasCumulativeActiveElectricEnergyForPowerFactorMeasurement";
+	public static final String PROPERTY_HAS_NUMBER_OF_EFFECTIVE_DIGITS_FOR_CUMULATIVE_ELECTRIC_ENERGY= EchonetOntology.NAMESPACE + "hasNumberOfEffectiveDigitsForCumulativeElectricEnergy";
+	public static final String PROPERTY_HAS_CUMULATIVE_ACTIVE_ELECTRIC_ENERGY_AMOUNT_UNIT = EchonetOntology.NAMESPACE + "hasMeasuredCumulativeActiveElectricEnergyAmountUnit";
+	public static final String PROPERTY_HAS_MEASURED_CUMULATIVE_ACTIVE_ELECTRIC_ENERGY_AMOUNT_HISTORICAL_DATA = EchonetOntology.NAMESPACE + "hasMeasuredCumulativeActiveElectricEnergyAmountHistoricalData";
+	public static final String PROPERTY_HAS_MONTHLY_MAXIMUM_ELECTRIC_POWER_DEMAND = EchonetOntology.NAMESPACE + "hasMonthlyMaximumElectricPowerDemand";
+	public static final String PROPERTY_HAS_CUMULATIVE_MAXIMUM_ELECTRIC_POWER_DEMAND = EchonetOntology.NAMESPACE + "hasCumulativeMaximumElectricPowerDemand";
+	public static final String PROPERTY_HAS_ELECTRIC_POWER_DEMAND_AT_FIXED_TIME = EchonetOntology.NAMESPACE + "hasElectricPowerDemandAtFixedTime";
+	public static final String PROPERTY_HAS_NUMBER_OF_EFFECTIVE_DIGITS_FOR_ELECTRIC_POWER_DEMAND= EchonetOntology.NAMESPACE + "hasNumberOfEffectiveDigitsForElectricPowerDemand";
+	public static final String PROPERTY_HAS_ELECTRIC_POWER_DEMAND_UNIT= EchonetOntology.NAMESPACE + "hasElectricPowerDemandUnit";
+	public static final String PROPERTY_HAS_MEASURED_ELECTRIC_POWER_DEMAND_HISTORICAL_DATA= EchonetOntology.NAMESPACE + "hasMeasuredElectricPowerDemandHistoricalData";
+	public static final String PROPERTY_HAS_CUMULATIVE_MAXIMUM_ELECTRIC_POWER_DEMAND_UNIT = EchonetOntology.NAMESPACE + "hasCumulativeMaximumElectricPowerDemandUnit";
 	public static final String PROPERTY_HAS_MEASURED_REACTIVE_ELECTRIC_POWER_CONSUMPTION_FOR_POWER_FACTOR_MEASUREMENT = EchonetOntology.NAMESPACE + 
-										"HasMeasuredReactiveElectricPowerConsumptionForPowerFactorMeasurement";
-	public static final String PROPERTY_HAS_MEASURED_CUMULATIVE_REACTIVE_ELECTRIC_POWER_CONSUMPTION_AT_FIXED_TIME_FOR_POWER_FACTOR_MEASUREMENT = EchonetOntology.NAMESPACE + "HasMeasuredCumulativeReactiveElectricPowerConsumptionAtFixedTimeForPowerFactorMeasurement";
+										"hasMeasuredReactiveElectricPowerConsumptionForPowerFactorMeasurement";
+	public static final String PROPERTY_HAS_MEASURED_CUMULATIVE_REACTIVE_ELECTRIC_POWER_CONSUMPTION_AT_FIXED_TIME_FOR_POWER_FACTOR_MEASUREMENT = EchonetOntology.NAMESPACE + "hasMeasuredCumulativeReactiveElectricPowerConsumptionAtFixedTimeForPowerFactorMeasurement";
 	public static final String PROPERTY_HAS_NUMBER_OF_EFFECTIVE_DIGITS_FOR_MEASURED_CUMULATIVE_REACTIVE_ELECTRIC_POWER_CONSUMPTION_FOR_POWER_FACTOR_MEASUREMENT = EchonetOntology.NAMESPACE + 
-										"HasNumberOfEffectiveDigitsForMeasuredCumulativeReactiveElectricPowerConsumptionForPowerFactorMeasurement";
+										"hasNumberOfEffectiveDigitsForMeasuredCumulativeReactiveElectricPowerConsumptionForPowerFactorMeasurement";
 	public static final String PROPERTY_HAS_MEASURED_CUMULATIVE_REACTIVE_ELECTRIC_POWER_CONSUMPTION_AMOUNT_UNIT = EchonetOntology.NAMESPACE + 
-										"HasMeasuredCumulativeReactiveElectricPowerConsumptionAmountUnit";
+										"hasMeasuredCumulativeReactiveElectricPowerConsumptionAmountUnit";
 	public static final String PROPERTY_HAS_MEASURED_CUMULATIVE_REACTIVE_ELECTRIC_POWER_CONSUMPTION_FOR_POWER_FACTOR_MEASUREMENT_HISTORICAL_DATA = EchonetOntology.NAMESPACE + 
-										"HasMeasuredCumulativeReactiveElectricPowerConsumptionForPoweerFactorMeasurementHistoricalData";
+										"hasMeasuredCumulativeReactiveElectricPowerConsumptionForPoweerFactorMeasurementHistoricalData";
 
 	public MeasuredValue getMeasuredCumulativeReactiveElectricPowerConsumptionForPoweerFactorMeasurementHistoricalData() {
 		return (MeasuredValue) getProperty(PROPERTY_HAS_MEASURED_CUMULATIVE_REACTIVE_ELECTRIC_POWER_CONSUMPTION_FOR_POWER_FACTOR_MEASUREMENT_HISTORICAL_DATA);	
@@ -164,17 +177,17 @@ public class HighVoltageSmartElectricEnergy extends EchonetSuperDevice{
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_MEASURED_CUMULATIVE_ACTIVE_ELECTRIC_ENERGY_AMOUNT, msg);	
 	}
-	public MeasuredValue getDayToRetrieveMeasuredCumulativeElectricEnergyHistoricalData() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_DAY_TO_RETRIVE_MEASURED_CUMULATIVE_ELECTRIC_ENERGY_HISTORICAL_DATA);	
+	public DateTimeValue getDayToRetrieveMeasuredCumulativeElectricEnergyHistoricalData() {
+		return (DateTimeValue) getProperty(PROPERTY_HAS_DAY_TO_RETRIVE_MEASURED_CUMULATIVE_ELECTRIC_ENERGY_HISTORICAL_DATA);	
 	}
-	public void setDayToRetrieveMeasuredCumulativeElectricEnergyHistoricalData(MeasuredValue msg) {
+	public void setDayToRetrieveMeasuredCumulativeElectricEnergyHistoricalData(DateTimeValue msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_DAY_TO_RETRIVE_MEASURED_CUMULATIVE_ELECTRIC_ENERGY_HISTORICAL_DATA, msg);	
 	}
-	public Date getFixedDay() {
-		return (Date) getProperty(PROPERTY_HAS_FIXED_DAY);	
+	public DateTimeValue getFixedDay() {
+		return (DateTimeValue) getProperty(PROPERTY_HAS_FIXED_DAY);	
 	}
-	public void setFixedDay(Date msg) {
+	public void setFixedDay(DateTimeValue msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_FIXED_DAY, msg);	
 	}
@@ -196,11 +209,9 @@ public class HighVoltageSmartElectricEnergy extends EchonetSuperDevice{
 	
 	public HighVoltageSmartElectricEnergy() {
 		super();
-		setClassGroupCode(EchonetDeviceGroupCodeValue.HousingFacilityRelatedDevice);
 	}
 	public HighVoltageSmartElectricEnergy(String uri) {
 		super(uri);
-		setClassGroupCode(EchonetDeviceGroupCodeValue.HousingFacilityRelatedDevice);
 	}
 	public String getClassURI() {
 		return MY_URI;

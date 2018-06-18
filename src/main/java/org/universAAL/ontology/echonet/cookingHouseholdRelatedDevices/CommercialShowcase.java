@@ -1,10 +1,25 @@
+/*******************************************************************************
+ * Copyright 2018 PHAM Van Cu, Tan laboratory, Japan Advanced Institute of Science and Technology (JAIST),
+ *  Japan as a part of the CARESSES project (http://www.caressesrobot.org/).
+ * 
+ * Licensed under the Apache License, Version 2.0 (the "License"); you may not
+ * use this file except in compliance with the License.  You may obtain a copy
+ * of the License at
+ * 
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+ * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.  See the
+ * License for the specific language governing permissions and limitations under
+ * the License.
+ ******************************************************************************/
 package org.universAAL.ontology.echonet.cookingHouseholdRelatedDevices;
 
 
 
 import org.universAAL.ontology.echonet.EchonetOntology;
 import org.universAAL.ontology.echonet.EchonetSuperDevice;
-import org.universAAL.ontology.echonet.values.EchonetDeviceGroupCodeValue;
 import org.universAAL.ontology.echonet.values.MeasuredValue;
 import org.universAAL.ontology.echonet.values.OperationFunctionSettingValue;
 import org.universAAL.ontology.echonet.values.OperationModeSettingValue;
@@ -14,27 +29,27 @@ import org.universAAL.ontology.echonet.values.ShapeValue;
 
 public class CommercialShowcase extends EchonetSuperDevice{
 	public static final String MY_URI = EchonetOntology.NAMESPACE + "CommercialShowcase";
-	public static final String PROPERTY_HAS_OPERATION_MODE_SETTING= EchonetOntology.NAMESPACE + "HasOperationModeSetting";
-	public static final String PROPERTY_HAS_MEASURED_DISCHARGE_TEMPERATURE= EchonetOntology.NAMESPACE + "HasMeasuredDischargeTemperature";
-	public static final String PROPERTY_HAS_GROUP_INFORMATION= EchonetOntology.NAMESPACE + "HasGroupInformation";
-	public static final String PROPERTY_HAS_INTERNAL_LIGHTING_OPERATION_STATUS= EchonetOntology.NAMESPACE + "HasInternalLightingOperationStatus";
-	public static final String PROPERTY_HAS_EXTERNAL_LIGHTING_OPERATION_STATUS= EchonetOntology.NAMESPACE + "HasExternalLightingOperationStatus";
-	public static final String PROPERTY_HAS_COMPRESSOR_OPERATION_STATUS= EchonetOntology.NAMESPACE + "HasCompressorOperationStatus";
-	public static final String PROPERTY_HAS_MEASURED_INTERNAL_TEMPERATURE= EchonetOntology.NAMESPACE + "HasMeasuredInternalTemperature";
-	public static final String PROPERTY_HAS_FREEZING_CAPABILITY_VALUE= EchonetOntology.NAMESPACE + "HasFreezingCapabilityValue";
-	public static final String PROPERTY_HAS_DEFROSTING_HEATER_POWER_CONSUMPTION= EchonetOntology.NAMESPACE + "HasDefrostingHeaterPowerConsumption";
-	public static final String PROPERTY_HAS_FAN_MOTER_POWER_CONSUMPTION= EchonetOntology.NAMESPACE + "HasFanMotorPowerConsumption";
-	public static final String PROPERTY_HAS_HEATER_MODE= EchonetOntology.NAMESPACE + "HasHeaterMode";
-	public static final String PROPERTY_HAS_INSIDE_THE_SHOWCASE_LIGHTING_TYPE= EchonetOntology.NAMESPACE + "HasInsideTheShowcaseLightingType";
-	public static final String PROPERTY_HAS_OUTSIDE_THE_CASE_LIGHTING_TYPE= EchonetOntology.NAMESPACE + "HasOutsideTheCaseLightingType";
-	public static final String PROPERTY_HAS_INSIDE_THE_SHOWCASE_LIGHTING_ILLUMINANCE_LEVEL= EchonetOntology.NAMESPACE + "HasInsideTheShowcaseLightingIlluminanceLevel";
-	public static final String PROPERTY_HAS_OUTSIDE_THE_CASE_LIGHTING_ILLUMINANCE_LEVEL= EchonetOntology.NAMESPACE + "HasOutsideTheCaseLightingIlluminanceLevel";
-	public static final String PROPERTY_HAS_INSIDE_THE_CASE_TEMPERATURE_SETTING= EchonetOntology.NAMESPACE + "HasInsideTheCaseTemperatureSetting";
-	public static final String PROPERTY_HAS_SHOWCASE_TYPE_INFORMATION= EchonetOntology.NAMESPACE + "HasShowCaseTypeInformation";
-	public static final String PROPERTY_HAS_DOOR_TYPE_INFORMATION= EchonetOntology.NAMESPACE + "HasDoorTypeInformation";
-	public static final String PROPERTY_HAS_SHOWCASE_CONFIGURATION_INFORMATION= EchonetOntology.NAMESPACE + "HasShowcaseConfigurationInformation";
-	public static final String PROPERTY_HAS_SHOWCASE_SHAPE_INFORMATION= EchonetOntology.NAMESPACE + "HasShowcaseShapeInformation";
-	public static final String PROPERTY_HAS_INSIDE_THE_CASE_TEMPERATURE_RANGE_INFORMATION= EchonetOntology.NAMESPACE + "HasInsideTheCaseTemperatureRangeInformation";
+	public static final String PROPERTY_HAS_OPERATION_MODE_SETTING= EchonetOntology.NAMESPACE + "hasOperationModeSetting";
+	public static final String PROPERTY_HAS_MEASURED_DISCHARGE_TEMPERATURE= EchonetOntology.NAMESPACE + "hasMeasuredDischargeTemperature";
+	public static final String PROPERTY_HAS_GROUP_INFORMATION= EchonetOntology.NAMESPACE + "hasGroupInformation";
+	public static final String PROPERTY_HAS_INTERNAL_LIGHTING_OPERATION_STATUS= EchonetOntology.NAMESPACE + "hasInternalLightingOperationStatus";
+	public static final String PROPERTY_HAS_EXTERNAL_LIGHTING_OPERATION_STATUS= EchonetOntology.NAMESPACE + "hasExternalLightingOperationStatus";
+	public static final String PROPERTY_HAS_COMPRESSOR_OPERATION_STATUS= EchonetOntology.NAMESPACE + "hasCompressorOperationStatus";
+	public static final String PROPERTY_HAS_MEASURED_INTERNAL_TEMPERATURE= EchonetOntology.NAMESPACE + "hasMeasuredInternalTemperature";
+	public static final String PROPERTY_HAS_FREEZING_CAPABILITY_VALUE= EchonetOntology.NAMESPACE + "hasFreezingCapabilityValue";
+	public static final String PROPERTY_HAS_DEFROSTING_HEATER_POWER_CONSUMPTION= EchonetOntology.NAMESPACE + "hasDefrostingHeaterPowerConsumption";
+	public static final String PROPERTY_HAS_FAN_MOTER_POWER_CONSUMPTION= EchonetOntology.NAMESPACE + "hasFanMotorPowerConsumption";
+	public static final String PROPERTY_HAS_HEATER_MODE= EchonetOntology.NAMESPACE + "hasHeaterMode";
+	public static final String PROPERTY_HAS_INSIDE_THE_SHOWCASE_LIGHTING_TYPE= EchonetOntology.NAMESPACE + "hasInsideTheShowcaseLightingType";
+	public static final String PROPERTY_HAS_OUTSIDE_THE_CASE_LIGHTING_TYPE= EchonetOntology.NAMESPACE + "hasOutsideTheCaseLightingType";
+	public static final String PROPERTY_HAS_INSIDE_THE_SHOWCASE_LIGHTING_ILLUMINANCE_LEVEL= EchonetOntology.NAMESPACE + "hasInsideTheShowcaseLightingIlluminanceLevel";
+	public static final String PROPERTY_HAS_OUTSIDE_THE_CASE_LIGHTING_ILLUMINANCE_LEVEL= EchonetOntology.NAMESPACE + "hasOutsideTheCaseLightingIlluminanceLevel";
+	public static final String PROPERTY_HAS_INSIDE_THE_CASE_TEMPERATURE_SETTING= EchonetOntology.NAMESPACE + "hasInsideTheCaseTemperatureSetting";
+	public static final String PROPERTY_HAS_SHOWCASE_TYPE_INFORMATION= EchonetOntology.NAMESPACE + "hasShowCaseTypeInformation";
+	public static final String PROPERTY_HAS_DOOR_TYPE_INFORMATION= EchonetOntology.NAMESPACE + "hasDoorTypeInformation";
+	public static final String PROPERTY_HAS_SHOWCASE_CONFIGURATION_INFORMATION= EchonetOntology.NAMESPACE + "hasShowcaseConfigurationInformation";
+	public static final String PROPERTY_HAS_SHOWCASE_SHAPE_INFORMATION= EchonetOntology.NAMESPACE + "hasShowcaseShapeInformation";
+	public static final String PROPERTY_HAS_INSIDE_THE_CASE_TEMPERATURE_RANGE_INFORMATION= EchonetOntology.NAMESPACE + "hasInsideTheCaseTemperatureRangeInformation";
 
 	public OperationStatusValue getInsideTheCaseTemperatureRangeInformation() {
 		return (OperationStatusValue) getProperty(PROPERTY_HAS_INSIDE_THE_CASE_TEMPERATURE_RANGE_INFORMATION);	
@@ -188,11 +203,9 @@ public class CommercialShowcase extends EchonetSuperDevice{
 	
 	public CommercialShowcase() {
 		super();
-		setClassGroupCode(EchonetDeviceGroupCodeValue.CookingHouseholdRelatedDevice);
 	}
 	public CommercialShowcase(String uri) {
 		super(uri);
-		setClassGroupCode(EchonetDeviceGroupCodeValue.CookingHouseholdRelatedDevice);
 	}
 	public String getClassURI() {
 		return MY_URI;

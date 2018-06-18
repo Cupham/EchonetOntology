@@ -1,12 +1,27 @@
+/*******************************************************************************
+ * Copyright 2018 PHAM Van Cu, Tan laboratory, Japan Advanced Institute of Science and Technology (JAIST),
+ *  Japan as a part of the CARESSES project (http://www.caressesrobot.org/).
+ * 
+ * Licensed under the Apache License, Version 2.0 (the "License"); you may not
+ * use this file except in compliance with the License.  You may obtain a copy
+ * of the License at
+ * 
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+ * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.  See the
+ * License for the specific language governing permissions and limitations under
+ * the License.
+ ******************************************************************************/
 package org.universAAL.ontology.echonet.managementOperationRelatedDevices;
 
 
 
-import java.util.Date;
 
 import org.universAAL.ontology.echonet.EchonetOntology;
 import org.universAAL.ontology.echonet.EchonetSuperDevice;
-import org.universAAL.ontology.echonet.values.EchonetDeviceGroupCodeValue;
+import org.universAAL.ontology.echonet.values.DateTimeValue;
 import org.universAAL.ontology.echonet.values.InstallationLocationValue;
 import org.universAAL.ontology.echonet.values.LocationValue;
 import org.universAAL.ontology.echonet.values.OccurenceStatusValue;
@@ -14,23 +29,23 @@ import org.universAAL.ontology.echonet.values.OperationStatusValue;
 
 public class Controller extends EchonetSuperDevice{
 	public static final String MY_URI = EchonetOntology.NAMESPACE + "Controller";
-	public static final String PROPERTY_HAS_CONTROLLER_ID= EchonetOntology.NAMESPACE + "HasControllerID";
-	public static final String PROPERTY_HAS_NUMBER_OF_CONTROLLED_DEVICES= EchonetOntology.NAMESPACE + "HasNumberOfControlledDevices";
-	public static final String PROPERTY_HAS_INDEX= EchonetOntology.NAMESPACE + "HasIndex";
-	public static final String PROPERTY_HAS_DEVICE_ID= EchonetOntology.NAMESPACE + "HasDeviceID";
-	public static final String PROPERTY_HAS_DEVICE_TYPE= EchonetOntology.NAMESPACE + "HasDeviceType";
-	public static final String PROPERTY_HAS_DEVICE_NAME= EchonetOntology.NAMESPACE + "HasDeviceName";
-	public static final String PROPERTY_HAS_CONNECTION_STATUS= EchonetOntology.NAMESPACE + "HasConnectionStatus";
-	public static final String PROPERTY_HAS_CONTROLLED_DEVICE_BUSINESS_CODE= EchonetOntology.NAMESPACE + "HasControlledDeviceBusinessCode";
-	public static final String PROPERTY_HAS_CONTROLLED_DEVICE_PRODUCT_CODE= EchonetOntology.NAMESPACE + "HasControlledDeviceProductCode";
-	public static final String PROPERTY_HAS_CONTROLLED_DEVICE_MANUFACTURER_DATE= EchonetOntology.NAMESPACE + "HasControlledDeviceManufacturerDate";
-	public static final String PROPERTY_HAS_CONTROLLED_DEVICE_REGISTERED_INFORMATION_RENEWAL_DATE= EchonetOntology.NAMESPACE + "HasControlledDeviceRegisteredInformationRenewalDate";
-	public static final String PROPERTY_HAS_CONTROLLED_DEVICE_REGISTERED_INFORMATION_RENEWAL_VERSION_INFORMATION= EchonetOntology.NAMESPACE + "HasControlledDeviceRegisteredInformationRenewalVersionInfor";
-	public static final String PROPERTY_HAS_CONTROLLED_DEVICE_INSTALLATION_LOCATION= EchonetOntology.NAMESPACE + "HasControlledDeviceInstallationLocation";
-	public static final String PROPERTY_HAS_CONTROLLED_DEVICE_FAULT_STATUS= EchonetOntology.NAMESPACE + "HasControlledDeviceFaultStatus";
-	public static final String PROPERTY_HAS_INSTALLATION_LOCATION_ADDRESS= EchonetOntology.NAMESPACE + "HasInstallationLocationAddress";
-	public static final String PROPERTY_HAS_CONTROLLED_DEVICE_SET_PROPERTY_MAP= EchonetOntology.NAMESPACE + "HasControlledDeviceSetPropertyMap";
-	public static final String PROPERTY_HAS_CONTROLLED_DEVICE_GET_PROPERTY_MAP= EchonetOntology.NAMESPACE + "HasControlledDeviceGetPropertyMap";
+	public static final String PROPERTY_HAS_CONTROLLER_ID= EchonetOntology.NAMESPACE + "hasControllerID";
+	public static final String PROPERTY_HAS_NUMBER_OF_CONTROLLED_DEVICES= EchonetOntology.NAMESPACE + "hasNumberOfControlledDevices";
+	public static final String PROPERTY_HAS_INDEX= EchonetOntology.NAMESPACE + "hasIndex";
+	public static final String PROPERTY_HAS_DEVICE_ID= EchonetOntology.NAMESPACE + "hasDeviceID";
+	public static final String PROPERTY_HAS_DEVICE_TYPE= EchonetOntology.NAMESPACE + "hasDeviceType";
+	public static final String PROPERTY_HAS_DEVICE_NAME= EchonetOntology.NAMESPACE + "hasDeviceName";
+	public static final String PROPERTY_HAS_CONNECTION_STATUS= EchonetOntology.NAMESPACE + "hasConnectionStatus";
+	public static final String PROPERTY_HAS_CONTROLLED_DEVICE_BUSINESS_CODE= EchonetOntology.NAMESPACE + "hasControlledDeviceBusinessCode";
+	public static final String PROPERTY_HAS_CONTROLLED_DEVICE_PRODUCT_CODE= EchonetOntology.NAMESPACE + "hasControlledDeviceProductCode";
+	public static final String PROPERTY_HAS_CONTROLLED_DEVICE_MANUFACTURER_DATE= EchonetOntology.NAMESPACE + "hasControlledDeviceManufacturerDateTimeValue";
+	public static final String PROPERTY_HAS_CONTROLLED_DEVICE_REGISTERED_INFORMATION_RENEWAL_DATE= EchonetOntology.NAMESPACE + "hasControlledDeviceRegisteredInformationRenewalDateTimeValue";
+	public static final String PROPERTY_HAS_CONTROLLED_DEVICE_REGISTERED_INFORMATION_RENEWAL_VERSION_INFORMATION= EchonetOntology.NAMESPACE + "hasControlledDeviceRegisteredInformationRenewalVersionInfor";
+	public static final String PROPERTY_HAS_CONTROLLED_DEVICE_INSTALLATION_LOCATION= EchonetOntology.NAMESPACE + "hasControlledDeviceInstallationLocation";
+	public static final String PROPERTY_HAS_CONTROLLED_DEVICE_FAULT_STATUS= EchonetOntology.NAMESPACE + "hasControlledDeviceFaultStatus";
+	public static final String PROPERTY_HAS_INSTALLATION_LOCATION_ADDRESS= EchonetOntology.NAMESPACE + "hasInstallationLocationAddress";
+	public static final String PROPERTY_HAS_CONTROLLED_DEVICE_SET_PROPERTY_MAP= EchonetOntology.NAMESPACE + "hasControlledDeviceSetPropertyMap";
+	public static final String PROPERTY_HAS_CONTROLLED_DEVICE_GET_PROPERTY_MAP= EchonetOntology.NAMESPACE + "hasControlledDeviceGetPropertyMap";
 	
 	public String getControlledDeviceGetPropertyMap() {
 		return (String) getProperty(PROPERTY_HAS_CONTROLLED_DEVICE_GET_PROPERTY_MAP);	
@@ -74,17 +89,17 @@ public class Controller extends EchonetSuperDevice{
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_CONTROLLED_DEVICE_REGISTERED_INFORMATION_RENEWAL_VERSION_INFORMATION, msg);	
 	}
-	public Date getControlledDeviceRegisteredInformationRenewalDate() {
-		return (Date) getProperty(PROPERTY_HAS_CONTROLLED_DEVICE_REGISTERED_INFORMATION_RENEWAL_DATE);	
+	public DateTimeValue getControlledDeviceRegisteredInformationRenewalDateTimeValue() {
+		return (DateTimeValue) getProperty(PROPERTY_HAS_CONTROLLED_DEVICE_REGISTERED_INFORMATION_RENEWAL_DATE);	
 	}
-	public void setControlledDeviceRegisteredInformationRenewalDate(Date msg) {
+	public void setControlledDeviceRegisteredInformationRenewalDateTimeValue(DateTimeValue msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_CONTROLLED_DEVICE_REGISTERED_INFORMATION_RENEWAL_DATE, msg);	
 	}
-	public Date getControlledDeviceManufacturerDate() {
-		return (Date) getProperty(PROPERTY_HAS_CONTROLLED_DEVICE_MANUFACTURER_DATE);	
+	public DateTimeValue getControlledDeviceManufacturerDateTimeValue() {
+		return (DateTimeValue) getProperty(PROPERTY_HAS_CONTROLLED_DEVICE_MANUFACTURER_DATE);	
 	}
-	public void setControlledDeviceManufacturerDate(Date msg) {
+	public void setControlledDeviceManufacturerDateTimeValue(DateTimeValue msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_CONTROLLED_DEVICE_MANUFACTURER_DATE, msg);	
 	}
@@ -156,11 +171,9 @@ public class Controller extends EchonetSuperDevice{
 	
 	public Controller() {
 		super();
-		setClassGroupCode(EchonetDeviceGroupCodeValue.ManagementOperationRelatedDevice);
 	}
 	public Controller(String uri) {
 		super(uri);
-		setClassGroupCode(EchonetDeviceGroupCodeValue.ManagementOperationRelatedDevice);
 	}
 	public String getClassURI() {
 		return MY_URI;

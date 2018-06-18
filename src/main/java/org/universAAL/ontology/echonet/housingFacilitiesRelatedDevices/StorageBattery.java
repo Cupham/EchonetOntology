@@ -1,3 +1,19 @@
+/*******************************************************************************
+ * Copyright 2018 PHAM Van Cu, Tan laboratory, Japan Advanced Institute of Science and Technology (JAIST),
+ *  Japan as a part of the CARESSES project (http://www.caressesrobot.org/).
+ * 
+ * Licensed under the Apache License, Version 2.0 (the "License"); you may not
+ * use this file except in compliance with the License.  You may obtain a copy
+ * of the License at
+ * 
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+ * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.  See the
+ * License for the specific language governing permissions and limitations under
+ * the License.
+ ******************************************************************************/
 package org.universAAL.ontology.echonet.housingFacilitiesRelatedDevices;
 
 
@@ -7,66 +23,65 @@ import org.universAAL.ontology.echonet.EchonetSuperDevice;
 import org.universAAL.ontology.echonet.values.MeasuredValue;
 import org.universAAL.ontology.echonet.values.MinMaxSettingValue;
 import org.universAAL.ontology.echonet.values.OperationFunctionSettingValue;
-import org.universAAL.ontology.echonet.values.EchonetDeviceGroupCodeValue;
 import org.universAAL.ontology.echonet.values.OperationModeSettingValue;
 import org.universAAL.ontology.echonet.values.OperationStatusValue;
 
 public class StorageBattery extends EchonetSuperDevice{
 	public static final String MY_URI = EchonetOntology.NAMESPACE + "StorageBattery";
-	public static final String PROPERTY_HAS_AC_EFFECTIVE_CAPACITY_CHARGING = EchonetOntology.NAMESPACE + "HasACEffectiveCapacityCharging";
-	public static final String PROPERTY_HAS_AC_EFFECTIVE_CAPACITY_DISCHARGING = EchonetOntology.NAMESPACE + "HasACEffectiveCapacityDischarging";
-	public static final String PROPERTY_HAS_AC_CHARGEABLE_CAPACITY = EchonetOntology.NAMESPACE + "HasACChargableCapacity";
-	public static final String PROPERTY_HAS_AC_DISCHARGEABLE_CAPACITY = EchonetOntology.NAMESPACE + "HasACDischargableCapacity";
-	public static final String PROPERTY_HAS_AC_CHARGEABLE_ELECTRIC_ENERGY = EchonetOntology.NAMESPACE + "HasACChargableElectricEnergy";
-	public static final String PROPERTY_HAS_AC_DISCHARGEABLE_ELECTRIC_ENERGY = EchonetOntology.NAMESPACE + "HasACDischargableElectricEnergy";
-	public static final String PROPERTY_HAS_AC_CHARGE_UPPER_LIMIT_SETTING = EchonetOntology.NAMESPACE + "HasACChargeUpperLimitSetting";
-	public static final String PROPERTY_HAS_AC_DISCHARGE_LOWER_LIMIT_SETTING = EchonetOntology.NAMESPACE + "HasACDischargeLowerLimitSetting";
-	public static final String PROPERTY_HAS_AC_MEASURED_CUMULATIVE_CHARGING_ELECTRIC_ENERGY = EchonetOntology.NAMESPACE + "HasACMeasuredCumulativeChargingElectricEnergy";
-	public static final String PROPERTY_HAS_AC_MEASURED_CUMULATIVE_DISCHARGING_ELECTRIC_ENERGY = EchonetOntology.NAMESPACE + "HasACMeasuredCumulativeDischargingElectricEnergy";
-	public static final String PROPERTY_HAS_AC_CHARGE_AMOUNT_SETTING_VALUE = EchonetOntology.NAMESPACE + "HasACChargeAmountSettingValue";
-	public static final String PROPERTY_HAS_AC_DISCHARGE_AMOUNT_SETTING_VALUE = EchonetOntology.NAMESPACE + "HasACDishargeAmountSettingValue";
-	public static final String PROPERTY_HAS_MINIMUM_MAXIMUM_CHARGING_ELECTRIC_POWER = EchonetOntology.NAMESPACE + "HasMinimumMaximumChargingElectricPower";
-	public static final String PROPERTY_HAS_MINIMUM_MAXIMUM_DISCHARGING_ELECTRIC_POWER = EchonetOntology.NAMESPACE + "HasMinimumMaximumDischargingElectricPower";
-	public static final String PROPERTY_HAS_MINIMUM_MAXIMUM_CHARGING_CURRENT = EchonetOntology.NAMESPACE + "HasMinimumMaximumChargingCurrent";
-	public static final String PROPERTY_HAS_MINIMUM_MAXIMUM_DISCHARGING_CURRENT = EchonetOntology.NAMESPACE + "HasMinimumMaximumDischargingCurrent";
-	public static final String PROPERTY_HAS_RE_INTERCONNECTION_PERMISSION_SETTING = EchonetOntology.NAMESPACE + "HasReInterconnectionPermissionSetting";
-	public static final String PROPERTY_HAS_OPERATION_PERMISSION_SETTING = EchonetOntology.NAMESPACE + "HasOperationPermissionSetting";
-	public static final String PROPERTY_HAS_INDEPENDENT_OPERATION_PERMISSION_SETTING = EchonetOntology.NAMESPACE + "HasIndependentOperationPermissionSetting";
-	public static final String PROPERTY_HAS_WORKING_OPERATION_STATUS = EchonetOntology.NAMESPACE + "HasWorkingOperationStatus";
-	public static final String PROPERTY_HAS_AC_RATED_ELECTRIC_ENERGY = EchonetOntology.NAMESPACE + "HasACRatedElectricEnergy";
-	public static final String PROPERTY_HAS_RATED_ELECTRIC_ENERGY = EchonetOntology.NAMESPACE + "HasRatedElectricEnergy";
-	public static final String PROPERTY_HAS_RATED_CAPACITY = EchonetOntology.NAMESPACE + "HasRatedCapacity";
-	public static final String PROPERTY_HAS_RATED_VOLTAGE = EchonetOntology.NAMESPACE + "HasRatedVoltage";
-	public static final String PROPERTY_HAS_MEASURED_INSTANTANEOUS_CHARGING_DISCHARGING_ELECTRIC_POWER = EchonetOntology.NAMESPACE + "HasMeasuredInstantaneousChargingDischargingElectricPower";
-	public static final String PROPERTY_HAS_MEASURED_INSTANTANEOUS_CHARGING_DISCHARGING_ELECTRIC_CURRENT = EchonetOntology.NAMESPACE + "HasMeasuredInstantaneousChargingDischargingElectricCurrent";
-	public static final String PROPERTY_HAS_MEASURED_INSTANTANEOUS_CHARGING_DISCHARGING_ELECTRIC_VOLTAGE = EchonetOntology.NAMESPACE + "HasMeasuredInstantaneousChargingDischargingElectricVoltage";
-	public static final String PROPERTY_HAS_MEASURED_CUMULATIVE_CHARGING_ELECTRIC_ENERGY = EchonetOntology.NAMESPACE + "HasMeasuredCumulativeChargingElectricEnergy";
-	public static final String PROPERTY_RESET_MEASURED_CUMULATIVE_CHARGING_ELECTRIC_ENERGY = EchonetOntology.NAMESPACE + "ResettingMeasuredCumulativeChargingDischargingElectricEnergy";
-	public static final String PROPERTY_HAS_MEASURED_CUMULATIVE_DISCHARGING_ELECTRIC_ENERGY = EchonetOntology.NAMESPACE + "HasMeasuredCumulativeDischargingElectricEnergy";
-	public static final String PROPERTY_RESET_MEASURED_CUMULATIVE_DISCHARGING_ELECTRIC_ENERGY = EchonetOntology.NAMESPACE + "ResettingMeasuredCumulativeDischargingDischargingElectricEnergy";
-	public static final String PROPERTY_HAS_OPERATION_MODE_SETTING = EchonetOntology.NAMESPACE + "HasOperationModeSetting";
-	public static final String PROPERTY_HAS_SYSTEM_INTERCONNECT_TYPE = EchonetOntology.NAMESPACE + "HasSystemInterconnectType";
-	public static final String PROPERTY_HAS_MINIMUM_MAXIMUM_CHARGING_ELECTRIC_POWER_INDEPENDENT = EchonetOntology.NAMESPACE + "HasMinimumMaximumChargingElectricPowerIndependent";
-	public static final String PROPERTY_HAS_MINIMUM_MAXIMUM_CHARGING_ELECTRIC_CURRENT_INDEPENDENT = EchonetOntology.NAMESPACE + "HasMinimumMaximumChargingElectricCurrentIndependent";
-	public static final String PROPERTY_HAS_MINIMUM_MAXIMUM_DISCHARGING_ELECTRIC_POWER_INDEPENDENT = EchonetOntology.NAMESPACE + "HasMinimumMaximumDisChargingElectricPowerIndependent";
-	public static final String PROPERTY_HAS_MINIMUM_MAXIMUM_DISCHARGING_ELECTRIC_CURRENT_INDEPENDENT = EchonetOntology.NAMESPACE + "HasMinimumMaximumDisChargingElectricCurrentIndependent";
+	public static final String PROPERTY_HAS_AC_EFFECTIVE_CAPACITY_CHARGING = EchonetOntology.NAMESPACE + "hasACEffectiveCapacityCharging";
+	public static final String PROPERTY_HAS_AC_EFFECTIVE_CAPACITY_DISCHARGING = EchonetOntology.NAMESPACE + "hasACEffectiveCapacityDischarging";
+	public static final String PROPERTY_HAS_AC_CHARGEABLE_CAPACITY = EchonetOntology.NAMESPACE + "hasACChargableCapacity";
+	public static final String PROPERTY_HAS_AC_DISCHARGEABLE_CAPACITY = EchonetOntology.NAMESPACE + "hasACDischargableCapacity";
+	public static final String PROPERTY_HAS_AC_CHARGEABLE_ELECTRIC_ENERGY = EchonetOntology.NAMESPACE + "hasACChargableElectricEnergy";
+	public static final String PROPERTY_HAS_AC_DISCHARGEABLE_ELECTRIC_ENERGY = EchonetOntology.NAMESPACE + "hasACDischargableElectricEnergy";
+	public static final String PROPERTY_HAS_AC_CHARGE_UPPER_LIMIT_SETTING = EchonetOntology.NAMESPACE + "hasACChargeUpperLimitSetting";
+	public static final String PROPERTY_HAS_AC_DISCHARGE_LOWER_LIMIT_SETTING = EchonetOntology.NAMESPACE + "hasACDischargeLowerLimitSetting";
+	public static final String PROPERTY_HAS_AC_MEASURED_CUMULATIVE_CHARGING_ELECTRIC_ENERGY = EchonetOntology.NAMESPACE + "hasACMeasuredCumulativeChargingElectricEnergy";
+	public static final String PROPERTY_HAS_AC_MEASURED_CUMULATIVE_DISCHARGING_ELECTRIC_ENERGY = EchonetOntology.NAMESPACE + "hasACMeasuredCumulativeDischargingElectricEnergy";
+	public static final String PROPERTY_HAS_AC_CHARGE_AMOUNT_SETTING_VALUE = EchonetOntology.NAMESPACE + "hasACChargeAmountSettingValue";
+	public static final String PROPERTY_HAS_AC_DISCHARGE_AMOUNT_SETTING_VALUE = EchonetOntology.NAMESPACE + "hasACDishargeAmountSettingValue";
+	public static final String PROPERTY_HAS_MINIMUM_MAXIMUM_CHARGING_ELECTRIC_POWER = EchonetOntology.NAMESPACE + "hasMinimumMaximumChargingElectricPower";
+	public static final String PROPERTY_HAS_MINIMUM_MAXIMUM_DISCHARGING_ELECTRIC_POWER = EchonetOntology.NAMESPACE + "hasMinimumMaximumDischargingElectricPower";
+	public static final String PROPERTY_HAS_MINIMUM_MAXIMUM_CHARGING_CURRENT = EchonetOntology.NAMESPACE + "hasMinimumMaximumChargingCurrent";
+	public static final String PROPERTY_HAS_MINIMUM_MAXIMUM_DISCHARGING_CURRENT = EchonetOntology.NAMESPACE + "hasMinimumMaximumDischargingCurrent";
+	public static final String PROPERTY_HAS_RE_INTERCONNECTION_PERMISSION_SETTING = EchonetOntology.NAMESPACE + "hasReInterconnectionPermissionSetting";
+	public static final String PROPERTY_HAS_OPERATION_PERMISSION_SETTING = EchonetOntology.NAMESPACE + "hasOperationPermissionSetting";
+	public static final String PROPERTY_HAS_INDEPENDENT_OPERATION_PERMISSION_SETTING = EchonetOntology.NAMESPACE + "hasIndependentOperationPermissionSetting";
+	public static final String PROPERTY_HAS_WORKING_OPERATION_STATUS = EchonetOntology.NAMESPACE + "hasWorkingOperationStatus";
+	public static final String PROPERTY_HAS_AC_RATED_ELECTRIC_ENERGY = EchonetOntology.NAMESPACE + "hasACRatedElectricEnergy";
+	public static final String PROPERTY_HAS_RATED_ELECTRIC_ENERGY = EchonetOntology.NAMESPACE + "hasRatedElectricEnergy";
+	public static final String PROPERTY_HAS_RATED_CAPACITY = EchonetOntology.NAMESPACE + "hasRatedCapacity";
+	public static final String PROPERTY_HAS_RATED_VOLTAGE = EchonetOntology.NAMESPACE + "hasRatedVoltage";
+	public static final String PROPERTY_HAS_MEASURED_INSTANTANEOUS_CHARGING_DISCHARGING_ELECTRIC_POWER = EchonetOntology.NAMESPACE + "hasMeasuredInstantaneousChargingDischargingElectricPower";
+	public static final String PROPERTY_HAS_MEASURED_INSTANTANEOUS_CHARGING_DISCHARGING_ELECTRIC_CURRENT = EchonetOntology.NAMESPACE + "hasMeasuredInstantaneousChargingDischargingElectricCurrent";
+	public static final String PROPERTY_HAS_MEASURED_INSTANTANEOUS_CHARGING_DISCHARGING_ELECTRIC_VOLTAGE = EchonetOntology.NAMESPACE + "hasMeasuredInstantaneousChargingDischargingElectricVoltage";
+	public static final String PROPERTY_HAS_MEASURED_CUMULATIVE_CHARGING_ELECTRIC_ENERGY = EchonetOntology.NAMESPACE + "hasMeasuredCumulativeChargingElectricEnergy";
+	public static final String PROPERTY_RESET_MEASURED_CUMULATIVE_CHARGING_ELECTRIC_ENERGY = EchonetOntology.NAMESPACE + "resetMeasuredCumulativeChargingDischargingElectricEnergy";
+	public static final String PROPERTY_HAS_MEASURED_CUMULATIVE_DISCHARGING_ELECTRIC_ENERGY = EchonetOntology.NAMESPACE + "hasMeasuredCumulativeDischargingElectricEnergy";
+	public static final String PROPERTY_RESET_MEASURED_CUMULATIVE_DISCHARGING_ELECTRIC_ENERGY = EchonetOntology.NAMESPACE + "resetMeasuredCumulativeDischargingDischargingElectricEnergy";
+	public static final String PROPERTY_HAS_OPERATION_MODE_SETTING = EchonetOntology.NAMESPACE + "hasOperationModeSetting";
+	public static final String PROPERTY_HAS_SYSTEM_INTERCONNECT_TYPE = EchonetOntology.NAMESPACE + "hasSystemInterconnectType";
+	public static final String PROPERTY_HAS_MINIMUM_MAXIMUM_CHARGING_ELECTRIC_POWER_INDEPENDENT = EchonetOntology.NAMESPACE + "hasMinimumMaximumChargingElectricPowerIndependent";
+	public static final String PROPERTY_HAS_MINIMUM_MAXIMUM_CHARGING_ELECTRIC_CURRENT_INDEPENDENT = EchonetOntology.NAMESPACE + "hasMinimumMaximumChargingElectricCurrentIndependent";
+	public static final String PROPERTY_HAS_MINIMUM_MAXIMUM_DISCHARGING_ELECTRIC_POWER_INDEPENDENT = EchonetOntology.NAMESPACE + "hasMinimumMaximumDisChargingElectricPowerIndependent";
+	public static final String PROPERTY_HAS_MINIMUM_MAXIMUM_DISCHARGING_ELECTRIC_CURRENT_INDEPENDENT = EchonetOntology.NAMESPACE + "hasMinimumMaximumDisChargingElectricCurrentIndependent";
 	
-	public static final String PROPERTY_HAS_CHARGING_DISCHARGING_AMOUNT_SETTING_1 = EchonetOntology.NAMESPACE + "HasChargingDischargingAmountSetting1";
-	public static final String PROPERTY_HAS_CHARGING_DISCHARGING_AMOUNT_SETTING_2 = EchonetOntology.NAMESPACE + "HasChargingDischargingAmountSetting2";
-	public static final String PROPERTY_HAS_REMAINING_STORED_ELECTRIC_1 = EchonetOntology.NAMESPACE + "HasRemainingStoredElectric1";
-	public static final String PROPERTY_HAS_REMAINING_STORED_ELECTRIC_2 = EchonetOntology.NAMESPACE + "HasRemainingStoredElectric2";
-	public static final String PROPERTY_HAS_REMAINING_STORED_ELECTRIC_3 = EchonetOntology.NAMESPACE + "HasRemainingStoredElectric3";
-	public static final String PROPERTY_HAS_BATTERY_STATE_OF_HEALTH = EchonetOntology.NAMESPACE + "HasBatteryStateOfHealth";
-	public static final String PROPERTY_HAS_BATTERY_TYPE = EchonetOntology.NAMESPACE + "HasBatteryType";
-	public static final String PROPERTY_HAS_CHARGING_AMOUNT_SETTING_1 = EchonetOntology.NAMESPACE + "HasChargingAmountSetting1";
-	public static final String PROPERTY_HAS_DISCHARGING_AMOUNT_SETTING_1 = EchonetOntology.NAMESPACE + "HasDischargingAmountSetting1";
-	public static final String PROPERTY_HAS_CHARGING_AMOUNT_SETTING_2 = EchonetOntology.NAMESPACE + "HasChargingAmountSetting2";
-	public static final String PROPERTY_HAS_DISCHARGING_AMOUNT_SETTING_2 = EchonetOntology.NAMESPACE + "HasDischargingAmountSetting2";
-	public static final String PROPERTY_HAS_CHARGING_ELECTRIC_POWER_SETTING = EchonetOntology.NAMESPACE + "HasChargingElectricPowerSetting";
-	public static final String PROPERTY_HAS_DISCHARGING_ELECTRIC_POWER_SETTING = EchonetOntology.NAMESPACE + "HasDischargingElectricPowerSetting";
-	public static final String PROPERTY_HAS_CHARGING_ELECTRIC_CURRENT_SETTING = EchonetOntology.NAMESPACE + "HasChargingElectricCurrentSetting";
-	public static final String PROPERTY_HAS_DISCHARGING_ELECTRIC_CURRENT_SETTING = EchonetOntology.NAMESPACE + "HasDischargingElectricCurrentSetting";
-	public static final String PROPERTY_HAS_RATED_VOLTAGE_INDEPENDENT = EchonetOntology.NAMESPACE + "HasRatedVoltageIndependent";
+	public static final String PROPERTY_HAS_CHARGING_DISCHARGING_AMOUNT_SETTING_1 = EchonetOntology.NAMESPACE + "hasChargingDischargingAmountSetting1";
+	public static final String PROPERTY_HAS_CHARGING_DISCHARGING_AMOUNT_SETTING_2 = EchonetOntology.NAMESPACE + "hasChargingDischargingAmountSetting2";
+	public static final String PROPERTY_HAS_REMAINING_STORED_ELECTRIC_1 = EchonetOntology.NAMESPACE + "hasRemainingStoredElectric1";
+	public static final String PROPERTY_HAS_REMAINING_STORED_ELECTRIC_2 = EchonetOntology.NAMESPACE + "hasRemainingStoredElectric2";
+	public static final String PROPERTY_HAS_REMAINING_STORED_ELECTRIC_3 = EchonetOntology.NAMESPACE + "hasRemainingStoredElectric3";
+	public static final String PROPERTY_HAS_BATTERY_STATE_OF_HEALTH = EchonetOntology.NAMESPACE + "hasBatteryStateOfHealth";
+	public static final String PROPERTY_HAS_BATTERY_TYPE = EchonetOntology.NAMESPACE + "hasBatteryType";
+	public static final String PROPERTY_HAS_CHARGING_AMOUNT_SETTING_1 = EchonetOntology.NAMESPACE + "hasChargingAmountSetting1";
+	public static final String PROPERTY_HAS_DISCHARGING_AMOUNT_SETTING_1 = EchonetOntology.NAMESPACE + "hasDischargingAmountSetting1";
+	public static final String PROPERTY_HAS_CHARGING_AMOUNT_SETTING_2 = EchonetOntology.NAMESPACE + "hasChargingAmountSetting2";
+	public static final String PROPERTY_HAS_DISCHARGING_AMOUNT_SETTING_2 = EchonetOntology.NAMESPACE + "hasDischargingAmountSetting2";
+	public static final String PROPERTY_HAS_CHARGING_ELECTRIC_POWER_SETTING = EchonetOntology.NAMESPACE + "hasChargingElectricPowerSetting";
+	public static final String PROPERTY_HAS_DISCHARGING_ELECTRIC_POWER_SETTING = EchonetOntology.NAMESPACE + "hasDischargingElectricPowerSetting";
+	public static final String PROPERTY_HAS_CHARGING_ELECTRIC_CURRENT_SETTING = EchonetOntology.NAMESPACE + "hasChargingElectricCurrentSetting";
+	public static final String PROPERTY_HAS_DISCHARGING_ELECTRIC_CURRENT_SETTING = EchonetOntology.NAMESPACE + "hasDischargingElectricCurrentSetting";
+	public static final String PROPERTY_HAS_RATED_VOLTAGE_INDEPENDENT = EchonetOntology.NAMESPACE + "hasRatedVoltageIndependent";
 
 	public MeasuredValue getRatedVoltageIndependent() {
 		return (MeasuredValue) getProperty(PROPERTY_HAS_RATED_VOLTAGE_INDEPENDENT);	
@@ -431,11 +446,9 @@ public class StorageBattery extends EchonetSuperDevice{
 	
 	public StorageBattery() {
 		super();
-		setClassGroupCode(EchonetDeviceGroupCodeValue.HousingFacilityRelatedDevice);
 	}
 	public StorageBattery(String uri) {
 		super(uri);
-		setClassGroupCode(EchonetDeviceGroupCodeValue.HousingFacilityRelatedDevice);
 	}
 	public String getClassURI() {
 		return MY_URI;

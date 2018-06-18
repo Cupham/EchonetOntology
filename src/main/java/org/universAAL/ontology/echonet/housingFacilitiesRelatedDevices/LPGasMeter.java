@@ -1,9 +1,24 @@
+/*******************************************************************************
+ * Copyright 2018 PHAM Van Cu, Tan laboratory, Japan Advanced Institute of Science and Technology (JAIST),
+ *  Japan as a part of the CARESSES project (http://www.caressesrobot.org/).
+ * 
+ * Licensed under the Apache License, Version 2.0 (the "License"); you may not
+ * use this file except in compliance with the License.  You may obtain a copy
+ * of the License at
+ * 
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+ * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.  See the
+ * License for the specific language governing permissions and limitations under
+ * the License.
+ ******************************************************************************/
 package org.universAAL.ontology.echonet.housingFacilitiesRelatedDevices;
 
 
 import org.universAAL.ontology.echonet.EchonetOntology;
 import org.universAAL.ontology.echonet.EchonetSuperDevice;
-import org.universAAL.ontology.echonet.values.EchonetDeviceGroupCodeValue;
 import org.universAAL.ontology.echonet.values.MeasuredValue;
 import org.universAAL.ontology.echonet.values.OccurenceStatusValue;
 import org.universAAL.ontology.echonet.values.OperationStateSettingValue;
@@ -12,30 +27,30 @@ import org.universAAL.ontology.echonet.values.ThresholdLevelValue;
 
 public class LPGasMeter extends EchonetSuperDevice{
 	public static final String MY_URI = EchonetOntology.NAMESPACE + "LPGasMetter";
-	public static final String PROPERTY_HAS_MEASURED_CUMMULATIVE_GAS_CONSUMPTION_METERING_DATA_1 = EchonetOntology.NAMESPACE + "HasMeasuredCummulativeGasConsumptionMeteringData1";
-	public static final String PROPERTY_HAS_MEASURED_CUMMULATIVE_GAS_CONSUMPTION_METERING_DATA_2 = EchonetOntology.NAMESPACE + "HasMeasuredCummulativeGasConsumptionMeteringData2";
-	public static final String PROPERTY_HAS_ERROR_DETECTION_OF_METERING_DATA = EchonetOntology.NAMESPACE + "HasErrorDetectionOfMeteringData";
-	public static final String PROPERTY_HAS_SECURITY_DATA_1 = EchonetOntology.NAMESPACE + "HasSecurityData1";
-	public static final String PROPERTY_HAS_SECURITY_DATA_2 = EchonetOntology.NAMESPACE + "HasSecurityData2";
-	public static final String PROPERTY_HAS_CENTER_VALUE_SHUTOFF_STATUS= EchonetOntology.NAMESPACE + "HasCenterValueShutOffStatus";
-	public static final String PROPERTY_HAS_CENTER_VALUE_SHUTOFF_RECOVERY_PERMISSION_SETTING_STATUS= EchonetOntology.NAMESPACE + "HasCenterValueShutOffRecoveryPermissionSettingStatus";
-	public static final String PROPERTY_HAS_EMERGENCY_VALUE_SHUTOFF_STATUS= EchonetOntology.NAMESPACE + "HasEmergencyValueShutOffStatus";
-	public static final String PROPERTY_HAS_SHUTOFF_VALUE_OPEN_CLOSE_STATUS= EchonetOntology.NAMESPACE + "HasShutOffValueOpenCloseStatus";
-	public static final String PROPERTY_HAS_RESIDUAL_VOLUME_CONTROL_WARNING= EchonetOntology.NAMESPACE + "HasResidualVolumeControlWarning";
-	public static final String PROPERTY_HAS_RESIDUAL_VOLUME_CONTROL_WARNING_LEVEL_1_VALUE= EchonetOntology.NAMESPACE + "HasResidualVolumeControlWarningLevel1Value";
-	public static final String PROPERTY_HAS_RESIDUAL_VOLUME_CONTROL_WARNING_LEVEL_2_VALUE= EchonetOntology.NAMESPACE + "HasResidualVolumeControlWarningLevel2Value";
-	public static final String PROPERTY_HAS_RESIDUAL_VOLUME_CONTROL_WARNING_LEVEL_3_VALUE= EchonetOntology.NAMESPACE + "HasResidualVolumeControlWarningLevel3Value";
-	public static final String PROPERTY_HAS_SLIGHT_LEAK_TIMER_VALUE_GAS_FLOW_CONTINUATION= EchonetOntology.NAMESPACE + "HasSlightLeakTimerValueGasFlowContinuation";
-	public static final String PROPERTY_HAS_SLIGHT_LEAK_TIMER_VALUE_WITHOUT_PRESSURE_INCREASE= EchonetOntology.NAMESPACE + "HasSlightLeakTimerValueWithoutPressureInscrease";
-	public static final String PROPERTY_HAS_SHUTOFF_REASON_LOG= EchonetOntology.NAMESPACE + "HasShutOffReasonLog";
-	public static final String PROPERTY_HAS_MAXIMUM_VALUE_OF_SUPPLY_PRESSURE_DATA= EchonetOntology.NAMESPACE + "HasMaximumValueOfSupplyPressureData";
-	public static final String PROPERTY_HAS_MINIMUM_VALUE_OF_SUPPLY_PRESSURE_DATA= EchonetOntology.NAMESPACE + "HasMinimumValueOfSupplyPressureData";
-	public static final String PROPERTY_HAS_CURRENT_VALUE_OF_SUPPLY_PRESSURE_DATA= EchonetOntology.NAMESPACE + "HasCurrentValueOfSupplyPressureData";
-	public static final String PROPERTY_HAS_MAXIMUM_VALUE_OF_BLOCK_PRESSURE_DATA= EchonetOntology.NAMESPACE + "HasMaximumValueOfBlockPressureData";
-	public static final String PROPERTY_HAS_MINIMUM_VALUE_OF_BLOCK_PRESSURE_DATA= EchonetOntology.NAMESPACE + "HasMinimumValueOfBlockPressureData";
-	public static final String PROPERTY_HAS_CURRENT_VALUE_OF_BLOCK_PRESSURE_DATA= EchonetOntology.NAMESPACE + "HasCurrentValueOfBlockPressureData";
-	public static final String PROPERTY_HAS_NUMBER_OF_BLOCK_SUPPLY_PRESSURE_ERROR_DAYS_TIMES= EchonetOntology.NAMESPACE + "HasNumberOfBlockSupplyPressureErrorDays_Time";
-	public static final String PROPERTY_HAS_TEST_CALL_SETTING= EchonetOntology.NAMESPACE + "HasTestCallSetting";
+	public static final String PROPERTY_HAS_MEASURED_CUMMULATIVE_GAS_CONSUMPTION_METERING_DATA_1 = EchonetOntology.NAMESPACE + "hasMeasuredCummulativeGasConsumptionMeteringData1";
+	public static final String PROPERTY_HAS_MEASURED_CUMMULATIVE_GAS_CONSUMPTION_METERING_DATA_2 = EchonetOntology.NAMESPACE + "hasMeasuredCummulativeGasConsumptionMeteringData2";
+	public static final String PROPERTY_HAS_ERROR_DETECTION_OF_METERING_DATA = EchonetOntology.NAMESPACE + "hasErrorDetectionOfMeteringData";
+	public static final String PROPERTY_HAS_SECURITY_DATA_1 = EchonetOntology.NAMESPACE + "hasSecurityData1";
+	public static final String PROPERTY_HAS_SECURITY_DATA_2 = EchonetOntology.NAMESPACE + "hasSecurityData2";
+	public static final String PROPERTY_HAS_CENTER_VALUE_SHUTOFF_STATUS= EchonetOntology.NAMESPACE + "hasCenterValueShutOffStatus";
+	public static final String PROPERTY_HAS_CENTER_VALUE_SHUTOFF_RECOVERY_PERMISSION_SETTING_STATUS= EchonetOntology.NAMESPACE + "hasCenterValueShutOffRecoveryPermissionSettingStatus";
+	public static final String PROPERTY_HAS_EMERGENCY_VALUE_SHUTOFF_STATUS= EchonetOntology.NAMESPACE + "hasEmergencyValueShutOffStatus";
+	public static final String PROPERTY_HAS_SHUTOFF_VALUE_OPEN_CLOSE_STATUS= EchonetOntology.NAMESPACE + "hasShutOffValueOpenCloseStatus";
+	public static final String PROPERTY_HAS_RESIDUAL_VOLUME_CONTROL_WARNING= EchonetOntology.NAMESPACE + "hasResidualVolumeControlWarning";
+	public static final String PROPERTY_HAS_RESIDUAL_VOLUME_CONTROL_WARNING_LEVEL_1_VALUE= EchonetOntology.NAMESPACE + "hasResidualVolumeControlWarningLevel1Value";
+	public static final String PROPERTY_HAS_RESIDUAL_VOLUME_CONTROL_WARNING_LEVEL_2_VALUE= EchonetOntology.NAMESPACE + "hasResidualVolumeControlWarningLevel2Value";
+	public static final String PROPERTY_HAS_RESIDUAL_VOLUME_CONTROL_WARNING_LEVEL_3_VALUE= EchonetOntology.NAMESPACE + "hasResidualVolumeControlWarningLevel3Value";
+	public static final String PROPERTY_HAS_SLIGHT_LEAK_TIMER_VALUE_GAS_FLOW_CONTINUATION= EchonetOntology.NAMESPACE + "hasSlightLeakTimerValueGasFlowContinuation";
+	public static final String PROPERTY_HAS_SLIGHT_LEAK_TIMER_VALUE_WITHOUT_PRESSURE_INCREASE= EchonetOntology.NAMESPACE + "hasSlightLeakTimerValueWithoutPressureInscrease";
+	public static final String PROPERTY_HAS_SHUTOFF_REASON_LOG= EchonetOntology.NAMESPACE + "hasShutOffReasonLog";
+	public static final String PROPERTY_HAS_MAXIMUM_VALUE_OF_SUPPLY_PRESSURE_DATA= EchonetOntology.NAMESPACE + "hasMaximumValueOfSupplyPressureData";
+	public static final String PROPERTY_HAS_MINIMUM_VALUE_OF_SUPPLY_PRESSURE_DATA= EchonetOntology.NAMESPACE + "hasMinimumValueOfSupplyPressureData";
+	public static final String PROPERTY_HAS_CURRENT_VALUE_OF_SUPPLY_PRESSURE_DATA= EchonetOntology.NAMESPACE + "hasCurrentValueOfSupplyPressureData";
+	public static final String PROPERTY_HAS_MAXIMUM_VALUE_OF_BLOCK_PRESSURE_DATA= EchonetOntology.NAMESPACE + "hasMaximumValueOfBlockPressureData";
+	public static final String PROPERTY_HAS_MINIMUM_VALUE_OF_BLOCK_PRESSURE_DATA= EchonetOntology.NAMESPACE + "hasMinimumValueOfBlockPressureData";
+	public static final String PROPERTY_HAS_CURRENT_VALUE_OF_BLOCK_PRESSURE_DATA= EchonetOntology.NAMESPACE + "hasCurrentValueOfBlockPressureData";
+	public static final String PROPERTY_HAS_NUMBER_OF_BLOCK_SUPPLY_PRESSURE_ERROR_DAYS_TIMES= EchonetOntology.NAMESPACE + "hasNumberOfBlockSupplyPressureErrorDays_Time";
+	public static final String PROPERTY_HAS_TEST_CALL_SETTING= EchonetOntology.NAMESPACE + "hasTestCallSetting";
 	
 	public OperationStatusValue getTestCallSetting() {
 		return (OperationStatusValue) getProperty(PROPERTY_HAS_TEST_CALL_SETTING);	
@@ -214,11 +229,9 @@ public class LPGasMeter extends EchonetSuperDevice{
 	
 	public LPGasMeter() {
 		super();
-		setClassGroupCode(EchonetDeviceGroupCodeValue.HousingFacilityRelatedDevice);
 	}
 	public LPGasMeter(String uri) {
 		super(uri);
-		setClassGroupCode(EchonetDeviceGroupCodeValue.HousingFacilityRelatedDevice);
 	}
 	public String getClassURI() {
 		return MY_URI;

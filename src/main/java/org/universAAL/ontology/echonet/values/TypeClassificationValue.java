@@ -1,3 +1,19 @@
+/*******************************************************************************
+ * Copyright 2018 PHAM Van Cu, Tan laboratory, Japan Advanced Institute of Science and Technology (JAIST),
+ *  Japan as a part of the CARESSES project (http://www.caressesrobot.org/).
+ * 
+ * Licensed under the Apache License, Version 2.0 (the "License"); you may not
+ * use this file except in compliance with the License.  You may obtain a copy
+ * of the License at
+ * 
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+ * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.  See the
+ * License for the specific language governing permissions and limitations under
+ * the License.
+ ******************************************************************************/
 package org.universAAL.ontology.echonet.values;
 
 
@@ -22,9 +38,9 @@ public class TypeClassificationValue extends ManagedIndividual{
 	public static final int CITY_GAS = 8;
 	public static final int LP_GAS = 9;
 	public static final int NATURAL_GAS = 10;
-	private static final String[] names = { "RunningWater", "RecycledWater","SewageWater","Others",
-											"NotSpecified","PublicWaterworksCompany","PrivateSectorCompany",
-											"Individual","CityGas","LPGas","NaturalGas"};
+	private static final String[] names = { "runningWater", "recycledWater","sewageWater","others",
+											"notSpecified","publicWaterworksCompany","privateSectorCompany",
+											"individual","cityGas","lpGas","naturalGas"};
 	
 	public static final TypeClassificationValue RunningWater = new TypeClassificationValue(RUNNING_WATER);
 	public static final TypeClassificationValue RecycledWater = new TypeClassificationValue(RECYCLED_WATER);

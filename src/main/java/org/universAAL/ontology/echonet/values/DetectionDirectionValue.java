@@ -1,3 +1,19 @@
+/*******************************************************************************
+ * Copyright 2018 PHAM Van Cu, Tan laboratory, Japan Advanced Institute of Science and Technology (JAIST),
+ *  Japan as a part of the CARESSES project (http://www.caressesrobot.org/).
+ * 
+ * Licensed under the Apache License, Version 2.0 (the "License"); you may not
+ * use this file except in compliance with the License.  You may obtain a copy
+ * of the License at
+ * 
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+ * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.  See the
+ * License for the specific language governing permissions and limitations under
+ * the License.
+ ******************************************************************************/
 package org.universAAL.ontology.echonet.values;
 
 import org.universAAL.middleware.owl.ManagedIndividual;
@@ -16,9 +32,9 @@ public static final String MY_URI = EchonetOntology.NAMESPACE + "DetectionDirect
 	public static final int IN_LEFT_DIRECTION = 7;
 	public static final int NO_DETECTION = 8;
 	public static final int DETECED_DIRECTION_UNKNOWN = 9;
-	private static final String[] names = {"InDirection", "In_RightDirection", "RightDirection", "Out_RightDirection", 
-										   "OutDirection", "Out_LeftDirection", "LeftDirection", "In_LeftDirection",
-										   "NoDetection","Detected_DirectionUnknown"};
+	private static final String[] names = {"inDirection", "in_RightDirection", "rightDirection", "out_RightDirection", 
+										   "outDirection", "out_LeftDirection", "leftDirection", "in_LeftDirection",
+										   "noDetection","detected_DirectionUnknown"};
 	
 	public static final DetectionDirectionValue InDirection = new DetectionDirectionValue(IN_DIRECTION);
 	public static final DetectionDirectionValue In_RightDirection = new DetectionDirectionValue(IN_RIGHT_DIRECTION);

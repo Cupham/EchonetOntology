@@ -1,10 +1,25 @@
+/*******************************************************************************
+ * Copyright 2018 PHAM Van Cu, Tan laboratory, Japan Advanced Institute of Science and Technology (JAIST),
+ *  Japan as a part of the CARESSES project (http://www.caressesrobot.org/).
+ * 
+ * Licensed under the Apache License, Version 2.0 (the "License"); you may not
+ * use this file except in compliance with the License.  You may obtain a copy
+ * of the License at
+ * 
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+ * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.  See the
+ * License for the specific language governing permissions and limitations under
+ * the License.
+ ******************************************************************************/
 package org.universAAL.ontology.echonet.housingFacilitiesRelatedDevices;
 
 
 
 import org.universAAL.ontology.echonet.EchonetOntology;
 import org.universAAL.ontology.echonet.EchonetSuperDevice;
-import org.universAAL.ontology.echonet.values.EchonetDeviceGroupCodeValue;
 import org.universAAL.ontology.echonet.values.MeasuredValue;
 import org.universAAL.ontology.echonet.values.OperationFunctionSettingValue;
 import org.universAAL.ontology.echonet.values.OperationStateSettingValue;
@@ -12,23 +27,23 @@ import org.universAAL.ontology.echonet.values.OperationStatusValue;
 
 public class FuelCell extends EchonetSuperDevice{
 	public static final String MY_URI = EchonetOntology.NAMESPACE + "FuelCell";
-	public static final String PROPERTY_HAS_MEASURED_WATER_TEMPERATURE_IN_WATER_HEATER_MODE = EchonetOntology.NAMESPACE + "HasMeasuredWaterTemperatureInWaterHeaterMode";
-	public static final String PROPERTY_HAS_REATED_POWER_GENERATION_OUTPUT= EchonetOntology.NAMESPACE + "HasRatedPowerGenerationOutput";
-	public static final String PROPERTY_HAS_HEATING_VALUE_OF_HOT_WATER_STORAGE_TANK= EchonetOntology.NAMESPACE + "HasHeatingValueOfHotWaterStorageTank";
-	public static final String PROPERTY_HAS_MEASURED_INSTANTANEOUS_POWER_GENERATION_OUTPUT = EchonetOntology.NAMESPACE + "HasMeasuredInstantaneousPowerGenerationOutput";
-	public static final String PROPERTY_HAS_MEASURED_CUMMULATIVE_POWER_GENERATION_OUTPUT = EchonetOntology.NAMESPACE + "HasMeasuredCummulativePowerGenerationOutput";
-	public static final String PROPERTY_RESET_MEASURED_CUMMULATIVE_POWER_GENERATION_OUTPUT = EchonetOntology.NAMESPACE + "ResettingMeasuredCummulativePowerGenerationOutput";
-	public static final String PROPERTY_HAS_MEASURED_INSTANTANEOUS_GAS_CONSUMPTION = EchonetOntology.NAMESPACE + "HasMeasuredInstantaneousGasConsumption";
-	public static final String PROPERTY_HAS_MEASURED_CUMMULATIVE_GAS_CONSUMPTION = EchonetOntology.NAMESPACE + "HasMeasuredCummulativeGasConsumption";
-	public static final String PROPERTY_RESET_MEASURED_CUMMULATIVE_GAS_CONSUMPTION = EchonetOntology.NAMESPACE + "ResettingMeasuredCummulativeGasConsumption";
-	public static final String PROPERTY_HAS_POWER_GENERATION_SETTING = EchonetOntology.NAMESPACE + "HasPowerGenerationSetting";
-	public static final String PROPERTY_HAS_POWER_GENERATION_STATE= EchonetOntology.NAMESPACE + "HasPowerGenerationState";
-	public static final String PROPERTY_HAS_MEASURED_IN_HOUSE_CUMMULATIVE_POWER_CONSUMPTION = EchonetOntology.NAMESPACE + "HasMeasuredInHouseCummulativePowerConsumption";
-	public static final String PROPERTY_HAS_MEASURED_IN_HOUSE_INSTANTANEOUS_POWER_POWER_CONSUMPTION = EchonetOntology.NAMESPACE + "HasMeasuredInHouseInstantaneousPowerConsumption";
-	public static final String PROPERTY_RESET_MEASURED_IN_HOUSE_CUMMULATIVE_POWER_CONSUMPTION  = EchonetOntology.NAMESPACE + "ResettingMeasuredInHouseCummulativePowerConsumption";
-	public static final String PROPERTY_HAS_SYSTEM_INTERCONNECT_TYPE = EchonetOntology.NAMESPACE + "HasSystemInterconnectType";
-	public static final String PROPERTY_HAS_MEASURED_REMAINING_HOT_WATER_AMOUNT = EchonetOntology.NAMESPACE + "HasMeasuredRemainingHotWaterAmount";
-	public static final String PROPERTY_HAS_TANK_CAPACITY = EchonetOntology.NAMESPACE + "HasTankCapacity";
+	public static final String PROPERTY_HAS_MEASURED_WATER_TEMPERATURE_IN_WATER_HEATER_MODE = EchonetOntology.NAMESPACE + "hasMeasuredWaterTemperatureInWaterHeaterMode";
+	public static final String PROPERTY_HAS_REATED_POWER_GENERATION_OUTPUT= EchonetOntology.NAMESPACE + "hasRatedPowerGenerationOutput";
+	public static final String PROPERTY_HAS_HEATING_VALUE_OF_HOT_WATER_STORAGE_TANK= EchonetOntology.NAMESPACE + "hasHeatingValueOfHotWaterStorageTank";
+	public static final String PROPERTY_HAS_MEASURED_INSTANTANEOUS_POWER_GENERATION_OUTPUT = EchonetOntology.NAMESPACE + "hasMeasuredInstantaneousPowerGenerationOutput";
+	public static final String PROPERTY_HAS_MEASURED_CUMMULATIVE_POWER_GENERATION_OUTPUT = EchonetOntology.NAMESPACE + "hasMeasuredCummulativePowerGenerationOutput";
+	public static final String PROPERTY_RESET_MEASURED_CUMMULATIVE_POWER_GENERATION_OUTPUT = EchonetOntology.NAMESPACE + "resetMeasuredCummulativePowerGenerationOutput";
+	public static final String PROPERTY_HAS_MEASURED_INSTANTANEOUS_GAS_CONSUMPTION = EchonetOntology.NAMESPACE + "hasMeasuredInstantaneousGasConsumption";
+	public static final String PROPERTY_HAS_MEASURED_CUMMULATIVE_GAS_CONSUMPTION = EchonetOntology.NAMESPACE + "hasMeasuredCummulativeGasConsumption";
+	public static final String PROPERTY_RESET_MEASURED_CUMMULATIVE_GAS_CONSUMPTION = EchonetOntology.NAMESPACE + "resetMeasuredCummulativeGasConsumption";
+	public static final String PROPERTY_HAS_POWER_GENERATION_SETTING = EchonetOntology.NAMESPACE + "hasPowerGenerationSetting";
+	public static final String PROPERTY_HAS_POWER_GENERATION_STATE= EchonetOntology.NAMESPACE + "hasPowerGenerationState";
+	public static final String PROPERTY_HAS_MEASURED_IN_HOUSE_CUMMULATIVE_POWER_CONSUMPTION = EchonetOntology.NAMESPACE + "hasMeasuredInHouseCummulativePowerConsumption";
+	public static final String PROPERTY_HAS_MEASURED_IN_HOUSE_INSTANTANEOUS_POWER_POWER_CONSUMPTION = EchonetOntology.NAMESPACE + "hasMeasuredInHouseInstantaneousPowerConsumption";
+	public static final String PROPERTY_RESET_MEASURED_IN_HOUSE_CUMMULATIVE_POWER_CONSUMPTION  = EchonetOntology.NAMESPACE + "resetMeasuredInHouseCummulativePowerConsumption";
+	public static final String PROPERTY_HAS_SYSTEM_INTERCONNECT_TYPE = EchonetOntology.NAMESPACE + "hasSystemInterconnectType";
+	public static final String PROPERTY_HAS_MEASURED_REMAINING_HOT_WATER_AMOUNT = EchonetOntology.NAMESPACE + "hasMeasuredRemainingHotWaterAmount";
+	public static final String PROPERTY_HAS_TANK_CAPACITY = EchonetOntology.NAMESPACE + "hasTankCapacity";
 		
 	public MeasuredValue getTankCapacity() {
 		return (MeasuredValue) getProperty(PROPERTY_HAS_TANK_CAPACITY);	
@@ -131,11 +146,9 @@ public class FuelCell extends EchonetSuperDevice{
 	
 	public FuelCell() {
 		super();
-		setClassGroupCode(EchonetDeviceGroupCodeValue.HousingFacilityRelatedDevice);
 	}
 	public FuelCell(String uri) {
 		super(uri);
-		setClassGroupCode(EchonetDeviceGroupCodeValue.HousingFacilityRelatedDevice);
 	}
 	public String getClassURI() {
 		return MY_URI;

@@ -1,3 +1,19 @@
+/*******************************************************************************
+ * Copyright 2018 PHAM Van Cu, Tan laboratory, Japan Advanced Institute of Science and Technology (JAIST),
+ *  Japan as a part of the CARESSES project (http://www.caressesrobot.org/).
+ * 
+ * Licensed under the Apache License, Version 2.0 (the "License"); you may not
+ * use this file except in compliance with the License.  You may obtain a copy
+ * of the License at
+ * 
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+ * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.  See the
+ * License for the specific language governing permissions and limitations under
+ * the License.
+ ******************************************************************************/
 package org.universAAL.ontology.echonet.values;
 
 
@@ -14,7 +30,7 @@ public class TransferingMethods extends ManagedIndividual{
 	public static final int LOCAL_STORAGE_TRANSFER = 0;
 	public static final int REMOTE_STORAGE_TRANSFER = 1;
 	public static final int MAIL_TRANSFER = 2;
-	private static final String[] names = { "LocalStorageTransger", "RemoteStorageTransger","MailTransfer"};
+	private static final String[] names = { "localStorageTransger", "remoteStorageTransger","mailTransfer"};
 	
 	public static final TransferingMethods LocalStorageTransger = new TransferingMethods(LOCAL_STORAGE_TRANSFER);
 	public static final TransferingMethods RemoteStorageTransger = new TransferingMethods(REMOTE_STORAGE_TRANSFER);

@@ -1,0 +1,8 @@
+mw.composite.version=3.4.2-SNAPSHOT
+jgcl.version=1.0
+ont.phWorld.version=3.4.2-SNAPSHOT
+ont.unit.version=3.4.2-SNAPSHOT
+ont.measurement.version=3.4.2-SNAPSHOT
+ont.device.version=3.4.2-SNAPSHOT
+owlapi.version=3.3
+ont.echonetontology.version=3.4.2-SNAPSHOT

@@ -1,9 +1,24 @@
-
+/*******************************************************************************
+ * Copyright 2018 PHAM Van Cu, Tan laboratory, Japan Advanced Institute of Science and Technology (JAIST),
+ *  Japan as a part of the CARESSES project (http://www.caressesrobot.org/).
+ * 
+ * Licensed under the Apache License, Version 2.0 (the "License"); you may not
+ * use this file except in compliance with the License.  You may obtain a copy
+ * of the License at
+ * 
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+ * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.  See the
+ * License for the specific language governing permissions and limitations under
+ * the License.
+ ******************************************************************************/
 package org.universAAL.ontology;
 
 import org.universAAL.middleware.rdf.Resource;
 import org.universAAL.middleware.rdf.ResourceFactory;
-import org.universAAL.ontology.device.TemperatureSensor;
+import org.universAAL.ontology.echonet.EchonetSuperDevice;
 import org.universAAL.ontology.echonet.airconditionerRelatedDevices.AirCleaner;
 import org.universAAL.ontology.echonet.airconditionerRelatedDevices.AirConditionerVentilationFan;
 import org.universAAL.ontology.echonet.airconditionerRelatedDevices.ElectricHeater;
@@ -104,6 +119,7 @@ import org.universAAL.ontology.echonet.sensorRelatedDevices.RainSensor;
 import org.universAAL.ontology.echonet.sensorRelatedDevices.SmokeSensor;
 import org.universAAL.ontology.echonet.sensorRelatedDevices.SnowSensor;
 import org.universAAL.ontology.echonet.sensorRelatedDevices.SoundSensor;
+import org.universAAL.ontology.echonet.sensorRelatedDevices.TemperatureSensor;
 import org.universAAL.ontology.echonet.sensorRelatedDevices.VOCSensor;
 import org.universAAL.ontology.echonet.sensorRelatedDevices.VisitorSensor;
 import org.universAAL.ontology.echonet.sensorRelatedDevices.WaterFlowRateSensor;
@@ -228,6 +244,7 @@ public class EchonetFactory implements ResourceFactory {
 	public static final int NETWORK_CAMERA = 105;
 	public static final int TELEVISION = 106;
 	public static final int EXTENDED_LIGHTING_SYSTEM = 107;
+	public static final int ECHONET_SUPER_DEVICE = 108;
 	
 
 	
@@ -237,6 +254,8 @@ public class EchonetFactory implements ResourceFactory {
 	public Resource createInstance(String classURI, String instanceURI, int factoryIndex) {
 
 		switch (factoryIndex) {
+			case ECHONET_SUPER_DEVICE:
+				return new EchonetSuperDevice(instanceURI);
 		//Sensor device
 			case ACTIVITY_AMOUNT_SENSOR:
 				return new ActivityMountSensor(instanceURI);

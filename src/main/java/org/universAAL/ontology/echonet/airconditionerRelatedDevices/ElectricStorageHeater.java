@@ -1,10 +1,25 @@
+/*******************************************************************************
+ * Copyright 2018 PHAM Van Cu, Tan laboratory, Japan Advanced Institute of Science and Technology (JAIST),
+ *  Japan as a part of the CARESSES project (http://www.caressesrobot.org/).
+ * 
+ * Licensed under the Apache License, Version 2.0 (the "License"); you may not
+ * use this file except in compliance with the License.  You may obtain a copy
+ * of the License at
+ * 
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+ * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.  See the
+ * License for the specific language governing permissions and limitations under
+ * the License.
+ ******************************************************************************/
 package org.universAAL.ontology.echonet.airconditionerRelatedDevices;
 
-import java.util.Date;
 
 import org.universAAL.ontology.echonet.EchonetOntology;
 import org.universAAL.ontology.echonet.EchonetSuperDevice;
-import org.universAAL.ontology.echonet.values.EchonetDeviceGroupCodeValue;
+import org.universAAL.ontology.echonet.values.DateTimeValue;
 import org.universAAL.ontology.echonet.values.MeasuredValue;
 import org.universAAL.ontology.echonet.values.OperationStatusValue;
 import org.universAAL.ontology.echonet.values.RadiationMethodValue;
@@ -12,39 +27,39 @@ import org.universAAL.ontology.echonet.values.ThresholdLevelValue;
 
 public class ElectricStorageHeater extends EchonetSuperDevice{
 	public static final String MY_URI = EchonetOntology.NAMESPACE + "ElectricStorageHeater";
-	public static final String PROPERTY_HAS_TEMPERATURE_SETTING = EchonetOntology.NAMESPACE +"ElectricStorageHeaterHasTemperatureSetting";
-	public static final String PROPERTY_HAS_RATED_POWER_CONSUMPTION = EchonetOntology.NAMESPACE +"ElectricStorageHeaterHasRatedPowerConsumption";
-	public static final String PROPERTY_HAS_MEASURED_INDOOR_TEMPERATURE = EchonetOntology.NAMESPACE +"ElectricStorageHeaterHasMeasuredIndoorTemperature";
-	public static final String PROPERTY_HAS_MEASURED_OUTDOOR_TEMPERATURE = EchonetOntology.NAMESPACE +"ElectricStorageHeaterHasMeasuredOutdoorTemperature";
-	public static final String PROPERTY_HAS_AIR_FLOW_RATE_SETTING = EchonetOntology.NAMESPACE + "ElectricStorageHeaterHasAirFlowRateSetting";
-	public static final String PROPERTY_HAS_FAN_OPERATION_STATUS = EchonetOntology.NAMESPACE + "ElectricStorageHeaterHasFanOperationStatus";
-	public static final String PROPERTY_HAS_HEAT_STORAGE_OPERATION_STATUS = EchonetOntology.NAMESPACE + "ElectricStorageHeaterHasHeatStorageOperationStatus";
-	public static final String PROPERTY_HAS_HEAT_STORAGE_TEMPERATURE_SETTING = EchonetOntology.NAMESPACE + "ElectricStorageHeaterHasHeatStorageTemperatureSetting";
-	public static final String PROPERTY_HAS_MEASURED_STORED_HEAT_TEMPERATURE = EchonetOntology.NAMESPACE + "ElectricStorageHeaterHasMeasuredStoredHeatTemperature";
-	public static final String PROPERTY_HAS_DAYTIME_HEAT_STORAGE_SETTING = EchonetOntology.NAMESPACE + "ElectricStorageHeaterHasDaytimeHeatStorageSetting";
-	public static final String PROPERTY_HAS_DAYTIME_HEAT_STORAGE_ABILITY = EchonetOntology.NAMESPACE + "ElectricStorageHeaterHasDaytimeHeatStorageAbility";
-	public static final String PROPERTY_HAS_MIDNIGHT_POWER_DURATION_SETTING = EchonetOntology.NAMESPACE + "ElectricStorageHeaterHasMidnightPowerDurationSetting";
-	public static final String PROPERTY_HAS_MIDNIGHT_POWER_START_TIME_SETTING = EchonetOntology.NAMESPACE + "ElectricStorageHeaterHasMidnightPowerStartTimeSetting";
-	public static final String PROPERTY_HAS_RADIATION_METHOD = EchonetOntology.NAMESPACE + "ElectricStorageHeaterHasRadiationMethod";
-	public static final String PROPERTY_HAS_CHILD_LOCK_SETTING = EchonetOntology.NAMESPACE + "ElectricStorageHeaterHasChildLockSetting";
-	public static final String PROPERTY_HAS_FAN_TIMER_1_SETTING = EchonetOntology.NAMESPACE + "ElectricStorageHeaterHasFanTimer1Setting";
-	public static final String PROPERTY_HAS_FAN_TIMER_1_ON_SETTING = EchonetOntology.NAMESPACE + "ElectricStorageHeaterHasFanTimer1ONSetting";
-	public static final String PROPERTY_HAS_FAN_TIMER_1_OFF_SETTING = EchonetOntology.NAMESPACE + "ElectricStorageHeaterHasFanTimer1OFFSetting";
-	public static final String PROPERTY_HAS_FAN_TIMER_2_SETTING = EchonetOntology.NAMESPACE + "ElectricStorageHeaterHasFanTimer2Setting";
-	public static final String PROPERTY_HAS_FAN_TIMER_2_ON_SETTING = EchonetOntology.NAMESPACE + "ElectricStorageHeaterHasFanTimer2ONSetting";
-	public static final String PROPERTY_HAS_FAN_TIMER_2_OFF_SETTING = EchonetOntology.NAMESPACE + "ElectricStorageHeaterHasFanTimer2OFFSetting";
+	public static final String PROPERTY_HAS_TEMPERATURE_SETTING = EchonetOntology.NAMESPACE +"hasTemperatureSetting";
+	public static final String PROPERTY_HAS_RATED_POWER_CONSUMPTION = EchonetOntology.NAMESPACE +"hasRatedPowerConsumption";
+	public static final String PROPERTY_HAS_MEASURED_INDOOR_TEMPERATURE = EchonetOntology.NAMESPACE +"hasMeasuredIndoorTemperature";
+	public static final String PROPERTY_HAS_MEASURED_OUTDOOR_TEMPERATURE = EchonetOntology.NAMESPACE +"hasMeasuredOutdoorTemperature";
+	public static final String PROPERTY_HAS_AIR_FLOW_RATE_SETTING = EchonetOntology.NAMESPACE + "hasAirFlowRateSetting";
+	public static final String PROPERTY_HAS_FAN_OPERATION_STATUS = EchonetOntology.NAMESPACE + "hasFanOperationStatus";
+	public static final String PROPERTY_HAS_HEAT_STORAGE_OPERATION_STATUS = EchonetOntology.NAMESPACE + "hasHeatStorageOperationStatus";
+	public static final String PROPERTY_HAS_HEAT_STORAGE_TEMPERATURE_SETTING = EchonetOntology.NAMESPACE + "hasHeatStorageTemperatureSetting";
+	public static final String PROPERTY_HAS_MEASURED_STORED_HEAT_TEMPERATURE = EchonetOntology.NAMESPACE + "hasMeasuredStoredHeatTemperature";
+	public static final String PROPERTY_HAS_DAYTIME_HEAT_STORAGE_SETTING = EchonetOntology.NAMESPACE + "hasDaytimeHeatStorageSetting";
+	public static final String PROPERTY_HAS_DAYTIME_HEAT_STORAGE_ABILITY = EchonetOntology.NAMESPACE + "hasDaytimeHeatStorageAbility";
+	public static final String PROPERTY_HAS_MIDNIGHT_POWER_DURATION_SETTING = EchonetOntology.NAMESPACE + "hasMidnightPowerDurationSetting";
+	public static final String PROPERTY_HAS_MIDNIGHT_POWER_START_TIME_SETTING = EchonetOntology.NAMESPACE + "hasMidnightPowerStartTimeSetting";
+	public static final String PROPERTY_HAS_RADIATION_METHOD = EchonetOntology.NAMESPACE + "hasRadiationMethod";
+	public static final String PROPERTY_HAS_CHILD_LOCK_SETTING = EchonetOntology.NAMESPACE + "hasChildLockSetting";
+	public static final String PROPERTY_HAS_FAN_TIMER_1_SETTING = EchonetOntology.NAMESPACE + "hasFanTimer1Setting";
+	public static final String PROPERTY_HAS_FAN_TIMER_1_ON_SETTING = EchonetOntology.NAMESPACE + "hasFanTimer1ONSetting";
+	public static final String PROPERTY_HAS_FAN_TIMER_1_OFF_SETTING = EchonetOntology.NAMESPACE + "hasFanTimer1OFFSetting";
+	public static final String PROPERTY_HAS_FAN_TIMER_2_SETTING = EchonetOntology.NAMESPACE + "hasFanTimer2Setting";
+	public static final String PROPERTY_HAS_FAN_TIMER_2_ON_SETTING = EchonetOntology.NAMESPACE + "hasFanTimer2ONSetting";
+	public static final String PROPERTY_HAS_FAN_TIMER_2_OFF_SETTING = EchonetOntology.NAMESPACE + "hasFanTimer2OFFSetting";
 
-	public Date getFanTimer2OFFSetting() {
-		return (Date) getProperty(PROPERTY_HAS_FAN_TIMER_2_OFF_SETTING);	
+	public DateTimeValue getFanTimer2OFFSetting() {
+		return (DateTimeValue) getProperty(PROPERTY_HAS_FAN_TIMER_2_OFF_SETTING);	
 	}
-	public void setFanTimer2OFFSetting(Date msg) {
+	public void setFanTimer2OFFSetting(DateTimeValue msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_FAN_TIMER_2_OFF_SETTING, msg);	
 	}
-	public Date getFanTimer2ONSetting() {
-		return (Date) getProperty(PROPERTY_HAS_FAN_TIMER_2_ON_SETTING);	
+	public DateTimeValue getFanTimer2ONSetting() {
+		return (DateTimeValue) getProperty(PROPERTY_HAS_FAN_TIMER_2_ON_SETTING);	
 	}
-	public void setFanTimer2ONSetting(Date msg) {
+	public void setFanTimer2ONSetting(DateTimeValue msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_FAN_TIMER_2_ON_SETTING, msg);	
 	}
@@ -55,17 +70,17 @@ public class ElectricStorageHeater extends EchonetSuperDevice{
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_FAN_TIMER_2_SETTING, msg);	
 	}
-	public Date getFanTimer1OFFSetting() {
-		return (Date) getProperty(PROPERTY_HAS_FAN_TIMER_1_OFF_SETTING);	
+	public DateTimeValue getFanTimer1OFFSetting() {
+		return (DateTimeValue) getProperty(PROPERTY_HAS_FAN_TIMER_1_OFF_SETTING);	
 	}
-	public void setFanTimer1OFFSetting(Date msg) {
+	public void setFanTimer1OFFSetting(DateTimeValue msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_FAN_TIMER_1_OFF_SETTING, msg);	
 	}
-	public Date getFanTimer1ONSetting() {
-		return (Date) getProperty(PROPERTY_HAS_FAN_TIMER_1_ON_SETTING);	
+	public DateTimeValue getFanTimer1ONSetting() {
+		return (DateTimeValue) getProperty(PROPERTY_HAS_FAN_TIMER_1_ON_SETTING);	
 	}
-	public void setFanTimer1ONSetting(Date msg) {
+	public void setFanTimer1ONSetting(DateTimeValue msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_FAN_TIMER_1_ON_SETTING, msg);	
 	}
@@ -186,11 +201,9 @@ public class ElectricStorageHeater extends EchonetSuperDevice{
 	
 	public ElectricStorageHeater() {
 		super();
-		setClassGroupCode(EchonetDeviceGroupCodeValue.AirConditionerRelatedDevice);
 	}
 	public ElectricStorageHeater(String uri) {
 		super(uri);
-		setClassGroupCode(EchonetDeviceGroupCodeValue.AirConditionerRelatedDevice);
 	}
 	public String getClassURI() {
 		return MY_URI;

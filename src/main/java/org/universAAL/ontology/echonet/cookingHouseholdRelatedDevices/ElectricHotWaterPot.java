@@ -1,10 +1,25 @@
+/*******************************************************************************
+ * Copyright 2018 PHAM Van Cu, Tan laboratory, Japan Advanced Institute of Science and Technology (JAIST),
+ *  Japan as a part of the CARESSES project (http://www.caressesrobot.org/).
+ * 
+ * Licensed under the Apache License, Version 2.0 (the "License"); you may not
+ * use this file except in compliance with the License.  You may obtain a copy
+ * of the License at
+ * 
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+ * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.  See the
+ * License for the specific language governing permissions and limitations under
+ * the License.
+ ******************************************************************************/
 package org.universAAL.ontology.echonet.cookingHouseholdRelatedDevices;
 
 
 
 import org.universAAL.ontology.echonet.EchonetOntology;
 import org.universAAL.ontology.echonet.EchonetSuperDevice;
-import org.universAAL.ontology.echonet.values.EchonetDeviceGroupCodeValue;
 import org.universAAL.ontology.echonet.values.MeasuredValue;
 import org.universAAL.ontology.echonet.values.OccurenceStatusValue;
 import org.universAAL.ontology.echonet.values.OperationModeSettingValue;
@@ -13,13 +28,13 @@ import org.universAAL.ontology.echonet.values.OperationStatusValue;
 
 public class ElectricHotWaterPot extends EchonetSuperDevice{
 	public static final String MY_URI = EchonetOntology.NAMESPACE + "ElectricHotWaterPot";
-	public static final String PROPERTY_HAS_COVER_OPEN_CLOSE_STATUS= EchonetOntology.NAMESPACE + "HasCoverOpenCloseStatus";
-	public static final String PROPERTY_HAS_NO_WATER_WARNING = EchonetOntology.NAMESPACE + "HasNoWaterWarning";
-	public static final String PROPERTY_HAS_BOIL_UP_SETTING = EchonetOntology.NAMESPACE + "HasBoilUpSetting";
-	public static final String PROPERTY_HAS_BOIL_UP_WARMER_MODE_SETTING = EchonetOntology.NAMESPACE + "HasBoilUpWarmerModeSetting";
-	public static final String PROPERTY_HAS_WARMER_TEMPERATURE_SETTING_VALUE = EchonetOntology.NAMESPACE + "HasWarmerTemperatureSettingValue";
-	public static final String PROPERTY_HAS_HOT_WATER_DISCHARGE_STATUS = EchonetOntology.NAMESPACE + "HasHotWaterDischargeStatus";
-	public static final String PROPERTY_HAS_LOCK_STATUS = EchonetOntology.NAMESPACE + "HasLockStatus";
+	public static final String PROPERTY_HAS_COVER_OPEN_CLOSE_STATUS= EchonetOntology.NAMESPACE + "hasCoverOpenCloseStatus";
+	public static final String PROPERTY_HAS_NO_WATER_WARNING = EchonetOntology.NAMESPACE + "hasNoWaterWarning";
+	public static final String PROPERTY_HAS_BOIL_UP_SETTING = EchonetOntology.NAMESPACE + "hasBoilUpSetting";
+	public static final String PROPERTY_HAS_BOIL_UP_WARMER_MODE_SETTING = EchonetOntology.NAMESPACE + "hasBoilUpWarmerModeSetting";
+	public static final String PROPERTY_HAS_WARMER_TEMPERATURE_SETTING_VALUE = EchonetOntology.NAMESPACE + "hasWarmerTemperatureSettingValue";
+	public static final String PROPERTY_HAS_HOT_WATER_DISCHARGE_STATUS = EchonetOntology.NAMESPACE + "hasHotWaterDischargeStatus";
+	public static final String PROPERTY_HAS_LOCK_STATUS = EchonetOntology.NAMESPACE + "hasLockStatus";
 	
 	public OperationStateSettingValue getLockStatus() {
 		return (OperationStateSettingValue) getProperty(PROPERTY_HAS_LOCK_STATUS);	
@@ -73,11 +88,9 @@ public class ElectricHotWaterPot extends EchonetSuperDevice{
 
 	public ElectricHotWaterPot() {
 		super();
-		setClassGroupCode(EchonetDeviceGroupCodeValue.CookingHouseholdRelatedDevice);
 	}
 	public ElectricHotWaterPot(String uri) {
 		super(uri);
-		setClassGroupCode(EchonetDeviceGroupCodeValue.CookingHouseholdRelatedDevice);
 	}
 	public String getClassURI() {
 		return MY_URI;

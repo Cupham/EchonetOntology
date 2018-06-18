@@ -1,0 +1,22 @@
+Manifest-Version: 1.0
+Bnd-LastModified: 1529318856804
+Build-Jdk: 1.8.0_171
+Built-By: cupham
+Bundle-Description: The Collection of ECHONET-based Devices Ontology
+Bundle-DocURL: http://www.universAAL.org/
+Bundle-License: http://www.apache.org/licenses/LICENSE-2.0.txt
+Bundle-ManifestVersion: 2
+Bundle-Name: EchonetOntology
+Bundle-SymbolicName: ont.echonetontology
+Bundle-Vendor: universAAL Consortium
+Bundle-Version: 3.4.2.SNAPSHOT
+Created-By: Apache Maven Bundle Plugin
+Import-Package: org.universAAL.middleware.container,org.universAAL.middl
+ eware.owl,org.universAAL.middleware.rdf,org.universAAL.ontology.echonet
+ ,org.universAAL.ontology.echonet.airconditionerRelatedDevices,org.unive
+ rsAAL.ontology.echonet.audiovisualRelatedDevices,org.universAAL.ontolog
+ y.echonet.cookingHouseholdRelatedDevices,org.universAAL.ontology.echone
+ t.healthRelatedDevices,org.universAAL.ontology.echonet.housingFacilitie
+ sRelatedDevices,org.universAAL.ontology.echonet.managementOperationRela
+ tedDevices,org.universAAL.ontology.echonet.sensorRelatedDevices
+Tool: Bnd-1.50.0

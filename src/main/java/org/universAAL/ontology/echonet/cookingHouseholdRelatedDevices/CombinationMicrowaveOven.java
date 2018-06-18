@@ -1,13 +1,27 @@
+/*******************************************************************************
+ * Copyright 2018 PHAM Van Cu, Tan laboratory, Japan Advanced Institute of Science and Technology (JAIST),
+ *  Japan as a part of the CARESSES project (http://www.caressesrobot.org/).
+ * 
+ * Licensed under the Apache License, Version 2.0 (the "License"); you may not
+ * use this file except in compliance with the License.  You may obtain a copy
+ * of the License at
+ * 
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+ * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.  See the
+ * License for the specific language governing permissions and limitations under
+ * the License.
+ ******************************************************************************/
 package org.universAAL.ontology.echonet.cookingHouseholdRelatedDevices;
 
 
 
-import java.util.Date;
-
 import org.universAAL.ontology.echonet.EchonetOntology;
 import org.universAAL.ontology.echonet.EchonetSuperDevice;
 import org.universAAL.ontology.echonet.values.AutomaticHeatingMenu;
-import org.universAAL.ontology.echonet.values.EchonetDeviceGroupCodeValue;
+import org.universAAL.ontology.echonet.values.DateTimeValue;
 import org.universAAL.ontology.echonet.values.MeasuredValue;
 import org.universAAL.ontology.echonet.values.OperationModeSettingValue;
 import org.universAAL.ontology.echonet.values.OperationStateSettingValue;
@@ -17,26 +31,26 @@ import org.universAAL.ontology.echonet.values.TwoStageMicrowaveSettingValue;
 
 public class CombinationMicrowaveOven extends EchonetSuperDevice{
 	public static final String MY_URI = EchonetOntology.NAMESPACE + "CombinationMicrowaveOven";
-	public static final String PROPERTY_HAS_DOOR_OPEN_CLOSE_STATUS= EchonetOntology.NAMESPACE + "HasDoorOpenCloseStatus";
-	public static final String PROPERTY_HAS_HEATING_STATUS= EchonetOntology.NAMESPACE + "HasHeatingStatus";
-	public static final String PROPERTY_HAS_HEATING_SETTING= EchonetOntology.NAMESPACE + "HasHeatingSetting";
-	public static final String PROPERTY_HAS_HEATING_MODE_SETTING= EchonetOntology.NAMESPACE + "HasHeatingModeSetting";
-	public static final String PROPERTY_HAS_AUTOMATIC_HEATING_SETTING= EchonetOntology.NAMESPACE + "HasAutomaticHeatingSetting";
-	public static final String PROPERTY_HAS_AUTOMATIC_HEATING_LEVEL_SETTING= EchonetOntology.NAMESPACE + "HasAutomaticHeatingLevelSetting";
-	public static final String PROPERTY_HAS_AUTOMATIC_HEATING_MENU_SETTING= EchonetOntology.NAMESPACE + "HasAutomaticHeatingMenuSetting";
-	public static final String PROPERTY_HAS_OVEN_MODE_SETTING= EchonetOntology.NAMESPACE + "HasOvenModeSetting";
-	public static final String PROPERTY_HAS_OVEN_PREHEATING_SETTING= EchonetOntology.NAMESPACE + "HasOvenPreheatingSetting";
-	public static final String PROPERTY_HAS_FERMENTING_MODE_SETTING= EchonetOntology.NAMESPACE + "HasFermentingModeSetting";
-	public static final String PROPERTY_HAS_CHAMPER_TEMPERATURE_SETTING= EchonetOntology.NAMESPACE + "HasChamperTemperatureSetting";
-	public static final String PROPERTY_HAS_FOOD_TEMPERATURE_SETTING= EchonetOntology.NAMESPACE + "HasFoodTemperatureSetting";
-	public static final String PROPERTY_HAS_HEATING_SETTING_TIME= EchonetOntology.NAMESPACE + "HasHeatingSettingTime";
-	public static final String PROPERTY_HAS_REMAINING_HEATING_TIME= EchonetOntology.NAMESPACE + "HasRemainingHeatingTime";
-	public static final String PROPERTY_HAS_MICROWAVE_HEATING_POWER_SETTING= EchonetOntology.NAMESPACE + "HasMicrowaveHeatingPowerSetting";
-	public static final String PROPERTY_HAS_PROMPT_MESSAGE_SETTING= EchonetOntology.NAMESPACE + "HasPromptMessageSettingSetting";
-	public static final String PROPERTY_HAS_ACCESSORIES_TO_COMBINATION_MICROWAVE_OVEN_SETTING= EchonetOntology.NAMESPACE + "HasAccessoriestoCombinationMicrowaveOvenSetting";
-	public static final String PROPERTY_HAS_DISPLAY_CHARACTER_STRING_SETTING= EchonetOntology.NAMESPACE + "HasDisplayCharacterStringSetting";
-	public static final String PROPERTY_HAS_TWO_STAGE_MICROWAVE_HEATING_DURATION= EchonetOntology.NAMESPACE + "HasTwoStageMicrowaveHeatingDuration";
-	public static final String PROPERTY_HAS_TWO_STAGE_MICROWAVE_HEATING_POWER= EchonetOntology.NAMESPACE + "HasTwoStageMicrowaveHeatingPower";
+	public static final String PROPERTY_HAS_DOOR_OPEN_CLOSE_STATUS= EchonetOntology.NAMESPACE + "hasDoorOpenCloseStatus";
+	public static final String PROPERTY_HAS_HEATING_STATUS= EchonetOntology.NAMESPACE + "hasHeatingStatus";
+	public static final String PROPERTY_HAS_HEATING_SETTING= EchonetOntology.NAMESPACE + "hasHeatingSetting";
+	public static final String PROPERTY_HAS_HEATING_MODE_SETTING= EchonetOntology.NAMESPACE + "hasHeatingModeSetting";
+	public static final String PROPERTY_HAS_AUTOMATIC_HEATING_SETTING= EchonetOntology.NAMESPACE + "hasAutomaticHeatingSetting";
+	public static final String PROPERTY_HAS_AUTOMATIC_HEATING_LEVEL_SETTING= EchonetOntology.NAMESPACE + "hasAutomaticHeatingLevelSetting";
+	public static final String PROPERTY_HAS_AUTOMATIC_HEATING_MENU_SETTING= EchonetOntology.NAMESPACE + "hasAutomaticHeatingMenuSetting";
+	public static final String PROPERTY_HAS_OVEN_MODE_SETTING= EchonetOntology.NAMESPACE + "hasOvenModeSetting";
+	public static final String PROPERTY_HAS_OVEN_PREHEATING_SETTING= EchonetOntology.NAMESPACE + "hasOvenPreheatingSetting";
+	public static final String PROPERTY_HAS_FERMENTING_MODE_SETTING= EchonetOntology.NAMESPACE + "hasFermentingModeSetting";
+	public static final String PROPERTY_HAS_CHAMPER_TEMPERATURE_SETTING= EchonetOntology.NAMESPACE + "hasChamperTemperatureSetting";
+	public static final String PROPERTY_HAS_FOOD_TEMPERATURE_SETTING= EchonetOntology.NAMESPACE + "hasFoodTemperatureSetting";
+	public static final String PROPERTY_HAS_HEATING_SETTING_TIME= EchonetOntology.NAMESPACE + "hasHeatingSettingTime";
+	public static final String PROPERTY_HAS_REMAINING_HEATING_TIME= EchonetOntology.NAMESPACE + "hasRemainingHeatingTime";
+	public static final String PROPERTY_HAS_MICROWAVE_HEATING_POWER_SETTING= EchonetOntology.NAMESPACE + "hasMicrowaveHeatingPowerSetting";
+	public static final String PROPERTY_HAS_PROMPT_MESSAGE_SETTING= EchonetOntology.NAMESPACE + "hasPromptMessageSettingSetting";
+	public static final String PROPERTY_HAS_ACCESSORIES_TO_COMBINATION_MICROWAVE_OVEN_SETTING= EchonetOntology.NAMESPACE + "hasAccessoriestoCombinationMicrowaveOvenSetting";
+	public static final String PROPERTY_HAS_DISPLAY_CHARACTER_STRING_SETTING= EchonetOntology.NAMESPACE + "hasDisplayCharacterStringSetting";
+	public static final String PROPERTY_HAS_TWO_STAGE_MICROWAVE_HEATING_DURATION= EchonetOntology.NAMESPACE + "hasTwoStageMicrowaveHeatingDuration";
+	public static final String PROPERTY_HAS_TWO_STAGE_MICROWAVE_HEATING_POWER= EchonetOntology.NAMESPACE + "hasTwoStageMicrowaveHeatingPower";
 	
 	public OperationModeSettingValue getHeatingModeSetting() {
 		return (OperationModeSettingValue) getProperty(PROPERTY_HAS_HEATING_MODE_SETTING);	
@@ -94,17 +108,17 @@ public class CombinationMicrowaveOven extends EchonetSuperDevice{
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_MICROWAVE_HEATING_POWER_SETTING, msg);	
 	}
-	public Date getRemainingHeatingTime() {
-		return (Date) getProperty(PROPERTY_HAS_REMAINING_HEATING_TIME);	
+	public DateTimeValue getRemainingHeatingTime() {
+		return (DateTimeValue) getProperty(PROPERTY_HAS_REMAINING_HEATING_TIME);	
 	}
-	public void setRemainingHeatingTime(Date msg) {
+	public void setRemainingHeatingTime(DateTimeValue msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_REMAINING_HEATING_TIME, msg);	
 	}
-	public Date getHeatingSettingTime() {
-		return (Date) getProperty(PROPERTY_HAS_HEATING_SETTING_TIME);	
+	public DateTimeValue getHeatingSettingTime() {
+		return (DateTimeValue) getProperty(PROPERTY_HAS_HEATING_SETTING_TIME);	
 	}
-	public void setHeatingSettingTime(Date msg) {
+	public void setHeatingSettingTime(DateTimeValue msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_HEATING_SETTING_TIME, msg);	
 	}
@@ -183,11 +197,9 @@ public class CombinationMicrowaveOven extends EchonetSuperDevice{
 	
 	public CombinationMicrowaveOven() {
 		super();
-		setClassGroupCode(EchonetDeviceGroupCodeValue.CookingHouseholdRelatedDevice);
 	}
 	public CombinationMicrowaveOven(String uri) {
 		super(uri);
-		setClassGroupCode(EchonetDeviceGroupCodeValue.CookingHouseholdRelatedDevice);
 	}
 	public String getClassURI() {
 		return MY_URI;

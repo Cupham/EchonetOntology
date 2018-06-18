@@ -1,10 +1,25 @@
+/*******************************************************************************
+ * Copyright 2018 PHAM Van Cu, Tan laboratory, Japan Advanced Institute of Science and Technology (JAIST),
+ *  Japan as a part of the CARESSES project (http://www.caressesrobot.org/).
+ * 
+ * Licensed under the Apache License, Version 2.0 (the "License"); you may not
+ * use this file except in compliance with the License.  You may obtain a copy
+ * of the License at
+ * 
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+ * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.  See the
+ * License for the specific language governing permissions and limitations under
+ * the License.
+ ******************************************************************************/
 package org.universAAL.ontology.echonet.airconditionerRelatedDevices;
 
-import java.util.Date;
 
 import org.universAAL.ontology.echonet.EchonetOntology;
 import org.universAAL.ontology.echonet.EchonetSuperDevice;
-import org.universAAL.ontology.echonet.values.EchonetDeviceGroupCodeValue;
+import org.universAAL.ontology.echonet.values.DateTimeValue;
 import org.universAAL.ontology.echonet.values.IonEmissionMethodValue;
 import org.universAAL.ontology.echonet.values.LiquidAmountLevelValue;
 import org.universAAL.ontology.echonet.values.OperationModeSettingValue;
@@ -13,20 +28,20 @@ import org.universAAL.ontology.echonet.values.MeasuredValue;
 
 public class FanHeater extends EchonetSuperDevice{
 	public static final String MY_URI = EchonetOntology.NAMESPACE + "FanHeater";
-	public static final String PROPERTY_HAS_TEMPERATURE_SETTING = EchonetOntology.NAMESPACE +"FanHeaterHasTemperatureSetting";
-	public static final String PROPERTY_HAS_MEASURED_ROOM_TEMPERATURE = EchonetOntology.NAMESPACE +"FanHeaterHasMeasuredRoomTemperature";
-	public static final String PROPERTY_HAS_AUTOMATIC_TEMPERATURE_CONTROL_SETTING = EchonetOntology.NAMESPACE +"FanHeaterHasAutomaticTemperatureControlSetting";
-	public static final String PROPERTY_HAS_ON_TIMER_BASED_RESERVATION_SETTING= EchonetOntology.NAMESPACE + "FanHeaterHasONTimerBasedReservationSetting";
-	public static final String PROPERTY_HAS_ON_TIMER_SETTING_TIME= EchonetOntology.NAMESPACE + "FanHeaterHasONTimerTimeSetting";
-	public static final String PROPERTY_HAS_ON_TIMER_SETTING_RELATIVE_TIME= EchonetOntology.NAMESPACE + "FanHeaterHasONTimerRelativeTimeSetting";
-	public static final String PROPERTY_HAS_OFF_TIMER_BASED_RESERVATION_SETTING= EchonetOntology.NAMESPACE + "FanHeaterHasOFFTimerBasedReservationSetting";
-	public static final String PROPERTY_HAS_OFF_TIMER_SETTING_TIME= EchonetOntology.NAMESPACE + "FanHeaterHasOFFTimerTimeSetting";
-	public static final String PROPERTY_HAS_OFF_TIMER_SETTING_RELATIVE_TIME= EchonetOntology.NAMESPACE + "FanHeaterHasOFFTimerRelativeTimeSetting";
-	public static final String PROPERTY_HAS_EXTENSIONAL_OPERATION_SETTING = EchonetOntology.NAMESPACE +"FanHeaterHasExtensionalOperationSetting";
-	public static final String PROPERTY_HAS_EXTENSIONAL_OPERATION_TIMER_SETTING_TIME= EchonetOntology.NAMESPACE + "FanHeaterHasExtensionalOperationTimerSettingTime";
-	public static final String PROPERTY_HAS_ION_EMISSION_SETTING = EchonetOntology.NAMESPACE + "FanHeaterHasIonEmissionSetting";
-	public static final String PROPERTY_HAS_IMPLEMENTED_ION_EMISSION_METHOD = EchonetOntology.NAMESPACE + "FanHeaterHasImplementedIonEmissionMethod";
-	public static final String PROPERTY_HAS_OIL_AMOUNT_LEVEL = EchonetOntology.NAMESPACE + "FanHeaterHasOilAmountLevel";
+	public static final String PROPERTY_HAS_TEMPERATURE_SETTING = EchonetOntology.NAMESPACE +"hasTemperatureSetting";
+	public static final String PROPERTY_HAS_MEASURED_ROOM_TEMPERATURE = EchonetOntology.NAMESPACE +"hasMeasuredRoomTemperature";
+	public static final String PROPERTY_HAS_AUTOMATIC_TEMPERATURE_CONTROL_SETTING = EchonetOntology.NAMESPACE +"hasAutomaticTemperatureControlSetting";
+	public static final String PROPERTY_HAS_ON_TIMER_BASED_RESERVATION_SETTING= EchonetOntology.NAMESPACE + "hasONTimerBasedReservationSetting";
+	public static final String PROPERTY_HAS_ON_TIMER_SETTING_TIME= EchonetOntology.NAMESPACE + "hasONTimerTimeSetting";
+	public static final String PROPERTY_HAS_ON_TIMER_SETTING_RELATIVE_TIME= EchonetOntology.NAMESPACE + "hasONTimerRelativeTimeSetting";
+	public static final String PROPERTY_HAS_OFF_TIMER_BASED_RESERVATION_SETTING= EchonetOntology.NAMESPACE + "hasOFFTimerBasedReservationSetting";
+	public static final String PROPERTY_HAS_OFF_TIMER_SETTING_TIME= EchonetOntology.NAMESPACE + "hasOFFTimerTimeSetting";
+	public static final String PROPERTY_HAS_OFF_TIMER_SETTING_RELATIVE_TIME= EchonetOntology.NAMESPACE + "hasOFFTimerRelativeTimeSetting";
+	public static final String PROPERTY_HAS_EXTENSIONAL_OPERATION_SETTING = EchonetOntology.NAMESPACE +"hasExtensionalOperationSetting";
+	public static final String PROPERTY_HAS_EXTENSIONAL_OPERATION_TIMER_SETTING_TIME= EchonetOntology.NAMESPACE + "hasExtensionalOperationTimerSettingTime";
+	public static final String PROPERTY_HAS_ION_EMISSION_SETTING = EchonetOntology.NAMESPACE + "hasIonEmissionSetting";
+	public static final String PROPERTY_HAS_IMPLEMENTED_ION_EMISSION_METHOD = EchonetOntology.NAMESPACE + "hasImplementedIonEmissionMethod";
+	public static final String PROPERTY_HAS_OIL_AMOUNT_LEVEL = EchonetOntology.NAMESPACE + "hasOilAmountLevel";
 	
 	public LiquidAmountLevelValue getOilAmountLevel() {
 		return (LiquidAmountLevelValue) getProperty(PROPERTY_HAS_OIL_AMOUNT_LEVEL);	
@@ -49,10 +64,10 @@ public class FanHeater extends EchonetSuperDevice{
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_ION_EMISSION_SETTING, msg);	
 	}
-	public Date getExtensionalOperationTimerSettingTime() {
-		return (Date) getProperty(PROPERTY_HAS_EXTENSIONAL_OPERATION_TIMER_SETTING_TIME);	
+	public DateTimeValue getExtensionalOperationTimerSettingTime() {
+		return (DateTimeValue) getProperty(PROPERTY_HAS_EXTENSIONAL_OPERATION_TIMER_SETTING_TIME);	
 	}
-	public void setExtensionalOperationTimerSettingTime(Date msg) {
+	public void setExtensionalOperationTimerSettingTime(DateTimeValue msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_EXTENSIONAL_OPERATION_TIMER_SETTING_TIME, msg);	
 	}
@@ -63,17 +78,17 @@ public class FanHeater extends EchonetSuperDevice{
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_EXTENSIONAL_OPERATION_SETTING, msg);	
 	}
-	public Date getOFFTimerRelativeTimeSetting() {
-		return (Date) getProperty(PROPERTY_HAS_OFF_TIMER_SETTING_RELATIVE_TIME);	
+	public DateTimeValue getOFFTimerRelativeTimeSetting() {
+		return (DateTimeValue) getProperty(PROPERTY_HAS_OFF_TIMER_SETTING_RELATIVE_TIME);	
 	}
-	public void setOFFTimerRelativeTimeSetting(Date msg) {
+	public void setOFFTimerRelativeTimeSetting(DateTimeValue msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_OFF_TIMER_SETTING_RELATIVE_TIME, msg);	
 	}
-	public Date getOFFTimerTimeSetting() {
-		return (Date) getProperty(PROPERTY_HAS_OFF_TIMER_SETTING_TIME);	
+	public DateTimeValue getOFFTimerTimeSetting() {
+		return (DateTimeValue) getProperty(PROPERTY_HAS_OFF_TIMER_SETTING_TIME);	
 	}
-	public void setOFFTimerTimeSetting(Date msg) {
+	public void setOFFTimerTimeSetting(DateTimeValue msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_OFF_TIMER_SETTING_TIME, msg);	
 	}
@@ -84,17 +99,17 @@ public class FanHeater extends EchonetSuperDevice{
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_OFF_TIMER_BASED_RESERVATION_SETTING, msg);	
 	}
-	public Date getONTimerRelativeTimeSetting() {
-		return (Date) getProperty(PROPERTY_HAS_ON_TIMER_SETTING_RELATIVE_TIME);	
+	public DateTimeValue getONTimerRelativeTimeSetting() {
+		return (DateTimeValue) getProperty(PROPERTY_HAS_ON_TIMER_SETTING_RELATIVE_TIME);	
 	}
-	public void setONTimerRelativeTimeSetting(Date msg) {
+	public void setONTimerRelativeTimeSetting(DateTimeValue msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_ON_TIMER_SETTING_RELATIVE_TIME, msg);	
 	}
-	public Date getONTimerTimeSetting() {
-		return (Date) getProperty(PROPERTY_HAS_ON_TIMER_SETTING_TIME);	
+	public DateTimeValue getONTimerTimeSetting() {
+		return (DateTimeValue) getProperty(PROPERTY_HAS_ON_TIMER_SETTING_TIME);	
 	}
-	public void setONTimerTimeSetting(Date msg) {
+	public void setONTimerTimeSetting(DateTimeValue msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_ON_TIMER_SETTING_TIME, msg);	
 	}
@@ -129,11 +144,9 @@ public class FanHeater extends EchonetSuperDevice{
 	
 	public FanHeater() {
 		super();
-		setClassGroupCode(EchonetDeviceGroupCodeValue.AirConditionerRelatedDevice);
 	}
 	public FanHeater(String uri) {
 		super(uri);
-		setClassGroupCode(EchonetDeviceGroupCodeValue.AirConditionerRelatedDevice);
 	}
 	public String getClassURI() {
 		return MY_URI;

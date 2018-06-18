@@ -1,0 +1,8 @@
+scan-composite:mvn:org.universAAL.middleware/mw.composite/3.4.2-SNAPSHOT/composite
+scan-bundle:wrap:mvn:jp.go.ipa/jgcl/1.0
+scan-bundle:mvn:org.universAAL.ontology/ont.phWorld/3.4.2-SNAPSHOT
+scan-bundle:mvn:org.universAAL.ontology/ont.unit/3.4.2-SNAPSHOT
+scan-bundle:mvn:org.universAAL.ontology/ont.measurement/3.4.2-SNAPSHOT
+scan-bundle:mvn:org.universAAL.ontology/ont.device/3.4.2-SNAPSHOT
+scan-bundle:wrap:mvn:org.coode.owlapi/owlapi/3.3
+scan-bundle:wrap:mvn:org.universAAL.ontology/ont.echonetontology/3.4.2-SNAPSHOT
