@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: org.universAAL.ontology.test.MyTest
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.367 sec - in org.universAAL.ontology.test.MyTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.903 sec - in org.universAAL.ontology.test.MyTest

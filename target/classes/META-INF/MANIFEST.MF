@@ -1,5 +1,5 @@
 Manifest-Version: 1.0
-Bnd-LastModified: 1529318856804
+Bnd-LastModified: 1529320527741
 Build-Jdk: 1.8.0_171
 Built-By: cupham
 Bundle-Description: The Collection of ECHONET-based Devices Ontology
