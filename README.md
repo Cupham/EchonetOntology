@@ -17,6 +17,7 @@ Java (JavaSE 1.8)
 Simply running "Maven-install" the project to generate ontology files.
 
   Example by using eclipse (Oxygen with maven plugin installed)
+  
   Select project -> right-click -> Run as -> Maven install
 
 The ontology files are located at $target/ontologies folder.
@@ -42,5 +43,7 @@ This project is licensed under the APACHE 2 License
 
 ## Acknowledgments
 This work is a part of the CARESSES project (http://caressesrobot.org/en/).
+
 The ECHONET device objects are from the ECHONET specification release J (https://echonet.jp/spec_object_rj_en/)
+
 The coding style are following the guidelines from universAAL platform (https://github.com/universAAL)
