@@ -19,7 +19,7 @@ package org.universAAL.ontology;
 import org.universAAL.middleware.container.ModuleContext;
 import org.universAAL.middleware.container.ModuleActivator;
 import org.universAAL.middleware.owl.OntologyManagement;
-import org.universAAL.ontology.echonet.EchonetOntology;
+import org.universAAL.ontology.echonetontology.EchonetOntology;
 
 public class EchonetActivator implements ModuleActivator {
 	 public static ModuleContext mc;

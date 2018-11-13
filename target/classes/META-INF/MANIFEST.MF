@@ -1,5 +1,5 @@
 Manifest-Version: 1.0
-Bnd-LastModified: 1529320527741
+Bnd-LastModified: 1539672584533
 Build-Jdk: 1.8.0_171
 Built-By: cupham
 Bundle-Description: The Collection of ECHONET-based Devices Ontology
@@ -9,14 +9,41 @@ Bundle-ManifestVersion: 2
 Bundle-Name: EchonetOntology
 Bundle-SymbolicName: ont.echonetontology
 Bundle-Vendor: universAAL Consortium
-Bundle-Version: 3.4.2.SNAPSHOT
+Bundle-Version: 3.4.0
 Created-By: Apache Maven Bundle Plugin
+Export-Package: org.universAAL.ontology.echonetontology;uses:="org.unive
+ rsAAL.middleware.owl,org.universAAL.middleware.rdf,org.universAAL.ontol
+ ogy.echonetontology.values,org.universAAL.ontology.phThing";version="3.
+ 4.0",org.universAAL.ontology.echonetontology.airconditionerRelatedDevic
+ es;uses:="org.universAAL.ontology.echonetontology.values,org.universAAL
+ .ontology.echonetontology";version="3.4.0",org.universAAL.ontology.echo
+ netontology.sensorRelatedDevices;uses:="org.universAAL.ontology.echonet
+ ontology.values,org.universAAL.ontology.echonetontology";version="3.4.0
+ ",org.universAAL.ontology.echonetontology.managementOperationRelatedDev
+ ices;uses:="org.universAAL.ontology.echonetontology.values,org.universA
+ AL.ontology.echonetontology";version="3.4.0",org.universAAL.ontology.ec
+ honetontology.housingFacilitiesRelatedDevices;uses:="org.universAAL.ont
+ ology.echonetontology.values,org.universAAL.ontology.echonetontology";v
+ ersion="3.4.0",org.universAAL.ontology.echonetontology.cookingHousehold
+ RelatedDevices;uses:="org.universAAL.ontology.echonetontology.values,or
+ g.universAAL.ontology.echonetontology";version="3.4.0",org.universAAL.o
+ ntology.echonetontology.values;uses:="org.universAAL.middleware.owl";ve
+ rsion="3.4.0",org.universAAL.ontology.echonetontology.healthRelatedDevi
+ ces;uses:="org.universAAL.ontology.echonetontology.values,org.universAA
+ L.ontology.echonetontology";version="3.4.0",org.universAAL.ontology.ech
+ onetontology.audiovisualRelatedDevices;uses:="org.universAAL.ontology.e
+ chonetontology.values,org.universAAL.ontology.echonetontology";version=
+ "3.4.0"
 Import-Package: org.universAAL.middleware.container,org.universAAL.middl
  eware.owl,org.universAAL.middleware.rdf,org.universAAL.ontology.echonet
- ,org.universAAL.ontology.echonet.airconditionerRelatedDevices,org.unive
- rsAAL.ontology.echonet.audiovisualRelatedDevices,org.universAAL.ontolog
- y.echonet.cookingHouseholdRelatedDevices,org.universAAL.ontology.echone
- t.healthRelatedDevices,org.universAAL.ontology.echonet.housingFacilitie
- sRelatedDevices,org.universAAL.ontology.echonet.managementOperationRela
- tedDevices,org.universAAL.ontology.echonet.sensorRelatedDevices
+ ontology.airconditionerRelatedDevices;version="[3.4,4)",org.universAAL.
+ ontology.echonetontology.audiovisualRelatedDevices;version="[3.4,4)",or
+ g.universAAL.ontology.echonetontology.cookingHouseholdRelatedDevices;ve
+ rsion="[3.4,4)",org.universAAL.ontology.echonetontology.healthRelatedDe
+ vices;version="[3.4,4)",org.universAAL.ontology.echonetontology.housing
+ FacilitiesRelatedDevices;version="[3.4,4)",org.universAAL.ontology.echo
+ netontology.managementOperationRelatedDevices;version="[3.4,4)",org.uni
+ versAAL.ontology.echonetontology.sensorRelatedDevices;version="[3.4,4)"
+ ,org.universAAL.ontology.echonetontology.values;version="[3.4,4)",org.u
+ niversAAL.ontology.phThing;version="[3.4,4)"
 Tool: Bnd-1.50.0

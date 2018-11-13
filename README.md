@@ -30,7 +30,10 @@ The ontology files are located at $target/ontologies folder.
 
 ## Contributing
 
-PHAM, Van Cu initial and create the project.
+PHAM, Van Cu(Japan Advanced Institute of Science and Technology) initial and create the project.
+Yuto LIM (Japan Advanced Institute of Science and Technology) advisor
+Yasuo TAN (Japan Advanced Institute of Science and Technology) advisor
+
 
 
 ## Authors
@@ -43,6 +46,9 @@ This project is licensed under the APACHE 2 License
 
 ## Acknowledgments
 This work is a part of the CARESSES project (http://caressesrobot.org/en/).
+  Contact information:
+  Chong Nak-Young (Japan Advanced Institute of Science and Technology, Japan) : Japan Coodinator
+  Antonio Sgorbissa (University of Genoa, Italy) : EU Coodinator
 
 The ECHONET device objects are from the ECHONET specification release J (https://echonet.jp/spec_object_rj_en/)
 
