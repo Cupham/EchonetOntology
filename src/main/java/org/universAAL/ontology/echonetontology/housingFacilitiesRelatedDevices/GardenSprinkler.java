@@ -19,9 +19,7 @@ package org.universAAL.ontology.echonetontology.housingFacilitiesRelatedDevices;
 
 import org.universAAL.ontology.echonetontology.EchonetOntology;
 import org.universAAL.ontology.echonetontology.EchonetSuperDevice;
-import org.universAAL.ontology.echonetontology.values.DateTimeValue;
 import org.universAAL.ontology.echonetontology.values.IntervalSettingValue;
-import org.universAAL.ontology.echonetontology.values.MeasuredValue;
 import org.universAAL.ontology.echonetontology.values.NumberOfSprinkleSettingValue;
 import org.universAAL.ontology.echonetontology.values.OperationStatusValue;
 
@@ -34,24 +32,24 @@ public class GardenSprinkler extends EchonetSuperDevice{
 	public static final String PROPERTY_HAS_SPRINKLE_TIME_SETTING_2 = EchonetOntology.NAMESPACE + "hasSprinkleTimeSetting2";
 	public static final String PROPERTY_HAS_SPRINKLE_DURATION_SETTING = EchonetOntology.NAMESPACE + "hasSprinkleDurationSetting";
 	
-	public MeasuredValue getSprinkleDurationSetting() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_SPRINKLE_DURATION_SETTING);	
+	public Integer getSprinkleDurationSetting() {
+		return (Integer) getProperty(PROPERTY_HAS_SPRINKLE_DURATION_SETTING);	
 	}
-	public void setSprinkleDurationSetting(MeasuredValue msg) {
+	public void setSprinkleDurationSetting(Integer msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_SPRINKLE_DURATION_SETTING, msg);	
 	}
-	public DateTimeValue getSprinkleTimeSetting2() {
-		return (DateTimeValue) getProperty(PROPERTY_HAS_SPRINKLE_TIME_SETTING_2);	
+	public String getSprinkleTimeSetting2() {
+		return  getProperty(PROPERTY_HAS_SPRINKLE_TIME_SETTING_2).toString();	
 	}
-	public void setSprinkleTimeSetting2(DateTimeValue msg) {
+	public void setSprinkleTimeSetting2(String msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_SPRINKLE_TIME_SETTING_2, msg);	
 	}
-	public DateTimeValue getSprinkleTimeSetting1() {
-		return (DateTimeValue) getProperty(PROPERTY_HAS_SPRINKLE_TIME_SETTING_1);	
+	public String getSprinkleTimeSetting1() {
+		return getProperty(PROPERTY_HAS_SPRINKLE_TIME_SETTING_1).toString();	
 	}
-	public void setSprinkleTimeSetting1(DateTimeValue msg) {
+	public void setSprinkleTimeSetting1(String msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_SPRINKLE_TIME_SETTING_1, msg);	
 	}

@@ -22,7 +22,6 @@ package org.universAAL.ontology.echonetontology.housingFacilitiesRelatedDevices;
 
 import org.universAAL.ontology.echonetontology.EchonetOntology;
 import org.universAAL.ontology.echonetontology.EchonetSuperDevice;
-import org.universAAL.ontology.echonetontology.values.MeasuredValue;
 
 public class LightingSystem extends EchonetSuperDevice{
 	public static final String MY_URI = EchonetOntology.NAMESPACE + "LightingSystem";	
@@ -30,24 +29,24 @@ public class LightingSystem extends EchonetSuperDevice{
 	public static final String PROPERTY_HAS_SCENE_CONTROL_SETTING = EchonetOntology.NAMESPACE + "hasSceneControlSetting";
 	public static final String PROPERTY_HAS_NUMBER_FOR_ASSIGNING_SCENE_CONTROL_SETTING = EchonetOntology.NAMESPACE + "hasNumberForAssigningSceneControlSetting";
 	
-	public MeasuredValue getNumberForAssigningSceneControlSetting() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_NUMBER_FOR_ASSIGNING_SCENE_CONTROL_SETTING);	
+	public Float getNumberForAssigningSceneControlSetting() {
+		return (Float) getProperty(PROPERTY_HAS_NUMBER_FOR_ASSIGNING_SCENE_CONTROL_SETTING);	
 	}
-	public void setNumberForAssigningSceneControlSetting(MeasuredValue msg) {
+	public void setNumberForAssigningSceneControlSetting(Float msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_NUMBER_FOR_ASSIGNING_SCENE_CONTROL_SETTING, msg);	
 	}
-	public MeasuredValue getSceneControlSetting() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_SCENE_CONTROL_SETTING);	
+	public Float getSceneControlSetting() {
+		return (Float) getProperty(PROPERTY_HAS_SCENE_CONTROL_SETTING);	
 	}
-	public void setSceneControlSetting(MeasuredValue msg) {
+	public void setSceneControlSetting(Float msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_SCENE_CONTROL_SETTING, msg);	
 	}
-	public MeasuredValue getIlluminanceLevel() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_ILLUMINANCE_LEVEL);	
+	public Float getIlluminanceLevel() {
+		return (Float) getProperty(PROPERTY_HAS_ILLUMINANCE_LEVEL);	
 	}
-	public void setIlluminanceLevel(MeasuredValue msg) {
+	public void setIlluminanceLevel(Float msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_ILLUMINANCE_LEVEL, msg);	
 	}

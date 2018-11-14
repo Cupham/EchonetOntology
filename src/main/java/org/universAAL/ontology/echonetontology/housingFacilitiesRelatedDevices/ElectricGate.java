@@ -20,7 +20,6 @@ package org.universAAL.ontology.echonetontology.housingFacilitiesRelatedDevices;
 import org.universAAL.ontology.echonetontology.EchonetOntology;
 import org.universAAL.ontology.echonetontology.EchonetSuperDevice;
 import org.universAAL.ontology.echonetontology.values.ElectricDeviceFaultDesciptionValue;
-import org.universAAL.ontology.echonetontology.values.MeasuredValue;
 import org.universAAL.ontology.echonetontology.values.OperationFunctionSettingValue;
 import org.universAAL.ontology.echonetontology.values.OperationStateSettingValue;
 import org.universAAL.ontology.echonetontology.values.OperationStatusValue;
@@ -93,10 +92,10 @@ public class ElectricGate extends EchonetSuperDevice{
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_OPENING_CLOSING_SPEED_SETTING, msg);	
 	}
-	public MeasuredValue getDegreeOfOpeningLevel() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_DEGREE_OF_OPENING_LEVEL);	
+	public Float getDegreeOfOpeningLevel() {
+		return (Float) getProperty(PROPERTY_HAS_DEGREE_OF_OPENING_LEVEL);	
 	}
-	public void setDegreeOfOpeningLevel(MeasuredValue msg) {
+	public void setDegreeOfOpeningLevel(Float msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_DEGREE_OF_OPENING_LEVEL, msg);	
 	}
@@ -107,10 +106,10 @@ public class ElectricGate extends EchonetSuperDevice{
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_OPENING_CLOSING_OPERATION_SETTING, msg);	
 	}
-	public MeasuredValue getOperationTimeSettingValue() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_OPERATION_TIME_SETTING_VALUE);	
+	public Float getOperationTimeSettingValue() {
+		return (Float) getProperty(PROPERTY_HAS_OPERATION_TIME_SETTING_VALUE);	
 	}
-	public void setOperationTimeSettingValue(MeasuredValue msg) {
+	public void setOperationTimeSettingValue(Float msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_OPERATION_TIME_SETTING_VALUE, msg);	
 	}

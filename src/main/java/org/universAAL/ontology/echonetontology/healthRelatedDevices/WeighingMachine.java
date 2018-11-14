@@ -20,24 +20,23 @@ package org.universAAL.ontology.echonetontology.healthRelatedDevices;
 
 import org.universAAL.ontology.echonetontology.EchonetOntology;
 import org.universAAL.ontology.echonetontology.EchonetSuperDevice;
-import org.universAAL.ontology.echonetontology.values.MeasuredValue;
 
 public class WeighingMachine extends EchonetSuperDevice{
 	public static final String MY_URI = EchonetOntology.NAMESPACE + "WeighingMachine";
 	public static final String PROPERTY_HAS_MEASURED_BODY_WEIGHT= EchonetOntology.NAMESPACE + "hasMeasuredBodyWeight";
 	public static final String PROPERTY_HAS_MEASURED_BODY_FAT= EchonetOntology.NAMESPACE + "hasMeasuredBodyFat";
 	
-	public MeasuredValue getMeasuredBodyFat() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_MEASURED_BODY_FAT);	
+	public Float getMeasuredBodyFat() {
+		return (Float) getProperty(PROPERTY_HAS_MEASURED_BODY_FAT);	
 	}
-	public void setMeasuredBodyFat(MeasuredValue msg) {
+	public void setMeasuredBodyFat(Float msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_MEASURED_BODY_FAT, msg);	
 	}
-	public MeasuredValue getMeasuredBodyWeight() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_MEASURED_BODY_WEIGHT);	
+	public Float getMeasuredBodyWeight() {
+		return (Float) getProperty(PROPERTY_HAS_MEASURED_BODY_WEIGHT);	
 	}
-	public void setMeasuredBodyWeight(MeasuredValue msg) {
+	public void setMeasuredBodyWeight(Float msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_MEASURED_BODY_WEIGHT, msg);	
 	}

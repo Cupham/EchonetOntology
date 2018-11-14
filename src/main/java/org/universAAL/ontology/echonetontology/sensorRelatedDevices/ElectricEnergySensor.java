@@ -18,7 +18,6 @@ package org.universAAL.ontology.echonetontology.sensorRelatedDevices;
 
 import org.universAAL.ontology.echonetontology.EchonetOntology;
 import org.universAAL.ontology.echonetontology.EchonetSuperDevice;
-import org.universAAL.ontology.echonetontology.values.MeasuredValue;
 
 public class ElectricEnergySensor extends EchonetSuperDevice{
 	public static final String MY_URI = EchonetOntology.NAMESPACE + "ElectricEnergySensor";
@@ -54,45 +53,45 @@ public class ElectricEnergySensor extends EchonetSuperDevice{
 		return true;
 	}
 	
-	public MeasuredValue getCumulativeAmountOfElectriceEnergy() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_CUMULATIVE_AMOUNT_OF_ELECTRIC_ENERGY);	
+	public Float getCumulativeAmountOfElectriceEnergy() {
+		return (Float) getProperty(PROPERTY_HAS_CUMULATIVE_AMOUNT_OF_ELECTRIC_ENERGY);	
 	}
-	public void setCumulativeAmountOfElectriceEnergy(MeasuredValue msg) {
+	public void setCumulativeAmountOfElectriceEnergy(Float msg) {
 		if (msg != null)
 			changeProperty(PROPERTY_HAS_CUMULATIVE_AMOUNT_OF_ELECTRIC_ENERGY,msg);	
 	}
-	public MeasuredValue getMediumCapacitySensorInstantaneousElectricEnergy() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_MEDIUM_CAPACITY_SENSOR_INSTANTANEOUS_ELECTRIC_ENERGY);	
+	public Float getMediumCapacitySensorInstantaneousElectricEnergy() {
+		return (Float) getProperty(PROPERTY_HAS_MEDIUM_CAPACITY_SENSOR_INSTANTANEOUS_ELECTRIC_ENERGY);	
 	}
-	public void setMediumCapacitySensorInstantaneousElectricEnergy(MeasuredValue msg) {
+	public void setMediumCapacitySensorInstantaneousElectricEnergy(Float msg) {
 		if (msg != null)
 			changeProperty(PROPERTY_HAS_MEDIUM_CAPACITY_SENSOR_INSTANTANEOUS_ELECTRIC_ENERGY,msg);	
 	}
-	public MeasuredValue getSmallCapacitySensorInstantaneousElectricEnergy() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_SMALL_CAPACITY_SENSOR_INSTANTANEOUS_ELECTRIC_ENERGY);	
+	public Float getSmallCapacitySensorInstantaneousElectricEnergy() {
+		return (Float) getProperty(PROPERTY_HAS_SMALL_CAPACITY_SENSOR_INSTANTANEOUS_ELECTRIC_ENERGY);	
 	}
-	public void setSmallCapacitySensorInstantaneousElectricEnergy(MeasuredValue msg) {
+	public void setSmallCapacitySensorInstantaneousElectricEnergy(Float msg) {
 		if (msg != null)
 			changeProperty(PROPERTY_HAS_SMALL_CAPACITY_SENSOR_INSTANTANEOUS_ELECTRIC_ENERGY,msg);	
 	}
-	public MeasuredValue getLargeCapacitySensorInstantaneousElectricEnergy() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_LARGE_CAPACITY_SENSOR_INSTANTANEOUS_ELECTRIC_ENERGY);	
+	public Float getLargeCapacitySensorInstantaneousElectricEnergy() {
+		return (Float) getProperty(PROPERTY_HAS_LARGE_CAPACITY_SENSOR_INSTANTANEOUS_ELECTRIC_ENERGY);	
 	}
-	public void setLargeCapacitySensorInstantaneousElectricEnergy(MeasuredValue msg) {
+	public void setLargeCapacitySensorInstantaneousElectricEnergy(Float msg) {
 		if (msg != null)
 			changeProperty(PROPERTY_HAS_LARGE_CAPACITY_SENSOR_INSTANTANEOUS_ELECTRIC_ENERGY,msg);	
 	}
-	public MeasuredValue getCumulativeAmountOfElectriceEnergyMeasurementLog() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_CUMULATIVE_AMOUNT_OF_ELECTRIC_ENERGY_MEASUREMENT_LOG);	
+	public Float getCumulativeAmountOfElectriceEnergyMeasurementLog() {
+		return (Float) getProperty(PROPERTY_HAS_CUMULATIVE_AMOUNT_OF_ELECTRIC_ENERGY_MEASUREMENT_LOG);	
 	}
-	public void setCumulativeAmountOfElectriceEnergyMeasurementLog(MeasuredValue msg) {
+	public void setCumulativeAmountOfElectriceEnergyMeasurementLog(Float msg) {
 		if (msg != null)
 			changeProperty(PROPERTY_HAS_CUMULATIVE_AMOUNT_OF_ELECTRIC_ENERGY_MEASUREMENT_LOG,msg);	
 	}
-	public MeasuredValue getEffectiveMeasuredValue() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_EFFECTIVE_VOLTAGE_VALUE);	
+	public Integer getEffectiveMeasuredValue() {
+		return (Integer) getProperty(PROPERTY_HAS_EFFECTIVE_VOLTAGE_VALUE);	
 	}
-	public void setEffectiveMeasuredValue(MeasuredValue msg) {
+	public void setEffectiveMeasuredValue(Integer msg) {
 		if (msg != null)
 			changeProperty(PROPERTY_HAS_EFFECTIVE_VOLTAGE_VALUE,msg);	
 	}

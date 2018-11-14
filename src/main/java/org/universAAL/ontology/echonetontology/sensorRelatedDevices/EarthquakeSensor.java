@@ -18,7 +18,6 @@ package org.universAAL.ontology.echonetontology.sensorRelatedDevices;
 
 import org.universAAL.ontology.echonetontology.EchonetOntology;
 import org.universAAL.ontology.echonetontology.EchonetSuperDevice;
-import org.universAAL.ontology.echonetontology.values.MeasuredValue;
 import org.universAAL.ontology.echonetontology.values.OccurenceStatusValue;
 import org.universAAL.ontology.echonetontology.values.ThresholdLevelValue;
 
@@ -66,10 +65,10 @@ public class EarthquakeSensor extends EchonetSuperDevice{
 		if(msg !=null)
 			changeProperty(PROPERTY_HAS_EARTHQUAKE_OCCURENCE_STATUS,msg);	
 	}
-	public MeasuredValue getSIValue() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_SI_VALUE);	
+	public Float getSIValue() {
+		return (Float) getProperty(PROPERTY_HAS_SI_VALUE);	
 	}
-	public void setSIValue(MeasuredValue msg) {
+	public void setSIValue(Float msg) {
 		if(msg !=null)
 			changeProperty(PROPERTY_HAS_SI_VALUE,msg);	
 	}

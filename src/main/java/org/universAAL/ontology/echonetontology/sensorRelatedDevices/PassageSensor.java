@@ -19,7 +19,6 @@ package org.universAAL.ontology.echonetontology.sensorRelatedDevices;
 import org.universAAL.ontology.echonetontology.EchonetOntology;
 import org.universAAL.ontology.echonetontology.EchonetSuperDevice;
 import org.universAAL.ontology.echonetontology.values.DetectionDirectionValue;
-import org.universAAL.ontology.echonetontology.values.MeasuredValue;
 import org.universAAL.ontology.echonetontology.values.ThresholdLevelValue;
 
 public class PassageSensor extends EchonetSuperDevice{
@@ -54,10 +53,10 @@ public class PassageSensor extends EchonetSuperDevice{
 		if(msg !=null)
 			changeProperty(PROPERTY_HAS_DETECTION_THRESHOLD_LEVEL,msg);	
 	}
-	public MeasuredValue getDectectionHoldTime() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_DETECTION_HOLD_TIME);	
+	public Integer getDectectionHoldTime() {
+		return (Integer) getProperty(PROPERTY_HAS_DETECTION_HOLD_TIME);	
 	}
-	public void setDectectionHoldTime(MeasuredValue msg) {
+	public void setDectectionHoldTime(Integer msg) {
 		if(msg !=null)	
 			changeProperty(PROPERTY_HAS_DETECTION_HOLD_TIME,msg);	
 	}

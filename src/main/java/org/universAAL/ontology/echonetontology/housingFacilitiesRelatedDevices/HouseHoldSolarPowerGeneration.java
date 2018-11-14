@@ -20,7 +20,6 @@ package org.universAAL.ontology.echonetontology.housingFacilitiesRelatedDevices;
 
 import org.universAAL.ontology.echonetontology.EchonetOntology;
 import org.universAAL.ontology.echonetontology.EchonetSuperDevice;
-import org.universAAL.ontology.echonetontology.values.MeasuredValue;
 import org.universAAL.ontology.echonetontology.values.OperationFunctionSettingValue;
 
 public class HouseHoldSolarPowerGeneration extends EchonetSuperDevice{
@@ -37,59 +36,59 @@ public class HouseHoldSolarPowerGeneration extends EchonetSuperDevice{
 	public static final String PROPERTY_HAS_REATED_POWER_GENERATION_OUTPUT_SYSTEM_INTERCONNECTED = EchonetOntology.NAMESPACE + "hasPowerGenerationOutputSystemInterconnected";
 	public static final String PROPERTY_HAS_REATED_POWER_GENERATION_OUTPUT_INDEPENDENT = EchonetOntology.NAMESPACE + "hasPowerGenerationOutputSystemIndependent";
 
-	public MeasuredValue getPowerGenerationOutputSystemIndependent() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_REATED_POWER_GENERATION_OUTPUT_INDEPENDENT);	
+	public Integer getPowerGenerationOutputSystemIndependent() {
+		return (Integer) getProperty(PROPERTY_HAS_REATED_POWER_GENERATION_OUTPUT_INDEPENDENT);	
 	}
-	public void setPowerGenerationOutputSystemIndependent(MeasuredValue msg) {
+	public void setPowerGenerationOutputSystemIndependent(Integer msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_REATED_POWER_GENERATION_OUTPUT_INDEPENDENT, msg);	
 	}
-	public MeasuredValue getPowerGenerationOutputSystemInterconnected() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_REATED_POWER_GENERATION_OUTPUT_SYSTEM_INTERCONNECTED);	
+	public Integer getPowerGenerationOutputSystemInterconnected() {
+		return (Integer) getProperty(PROPERTY_HAS_REATED_POWER_GENERATION_OUTPUT_SYSTEM_INTERCONNECTED);	
 	}
-	public void setPowerGenerationOutputSystemInterconnected(MeasuredValue msg) {
+	public void setPowerGenerationOutputSystemInterconnected(Integer msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_REATED_POWER_GENERATION_OUTPUT_SYSTEM_INTERCONNECTED, msg);	
 	}
-	public MeasuredValue getAmountOfElectricitySoldLimitSetting() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_AMOUNT_OF_ELECTRICITY_SOLD_LIMIT_SETTING);	
+	public Integer getAmountOfElectricitySoldLimitSetting() {
+		return (Integer) getProperty(PROPERTY_HAS_AMOUNT_OF_ELECTRICITY_SOLD_LIMIT_SETTING);	
 	}
-	public void setAmountOfElectricitySoldLimitSetting(MeasuredValue msg) {
+	public void setAmountOfElectricitySoldLimitSetting(Integer msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_AMOUNT_OF_ELECTRICITY_SOLD_LIMIT_SETTING, msg);	
 	}
-	public MeasuredValue getPowerGenerationOutputLimitSetting2() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_POWER_GENERATION_OUTPUT_LIMIT_SETTING_2);	
+	public Integer getPowerGenerationOutputLimitSetting2() {
+		return (Integer) getProperty(PROPERTY_HAS_POWER_GENERATION_OUTPUT_LIMIT_SETTING_2);	
 	}
-	public void setPowerGenerationOutputLimitSetting2(MeasuredValue msg) {
+	public void setPowerGenerationOutputLimitSetting2(Integer msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_POWER_GENERATION_OUTPUT_LIMIT_SETTING_2, msg);	
 	}
-	public MeasuredValue getPowerGenerationOutputLimitSetting1() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_POWER_GENERATION_OUTPUT_LIMIT_SETTING_1);	
+	public Integer getPowerGenerationOutputLimitSetting1() {
+		return (Integer) getProperty(PROPERTY_HAS_POWER_GENERATION_OUTPUT_LIMIT_SETTING_1);	
 	}
-	public void setPowerGenerationOutputLimitSetting1(MeasuredValue msg) {
+	public void setPowerGenerationOutputLimitSetting1(Integer msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_POWER_GENERATION_OUTPUT_LIMIT_SETTING_1, msg);	
 	}
-	public MeasuredValue getMeasuredCummulativeElectricEnergySoldAmount() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_MEASURED_CUMMULATIVE_ELECTRIC_ENERGY_SOLD_AMOUNT);	
+	public Float getMeasuredCummulativeElectricEnergySoldAmount() {
+		return (Float) getProperty(PROPERTY_HAS_MEASURED_CUMMULATIVE_ELECTRIC_ENERGY_SOLD_AMOUNT);	
 	}
-	public void setMeasuredCummulativeElectricEnergySoldAmount(MeasuredValue msg) {
+	public void setMeasuredCummulativeElectricEnergySoldAmount(Float msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_MEASURED_CUMMULATIVE_ELECTRIC_ENERGY_SOLD_AMOUNT, msg);	
 	}
-	public MeasuredValue getMeasuredInstantaneousElectricEnergyGeneratedAmount() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_MEASURED_INSTANTANEOUS_ELECTRIC_ENERGY_GENERATED_AMOUNT);	
+	public Integer getMeasuredInstantaneousElectricEnergyGeneratedAmount() {
+		return (Integer) getProperty(PROPERTY_HAS_MEASURED_INSTANTANEOUS_ELECTRIC_ENERGY_GENERATED_AMOUNT);	
 	}
-	public void setMeasuredInstantaneousElectricEnergyGeneratedAmount(MeasuredValue msg) {
+	public void setMeasuredInstantaneousElectricEnergyGeneratedAmount(Integer msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_MEASURED_INSTANTANEOUS_ELECTRIC_ENERGY_GENERATED_AMOUNT, msg);	
 	}
-	public MeasuredValue getMeasuredCummulativeElectricEnergyGeneratedAmount() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_MEASURED_CUMMULATIVE_ELECTRIC_ENERGY_GENERATED_AMOUNT);	
+	public Float getMeasuredCummulativeElectricEnergyGeneratedAmount() {
+		return (Float) getProperty(PROPERTY_HAS_MEASURED_CUMMULATIVE_ELECTRIC_ENERGY_GENERATED_AMOUNT);	
 	}
-	public void setMeasuredCummulativeElectricEnergyGeneratedAmount(MeasuredValue msg) {
+	public void setMeasuredCummulativeElectricEnergyGeneratedAmount(Float msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_MEASURED_CUMMULATIVE_ELECTRIC_ENERGY_GENERATED_AMOUNT, msg);	
 	}

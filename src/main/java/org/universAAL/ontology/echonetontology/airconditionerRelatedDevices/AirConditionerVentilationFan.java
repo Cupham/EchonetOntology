@@ -18,14 +18,12 @@ package org.universAAL.ontology.echonetontology.airconditionerRelatedDevices;
 
 import org.universAAL.ontology.echonetontology.EchonetOntology;
 import org.universAAL.ontology.echonetontology.EchonetSuperDevice;
-import org.universAAL.ontology.echonetontology.values.MeasuredValue;
 import org.universAAL.ontology.echonetontology.values.OccurenceStatusValue;
 import org.universAAL.ontology.echonetontology.values.OperationStatusValue;
 import org.universAAL.ontology.echonetontology.values.ThresholdLevelValue;
 public class AirConditionerVentilationFan extends EchonetSuperDevice{
 	public static final String MY_URI = EchonetOntology.NAMESPACE + "AirConditionerVentilationFan";
 	public static final String PROPERTY_HAS_SETTING_ROOM_RELATIVE_HUMIDITY = EchonetOntology.NAMESPACE + "hasSettingRoomHumidity";
-	public static final String PROPERTY_HAS_RELATIVE_HUMIDITY_IN_VENTILATION_MODE = EchonetOntology.NAMESPACE + "hasRelativeHumidityInAutoVentilationMode";
 	public static final String PROPERTY_HAS_VENTILATION_AUTO_SETTING = EchonetOntology.NAMESPACE + "hasVentilationAutoSetting";
 	public static final String PROPERTY_HAS_MEASURED_ROOM_RELATIVE_HUMIDITY = EchonetOntology.NAMESPACE + "hasMeasuredRoomHumidity";
 	public static final String PROPERTY_HAS_VALUE_OF_VENTILATION_AIR_FLOW_RATE = EchonetOntology.NAMESPACE + "hasValueOfVentilationAirFlowRate";
@@ -48,17 +46,17 @@ public class AirConditionerVentilationFan extends EchonetSuperDevice{
 		if(msg !=null)
 			changeProperty(PROPERTY_HAS_SMOKE_DETECTION_STATUS,msg);	
 	}
-	public MeasuredValue getSettingRoomHumidity() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_SETTING_ROOM_RELATIVE_HUMIDITY);	
+	public Integer getSettingRoomHumidity() {
+		return (Integer) getProperty(PROPERTY_HAS_SETTING_ROOM_RELATIVE_HUMIDITY);	
 	}
-	public void setSettingRoomHumidity(MeasuredValue msg) {
+	public void setSettingRoomHumidity(Integer msg) {
 		if(msg !=null)
 			changeProperty(PROPERTY_HAS_SETTING_ROOM_RELATIVE_HUMIDITY,msg);	
 	}
-	public MeasuredValue getCO2ConcentrationMeasuredValue() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_MEASURED_VALUE_OF_CO2_CONCENTRATION);	
+	public Integer getCO2ConcentrationMeasuredValue() {
+		return (Integer) getProperty(PROPERTY_HAS_MEASURED_VALUE_OF_CO2_CONCENTRATION);	
 	}
-	public void setCO2ConcentrationMeasuredValue(MeasuredValue msg) {
+	public void setCO2ConcentrationMeasuredValue(Integer msg) {
 		if(msg !=null)
 			changeProperty(PROPERTY_HAS_MEASURED_VALUE_OF_CO2_CONCENTRATION,msg);	
 	}
@@ -76,10 +74,10 @@ public class AirConditionerVentilationFan extends EchonetSuperDevice{
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_VALUE_OF_VENTILATION_AIR_FLOW_RATE, msg);
 	}
-	public MeasuredValue getMeasuredRoomHumidity() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_MEASURED_ROOM_RELATIVE_HUMIDITY);	
+	public Integer getMeasuredRoomHumidity() {
+		return (Integer) getProperty(PROPERTY_HAS_MEASURED_ROOM_RELATIVE_HUMIDITY);	
 	}
-	public void setMeasuredRoomHumidity(MeasuredValue msg) {
+	public void setMeasuredRoomHumidity(Integer msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_MEASURED_ROOM_RELATIVE_HUMIDITY, msg);	
 	}
@@ -89,13 +87,6 @@ public class AirConditionerVentilationFan extends EchonetSuperDevice{
 	public void setVentilationAutoSetting(OperationStatusValue msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_VENTILATION_AUTO_SETTING, msg);
-	}
-	public MeasuredValue setRelativeHumidityInAutoVentilationMode() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_RELATIVE_HUMIDITY_IN_VENTILATION_MODE);	
-	}
-	public void setRelativeHumidityInAutoVentilationMode(MeasuredValue msg) {
-		if(msg !=null) 
-			changeProperty(PROPERTY_HAS_RELATIVE_HUMIDITY_IN_VENTILATION_MODE, msg);	
 	}
 	public AirConditionerVentilationFan() {
 		super();

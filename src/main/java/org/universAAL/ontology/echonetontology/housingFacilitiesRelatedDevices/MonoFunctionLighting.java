@@ -22,16 +22,15 @@ package org.universAAL.ontology.echonetontology.housingFacilitiesRelatedDevices;
 
 import org.universAAL.ontology.echonetontology.EchonetOntology;
 import org.universAAL.ontology.echonetontology.EchonetSuperDevice;
-import org.universAAL.ontology.echonetontology.values.MeasuredValue;
 
 public class MonoFunctionLighting extends EchonetSuperDevice{
 	public static final String MY_URI = EchonetOntology.NAMESPACE + "MonoFunctionLighting";	
 	public static final String PROPERTY_HAS_ILLUMINANCE_LEVEL = EchonetOntology.NAMESPACE + "hasIlluminanceLevel";
 	
-	public MeasuredValue getIlluminanceLevel() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_ILLUMINANCE_LEVEL);	
+	public Float getIlluminanceLevel() {
+		return (Float) getProperty(PROPERTY_HAS_ILLUMINANCE_LEVEL);	
 	}
-	public void setIlluminanceLevel(MeasuredValue msg) {
+	public void setIlluminanceLevel(Float msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_ILLUMINANCE_LEVEL, msg);	
 	}

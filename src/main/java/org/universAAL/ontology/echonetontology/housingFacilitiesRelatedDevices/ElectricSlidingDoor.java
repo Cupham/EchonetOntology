@@ -19,9 +19,7 @@ package org.universAAL.ontology.echonetontology.housingFacilitiesRelatedDevices;
 
 import org.universAAL.ontology.echonetontology.EchonetOntology;
 import org.universAAL.ontology.echonetontology.EchonetSuperDevice;
-import org.universAAL.ontology.echonetontology.values.DateTimeValue;
 import org.universAAL.ontology.echonetontology.values.ElectricDeviceFaultDesciptionValue;
-import org.universAAL.ontology.echonetontology.values.MeasuredValue;
 import org.universAAL.ontology.echonetontology.values.OperationFunctionSettingValue;
 import org.universAAL.ontology.echonetontology.values.OperationStateSettingValue;
 import org.universAAL.ontology.echonetontology.values.OperationStatusValue;
@@ -86,10 +84,10 @@ public class ElectricSlidingDoor extends EchonetSuperDevice{
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_OPENING_CLOSING_SPEED_SETTING, msg);	
 	}
-	public MeasuredValue getDegreeOfOpeningSetting() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_DEGREE_OF_OPENING_SETTING);	
+	public Integer getDegreeOfOpeningSetting() {
+		return (Integer) getProperty(PROPERTY_HAS_DEGREE_OF_OPENING_SETTING);	
 	}
-	public void setDegreeOfOpeningSetting(MeasuredValue msg) {
+	public void setDegreeOfOpeningSetting(Integer msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_DEGREE_OF_OPENING_SETTING, msg);	
 	}
@@ -100,17 +98,17 @@ public class ElectricSlidingDoor extends EchonetSuperDevice{
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_OPENING_CLOSING_OPERATION_SETTING, msg);	
 	}
-	public DateTimeValue getOpeningTimeSetting() {
-		return (DateTimeValue) getProperty(PROPERTY_HAS_OPENING_TIME_SETTING);	
+	public String getOpeningTimeSetting() {
+		return  getProperty(PROPERTY_HAS_OPENING_TIME_SETTING).toString();	
 	}
-	public void setOpeningTimeSetting(DateTimeValue msg) {
+	public void setOpeningTimeSetting(String msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_OPENING_TIME_SETTING, msg);	
 	}
-	public MeasuredValue getOperationTimeSettingValue() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_OPERATION_TIME_SETTING_VALUE);	
+	public Integer getOperationTimeSettingValue() {
+		return (Integer) getProperty(PROPERTY_HAS_OPERATION_TIME_SETTING_VALUE);	
 	}
-	public void setOperationTimeSettingValue(MeasuredValue msg) {
+	public void setOperationTimeSettingValue(Integer msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_OPERATION_TIME_SETTING_VALUE, msg);	
 	}

@@ -18,7 +18,6 @@ package org.universAAL.ontology.echonetontology.sensorRelatedDevices;
 
 import org.universAAL.ontology.echonetontology.EchonetOntology;
 import org.universAAL.ontology.echonetontology.EchonetSuperDevice;
-import org.universAAL.ontology.echonetontology.values.MeasuredValue;
 import org.universAAL.ontology.echonetontology.values.OccurenceStatusValue;
 
 public class WaterLevelSensor extends EchonetSuperDevice{
@@ -46,10 +45,10 @@ public class WaterLevelSensor extends EchonetSuperDevice{
 		return true;
 	}
 	
-	public MeasuredValue getWaterLevelOverDetectionThreshold() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_WATER_LEVEL_OVER_DETECTION_THRESHOLD_LEVEL);	
+	public Integer getWaterLevelOverDetectionThreshold() {
+		return (Integer) getProperty(PROPERTY_HAS_WATER_LEVEL_OVER_DETECTION_THRESHOLD_LEVEL);	
 	}
-	public void setWaterLevelOverDetectionThreshold(MeasuredValue msg) {
+	public void setWaterLevelOverDetectionThreshold(Integer msg) {
 		if(msg !=null)
 			changeProperty(PROPERTY_HAS_WATER_LEVEL_OVER_DETECTION_THRESHOLD_LEVEL,msg);	
 	}
@@ -60,10 +59,10 @@ public class WaterLevelSensor extends EchonetSuperDevice{
 		if(msg !=null)
 			changeProperty(PROPERTY_HAS_WATER_LEVEL_OVER_DETECTION_STATUS,msg);	
 	}
-	public MeasuredValue getMeasuredWaterLevelValue() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_MEASURED_WATER_LEVEL_VALUE);	
+	public Integer getMeasuredWaterLevelValue() {
+		return (Integer) getProperty(PROPERTY_HAS_MEASURED_WATER_LEVEL_VALUE);	
 	}
-	public void getMeasuredWaterLevelValue(MeasuredValue msg) {
+	public void getMeasuredWaterLevelValue(Integer msg) {
 		if(msg !=null)
 			changeProperty(PROPERTY_HAS_MEASURED_WATER_LEVEL_VALUE,msg);	
 	}

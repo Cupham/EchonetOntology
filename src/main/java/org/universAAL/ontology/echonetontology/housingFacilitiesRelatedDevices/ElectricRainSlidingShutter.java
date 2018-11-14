@@ -19,9 +19,7 @@ package org.universAAL.ontology.echonetontology.housingFacilitiesRelatedDevices;
 
 import org.universAAL.ontology.echonetontology.EchonetOntology;
 import org.universAAL.ontology.echonetontology.EchonetSuperDevice;
-import org.universAAL.ontology.echonetontology.values.DateTimeValue;
 import org.universAAL.ontology.echonetontology.values.ElectricDeviceFaultDesciptionValue;
-import org.universAAL.ontology.echonetontology.values.MeasuredValue;
 import org.universAAL.ontology.echonetontology.values.OperationFunctionSettingValue;
 import org.universAAL.ontology.echonetontology.values.OperationStateSettingValue;
 import org.universAAL.ontology.echonetontology.values.OperationStatusValue;
@@ -103,17 +101,17 @@ public class ElectricRainSlidingShutter extends EchonetSuperDevice{
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_OPENING_CLOSING_SPEED_SETTING, msg);	
 	}
-	public MeasuredValue getBlindAngleSetting() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_BLIND_ANGLE_SETTING);	
+	public Integer getBlindAngleSetting() {
+		return (Integer) getProperty(PROPERTY_HAS_BLIND_ANGLE_SETTING);	
 	}
-	public void setBlindAngleSetting(MeasuredValue msg) {
+	public void setBlindAngleSetting(Integer msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_BLIND_ANGLE_SETTING, msg);	
 	}
-	public MeasuredValue getDegreeOfOpeningLevel() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_DEGREE_OF_OPENING_LEVEL);	
+	public Integer getDegreeOfOpeningLevel() {
+		return (Integer) getProperty(PROPERTY_HAS_DEGREE_OF_OPENING_LEVEL);	
 	}
-	public void setDegreeOfOpeningLevel(MeasuredValue msg) {
+	public void setDegreeOfOpeningLevel(Integer msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_DEGREE_OF_OPENING_LEVEL, msg);	
 	}
@@ -124,10 +122,10 @@ public class ElectricRainSlidingShutter extends EchonetSuperDevice{
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_OPEN_CLOSE_SETTING, msg);	
 	}
-	public MeasuredValue getOperationTime() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_OPERATION_TIME);	
+	public Integer getOperationTime() {
+		return (Integer) getProperty(PROPERTY_HAS_OPERATION_TIME);	
 	}
-	public void setOperationTime(DateTimeValue msg) {
+	public void setOperationTime(Integer msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_OPERATION_TIME, msg);	
 	}

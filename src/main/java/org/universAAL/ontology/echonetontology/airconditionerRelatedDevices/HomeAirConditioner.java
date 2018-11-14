@@ -21,18 +21,10 @@ package org.universAAL.ontology.echonetontology.airconditionerRelatedDevices;
 import org.universAAL.ontology.echonetontology.EchonetOntology;
 import org.universAAL.ontology.echonetontology.EchonetSuperDevice;
 import org.universAAL.ontology.echonetontology.values.AirFlowDirectionSettingValue;
-import org.universAAL.ontology.echonetontology.values.AirconditionerComponentOperationStatus;
-import org.universAAL.ontology.echonetontology.values.DateTimeValue;
-import org.universAAL.ontology.echonetontology.values.MeasuredValue;
-import org.universAAL.ontology.echonetontology.values.MountedAirCleaningPurifyingMethodValue;
-import org.universAAL.ontology.echonetontology.values.MountedAirRefreshingMethodValue;
-import org.universAAL.ontology.echonetontology.values.MountedAirSelfCleaningMethodValue;
 import org.universAAL.ontology.echonetontology.values.OperationFunctionSettingValue;
 import org.universAAL.ontology.echonetontology.values.OperationModeSettingValue;
 import org.universAAL.ontology.echonetontology.values.OperationStateSettingValue;
 import org.universAAL.ontology.echonetontology.values.OperationStatusValue;
-import org.universAAL.ontology.echonetontology.values.RatedPowerConsumptionInModeValue;
-import org.universAAL.ontology.echonetontology.values.ThermostatSettingOverrideFunctionValue;
 import org.universAAL.ontology.echonetontology.values.ThresholdLevelValue;
 
 public class HomeAirConditioner extends EchonetSuperDevice{
@@ -90,17 +82,17 @@ public class HomeAirConditioner extends EchonetSuperDevice{
 		super(uri);
 	}
 
-	public DateTimeValue getOFFTimerRelativeTimeSetting() {
-		return (DateTimeValue) getProperty(PROPERTY_HAS_OFF_TIMER_SETTING_RELATIVE_TIME);	
+	public String getOFFTimerRelativeTimeSetting() {
+		return  getProperty(PROPERTY_HAS_OFF_TIMER_SETTING_RELATIVE_TIME).toString();	
 	}
-	public void setOFFTimerRelativeTimeSetting(DateTimeValue msg) {
+	public void setOFFTimerRelativeTimeSetting(String msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_OFF_TIMER_SETTING_RELATIVE_TIME, msg);	
 	}
-	public DateTimeValue getOFFTimerTimeSetting() {
-		return (DateTimeValue) getProperty(PROPERTY_HAS_OFF_TIMER_SETTING_TIME);	
+	public String getOFFTimerTimeSetting() {
+		return  getProperty(PROPERTY_HAS_OFF_TIMER_SETTING_TIME).toString();	
 	}
-	public void setOFFTimerTimeSetting(DateTimeValue msg) {
+	public void setOFFTimerTimeSetting(String msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_OFF_TIMER_SETTING_TIME, msg);	
 	}
@@ -111,17 +103,17 @@ public class HomeAirConditioner extends EchonetSuperDevice{
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_OFF_TIMER_BASED_RESERVATION_SETTING, msg);	
 	}
-	public DateTimeValue getONTimerRelativeTimeSetting() {
-		return (DateTimeValue) getProperty(PROPERTY_HAS_ON_TIMER_SETTING_RELATIVE_TIME);	
+	public String getONTimerRelativeTimeSetting() {
+		return getProperty(PROPERTY_HAS_ON_TIMER_SETTING_RELATIVE_TIME).toString();	
 	}
-	public void setONTimerRelativeTimeSetting(DateTimeValue msg) {
+	public void setONTimerRelativeTimeSetting(String msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_ON_TIMER_SETTING_RELATIVE_TIME, msg);	
 	}
-	public DateTimeValue getONTimerTimeSetting() {
-		return (DateTimeValue) getProperty(PROPERTY_HAS_ON_TIMER_SETTING_TIME);	
+	public String getONTimerTimeSetting() {
+		return getProperty(PROPERTY_HAS_ON_TIMER_SETTING_TIME).toString();	
 	}
-	public void setONTimerTimeSetting(DateTimeValue msg) {
+	public void setONTimerTimeSetting(String msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_ON_TIMER_SETTING_TIME, msg);	
 	}
@@ -139,17 +131,17 @@ public class HomeAirConditioner extends EchonetSuperDevice{
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_AIR_PURIFICATION_MODE_SETTING, msg);	
 	}
-	public ThermostatSettingOverrideFunctionValue getThermostatSettingOverrideFunction() {
-		return (ThermostatSettingOverrideFunctionValue) getProperty(PROPERTY_HAS_THERMOSTAT_SETTING_OVERRIDE_FUNCTION);	
+	public String getThermostatSettingOverrideFunction() {
+		return getProperty(PROPERTY_HAS_THERMOSTAT_SETTING_OVERRIDE_FUNCTION).toString();	
 	}
-	public void setThermostatSettingOverrideFunction(ThermostatSettingOverrideFunctionValue msg) {
+	public void setThermostatSettingOverrideFunction(String msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_THERMOSTAT_SETTING_OVERRIDE_FUNCTION, msg);	
 	}
-	public AirconditionerComponentOperationStatus getOperationStatusOfComponents() {
-		return (AirconditionerComponentOperationStatus) getProperty(PROPERTY_HAS_OPERATION_STATUS_OF_COMPONENTS);	
+	public String getOperationStatusOfComponents() {
+		return getProperty(PROPERTY_HAS_OPERATION_STATUS_OF_COMPONENTS).toString();	
 	}
-	public void setOperationStatusOfComponents(AirconditionerComponentOperationStatus msg) {
+	public void setOperationStatusOfComponents(String msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_OPERATION_STATUS_OF_COMPONENTS, msg);	
 	}
@@ -160,46 +152,46 @@ public class HomeAirConditioner extends EchonetSuperDevice{
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_SPECIAL_FUNCTION_SETTING, msg);	
 	}
-	public MountedAirSelfCleaningMethodValue getMountedSelfCleaningFunctionSetting() {
-		return (MountedAirSelfCleaningMethodValue) getProperty(PROPERTY_HAS_MOUNTED_SELF_CLEANING_FUNCTION_SETTING);	
+	public String getMountedSelfCleaningFunctionSetting() {
+		return  getProperty(PROPERTY_HAS_MOUNTED_SELF_CLEANING_FUNCTION_SETTING).toString();	
 	}
-	public void setMountedSelfCleaningFunctionSetting(MountedAirSelfCleaningMethodValue msg) {
+	public void setMountedSelfCleaningFunctionSetting(String msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_MOUNTED_SELF_CLEANING_FUNCTION_SETTING, msg);	
 	}
-	public MountedAirSelfCleaningMethodValue getMountedSelfCleaningMethod() {
-		return (MountedAirSelfCleaningMethodValue) getProperty(PROPERTY_HAS_MOUNTED_SELF_CLEANING_METHOD);	
+	public String getMountedSelfCleaningMethod() {
+		return  getProperty(PROPERTY_HAS_MOUNTED_SELF_CLEANING_METHOD).toString();	
 	}
-	public void setMountedSelfCleaningMethod(MountedAirSelfCleaningMethodValue msg) {
+	public void setMountedSelfCleaningMethod(String msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_MOUNTED_SELF_CLEANING_METHOD, msg);	
 	}
 	
-	public MountedAirRefreshingMethodValue getMountedAirRefresherFunctionSetting() {
-		return (MountedAirRefreshingMethodValue) getProperty(PROPERTY_HAS_MOUNTED_AIR_REFRESHER_FUNCTION_SETTING);	
+	public String getMountedAirRefresherFunctionSetting() {
+		return  getProperty(PROPERTY_HAS_MOUNTED_AIR_REFRESHER_FUNCTION_SETTING).toString();	
 	}
-	public void setMountedAirRefresherFunctionSetting(MountedAirRefreshingMethodValue msg) {
+	public void setMountedAirRefresherFunctionSetting(String msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_MOUNTED_AIR_REFRESHER_FUNCTION_SETTING, msg);	
 	}
-	public MountedAirRefreshingMethodValue getMountedAirRefreshMethod() {
-		return (MountedAirRefreshingMethodValue) getProperty(PROPERTY_HAS_MOUNTED_AIR_REFRESH_METHOD);	
+	public String getMountedAirRefreshMethod() {
+		return  getProperty(PROPERTY_HAS_MOUNTED_AIR_REFRESH_METHOD).toString();	
 	}
-	public void setMountedAirRefreshMethod(MountedAirRefreshingMethodValue msg) {
+	public void setMountedAirRefreshMethod(String msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_MOUNTED_AIR_REFRESH_METHOD, msg);	
 	}
-	public MountedAirCleaningPurifyingMethodValue getMountedAirPurifierFunctionSetting() {
-		return (MountedAirCleaningPurifyingMethodValue) getProperty(PROPERTY_HAS_MOUNTED_AIR_PURIFIER_FUNCTION_SETTING);	
+	public String getMountedAirPurifierFunctionSetting() {
+		return  getProperty(PROPERTY_HAS_MOUNTED_AIR_PURIFIER_FUNCTION_SETTING).toString();	
 	}
-	public void setMountedAirPurifierFunctionSetting(MountedAirCleaningPurifyingMethodValue msg) {
+	public void setMountedAirPurifierFunctionSetting(String msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_MOUNTED_AIR_PURIFIER_FUNCTION_SETTING, msg);	
 	}
-	public MountedAirCleaningPurifyingMethodValue getMountedAirCleaningMethod() {
-		return (MountedAirCleaningPurifyingMethodValue) getProperty(PROPERTY_HAS_MOUNTED_AIR_CLEANING_METHOD);	
+	public String getMountedAirCleaningMethod() {
+		return  getProperty(PROPERTY_HAS_MOUNTED_AIR_CLEANING_METHOD).toString();	
 	}
-	public void setMountedAirCleaningMethod(MountedAirCleaningPurifyingMethodValue msg) {
+	public void setMountedAirCleaningMethod(String msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_MOUNTED_AIR_CLEANING_METHOD, msg);	
 	}
@@ -259,94 +251,94 @@ public class HomeAirConditioner extends EchonetSuperDevice{
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_TYPE_OF_OPERATION_SETTING, msg);	
 	}
-	public MeasuredValue getCurrentSettingOfTemperature() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_CURRENT_SETTING_OF_TEMPERATURE);	
+	public Float getCurrentSettingOfTemperature() {
+		return (Float) getProperty(PROPERTY_HAS_CURRENT_SETTING_OF_TEMPERATURE);	
 	}
-	public void setCurrentSettingOfTemperature(MeasuredValue msg) {
+	public void setCurrentSettingOfTemperature(Float msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_CURRENT_SETTING_OF_TEMPERATURE, msg);	
 	}
-	public MeasuredValue getRelativeHumidityInDehumidificationMode() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_RELATIVE_HUMIDITY_IN_DEHUMIDIFICATION_MODE);	
+	public Integer getRelativeHumidityInDehumidificationMode() {
+		return (Integer) getProperty(PROPERTY_HAS_RELATIVE_HUMIDITY_IN_DEHUMIDIFICATION_MODE);	
 	}
-	public void setRelativeHumidityInDehumidificationMode(MeasuredValue msg) {
+	public void setRelativeHumidityInDehumidificationMode(Integer msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_RELATIVE_HUMIDITY_IN_DEHUMIDIFICATION_MODE, msg);	
 	}
-	public MeasuredValue getSettingTemperatureInCoolingMode() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_SETTING_TEMPERATURE_IN_COOLING_MODE);	
+	public Float getSettingTemperatureInCoolingMode() {
+		return (Float) getProperty(PROPERTY_HAS_SETTING_TEMPERATURE_IN_COOLING_MODE);	
 	}
-	public void setSettingTemperatureInCoolingMode(MeasuredValue msg) {
+	public void setSettingTemperatureInCoolingMode(Float msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_SETTING_TEMPERATURE_IN_COOLING_MODE, msg);	
 	}
-	public MeasuredValue getSettingTemperatureInHeatingMode() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_SETTING_TEMPERATURE_IN_HEATING_MODE);	
+	public Float getSettingTemperatureInHeatingMode() {
+		return (Float) getProperty(PROPERTY_HAS_SETTING_TEMPERATURE_IN_HEATING_MODE);	
 	}
-	public void setSettingTemperatureInHeatingMode(MeasuredValue msg) {
+	public void setSettingTemperatureInHeatingMode(Float msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_SETTING_TEMPERATURE_IN_HEATING_MODE, msg);	
 	}
-	public MeasuredValue getSettingTemperatureInDehumidificationMode() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_SETTING_TEMPERATURE_IN_DEHUMIDICATION_MODE);	
+	public Float getSettingTemperatureInDehumidificationMode() {
+		return (Float) getProperty(PROPERTY_HAS_SETTING_TEMPERATURE_IN_DEHUMIDICATION_MODE);	
 	}
-	public void setSettingTemperatureInDehumidificationMode(MeasuredValue msg) {
+	public void setSettingTemperatureInDehumidificationMode(Float msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_SETTING_TEMPERATURE_IN_DEHUMIDICATION_MODE, msg);	
 	}
-	public RatedPowerConsumptionInModeValue getRatedPowerConsumptionInModes() {
-		return (RatedPowerConsumptionInModeValue) getProperty(PROPERTY_HAS_RATED_POWER_CONSUMPTION_IN_MODES);	
+	public String getRatedPowerConsumptionInModes() {
+		return getProperty(PROPERTY_HAS_RATED_POWER_CONSUMPTION_IN_MODES).toString();	
 	}
-	public void setRatedPowerConsumptionInModes(RatedPowerConsumptionInModeValue msg) {
+	public void setRatedPowerConsumptionInModes(String msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_RATED_POWER_CONSUMPTION_IN_MODES, msg);	
 	}
-	public MeasuredValue getMeasuredCurrentConsumption() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_MEASURED_CURRENT_CONSUMPTION);	
+	public Float getMeasuredCurrentConsumption() {
+		return (Float) getProperty(PROPERTY_HAS_MEASURED_CURRENT_CONSUMPTION);	
 	}
-	public void setMeasuredCurrentConsumption(MeasuredValue msg) {
+	public void setMeasuredCurrentConsumption(Float msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_MEASURED_CURRENT_CONSUMPTION, msg);	
 	} 
-	public MeasuredValue getMeasuredRoomHumidity() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_MEASURED_ROOM_RELATIVE_HUMIDITY);	
+	public Integer getMeasuredRoomHumidity() {
+		return (Integer) getProperty(PROPERTY_HAS_MEASURED_ROOM_RELATIVE_HUMIDITY);	
 	}
-	public void setMeasuredRoomHumidity(MeasuredValue msg) {
+	public void setMeasuredRoomHumidity(Integer msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_MEASURED_ROOM_RELATIVE_HUMIDITY, msg);	
 	}
-	public MeasuredValue getMeasuredRoomTemperature() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_MEASURED_ROOM_TEMPERATURE);	
+	public Float getMeasuredRoomTemperature() {
+		return (Float) getProperty(PROPERTY_HAS_MEASURED_ROOM_TEMPERATURE);	
 	}
-	public void setMeasuredRoomTemperature(MeasuredValue msg) {
+	public void setMeasuredRoomTemperature(Float msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_MEASURED_ROOM_TEMPERATURE, msg);	
 	}
-	public MeasuredValue getCurrentTemperatureSettingOfRemoteControl() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_CURRENT_TEMPERATER_SETTING_OF_REMOTE_CONTROL);	
+	public Float getCurrentTemperatureSettingOfRemoteControl() {
+		return (Float) getProperty(PROPERTY_HAS_CURRENT_TEMPERATER_SETTING_OF_REMOTE_CONTROL);	
 	}
-	public void setCurrentTemperatureSettingOfRemoteControl(MeasuredValue msg) {
+	public void setCurrentTemperatureSettingOfRemoteControl(Float msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_CURRENT_TEMPERATER_SETTING_OF_REMOTE_CONTROL, msg);	
 	}
-	public MeasuredValue getMeasuredCooledAirTemperature() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_MEASURED_COOLED_AIR_TEMPERATURE);	
+	public Float getMeasuredCooledAirTemperature() {
+		return (Float) getProperty(PROPERTY_HAS_MEASURED_COOLED_AIR_TEMPERATURE);	
 	}
-	public void setMeasuredCooledAirTemperature(MeasuredValue msg) {
+	public void setMeasuredCooledAirTemperature(Float msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_MEASURED_COOLED_AIR_TEMPERATURE, msg);	
 	}
-	public MeasuredValue getMeasuredOutdoorAirTemperature() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_MEASURED_OUTDOOR_AIR_TEMPERATURE);	
+	public Float getMeasuredOutdoorAirTemperature() {
+		return (Float) getProperty(PROPERTY_HAS_MEASURED_OUTDOOR_AIR_TEMPERATURE);	
 	}
-	public void setMeasuredOutdoorAirTemperature(MeasuredValue msg) {
+	public void setMeasuredOutdoorAirTemperature(Float msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_MEASURED_OUTDOOR_AIR_TEMPERATURE, msg);	
 	}
-	public MeasuredValue getRelativeTemperatureSetting() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_RELATIVE_TEMPERATURE_SETTING);	
+	public Float getRelativeTemperatureSetting() {
+		return (Float) getProperty(PROPERTY_HAS_RELATIVE_TEMPERATURE_SETTING);	
 	}
-	public void setRelativeTemperatureSetting(MeasuredValue msg) {
+	public void setRelativeTemperatureSetting(Float msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_RELATIVE_TEMPERATURE_SETTING, msg);	
 	}
@@ -385,10 +377,10 @@ public class HomeAirConditioner extends EchonetSuperDevice{
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_AIRFLOW_HORIZONTAL_DIRECTION_SETTING, msg);	
 	}
-	public OperationStatusValue getSpecialState() {
-		return (OperationStatusValue) getProperty(PROPERTY_HAS_SPECIAL_STATE);	
+	public OperationStateSettingValue getSpecialState() {
+		return (OperationStateSettingValue) getProperty(PROPERTY_HAS_SPECIAL_STATE);	
 	}
-	public void setSpecialState(OperationStatusValue msg) {
+	public void setSpecialState(OperationStateSettingValue msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_SPECIAL_STATE, msg);	
 	}

@@ -20,8 +20,6 @@ package org.universAAL.ontology.echonetontology.sensorRelatedDevices;
 
 import org.universAAL.ontology.echonetontology.EchonetOntology;
 import org.universAAL.ontology.echonetontology.EchonetSuperDevice;
-import org.universAAL.ontology.echonetontology.values.LocationValue;
-import org.universAAL.ontology.echonetontology.values.MeasuredValue;
 public class HumanBodyLocationSensor extends EchonetSuperDevice{
 	public static final String MY_URI = EchonetOntology.NAMESPACE + "HumanBodyLocationSensor";
 	public static final String PROPERTY_HAS_HUMAN_DETECTION_LOCATION_1 = EchonetOntology.NAMESPACE + "hasHumanBodyDetectionLocation1";
@@ -48,29 +46,29 @@ public class HumanBodyLocationSensor extends EchonetSuperDevice{
 		return true;
 	}
 	
-	public LocationValue getHumanBodyDetectionLocation1() {
-		return (LocationValue) getProperty(PROPERTY_HAS_HUMAN_DETECTION_LOCATION_1);	
+	public String getHumanBodyDetectionLocation1() {
+		return  getProperty(PROPERTY_HAS_HUMAN_DETECTION_LOCATION_1).toString();	
 	}
-	public void setHumanBodyDetectionLocation1(LocationValue msg) {
+	public void setHumanBodyDetectionLocation1(String msg) {
 		if(msg !=null)
 			changeProperty(PROPERTY_HAS_HUMAN_DETECTION_LOCATION_1,msg);	
 	}
-	public LocationValue getHumanBodyDetectionLocation2() {
-		return (LocationValue) getProperty(PROPERTY_HAS_HUMAN_DETECTION_LOCATION_2);	
+	public String getHumanBodyDetectionLocation2() {
+		return  getProperty(PROPERTY_HAS_HUMAN_DETECTION_LOCATION_2).toString();	
 	}
-	public void setHumanBodyDetectionLocation2(LocationValue msg) {
+	public void setHumanBodyDetectionLocation2(String msg) {
 		if(msg !=null)
 			changeProperty(PROPERTY_HAS_HUMAN_DETECTION_LOCATION_2,msg);	
 	}
-	public MeasuredValue getMaxNumberofHumanBodyID() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_MAX_NUMBER_OF_HUMAN_BODY_ID);
+	public Integer getMaxNumberofHumanBodyID() {
+		return (Integer) getProperty(PROPERTY_HAS_MAX_NUMBER_OF_HUMAN_BODY_ID);
 	}
-	public void getMaxNumberofHumanBodyID(MeasuredValue msg) {
+	public void getMaxNumberofHumanBodyID(Integer msg) {
 		if(msg!=null)
 			changeProperty(PROPERTY_HAS_MAX_NUMBER_OF_HUMAN_BODY_ID, msg);	
 	}
 	public String getHumanBodyExistenceInfor() {
-		return (String) getProperty(PROPERTY_HAS_HUMAN_BODY_EXISTENCE_INFORMATION);
+		return  getProperty(PROPERTY_HAS_HUMAN_BODY_EXISTENCE_INFORMATION).toString();
 	}
 	public void setHumanBodyExistenceInfor(String msg) {
 		if(msg!=null)

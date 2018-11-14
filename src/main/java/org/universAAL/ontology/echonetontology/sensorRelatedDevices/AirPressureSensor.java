@@ -18,7 +18,6 @@ package org.universAAL.ontology.echonetontology.sensorRelatedDevices;
 
 import org.universAAL.ontology.echonetontology.EchonetOntology;
 import org.universAAL.ontology.echonetontology.EchonetSuperDevice;
-import org.universAAL.ontology.echonetontology.values.MeasuredValue;
 
 
 public class AirPressureSensor extends EchonetSuperDevice{
@@ -44,10 +43,10 @@ public class AirPressureSensor extends EchonetSuperDevice{
 		return true;
 	}
 	
-	public MeasuredValue getMeasuredAirPressure() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_MEASURED_AIR_PRESSURE);	
+	public Float getMeasuredAirPressure() {
+		return (Float) getProperty(PROPERTY_HAS_MEASURED_AIR_PRESSURE);	
 	}
-	public void setMeasuredAirPressure(MeasuredValue msg) {
+	public void setMeasuredAirPressure(Float msg) {
 		if(msg !=null)
 			changeProperty(PROPERTY_HAS_MEASURED_AIR_PRESSURE,msg);	
 	}

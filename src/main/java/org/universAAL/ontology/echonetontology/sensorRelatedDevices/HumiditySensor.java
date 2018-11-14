@@ -18,7 +18,6 @@ package org.universAAL.ontology.echonetontology.sensorRelatedDevices;
 
 import org.universAAL.ontology.echonetontology.EchonetOntology;
 import org.universAAL.ontology.echonetontology.EchonetSuperDevice;
-import org.universAAL.ontology.echonetontology.values.MeasuredValue;
 
 
 public class HumiditySensor extends EchonetSuperDevice{
@@ -44,10 +43,10 @@ public class HumiditySensor extends EchonetSuperDevice{
 		return true;
 	}
 	
-	public MeasuredValue getMeasuredRelatedHimidityValue() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_MEASURED_RELATIVE_HUMIDITY_VALUE);	
+	public Integer getMeasuredRelatedHimidityValue() {
+		return (Integer) getProperty(PROPERTY_HAS_MEASURED_RELATIVE_HUMIDITY_VALUE);	
 	}
-	public void setMeasuredRelatedHimidityValue(MeasuredValue msg) {
+	public void setMeasuredRelatedHimidityValue(Integer msg) {
 		if(msg !=null)
 			changeProperty(PROPERTY_HAS_MEASURED_RELATIVE_HUMIDITY_VALUE,msg);	
 	}

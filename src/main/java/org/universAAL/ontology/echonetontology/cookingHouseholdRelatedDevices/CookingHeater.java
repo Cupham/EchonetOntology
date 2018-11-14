@@ -20,8 +20,6 @@ package org.universAAL.ontology.echonetontology.cookingHouseholdRelatedDevices;
 
 import org.universAAL.ontology.echonetontology.EchonetOntology;
 import org.universAAL.ontology.echonetontology.EchonetSuperDevice;
-import org.universAAL.ontology.echonetontology.values.DateTimeValue;
-import org.universAAL.ontology.echonetontology.values.MeasuredValue;
 import org.universAAL.ontology.echonetontology.values.OperationModeSettingValue;
 import org.universAAL.ontology.echonetontology.values.OperationStateSettingValue;
 import org.universAAL.ontology.echonetontology.values.OperationStatusValue;
@@ -52,10 +50,10 @@ public class CookingHeater extends EchonetSuperDevice{
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_CHILD_LOCK_SETTING, msg);	
 	}
-	public DateTimeValue getOffTimerSettingRelativeTime() {
-		return (DateTimeValue) getProperty(PROPERTY_HAS_OFF_TIMER_SETTING_RELATIVE_TIME);	
+	public String getOffTimerSettingRelativeTime() {
+		return getProperty(PROPERTY_HAS_OFF_TIMER_SETTING_RELATIVE_TIME).toString();	
 	}
-	public void setOffTimerSettingRelativeTime(DateTimeValue msg) {
+	public void setOffTimerSettingRelativeTime(String msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_OFF_TIMER_SETTING_RELATIVE_TIME, msg);	
 	}
@@ -68,17 +66,17 @@ public class CookingHeater extends EchonetSuperDevice{
 			changeProperty(PROPERTY_HAS_STOVE_HEATING_MODES_SETTING, msg);	
 	}
 	
-	public MeasuredValue getHeatingTemperatureSetting() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_HEATING_TEMPERATURE_SETTING);	
+	public Float getHeatingTemperatureSetting() {
+		return (Float) getProperty(PROPERTY_HAS_HEATING_TEMPERATURE_SETTING);	
 	}
-	public void setHeatingTemperatureSetting(MeasuredValue msg) {
+	public void setHeatingTemperatureSetting(Float msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_HEATING_TEMPERATURE_SETTING, msg);	
 	}
-	public MeasuredValue getHeatingPowerSetting() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_HEATING_POWER_SETTING);	
+	public Float getHeatingPowerSetting() {
+		return (Float) getProperty(PROPERTY_HAS_HEATING_POWER_SETTING);	
 	}
-	public void setHeatingPowerSetting(MeasuredValue msg) {
+	public void setHeatingPowerSetting(Float msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_HEATING_POWER_SETTING, msg);	
 	}

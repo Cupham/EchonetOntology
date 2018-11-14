@@ -19,7 +19,6 @@ package org.universAAL.ontology.echonetontology.airconditionerRelatedDevices;
 
 import org.universAAL.ontology.echonetontology.EchonetOntology;
 import org.universAAL.ontology.echonetontology.EchonetSuperDevice;
-import org.universAAL.ontology.echonetontology.values.MeasuredValue;
 import org.universAAL.ontology.echonetontology.values.OperationStateSettingValue;
 
 public class PackageTypeCommercialAirConditionerOutdoorUnit extends EchonetSuperDevice{
@@ -42,31 +41,31 @@ public class PackageTypeCommercialAirConditionerOutdoorUnit extends EchonetSuper
 	public static final String PROPERTY_HAS_MINUMUM_POWER_CONSUMPTION_FOR_RESTRICTED_OUTDOOR_UNIT = EchonetOntology.NAMESPACE + 
 			"hasMinimumPowerConsumptionForRestrictedOutdoorUnit";
 	
-	public MeasuredValue getMinimumPowerConsumptionForRestrictedOutdoorUnit() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_MINUMUM_POWER_CONSUMPTION_FOR_RESTRICTED_OUTDOOR_UNIT);	
+	public Integer getMinimumPowerConsumptionForRestrictedOutdoorUnit() {
+		return (Integer) getProperty(PROPERTY_HAS_MINUMUM_POWER_CONSUMPTION_FOR_RESTRICTED_OUTDOOR_UNIT);	
 	}
-	public void setMinimumPowerConsumptionForRestrictedOutdoorUnit(MeasuredValue msg) {
+	public void setMinimumPowerConsumptionForRestrictedOutdoorUnit(Integer msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_MINUMUM_POWER_CONSUMPTION_FOR_RESTRICTED_OUTDOOR_UNIT, msg);	
 	}
-	public MeasuredValue getSettingRestrictingPowerConsumptionForOutdoorUnit() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_SETTING_RESTRICTING_POWER_CONSUMPTION_FOR_OUTDOOR_UNIT);	
+	public Integer getSettingRestrictingPowerConsumptionForOutdoorUnit() {
+		return (Integer) getProperty(PROPERTY_HAS_SETTING_RESTRICTING_POWER_CONSUMPTION_FOR_OUTDOOR_UNIT);	
 	}
-	public void setSettingRestrictingPowerConsumptionForOutdoorUnit(MeasuredValue msg) {
+	public void setSettingRestrictingPowerConsumptionForOutdoorUnit(Integer msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_SETTING_RESTRICTING_POWER_CONSUMPTION_FOR_OUTDOOR_UNIT, msg);	
 	}
-	public MeasuredValue getPossiblePowerSavingForOutdoorUnit() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_POSSIBLE_POWER_SAVING_FOR_OUTDOOR_UNIT);	
+	public Integer getPossiblePowerSavingForOutdoorUnit() {
+		return (Integer) getProperty(PROPERTY_HAS_POSSIBLE_POWER_SAVING_FOR_OUTDOOR_UNIT);	
 	}
-	public void setPossiblePowerSavingForOutdoorUnit(MeasuredValue msg) {
+	public void setPossiblePowerSavingForOutdoorUnit(Integer msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_POSSIBLE_POWER_SAVING_FOR_OUTDOOR_UNIT, msg);	
 	}
-	public MeasuredValue getMeasuredOutdoorUnitPowerConsumption() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_MEASURED_OUTDOOR_UNIT_POWER_CONSUMPTION);	
+	public Integer getMeasuredOutdoorUnitPowerConsumption() {
+		return (Integer) getProperty(PROPERTY_HAS_MEASURED_OUTDOOR_UNIT_POWER_CONSUMPTION);	
 	}
-	public void setMeasuredOutdoorUnitPowerConsumption(MeasuredValue msg) {
+	public void setMeasuredOutdoorUnitPowerConsumption(Integer msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_MEASURED_OUTDOOR_UNIT_POWER_CONSUMPTION, msg);	
 	}
@@ -84,17 +83,17 @@ public class PackageTypeCommercialAirConditionerOutdoorUnit extends EchonetSuper
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_SPECIAL_STATE, msg);	
 	}
-	public MeasuredValue getMeasuredOutdoorUnitTemperature() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_MEASURED_OUTDOOR_UNIT_TEMPERATURE);	
+	public Float getMeasuredOutdoorUnitTemperature() {
+		return (Float) getProperty(PROPERTY_HAS_MEASURED_OUTDOOR_UNIT_TEMPERATURE);	
 	}
-	public void setMeasuredOutdoorUnitTemperature(MeasuredValue msg) {
+	public void setMeasuredOutdoorUnitTemperature(Float msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_MEASURED_OUTDOOR_UNIT_TEMPERATURE, msg);	
 	}
-	public MeasuredValue getOutDoorUnitRatedPowerConsumption() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_OUTDOOR_UNIT_RATED_POWER_CONSUMPTION);	
+	public Integer getOutDoorUnitRatedPowerConsumption() {
+		return (Integer) getProperty(PROPERTY_HAS_OUTDOOR_UNIT_RATED_POWER_CONSUMPTION);	
 	}
-	public void setOutDoorUnitRatedPowerConsumption(MeasuredValue msg) {
+	public void setOutDoorUnitRatedPowerConsumption(Integer msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_OUTDOOR_UNIT_RATED_POWER_CONSUMPTION, msg);	
 	}

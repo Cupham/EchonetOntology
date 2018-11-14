@@ -18,7 +18,6 @@ package org.universAAL.ontology.echonetontology.sensorRelatedDevices;
 
 import org.universAAL.ontology.echonetontology.EchonetOntology;
 import org.universAAL.ontology.echonetontology.EchonetSuperDevice;
-import org.universAAL.ontology.echonetontology.values.MeasuredValue;
 import org.universAAL.ontology.echonetontology.values.OccurenceStatusValue;
 import org.universAAL.ontology.echonetontology.values.ThresholdLevelValue;
 
@@ -61,10 +60,10 @@ public class OdorSensor extends EchonetSuperDevice{
 		if(msg !=null)
 			changeProperty(PROPERTY_HAS_ODOR_DETECTION_STATUS,msg);	
 	}
-	public MeasuredValue getMeasuredOdorValue() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_MEASURED_ODOR_VALUE);	
+	public Integer getMeasuredOdorValue() {
+		return (Integer) getProperty(PROPERTY_HAS_MEASURED_ODOR_VALUE);	
 	}
-	public void setMeasuredOdorValue(MeasuredValue msg) {
+	public void setMeasuredOdorValue(Integer msg) {
 		if(msg!= null)
 			changeProperty(PROPERTY_HAS_MEASURED_ODOR_VALUE,msg);	
 	}

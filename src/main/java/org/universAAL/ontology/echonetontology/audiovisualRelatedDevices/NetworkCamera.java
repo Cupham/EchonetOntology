@@ -21,7 +21,7 @@ package org.universAAL.ontology.echonetontology.audiovisualRelatedDevices;
 import org.universAAL.ontology.echonetontology.EchonetOntology;
 import org.universAAL.ontology.echonetontology.EchonetSuperDevice;
 import org.universAAL.ontology.echonetontology.values.OperationStateSettingValue;
-import org.universAAL.ontology.echonetontology.values.TransferSettingValue;
+import org.universAAL.ontology.echonetontology.values.TransferingMethods;
 
 public class NetworkCamera extends EchonetSuperDevice{
 	public static final String MY_URI = EchonetOntology.NAMESPACE + "NetworkCamera";
@@ -30,13 +30,21 @@ public class NetworkCamera extends EchonetSuperDevice{
 	public static final String PROPERTY_SET_STILL_IMAGE_PHOTOGRAPHY_SETTING =  EchonetOntology.NAMESPACE + "setStillImagePhotographySetting";
 	public static final String PROPERTY_HAS_TRANSFER_SETTING= EchonetOntology.NAMESPACE + "hasTransferSetting";
 	
-	public TransferSettingValue getTransferSetting() {
-		return (TransferSettingValue) getProperty(PROPERTY_HAS_TRANSFER_SETTING);	
+	public TransferingMethods getTransferSetting() {
+		return (TransferingMethods) getProperty(PROPERTY_HAS_TRANSFER_SETTING);	
 	}
-	public void setTransferSetting(TransferSettingValue msg) {
+	public void setTransferSetting(TransferingMethods msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_TRANSFER_SETTING, msg);	
 	}
+	public Boolean getStillImagePhotographySetting() {
+		return (Boolean) getProperty(PROPERTY_SET_STILL_IMAGE_PHOTOGRAPHY_SETTING);	
+	}
+	public void setStillImagePhotographySetting(Boolean msg) {
+		if(msg !=null) 
+			changeProperty(PROPERTY_SET_STILL_IMAGE_PHOTOGRAPHY_SETTING, msg);	
+	}
+	
 	public OperationStateSettingValue getStillImagePhotographySettingAcceptanceStatus() {
 		return (OperationStateSettingValue) getProperty(PROPERTY_HAS_STILL_IMAGE_PHOTOGRAPHY_SETTING_ACCEPTANCE_STATUS);	
 	}

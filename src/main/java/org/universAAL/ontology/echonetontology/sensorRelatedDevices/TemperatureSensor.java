@@ -18,7 +18,6 @@ package org.universAAL.ontology.echonetontology.sensorRelatedDevices;
 
 import org.universAAL.ontology.echonetontology.EchonetOntology;
 import org.universAAL.ontology.echonetontology.EchonetSuperDevice;
-import org.universAAL.ontology.echonetontology.values.MeasuredValue;
 
 
 public class TemperatureSensor extends EchonetSuperDevice{
@@ -43,10 +42,10 @@ public class TemperatureSensor extends EchonetSuperDevice{
 		return true;
 	}
 	
-	public MeasuredValue getMeasuredTemperatureValue() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_MEASURED_TEMPERATURE_VALUE);	
+	public Float getMeasuredTemperatureValue() {
+		return (Float) getProperty(PROPERTY_HAS_MEASURED_TEMPERATURE_VALUE);	
 	}
-	public void setMeasuredTemperatureValue(MeasuredValue msg) {
+	public void setMeasuredTemperatureValue(Float msg) {
 		if(msg !=null)
 			changeProperty(PROPERTY_HAS_MEASURED_TEMPERATURE_VALUE,msg);	
 	}

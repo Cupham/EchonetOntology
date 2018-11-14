@@ -18,7 +18,6 @@ package org.universAAL.ontology.echonetontology.sensorRelatedDevices;
 
 import org.universAAL.ontology.echonetontology.EchonetOntology;
 import org.universAAL.ontology.echonetontology.EchonetSuperDevice;
-import org.universAAL.ontology.echonetontology.values.MeasuredValue;
 
 public class CO2Sensor extends EchonetSuperDevice{
 	public static final String MY_URI = EchonetOntology.NAMESPACE + "Co2Sensor";
@@ -44,10 +43,10 @@ public class CO2Sensor extends EchonetSuperDevice{
 	}
 	
 
-	public MeasuredValue getCO2ConcentrationMeasuredValue() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_MEASURED_VALUE_OF_CO2_CONCENTRATION);	
+	public Integer getCO2ConcentrationMeasuredValue() {
+		return (Integer) getProperty(PROPERTY_HAS_MEASURED_VALUE_OF_CO2_CONCENTRATION);	
 	}
-	public void setCO2ConcentrationMeasuredValue(MeasuredValue msg) {
+	public void setCO2ConcentrationMeasuredValue(Integer msg) {
 		if(msg !=null)
 			changeProperty(PROPERTY_HAS_MEASURED_VALUE_OF_CO2_CONCENTRATION,msg);	
 	}

@@ -18,7 +18,6 @@ package org.universAAL.ontology.echonetontology.sensorRelatedDevices;
 
 import org.universAAL.ontology.echonetontology.EchonetOntology;
 import org.universAAL.ontology.echonetontology.EchonetSuperDevice;
-import org.universAAL.ontology.echonetontology.values.MeasuredValue;
 
 
 public class PressureSensor extends EchonetSuperDevice{
@@ -44,10 +43,10 @@ public class PressureSensor extends EchonetSuperDevice{
 		return true;
 	}
 	
-	public MeasuredValue getMeasuredDiffirentialPressureValue() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_MEASURED_DIFFIRENTIAL_PRESSURE_VALUE);	
+	public Integer getMeasuredDiffirentialPressureValue() {
+		return (Integer) getProperty(PROPERTY_HAS_MEASURED_DIFFIRENTIAL_PRESSURE_VALUE);	
 	}
-	public void setMeasuredDiffirentialPressureValue(MeasuredValue msg) {
+	public void setMeasuredDiffirentialPressureValue(Integer msg) {
 		if(msg !=null)
 			changeProperty(PROPERTY_HAS_MEASURED_DIFFIRENTIAL_PRESSURE_VALUE,msg);	
 	}

@@ -18,7 +18,6 @@ package org.universAAL.ontology.echonetontology.sensorRelatedDevices;
 
 import org.universAAL.ontology.echonetontology.EchonetOntology;
 import org.universAAL.ontology.echonetontology.EchonetSuperDevice;
-import org.universAAL.ontology.echonetontology.values.MeasuredValue;
 
 public class IlluminanceSensor extends EchonetSuperDevice{
 	public static final String MY_URI = EchonetOntology.NAMESPACE + "IlluminanceSensor";
@@ -46,18 +45,18 @@ public class IlluminanceSensor extends EchonetSuperDevice{
 	}
 	
 
-	public MeasuredValue getMeasuredIlluminanceValueInLux() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_MEASURED_ILLUMINANCE_VALUE_1);	
+	public Integer getMeasuredIlluminanceValueInLux() {
+		return (Integer) getProperty(PROPERTY_HAS_MEASURED_ILLUMINANCE_VALUE_1);	
 	}
-	public void setMeasuredIlluminanceValueInLux(MeasuredValue msg) {
+	public void setMeasuredIlluminanceValueInLux(Integer msg) {
 		if(msg !=null)
 			changeProperty(PROPERTY_HAS_MEASURED_ILLUMINANCE_VALUE_1,msg);	
 	}
 	
-	public MeasuredValue getMeasuredIlluminanceValueInKLux() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_MEASURED_ILLUMINANCE_VALUE_2);	
+	public Integer getMeasuredIlluminanceValueInKLux() {
+		return (Integer) getProperty(PROPERTY_HAS_MEASURED_ILLUMINANCE_VALUE_2);	
 	}
-	public void setMeasuredIlluminanceValueInKLux(MeasuredValue msg) {
+	public void setMeasuredIlluminanceValueInKLux(Integer msg) {
 		if(msg !=null)
 			changeProperty(PROPERTY_HAS_MEASURED_ILLUMINANCE_VALUE_2,msg);	
 	}

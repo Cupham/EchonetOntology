@@ -20,7 +20,6 @@ package org.universAAL.ontology.echonetontology.sensorRelatedDevices;
 
 import org.universAAL.ontology.echonetontology.EchonetOntology;
 import org.universAAL.ontology.echonetontology.EchonetSuperDevice;
-import org.universAAL.ontology.echonetontology.values.MeasuredValue;
 import org.universAAL.ontology.echonetontology.values.OccurenceStatusValue;
 import org.universAAL.ontology.echonetontology.values.ThresholdLevelValue;
 
@@ -65,24 +64,24 @@ public class MicromotionSensor extends EchonetSuperDevice{
 		if(msg !=null)
 			changeProperty(PROPERTY_HAS_MICROMOTION_DETECTION_STATUS,msg);	
 	}
-	public MeasuredValue getDetectionCounter() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_DETECTION_COUNTER);	
+	public Integer getDetectionCounter() {
+		return (Integer) getProperty(PROPERTY_HAS_DETECTION_COUNTER);	
 	}
-	public void setDetectionCounter(MeasuredValue msg) {
+	public void setDetectionCounter(Integer msg) {
 		if(msg !=null)
 			changeProperty(PROPERTY_HAS_DETECTION_COUNTER,msg);	
 	}
-	public MeasuredValue getSamplingCount() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_MICROMOTION_SAMPLING_COUNT);	
+	public Integer getSamplingCount() {
+		return (Integer) getProperty(PROPERTY_HAS_MICROMOTION_SAMPLING_COUNT);	
 	}
-	public void setSamplingCount(MeasuredValue msg) {
+	public void setSamplingCount(Integer msg) {
 		if(msg !=null)
 			changeProperty(PROPERTY_HAS_MICROMOTION_SAMPLING_COUNT,msg);	
 	}
-	public MeasuredValue getSamplingCycle() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_MICROMOTION_SAMPLING_CYCLE);	
+	public Integer getSamplingCycle() {
+		return (Integer) getProperty(PROPERTY_HAS_MICROMOTION_SAMPLING_CYCLE);	
 	}
-	public void setSamplingCycle(MeasuredValue msg) {
+	public void setSamplingCycle(Integer msg) {
 		if(msg !=null)
 			changeProperty(PROPERTY_HAS_MICROMOTION_SAMPLING_CYCLE,msg);	
 	}

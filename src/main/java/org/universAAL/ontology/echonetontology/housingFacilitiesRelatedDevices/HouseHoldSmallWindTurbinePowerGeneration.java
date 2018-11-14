@@ -20,7 +20,6 @@ package org.universAAL.ontology.echonetontology.housingFacilitiesRelatedDevices;
 
 import org.universAAL.ontology.echonetontology.EchonetOntology;
 import org.universAAL.ontology.echonetontology.EchonetSuperDevice;
-import org.universAAL.ontology.echonetontology.values.MeasuredValue;
 import org.universAAL.ontology.echonetontology.values.OperationFunctionSettingValue;
 import org.universAAL.ontology.echonetontology.values.OperationStatusValue;
 
@@ -50,87 +49,87 @@ public class HouseHoldSmallWindTurbinePowerGeneration extends EchonetSuperDevice
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_BARKING_STATUS, msg);	
 	}
-	public MeasuredValue getExtremeWindSpeed() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_EXTREME_WIND_SPEED);	
+	public Float getExtremeWindSpeed() {
+		return (Float) getProperty(PROPERTY_HAS_EXTREME_WIND_SPEED);	
 	}
-	public void setExtremeWindSpeed(MeasuredValue msg) {
+	public void setExtremeWindSpeed(Float msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_EXTREME_WIND_SPEED, msg);	
 	}
-	public MeasuredValue getCutOutWindSpeed() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_CUT_OUT_WIND_SPEED);	
+	public Float getCutOutWindSpeed() {
+		return (Float) getProperty(PROPERTY_HAS_CUT_OUT_WIND_SPEED);	
 	}
-	public void setCutOutWindSpeed(MeasuredValue msg) {
+	public void setCutOutWindSpeed(Float msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_CUT_OUT_WIND_SPEED, msg);	
 	}	
-	public MeasuredValue getCutInWindSpeed() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_CUT_IN_WIND_SPEED);	
+	public Float getCutInWindSpeed() {
+		return (Float) getProperty(PROPERTY_HAS_CUT_IN_WIND_SPEED);	
 	}
-	public void setCutInWindSpeed(MeasuredValue msg) {
+	public void setCutInWindSpeed(Float msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_CUT_IN_WIND_SPEED, msg);	
 	}
-	public MeasuredValue getRatedWindSpeed() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_RATED_WIND_SPEED);	
+	public Float getRatedWindSpeed() {
+		return (Float) getProperty(PROPERTY_HAS_RATED_WIND_SPEED);	
 	}
-	public void setRatedWindSpeed(MeasuredValue msg) {
+	public void setRatedWindSpeed(Float msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_RATED_WIND_SPEED, msg);	
 	}
-	public MeasuredValue getMeasuredWindSpeed() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_MEASURED_WIND_SPEED);	
+	public Float getMeasuredWindSpeed() {
+		return (Float) getProperty(PROPERTY_HAS_MEASURED_WIND_SPEED);	
 	}
-	public void setMeasuredWindSpeed(MeasuredValue msg) {
+	public void setMeasuredWindSpeed(Float msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_MEASURED_WIND_SPEED, msg);	
 	}
-	public MeasuredValue getRatedPower() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_RATED_POWER);	
+	public Float getRatedPower() {
+		return (Float) getProperty(PROPERTY_HAS_RATED_POWER);	
 	}
-	public void setRatedPower(MeasuredValue msg) {
+	public void setRatedPower(Float msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_RATED_POWER, msg);	
 	}
-	public MeasuredValue getAmoundOfElectricitySoldLimitSetting() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_AMOUNT_OF_ELECTRICITY_SOLD_LIMIT_SETTING);	
+	public Float getAmoundOfElectricitySoldLimitSetting() {
+		return (Float) getProperty(PROPERTY_HAS_AMOUNT_OF_ELECTRICITY_SOLD_LIMIT_SETTING);	
 	}
-	public void setAmoundOfElectricitySoldLimitSetting(MeasuredValue msg) {
+	public void setAmoundOfElectricitySoldLimitSetting(Float msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_AMOUNT_OF_ELECTRICITY_SOLD_LIMIT_SETTING, msg);	
 	}
-	public MeasuredValue getPowerGenerationOutputLimitSetting2() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_POWER_GENERATION_OUTPUT_LIMIT_SETTING_2);	
+	public Float getPowerGenerationOutputLimitSetting2() {
+		return (Float) getProperty(PROPERTY_HAS_POWER_GENERATION_OUTPUT_LIMIT_SETTING_2);	
 	}
-	public void setPowerGenerationOutputLimitSetting2(MeasuredValue msg) {
+	public void setPowerGenerationOutputLimitSetting2(Float msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_POWER_GENERATION_OUTPUT_LIMIT_SETTING_2, msg);	
 	}
-	public MeasuredValue getPowerGenerationOutputLimitSetting1() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_POWER_GENERATION_OUTPUT_LIMIT_SETTING_1);	
+	public Float getPowerGenerationOutputLimitSetting1() {
+		return (Float) getProperty(PROPERTY_HAS_POWER_GENERATION_OUTPUT_LIMIT_SETTING_1);	
 	}
-	public void setPowerGenerationOutputLimitSetting1(MeasuredValue msg) {
+	public void setPowerGenerationOutputLimitSetting1(Float msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_POWER_GENERATION_OUTPUT_LIMIT_SETTING_1, msg);	
 	}
-	public MeasuredValue getMeasuredCumulativeSoldElectricityAmount() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_MEASURED_CUMULATIVE_SOLD_ELECTRICITY_AMOUNT);	
+	public Float getMeasuredCumulativeSoldElectricityAmount() {
+		return (Float) getProperty(PROPERTY_HAS_MEASURED_CUMULATIVE_SOLD_ELECTRICITY_AMOUNT);	
 	}
-	public void setMeasuredCumulativeSoldElectricityAmount(MeasuredValue msg) {
+	public void setMeasuredCumulativeSoldElectricityAmount(Float msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_MEASURED_CUMULATIVE_SOLD_ELECTRICITY_AMOUNT, msg);	
 	}
-	public MeasuredValue getMeasuredCumulativeGeneratedElectricityAmount() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_MEASURED_CUMULATIVE_GENERATED_ELECTRICITY_AMOUNT);	
+	public Float getMeasuredCumulativeGeneratedElectricityAmount() {
+		return (Float) getProperty(PROPERTY_HAS_MEASURED_CUMULATIVE_GENERATED_ELECTRICITY_AMOUNT);	
 	}
-	public void setMeasuredCumulativeGeneratedElectricityAmount(MeasuredValue msg) {
+	public void setMeasuredCumulativeGeneratedElectricityAmount(Float msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_MEASURED_CUMULATIVE_GENERATED_ELECTRICITY_AMOUNT, msg);	
 	}
-	public MeasuredValue getMeasuredInstantaneousGeneratedElectricityAmount() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_MEASURED_INSTANTANEOUS_GENERATED_ELECTRICITY_AMOUNT);	
+	public Float getMeasuredInstantaneousGeneratedElectricityAmount() {
+		return (Float) getProperty(PROPERTY_HAS_MEASURED_INSTANTANEOUS_GENERATED_ELECTRICITY_AMOUNT);	
 	}
-	public void setMeasuredInstantaneousGeneratedElectricityAmount(MeasuredValue msg) {
+	public void setMeasuredInstantaneousGeneratedElectricityAmount(Float msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_MEASURED_INSTANTANEOUS_GENERATED_ELECTRICITY_AMOUNT, msg);	
 	}

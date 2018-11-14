@@ -21,13 +21,10 @@ package org.universAAL.ontology.echonetontology.cookingHouseholdRelatedDevices;
 import org.universAAL.ontology.echonetontology.EchonetOntology;
 import org.universAAL.ontology.echonetontology.EchonetSuperDevice;
 import org.universAAL.ontology.echonetontology.values.AutomaticHeatingMenu;
-import org.universAAL.ontology.echonetontology.values.DateTimeValue;
-import org.universAAL.ontology.echonetontology.values.MeasuredValue;
 import org.universAAL.ontology.echonetontology.values.OperationModeSettingValue;
 import org.universAAL.ontology.echonetontology.values.OperationStateSettingValue;
 import org.universAAL.ontology.echonetontology.values.OperationStatusValue;
 import org.universAAL.ontology.echonetontology.values.ThresholdLevelValue;
-import org.universAAL.ontology.echonetontology.values.TwoStageMicrowaveSettingValue;
 
 public class CombinationMicrowaveOven extends EchonetSuperDevice{
 	public static final String MY_URI = EchonetOntology.NAMESPACE + "CombinationMicrowaveOven";
@@ -66,73 +63,73 @@ public class CombinationMicrowaveOven extends EchonetSuperDevice{
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_AUTOMATIC_HEATING_LEVEL_SETTING, msg);	
 	}
-	public TwoStageMicrowaveSettingValue getTwoStageMicrowaveHeatingPower() {
-		return (TwoStageMicrowaveSettingValue) getProperty(PROPERTY_HAS_TWO_STAGE_MICROWAVE_HEATING_POWER);	
+	public String getTwoStageMicrowaveHeatingPower() {
+		return  getProperty(PROPERTY_HAS_TWO_STAGE_MICROWAVE_HEATING_POWER).toString();	
 	}
-	public void setTwoStageMicrowaveHeatingPower(TwoStageMicrowaveSettingValue msg) {
+	public void setTwoStageMicrowaveHeatingPower(String msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_TWO_STAGE_MICROWAVE_HEATING_POWER, msg);	
 	}
-	public TwoStageMicrowaveSettingValue setTwoStageMicrowaveHeatingDuration() {
-		return (TwoStageMicrowaveSettingValue) getProperty(PROPERTY_HAS_TWO_STAGE_MICROWAVE_HEATING_DURATION);	
+	public String setTwoStageMicrowaveHeatingDuration() {
+		return  getProperty(PROPERTY_HAS_TWO_STAGE_MICROWAVE_HEATING_DURATION).toString();	
 	}
-	public void setTwoStageMicrowaveHeatingDuration(TwoStageMicrowaveSettingValue msg) {
+	public void setTwoStageMicrowaveHeatingDuration(String msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_TWO_STAGE_MICROWAVE_HEATING_DURATION, msg);	
 	}
 	public String getDisplayCharacterStringSetting() {
-		return (String) getProperty(PROPERTY_HAS_DISPLAY_CHARACTER_STRING_SETTING);	
+		return  getProperty(PROPERTY_HAS_DISPLAY_CHARACTER_STRING_SETTING).toString();	
 	}
 	public void setDisplayCharacterStringSetting(String msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_DISPLAY_CHARACTER_STRING_SETTING, msg);	
 	}
 	public String getAccessoriestoCombinationMicrowaveOvenSetting() {
-		return (String) getProperty(PROPERTY_HAS_ACCESSORIES_TO_COMBINATION_MICROWAVE_OVEN_SETTING);	
+		return  getProperty(PROPERTY_HAS_ACCESSORIES_TO_COMBINATION_MICROWAVE_OVEN_SETTING).toString();	
 	}
 	public void setAccessoriestoCombinationMicrowaveOvenSetting(String msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_ACCESSORIES_TO_COMBINATION_MICROWAVE_OVEN_SETTING, msg);	
 	}
 	public String getPromptMessageSettingSetting() {
-		return (String) getProperty(PROPERTY_HAS_PROMPT_MESSAGE_SETTING);	
+		return  getProperty(PROPERTY_HAS_PROMPT_MESSAGE_SETTING).toString();	
 	}
 	public void setPromptMessageSettingSetting(String msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_PROMPT_MESSAGE_SETTING, msg);	
 	}
-	public MeasuredValue getMicrowaveHeatingPowerSetting() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_MICROWAVE_HEATING_POWER_SETTING);	
+	public Float getMicrowaveHeatingPowerSetting() {
+		return (Float) getProperty(PROPERTY_HAS_MICROWAVE_HEATING_POWER_SETTING);	
 	}
-	public void setMicrowaveHeatingPowerSetting(MeasuredValue msg) {
+	public void setMicrowaveHeatingPowerSetting(Float msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_MICROWAVE_HEATING_POWER_SETTING, msg);	
 	}
-	public DateTimeValue getRemainingHeatingTime() {
-		return (DateTimeValue) getProperty(PROPERTY_HAS_REMAINING_HEATING_TIME);	
+	public String getRemainingHeatingTime() {
+		return  getProperty(PROPERTY_HAS_REMAINING_HEATING_TIME).toString();	
 	}
-	public void setRemainingHeatingTime(DateTimeValue msg) {
+	public void setRemainingHeatingTime(String msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_REMAINING_HEATING_TIME, msg);	
 	}
-	public DateTimeValue getHeatingSettingTime() {
-		return (DateTimeValue) getProperty(PROPERTY_HAS_HEATING_SETTING_TIME);	
+	public String getHeatingSettingTime() {
+		return getProperty(PROPERTY_HAS_HEATING_SETTING_TIME).toString();	
 	}
-	public void setHeatingSettingTime(DateTimeValue msg) {
+	public void setHeatingSettingTime(String msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_HEATING_SETTING_TIME, msg);	
 	}
-	public MeasuredValue getFoodTemperatureSetting() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_FOOD_TEMPERATURE_SETTING);	
+	public Float getFoodTemperatureSetting() {
+		return (Float) getProperty(PROPERTY_HAS_FOOD_TEMPERATURE_SETTING);	
 	}
-	public void setFoodTemperatureSetting(MeasuredValue msg) {
+	public void setFoodTemperatureSetting(Float msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_FOOD_TEMPERATURE_SETTING, msg);	
 	}
-	public MeasuredValue getChamperTemperatureSetting() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_CHAMPER_TEMPERATURE_SETTING);	
+	public Float getChamperTemperatureSetting() {
+		return (Float) getProperty(PROPERTY_HAS_CHAMPER_TEMPERATURE_SETTING);	
 	}
-	public void setChamperTemperatureSetting(MeasuredValue msg) {
+	public void setChamperTemperatureSetting(Float msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_CHAMPER_TEMPERATURE_SETTING, msg);	
 	}

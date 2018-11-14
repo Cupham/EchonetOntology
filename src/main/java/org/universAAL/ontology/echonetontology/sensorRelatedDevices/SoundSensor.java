@@ -18,7 +18,6 @@ package org.universAAL.ontology.echonetontology.sensorRelatedDevices;
 
 import org.universAAL.ontology.echonetontology.EchonetOntology;
 import org.universAAL.ontology.echonetontology.EchonetSuperDevice;
-import org.universAAL.ontology.echonetontology.values.MeasuredValue;
 import org.universAAL.ontology.echonetontology.values.OccurenceStatusValue;
 import org.universAAL.ontology.echonetontology.values.ThresholdLevelValue;
 
@@ -61,10 +60,10 @@ public class SoundSensor extends EchonetSuperDevice{
 		if(msg !=null)
 			changeProperty(PROPERTY_HAS_SOUND_DETECTION_STATUS,msg);	
 	}
-	public MeasuredValue getSoundDectionHoldingTime() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_SOUND_DETECTION_HOLDING_TIME);	
+	public Integer getSoundDectionHoldingTime() {
+		return (Integer) getProperty(PROPERTY_HAS_SOUND_DETECTION_HOLDING_TIME);	
 	}
-	public void setSoundDectionHoldingTime(MeasuredValue msg) {
+	public void setSoundDectionHoldingTime(Integer msg) {
 		if(msg !=null)
 			changeProperty(PROPERTY_HAS_SOUND_DETECTION_HOLDING_TIME,msg);	
 	}

@@ -19,8 +19,6 @@ package org.universAAL.ontology.echonetontology.housingFacilitiesRelatedDevices;
 
 import org.universAAL.ontology.echonetontology.EchonetOntology;
 import org.universAAL.ontology.echonetontology.EchonetSuperDevice;
-import org.universAAL.ontology.echonetontology.values.DateTimeValue;
-import org.universAAL.ontology.echonetontology.values.MeasuredValue;
 import org.universAAL.ontology.echonetontology.values.OccurenceStatusValue;
 import org.universAAL.ontology.echonetontology.values.TypeClassificationValue;
 
@@ -36,22 +34,22 @@ public class WaterFlowMeter extends EchonetSuperDevice{
 	public static final String PROPERTY_HAS_ID_NUMBER_SETTING = EchonetOntology.NAMESPACE + "hasIDNumberSetting";
 	public static final String PROPERTY_VERIFICATION_EXPIRATION_INFORMATION= EchonetOntology.NAMESPACE + "hasVerificationExpirationInformation";
 	
-	public DateTimeValue getVerificationExpirationInformation() {
-		return (DateTimeValue) getProperty(PROPERTY_VERIFICATION_EXPIRATION_INFORMATION);	
+	public String getVerificationExpirationInformation() {
+		return  getProperty(PROPERTY_VERIFICATION_EXPIRATION_INFORMATION).toString();	
 	}
-	public void setVerificationExpirationInformation(DateTimeValue msg) {
+	public void setVerificationExpirationInformation(String msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_VERIFICATION_EXPIRATION_INFORMATION, msg);	
 	}
 	public String getIDNumberSetting() {
-		return (String) getProperty(PROPERTY_HAS_ID_NUMBER_SETTING);	
+		return  getProperty(PROPERTY_HAS_ID_NUMBER_SETTING).toString();	
 	}
 	public void setIDNumberSetting(String msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_ID_NUMBER_SETTING, msg);	
 	}
 	public String getSecurityDataInformation() {
-		return (String) getProperty(PROPERTY_HAS_SECURITY_DATA_INFORMATION);	
+		return  getProperty(PROPERTY_HAS_SECURITY_DATA_INFORMATION).toString();	
 	}
 	public void setSecurityDataInformation(String msg) {
 		if(msg !=null) 
@@ -64,24 +62,24 @@ public class WaterFlowMeter extends EchonetSuperDevice{
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_DETECTION_OF_ABNORMAL_VALUE_IN_METERING_DATA, msg);	
 	}
-	public MeasuredValue getMeasuredCummulativeFlowingWaterAmountHistoricalData() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_MEASURED_CUMMULATIVE_FLOWING_WATER_AMOUNT_HISTORICAL_DATA);	
+	public Float getMeasuredCummulativeFlowingWaterAmountHistoricalData() {
+		return (Float) getProperty(PROPERTY_HAS_MEASURED_CUMMULATIVE_FLOWING_WATER_AMOUNT_HISTORICAL_DATA);	
 	}
-	public void setMeasuredCummulativeFlowingWaterAmountHistoricalData(MeasuredValue msg) {
+	public void setMeasuredCummulativeFlowingWaterAmountHistoricalData(Float msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_MEASURED_CUMMULATIVE_FLOWING_WATER_AMOUNT_HISTORICAL_DATA, msg);	
 	}
 	public String getMeasuredCummulativeFlowingWaterAmountUnit() {
-		return (String) getProperty(PROPERTY_HAS_MEASURED_CUMMULATIVE_FLOWING_WATER_AMOUNT_UNIT);	
+		return  getProperty(PROPERTY_HAS_MEASURED_CUMMULATIVE_FLOWING_WATER_AMOUNT_UNIT).toString();	
 	}
 	public void setMeasuredCummulativeFlowingWaterAmountUnit(String msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_MEASURED_CUMMULATIVE_FLOWING_WATER_AMOUNT_UNIT, msg);	
 	}
-	public MeasuredValue getMeasuredCummulativeFlowingWaterAmount() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_MEASURED_CUMMULATIVE_FLOWING_WATER_AMOUNT);	
+	public Float getMeasuredCummulativeFlowingWaterAmount() {
+		return (Float) getProperty(PROPERTY_HAS_MEASURED_CUMMULATIVE_FLOWING_WATER_AMOUNT);	
 	}
-	public void setMeasuredCummulativeFlowingWaterAmount(MeasuredValue msg) {
+	public void setMeasuredCummulativeFlowingWaterAmount(Float msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_MEASURED_CUMMULATIVE_FLOWING_WATER_AMOUNT, msg);	
 	}

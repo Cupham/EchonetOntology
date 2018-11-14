@@ -20,7 +20,6 @@ package org.universAAL.ontology.echonetontology.cookingHouseholdRelatedDevices;
 
 import org.universAAL.ontology.echonetontology.EchonetOntology;
 import org.universAAL.ontology.echonetontology.EchonetSuperDevice;
-import org.universAAL.ontology.echonetontology.values.MeasuredValue;
 import org.universAAL.ontology.echonetontology.values.OperationFunctionSettingValue;
 import org.universAAL.ontology.echonetontology.values.OperationModeSettingValue;
 import org.universAAL.ontology.echonetontology.values.OperationStateSettingValue;
@@ -86,24 +85,24 @@ public class CommercialShowcase extends EchonetSuperDevice{
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_SHOWCASE_TYPE_INFORMATION, msg);	
 	}
-	public MeasuredValue getInsideTheCaseTemperatureSetting() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_INSIDE_THE_CASE_TEMPERATURE_SETTING);	
+	public Float getInsideTheCaseTemperatureSetting() {
+		return (Float) getProperty(PROPERTY_HAS_INSIDE_THE_CASE_TEMPERATURE_SETTING);	
 	}
-	public void setInsideTheCaseTemperatureSetting(MeasuredValue msg) {
+	public void setInsideTheCaseTemperatureSetting(Float msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_INSIDE_THE_CASE_TEMPERATURE_SETTING, msg);	
 	}
-	public MeasuredValue getOutsideTheCaseLightingIlluminanceLevel() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_OUTSIDE_THE_CASE_LIGHTING_ILLUMINANCE_LEVEL);	
+	public Float getOutsideTheCaseLightingIlluminanceLevel() {
+		return (Float) getProperty(PROPERTY_HAS_OUTSIDE_THE_CASE_LIGHTING_ILLUMINANCE_LEVEL);	
 	}
-	public void setOutsideTheCaseLightingIlluminanceLevel(MeasuredValue msg) {
+	public void setOutsideTheCaseLightingIlluminanceLevel(Float msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_OUTSIDE_THE_CASE_LIGHTING_ILLUMINANCE_LEVEL, msg);	
 	}
-	public MeasuredValue getInsideTheShowcaseLightingIlluminanceLevel() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_INSIDE_THE_SHOWCASE_LIGHTING_ILLUMINANCE_LEVEL);	
+	public Float getInsideTheShowcaseLightingIlluminanceLevel() {
+		return (Float) getProperty(PROPERTY_HAS_INSIDE_THE_SHOWCASE_LIGHTING_ILLUMINANCE_LEVEL);	
 	}
-	public void setInsideTheCaseLightingIlluminanceLevel(MeasuredValue msg) {
+	public void setInsideTheCaseLightingIlluminanceLevel(Float msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_INSIDE_THE_SHOWCASE_LIGHTING_ILLUMINANCE_LEVEL, msg);	
 	}
@@ -128,31 +127,31 @@ public class CommercialShowcase extends EchonetSuperDevice{
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_HEATER_MODE, msg);	
 	}
-	public MeasuredValue getFanMotorPowerConsumption() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_FAN_MOTER_POWER_CONSUMPTION);	
+	public Float getFanMotorPowerConsumption() {
+		return (Float) getProperty(PROPERTY_HAS_FAN_MOTER_POWER_CONSUMPTION);	
 	}
-	public void setFanMotorPowerConsumption(MeasuredValue msg) {
+	public void setFanMotorPowerConsumption(Float msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_FAN_MOTER_POWER_CONSUMPTION, msg);	
 	}
-	public MeasuredValue getDefrostingHeaterPowerConsumption() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_DEFROSTING_HEATER_POWER_CONSUMPTION);	
+	public Float getDefrostingHeaterPowerConsumption() {
+		return (Float) getProperty(PROPERTY_HAS_DEFROSTING_HEATER_POWER_CONSUMPTION);	
 	}
-	public void setDefrostingHeaterPowerConsumption(MeasuredValue msg) {
+	public void setDefrostingHeaterPowerConsumption(Float msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_DEFROSTING_HEATER_POWER_CONSUMPTION, msg);	
 	}
-	public MeasuredValue getFreezingCapabilityValue() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_FREEZING_CAPABILITY_VALUE);	
+	public Float getFreezingCapabilityValue() {
+		return (Float) getProperty(PROPERTY_HAS_FREEZING_CAPABILITY_VALUE);	
 	}
-	public void setFreezingCapabilityValue(MeasuredValue msg) {
+	public void setFreezingCapabilityValue(Float msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_FREEZING_CAPABILITY_VALUE, msg);	
 	}
-	public MeasuredValue getMeasuredInternalTemperature() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_MEASURED_INTERNAL_TEMPERATURE);	
+	public Float getMeasuredInternalTemperature() {
+		return (Float) getProperty(PROPERTY_HAS_MEASURED_INTERNAL_TEMPERATURE);	
 	}
-	public void setMeasuredInternalTemperature(MeasuredValue msg) {
+	public void setMeasuredInternalTemperature(Float msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_MEASURED_INTERNAL_TEMPERATURE, msg);	
 	}
@@ -184,10 +183,10 @@ public class CommercialShowcase extends EchonetSuperDevice{
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_GROUP_INFORMATION, msg);	
 	}
-	public MeasuredValue getMeasuredDischargeTemperature() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_MEASURED_DISCHARGE_TEMPERATURE);	
+	public Float getMeasuredDischargeTemperature() {
+		return (Float) getProperty(PROPERTY_HAS_MEASURED_DISCHARGE_TEMPERATURE);	
 	}
-	public void setMeasuredDischargeTemperature(MeasuredValue msg) {
+	public void setMeasuredDischargeTemperature(Float msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_MEASURED_DISCHARGE_TEMPERATURE, msg);	
 	}

@@ -21,10 +21,8 @@ package org.universAAL.ontology.echonetontology.audiovisualRelatedDevices;
 import org.universAAL.ontology.echonetontology.EchonetOntology;
 import org.universAAL.ontology.echonetontology.EchonetSuperDevice;
 import org.universAAL.ontology.echonetontology.values.CharacterCodes;
-import org.universAAL.ontology.echonetontology.values.MeasuredValue;
 import org.universAAL.ontology.echonetontology.values.OperationStateSettingValue;
 import org.universAAL.ontology.echonetontology.values.OperationStatusValue;
-import org.universAAL.ontology.echonetontology.values.SupportedCharacterCodesValue;
 
 public class Television extends EchonetSuperDevice{
 	public static final String MY_URI = EchonetOntology.NAMESPACE + "Television";
@@ -34,10 +32,10 @@ public class Television extends EchonetSuperDevice{
 	public static final String PROPERTY_HAS_CHARACTER_STRING_TO_PRESENT_TO_USER= EchonetOntology.NAMESPACE + "hasCharacterStringToPresentToUser";
 	public static final String PROPERTY_ACCEPTED_CHARACTER_STRING_LENGTH= EchonetOntology.NAMESPACE + "hasAcceptedCharacterStringLength";
 	
-	public MeasuredValue getAcceptedCharacterStringLength() {
-		return (MeasuredValue) getProperty(PROPERTY_ACCEPTED_CHARACTER_STRING_LENGTH);	
+	public Integer getAcceptedCharacterStringLength() {
+		return (Integer) getProperty(PROPERTY_ACCEPTED_CHARACTER_STRING_LENGTH);	
 	}
-	public void setAcceptedCharacterStringLength(MeasuredValue msg) {
+	public void setAcceptedCharacterStringLength(Integer msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_ACCEPTED_CHARACTER_STRING_LENGTH, msg);	
 	}
@@ -48,10 +46,10 @@ public class Television extends EchonetSuperDevice{
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_CHARACTER_STRING_TO_PRESENT_TO_USER, msg);	
 	}
-	public SupportedCharacterCodesValue getSupportedCharacterCodes() {
-		return (SupportedCharacterCodesValue) getProperty(PROPERTY_HAS_SUPPORTED_CHARACTER_CODES);	
+	public String getSupportedCharacterCodes() {
+		return  getProperty(PROPERTY_HAS_SUPPORTED_CHARACTER_CODES).toString();	
 	}
-	public void setSupportedCharacterCodes(SupportedCharacterCodesValue msg) {
+	public void setSupportedCharacterCodes(String msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_SUPPORTED_CHARACTER_CODES, msg);	
 	}

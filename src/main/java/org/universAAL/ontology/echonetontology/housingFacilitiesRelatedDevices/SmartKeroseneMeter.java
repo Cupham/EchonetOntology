@@ -19,8 +19,6 @@ package org.universAAL.ontology.echonetontology.housingFacilitiesRelatedDevices;
 
 import org.universAAL.ontology.echonetontology.EchonetOntology;
 import org.universAAL.ontology.echonetontology.EchonetSuperDevice;
-import org.universAAL.ontology.echonetontology.values.DateTimeValue;
-import org.universAAL.ontology.echonetontology.values.MeasuredValue;
 import org.universAAL.ontology.echonetontology.values.OccurenceStatusValue;
 import org.universAAL.ontology.echonetontology.values.ThresholdLevelValue;
 import org.universAAL.ontology.echonetontology.values.TypeClassificationValue;
@@ -42,69 +40,69 @@ public class SmartKeroseneMeter extends EchonetSuperDevice{
 	public static final String PROPERTY_HAS_SLIGHT_LEAK_TIMER_VALUE = EchonetOntology.NAMESPACE + "hasSlightLeakTimerValue";
 	public static final String PROPERTY_HAS_ID_NUMBER_SETTING = EchonetOntology.NAMESPACE + "hasIDNumberSetting";
 	public static final String PROPERTY_VERIFICATION_EXPIRATION_INFORMATION= EchonetOntology.NAMESPACE + "hasVerificationExpirationInformation";
-	public static final String PROPERTY_HAS_MEASURED_CUMULATIVE_KEROSENE_CONSUMPTION_INFORMATION_DATE_TIME_INCLUDED = EchonetOntology.NAMESPACE + "hasMeasuredCumulativeKeroseneConsumptionInformationDateTimeValueTimeIncluded";
-	public static final String PROPERTY_HAS_MEASURED_CUMULATIVE_KEROSENE_CONSUMPTION_HISTORICAL_INFORMATION_DATE_TIME_INCLUDED = EchonetOntology.NAMESPACE + "hasMeasuredCumulativeKeroseneConsumptionHistoricalInformationDateTimeValueTimeIncluded";
+	public static final String PROPERTY_HAS_MEASURED_CUMULATIVE_KEROSENE_CONSUMPTION_INFORMATION_DATE_TIME_INCLUDED = EchonetOntology.NAMESPACE + "hasMeasuredCumulativeKeroseneConsumptionInformationStringTimeIncluded";
+	public static final String PROPERTY_HAS_MEASURED_CUMULATIVE_KEROSENE_CONSUMPTION_HISTORICAL_INFORMATION_DATE_TIME_INCLUDED = EchonetOntology.NAMESPACE + "hasMeasuredCumulativeKeroseneConsumptionHistoricalInformationStringTimeIncluded";
 	
 	public String getMeasuredCumulativeKeroseneConsumptionUnit() {
-		return (String) getProperty(PROPERTY_HAS_MEASURED_CUMULATIVE_KEROSENE_CONSUMPTION_UNIT);	
+		return  getProperty(PROPERTY_HAS_MEASURED_CUMULATIVE_KEROSENE_CONSUMPTION_UNIT).toString();	
 	}
 	public void setMeasuredCumulativeKeroseneConsumptionUnit(String msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_MEASURED_CUMULATIVE_KEROSENE_CONSUMPTION_UNIT, msg);	
 	}
-	public MeasuredValue getMeasuredCumulativeKeroseneConsumptionHistoricalInformationDateTimeValueTimeIncluded() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_MEASURED_CUMULATIVE_KEROSENE_CONSUMPTION_HISTORICAL_INFORMATION_DATE_TIME_INCLUDED);	
+	public Float getMeasuredCumulativeKeroseneConsumptionHistoricalInformationStringTimeIncluded() {
+		return (Float) getProperty(PROPERTY_HAS_MEASURED_CUMULATIVE_KEROSENE_CONSUMPTION_HISTORICAL_INFORMATION_DATE_TIME_INCLUDED);	
 	}
-	public void setMeasuredCumulativeKeroseneConsumptionHistoricalInformationDateTimeValueTimeIncluded(MeasuredValue msg) {
+	public void setMeasuredCumulativeKeroseneConsumptionHistoricalInformationStringTimeIncluded(Float msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_MEASURED_CUMULATIVE_KEROSENE_CONSUMPTION_HISTORICAL_INFORMATION_DATE_TIME_INCLUDED, msg);	
 	}
-	public MeasuredValue getMeasuredCumulativeKeroseneConsumptionInformationDateTimeValueTimeIncluded() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_MEASURED_CUMULATIVE_KEROSENE_CONSUMPTION_INFORMATION_DATE_TIME_INCLUDED);	
+	public Float getMeasuredCumulativeKeroseneConsumptionInformationStringTimeIncluded() {
+		return (Float) getProperty(PROPERTY_HAS_MEASURED_CUMULATIVE_KEROSENE_CONSUMPTION_INFORMATION_DATE_TIME_INCLUDED);	
 	}
-	public void setMeasuredCumulativeKeroseneConsumptionInformationDateTimeValueTimeIncluded(MeasuredValue msg) {
+	public void setMeasuredCumulativeKeroseneConsumptionInformationStringTimeIncluded(Float msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_MEASURED_CUMULATIVE_KEROSENE_CONSUMPTION_INFORMATION_DATE_TIME_INCLUDED, msg);	
 	}
-	public DateTimeValue getVerificationExpirationInformation() {
-		return (DateTimeValue) getProperty(PROPERTY_VERIFICATION_EXPIRATION_INFORMATION);	
+	public String getVerificationExpirationInformation() {
+		return  getProperty(PROPERTY_VERIFICATION_EXPIRATION_INFORMATION).toString();	
 	}
-	public void setVerificationExpirationInformation(DateTimeValue msg) {
+	public void setVerificationExpirationInformation(String msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_VERIFICATION_EXPIRATION_INFORMATION, msg);	
 	}
 	public String getIDNumberSetting() {
-		return (String) getProperty(PROPERTY_HAS_ID_NUMBER_SETTING);	
+		return  getProperty(PROPERTY_HAS_ID_NUMBER_SETTING).toString();	
 	}
 	public void setIDNumberSetting(String msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_ID_NUMBER_SETTING, msg);	
 	}
-	public DateTimeValue getSlightLeakTimerValue() {
-		return (DateTimeValue) getProperty(PROPERTY_HAS_SLIGHT_LEAK_TIMER_VALUE);	
+	public String getSlightLeakTimerValue() {
+		return  getProperty(PROPERTY_HAS_SLIGHT_LEAK_TIMER_VALUE).toString();	
 	}
-	public void setSlightLeakTimerValue(DateTimeValue msg) {
+	public void setSlightLeakTimerValue(String msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_SLIGHT_LEAK_TIMER_VALUE, msg);	
 	}
-	public MeasuredValue getResidualVolumeControlWarningLevel3() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_RESIDUAL_VOLUME_CONTROL_WARNING_LEVEL_3);	
+	public Float getResidualVolumeControlWarningLevel3() {
+		return (Float) getProperty(PROPERTY_HAS_RESIDUAL_VOLUME_CONTROL_WARNING_LEVEL_3);	
 	}
-	public void setResidualVolumeControlWarningLevel3(MeasuredValue msg) {
+	public void setResidualVolumeControlWarningLevel3(Float msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_RESIDUAL_VOLUME_CONTROL_WARNING_LEVEL_3, msg);	
 	}
-	public MeasuredValue getResidualVolumeControlWarningLevel2() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_RESIDUAL_VOLUME_CONTROL_WARNING_LEVEL_2);	
+	public Float getResidualVolumeControlWarningLevel2() {
+		return (Float) getProperty(PROPERTY_HAS_RESIDUAL_VOLUME_CONTROL_WARNING_LEVEL_2);	
 	}
-	public void setResidualVolumeControlWarningLevel2(MeasuredValue msg) {
+	public void setResidualVolumeControlWarningLevel2(Float msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_RESIDUAL_VOLUME_CONTROL_WARNING_LEVEL_2, msg);	
 	}
-	public MeasuredValue getResidualVolumeControlWarningLevel1() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_RESIDUAL_VOLUME_CONTROL_WARNING_LEVEL_1);	
+	public Float getResidualVolumeControlWarningLevel1() {
+		return (Float) getProperty(PROPERTY_HAS_RESIDUAL_VOLUME_CONTROL_WARNING_LEVEL_1);	
 	}
-	public void setResidualVolumeControlWarningLevel1(MeasuredValue msg) {
+	public void setResidualVolumeControlWarningLevel1(Float msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_RESIDUAL_VOLUME_CONTROL_WARNING_LEVEL_1, msg);	
 	}
@@ -116,7 +114,7 @@ public class SmartKeroseneMeter extends EchonetSuperDevice{
 			changeProperty(PROPERTY_HAS_RESIDUAL_VOLUME_CONTROL_WARNING_LEVEL, msg);	
 	}
 	public String getSecurityDataInformation() {
-		return (String) getProperty(PROPERTY_HAS_SECURITY_DATA_INFORMATION);	
+		return  getProperty(PROPERTY_HAS_SECURITY_DATA_INFORMATION).toString();	
 	}
 	public void setSecurityDataInformation(String msg) {
 		if(msg !=null) 
@@ -129,26 +127,26 @@ public class SmartKeroseneMeter extends EchonetSuperDevice{
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_DETECTION_OF_ABNORMAL_VALUE_IN_METERING_DATA, msg);	
 	}
-	public MeasuredValue getCollectionDataSettingForHistoryCumulativeKeroseneConsumption() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_COLLECTION_DATE_SETTING_FOR_HISTORY_CUMULATIVE_KEROSENE_CONSUMPTION);	
+	public Float getCollectionDataSettingForHistoryCumulativeKeroseneConsumption() {
+		return (Float) getProperty(PROPERTY_HAS_COLLECTION_DATE_SETTING_FOR_HISTORY_CUMULATIVE_KEROSENE_CONSUMPTION);	
 	}
-	public void setCollectionDataSettingForHistoryCumulativeKeroseneConsumption(MeasuredValue msg) {
+	public void setCollectionDataSettingForHistoryCumulativeKeroseneConsumption(Float msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_COLLECTION_DATE_SETTING_FOR_HISTORY_CUMULATIVE_KEROSENE_CONSUMPTION, msg);	
 	}
 
-	public MeasuredValue getMeasuredCumulativeKeroseneConsumptionHistoricalData() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_MEASURED_CUMULATIVE_KEROSENE_CONSUMPTION_HISTORICAL_DATA);	
+	public Float getMeasuredCumulativeKeroseneConsumptionHistoricalData() {
+		return (Float) getProperty(PROPERTY_HAS_MEASURED_CUMULATIVE_KEROSENE_CONSUMPTION_HISTORICAL_DATA);	
 	}
-	public void setMeasuredCumulativeKeroseneConsumptionHistoricalData(MeasuredValue msg) {
+	public void setMeasuredCumulativeKeroseneConsumptionHistoricalData(Float msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_MEASURED_CUMULATIVE_KEROSENE_CONSUMPTION_HISTORICAL_DATA, msg);	
 	}
 
-	public MeasuredValue getMeasuredCumulativeKeroseneConsumption() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_MEASURED_CUMULATIVE_KEROSENE_CONSUMPTION);	
+	public Float getMeasuredCumulativeKeroseneConsumption() {
+		return (Float) getProperty(PROPERTY_HAS_MEASURED_CUMULATIVE_KEROSENE_CONSUMPTION);	
 	}
-	public void setMeasuredCumulativeKeroseneConsumption(MeasuredValue msg) {
+	public void setMeasuredCumulativeKeroseneConsumption(Float msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_MEASURED_CUMULATIVE_KEROSENE_CONSUMPTION, msg);	
 	}

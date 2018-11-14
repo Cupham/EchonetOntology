@@ -30,11 +30,13 @@ public class TransferingMethods extends ManagedIndividual{
 	public static final int LOCAL_STORAGE_TRANSFER = 0;
 	public static final int REMOTE_STORAGE_TRANSFER = 1;
 	public static final int MAIL_TRANSFER = 2;
-	private static final String[] names = { "localStorageTransger", "remoteStorageTransger","mailTransfer"};
+	public static final int NOT_SET = 3;
+	private static final String[] names = { "localStorageTransger", "remoteStorageTransger","mailTransfer","notSet"};
 	
 	public static final TransferingMethods LocalStorageTransger = new TransferingMethods(LOCAL_STORAGE_TRANSFER);
 	public static final TransferingMethods RemoteStorageTransger = new TransferingMethods(REMOTE_STORAGE_TRANSFER);
 	public static final TransferingMethods MailTransfer = new TransferingMethods(MAIL_TRANSFER);
+	public static final TransferingMethods NotSet = new TransferingMethods(NOT_SET);
 	
 	private int order;
 
@@ -51,6 +53,8 @@ public class TransferingMethods extends ManagedIndividual{
 			return RemoteStorageTransger;
 		case MAIL_TRANSFER:
 			return MailTransfer;
+		case NOT_SET:
+			return NotSet;
 		default:
 			return null;
 		}
@@ -63,7 +67,7 @@ public class TransferingMethods extends ManagedIndividual{
 		if (name.startsWith(EchonetOntology.NAMESPACE))
 			name = name.substring(EchonetOntology.NAMESPACE.length());
 
-		for (int i = LOCAL_STORAGE_TRANSFER; i <= MAIL_TRANSFER; i++)
+		for (int i = LOCAL_STORAGE_TRANSFER; i <= NOT_SET; i++)
 			if (names[i].equals(name))
 				return getTransferingMethodsByOrder(i);
 		return null;

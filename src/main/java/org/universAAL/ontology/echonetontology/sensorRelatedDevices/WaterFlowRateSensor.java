@@ -18,7 +18,6 @@ package org.universAAL.ontology.echonetontology.sensorRelatedDevices;
 
 import org.universAAL.ontology.echonetontology.EchonetOntology;
 import org.universAAL.ontology.echonetontology.EchonetSuperDevice;
-import org.universAAL.ontology.echonetontology.values.MeasuredValue;
 
 public class WaterFlowRateSensor extends EchonetSuperDevice{
 	public static final String MY_URI = EchonetOntology.NAMESPACE + "WaterFlowRateSensor";
@@ -44,17 +43,17 @@ public class WaterFlowRateSensor extends EchonetSuperDevice{
 		return true;
 	}
 	
-	public MeasuredValue getCumulativeFlowRate() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_CUMULATIVE_FLOW_RATE);	
+	public Integer getCumulativeFlowRate() {
+		return (Integer) getProperty(PROPERTY_HAS_CUMULATIVE_FLOW_RATE);	
 	}
-	public void setCumulativeFlowRate(MeasuredValue msg) {
+	public void setCumulativeFlowRate(Integer msg) {
 		if(msg !=null)
 			changeProperty(PROPERTY_HAS_CUMULATIVE_FLOW_RATE,msg);	
 	}
-	public MeasuredValue getFlowRate() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_FLOW_RATE);	
+	public Integer getFlowRate() {
+		return (Integer) getProperty(PROPERTY_HAS_FLOW_RATE);	
 	}
-	public void setFlowRate(MeasuredValue msg) {
+	public void setFlowRate(Integer msg) {
 		if(msg !=null)
 			changeProperty(PROPERTY_HAS_FLOW_RATE,msg);	
 	}

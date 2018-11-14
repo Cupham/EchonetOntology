@@ -19,11 +19,9 @@ package org.universAAL.ontology.echonetontology.airconditionerRelatedDevices;
 
 import org.universAAL.ontology.echonetontology.EchonetOntology;
 import org.universAAL.ontology.echonetontology.EchonetSuperDevice;
-import org.universAAL.ontology.echonetontology.values.DateTimeValue;
 import org.universAAL.ontology.echonetontology.values.HumidifyingLevelValue;
 import org.universAAL.ontology.echonetontology.values.IonEmissionMethodValue;
 import org.universAAL.ontology.echonetontology.values.LiquidAmountLevelValue;
-import org.universAAL.ontology.echonetontology.values.MeasuredValue;
 import org.universAAL.ontology.echonetontology.values.OperationModeSettingValue;
 import org.universAAL.ontology.echonetontology.values.OperationStatusValue;
 public class Humidifier extends EchonetSuperDevice{
@@ -68,10 +66,10 @@ public class Humidifier extends EchonetSuperDevice{
 	}
 	
 	
-	public DateTimeValue getOFFTimerReservationRelativeTimeValue() {
-		return (DateTimeValue) getProperty(PROPERTY_HAS_OFF_TIMER_RESERVATION_RELATIVE_TIME_VALUE);	
+	public String getOFFTimerReservationRelativeTimeValue() {
+		return getProperty(PROPERTY_HAS_OFF_TIMER_RESERVATION_RELATIVE_TIME_VALUE).toString();	
 	}
-	public void setOFFTimerReservationRelativeTimeValue(DateTimeValue msg) {
+	public void setOFFTimerReservationRelativeTimeValue(String msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_OFF_TIMER_RESERVATION_RELATIVE_TIME_VALUE, msg);	
 	}
@@ -82,10 +80,10 @@ public class Humidifier extends EchonetSuperDevice{
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_OFF_TIMER_RESERVATION_SETTING, msg);
 	}
-	public MeasuredValue getMeasuredRoomHumidity() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_MEASURED_ROOM_RELATIVE_HUMIDITY);	
+	public Integer getMeasuredRoomHumidity() {
+		return (Integer) getProperty(PROPERTY_HAS_MEASURED_ROOM_RELATIVE_HUMIDITY);	
 	}
-	public void setMeasuredRoomHumidity(MeasuredValue msg) {
+	public void setMeasuredRoomHumidity(Integer msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_MEASURED_ROOM_RELATIVE_HUMIDITY, msg);	
 	}

@@ -19,7 +19,6 @@ package org.universAAL.ontology.echonetontology.housingFacilitiesRelatedDevices;
 
 import org.universAAL.ontology.echonetontology.EchonetOntology;
 import org.universAAL.ontology.echonetontology.EchonetSuperDevice;
-import org.universAAL.ontology.echonetontology.values.MeasuredValue;
 import org.universAAL.ontology.echonetontology.values.OccurenceStatusValue;
 import org.universAAL.ontology.echonetontology.values.OperationStateSettingValue;
 import org.universAAL.ontology.echonetontology.values.OperationStatusValue;
@@ -66,47 +65,47 @@ public class LPGasMeter extends EchonetSuperDevice{
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_NUMBER_OF_BLOCK_SUPPLY_PRESSURE_ERROR_DAYS_TIMES, msg);	
 	}
-	public MeasuredValue getCurrentValueOfBlockPressureData() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_CURRENT_VALUE_OF_BLOCK_PRESSURE_DATA);	
+	public Float getCurrentValueOfBlockPressureData() {
+		return (Float) getProperty(PROPERTY_HAS_CURRENT_VALUE_OF_BLOCK_PRESSURE_DATA);	
 	}	
-	public void setCurrentValueOfBlockPressureData(MeasuredValue msg) {
+	public void setCurrentValueOfBlockPressureData(Float msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_CURRENT_VALUE_OF_BLOCK_PRESSURE_DATA, msg);	
 	}
-	public MeasuredValue getMinimumValueOfBlockPressureData() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_MINIMUM_VALUE_OF_BLOCK_PRESSURE_DATA);	
+	public Float getMinimumValueOfBlockPressureData() {
+		return (Float) getProperty(PROPERTY_HAS_MINIMUM_VALUE_OF_BLOCK_PRESSURE_DATA);	
 	}	
-	public void setMinimumValueOfBlockPressureData(MeasuredValue msg) {
+	public void setMinimumValueOfBlockPressureData(Float msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_MINIMUM_VALUE_OF_BLOCK_PRESSURE_DATA, msg);	
 	}
 	
-	public MeasuredValue getMaximumValueOfBlockPressureData() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_MINIMUM_VALUE_OF_BLOCK_PRESSURE_DATA);	
+	public Float getMaximumValueOfBlockPressureData() {
+		return (Float) getProperty(PROPERTY_HAS_MINIMUM_VALUE_OF_BLOCK_PRESSURE_DATA);	
 	}	
-	public void setMaximumValueOfBlockPressureData(MeasuredValue msg) {
+	public void setMaximumValueOfBlockPressureData(Float msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_MINIMUM_VALUE_OF_BLOCK_PRESSURE_DATA, msg);	
 	}
-	public MeasuredValue getCurrentValueOfSupplyPressureData() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_CURRENT_VALUE_OF_SUPPLY_PRESSURE_DATA);	
+	public Float getCurrentValueOfSupplyPressureData() {
+		return (Float) getProperty(PROPERTY_HAS_CURRENT_VALUE_OF_SUPPLY_PRESSURE_DATA);	
 	}	
-	public void setCurrentValueOfSupplyPressureData(MeasuredValue msg) {
+	public void setCurrentValueOfSupplyPressureData(Float msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_CURRENT_VALUE_OF_SUPPLY_PRESSURE_DATA, msg);	
 	}
-	public MeasuredValue getMinimumValueOfSupplyPressureData() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_MINIMUM_VALUE_OF_SUPPLY_PRESSURE_DATA);	
+	public Float getMinimumValueOfSupplyPressureData() {
+		return (Float) getProperty(PROPERTY_HAS_MINIMUM_VALUE_OF_SUPPLY_PRESSURE_DATA);	
 	}	
-	public void setMinimumValueOfSupplyPressureData(MeasuredValue msg) {
+	public void setMinimumValueOfSupplyPressureData(Float msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_MINIMUM_VALUE_OF_SUPPLY_PRESSURE_DATA, msg);	
 	}
 	
-	public MeasuredValue getMaximumValueOfSupplyPressureData() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_MAXIMUM_VALUE_OF_SUPPLY_PRESSURE_DATA);	
+	public Float getMaximumValueOfSupplyPressureData() {
+		return (Float) getProperty(PROPERTY_HAS_MAXIMUM_VALUE_OF_SUPPLY_PRESSURE_DATA);	
 	}	
-	public void setMaximumValueOfSupplyPressureData(MeasuredValue msg) {
+	public void setMaximumValueOfSupplyPressureData(Float msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_MAXIMUM_VALUE_OF_SUPPLY_PRESSURE_DATA, msg);	
 	}
@@ -118,38 +117,38 @@ public class LPGasMeter extends EchonetSuperDevice{
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_SHUTOFF_REASON_LOG, msg);	
 	}
-	public MeasuredValue getSlightLeakTimerValueWithoutPressureInscrease() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_SLIGHT_LEAK_TIMER_VALUE_WITHOUT_PRESSURE_INCREASE);	
+	public Float getSlightLeakTimerValueWithoutPressureInscrease() {
+		return (Float) getProperty(PROPERTY_HAS_SLIGHT_LEAK_TIMER_VALUE_WITHOUT_PRESSURE_INCREASE);	
 	}
-	public void setSlightLeakTimerValueWithoutPressureInscrease(MeasuredValue msg) {
+	public void setSlightLeakTimerValueWithoutPressureInscrease(Float msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_SLIGHT_LEAK_TIMER_VALUE_WITHOUT_PRESSURE_INCREASE, msg);	
 	}
-	public MeasuredValue getSlightLeakTimerValueGasFlowContinuation() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_SLIGHT_LEAK_TIMER_VALUE_GAS_FLOW_CONTINUATION);	
+	public Float getSlightLeakTimerValueGasFlowContinuation() {
+		return (Float) getProperty(PROPERTY_HAS_SLIGHT_LEAK_TIMER_VALUE_GAS_FLOW_CONTINUATION);	
 	}
-	public void setSlightLeakTimerValueGasFlowContinuation(MeasuredValue msg) {
+	public void setSlightLeakTimerValueGasFlowContinuation(Float msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_SLIGHT_LEAK_TIMER_VALUE_GAS_FLOW_CONTINUATION, msg);	
 	}
-	public MeasuredValue getResidualVolumeControlWarningLevel3Value() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_RESIDUAL_VOLUME_CONTROL_WARNING_LEVEL_3_VALUE);	
+	public Float getResidualVolumeControlWarningLevel3Value() {
+		return (Float) getProperty(PROPERTY_HAS_RESIDUAL_VOLUME_CONTROL_WARNING_LEVEL_3_VALUE);	
 	}
-	public void setResidualVolumeControlWarningLevel3Value(MeasuredValue msg) {
+	public void setResidualVolumeControlWarningLevel3Value(Float msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_RESIDUAL_VOLUME_CONTROL_WARNING_LEVEL_3_VALUE, msg);	
 	}
-	public MeasuredValue getResidualVolumeControlWarningLevel2Value() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_RESIDUAL_VOLUME_CONTROL_WARNING_LEVEL_2_VALUE);	
+	public Float getResidualVolumeControlWarningLevel2Value() {
+		return (Float) getProperty(PROPERTY_HAS_RESIDUAL_VOLUME_CONTROL_WARNING_LEVEL_2_VALUE);	
 	}
-	public void setResidualVolumeControlWarningLevel2Value(MeasuredValue msg) {
+	public void setResidualVolumeControlWarningLevel2Value(Float msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_RESIDUAL_VOLUME_CONTROL_WARNING_LEVEL_2_VALUE, msg);	
 	}
-	public MeasuredValue getResidualVolumeControlWarningLevel1Value() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_RESIDUAL_VOLUME_CONTROL_WARNING_LEVEL_1_VALUE);	
+	public Float getResidualVolumeControlWarningLevel1Value() {
+		return (Float) getProperty(PROPERTY_HAS_RESIDUAL_VOLUME_CONTROL_WARNING_LEVEL_1_VALUE);	
 	}
-	public void setResidualVolumeControlWarningLevel1Value(MeasuredValue msg) {
+	public void setResidualVolumeControlWarningLevel1Value(Float msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_RESIDUAL_VOLUME_CONTROL_WARNING_LEVEL_1_VALUE, msg);	
 	}
@@ -209,17 +208,17 @@ public class LPGasMeter extends EchonetSuperDevice{
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_ERROR_DETECTION_OF_METERING_DATA, msg);	
 	}
-	public MeasuredValue getMeasuredCummulativeGasConsumptionMeteringData2() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_MEASURED_CUMMULATIVE_GAS_CONSUMPTION_METERING_DATA_2);	
+	public Float getMeasuredCummulativeGasConsumptionMeteringData2() {
+		return (Float) getProperty(PROPERTY_HAS_MEASURED_CUMMULATIVE_GAS_CONSUMPTION_METERING_DATA_2);	
 	}
-	public void setMeasuredCummulativeGasConsumptionMeteringData2(MeasuredValue msg) {
+	public void setMeasuredCummulativeGasConsumptionMeteringData2(Float msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_MEASURED_CUMMULATIVE_GAS_CONSUMPTION_METERING_DATA_2, msg);	
 	}
-	public MeasuredValue getMeasuredCummulativeGasConsumptionMeteringData1() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_MEASURED_CUMMULATIVE_GAS_CONSUMPTION_METERING_DATA_1);	
+	public Float getMeasuredCummulativeGasConsumptionMeteringData1() {
+		return (Float) getProperty(PROPERTY_HAS_MEASURED_CUMMULATIVE_GAS_CONSUMPTION_METERING_DATA_1);	
 	}
-	public void setMeasuredCummulativeGasConsumptionMeteringData1(MeasuredValue msg) {
+	public void setMeasuredCummulativeGasConsumptionMeteringData1(Float msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_MEASURED_CUMMULATIVE_GAS_CONSUMPTION_METERING_DATA_1, msg);	
 	}

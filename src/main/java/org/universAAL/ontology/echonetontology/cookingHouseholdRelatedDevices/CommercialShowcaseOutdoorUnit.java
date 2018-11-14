@@ -20,7 +20,6 @@ package org.universAAL.ontology.echonetontology.cookingHouseholdRelatedDevices;
 
 import org.universAAL.ontology.echonetontology.EchonetOntology;
 import org.universAAL.ontology.echonetontology.EchonetSuperDevice;
-import org.universAAL.ontology.echonetontology.values.MeasuredValue;
 import org.universAAL.ontology.echonetontology.values.OperationModeSettingValue;
 import org.universAAL.ontology.echonetontology.values.OperationStatusValue;
 
@@ -42,10 +41,10 @@ public class CommercialShowcaseOutdoorUnit extends EchonetSuperDevice{
 			changeProperty(PROPERTY_HAS_MEASURED_OUTDOOR_AIR_TEMPERATURE, msg);	
 	}
 	
-	public MeasuredValue getMeasuredOutDoorAirTemperature() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_MEASURED_OUTDOOR_AIR_TEMPERATURE);	
+	public Float getMeasuredOutDoorAirTemperature() {
+		return (Float) getProperty(PROPERTY_HAS_MEASURED_OUTDOOR_AIR_TEMPERATURE);	
 	}
-	public void setMeasuredOutDoorAirTemperature(MeasuredValue msg) {
+	public void setMeasuredOutDoorAirTemperature(Float msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_MEASURED_OUTDOOR_AIR_TEMPERATURE, msg);	
 	}

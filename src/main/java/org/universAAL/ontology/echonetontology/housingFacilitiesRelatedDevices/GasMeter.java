@@ -20,24 +20,23 @@ package org.universAAL.ontology.echonetontology.housingFacilitiesRelatedDevices;
 
 import org.universAAL.ontology.echonetontology.EchonetOntology;
 import org.universAAL.ontology.echonetontology.EchonetSuperDevice;
-import org.universAAL.ontology.echonetontology.values.MeasuredValue;
 
 public class GasMeter extends EchonetSuperDevice{
 	public static final String MY_URI = EchonetOntology.NAMESPACE + "GasMetter";
 	public static final String PROPERTY_HAS_MEASURED_CUMMULATIVE_GAS_CONSUMPTION_AMOUNT = EchonetOntology.NAMESPACE + "hasMeasuredCummulativeGasConsumptionAmount";
 	public static final String PROPERTY_HAS_MEASURED_CUMMULATIVE_GAS_CONSUMPTION_LOG = EchonetOntology.NAMESPACE + "hasMeasuredCummulativeGasConsumptionLog";
 
-	public MeasuredValue getMeasuredCummulativeGasConsumptionLog() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_MEASURED_CUMMULATIVE_GAS_CONSUMPTION_LOG);	
+	public Float getMeasuredCummulativeGasConsumptionLog() {
+		return (Float) getProperty(PROPERTY_HAS_MEASURED_CUMMULATIVE_GAS_CONSUMPTION_LOG);	
 	}
-	public void setMeasuredCummulativeGasConsumptionLog(MeasuredValue msg) {
+	public void setMeasuredCummulativeGasConsumptionLog(Float msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_MEASURED_CUMMULATIVE_GAS_CONSUMPTION_LOG, msg);	
 	}
-	public MeasuredValue getMeasuredCummulativeGasConsumptionAmount() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_MEASURED_CUMMULATIVE_GAS_CONSUMPTION_AMOUNT);	
+	public Float getMeasuredCummulativeGasConsumptionAmount() {
+		return (Float) getProperty(PROPERTY_HAS_MEASURED_CUMMULATIVE_GAS_CONSUMPTION_AMOUNT);	
 	}
-	public void setMeasuredCummulativeGasConsumptionAmount(MeasuredValue msg) {
+	public void setMeasuredCummulativeGasConsumptionAmount(Float msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_MEASURED_CUMMULATIVE_GAS_CONSUMPTION_AMOUNT, msg);	
 	}

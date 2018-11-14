@@ -22,7 +22,6 @@ package org.universAAL.ontology.echonetontology.housingFacilitiesRelatedDevices;
 
 import org.universAAL.ontology.echonetontology.EchonetOntology;
 import org.universAAL.ontology.echonetontology.EchonetSuperDevice;
-import org.universAAL.ontology.echonetontology.values.MeasuredValue;
 
 public class ExtendedLightingSystem extends EchonetSuperDevice{
 	public static final String MY_URI = EchonetOntology.NAMESPACE + "ExtendedLightingSystem";	
@@ -34,52 +33,52 @@ public class ExtendedLightingSystem extends EchonetSuperDevice{
 	public static final String PROPERTY_HAS_POSISSLBE_POWER_SAVING = EchonetOntology.NAMESPACE + "hasPossiblePowerSaving";
 	public static final String PROPERTY_HAS_POWER_CONSUMPTION_LIMIT_SETTING = EchonetOntology.NAMESPACE + "hasPowerConsumptionLimitSetting";
 	
-	public MeasuredValue getPowerConsumptionLimitSetting() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_POWER_CONSUMPTION_LIMIT_SETTING);	
+	public Float getPowerConsumptionLimitSetting() {
+		return (Float) getProperty(PROPERTY_HAS_POWER_CONSUMPTION_LIMIT_SETTING);	
 	}
-	public void setPowerConsumptionLimitSetting(MeasuredValue msg) {
+	public void setPowerConsumptionLimitSetting(Float msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_POWER_CONSUMPTION_LIMIT_SETTING, msg);	
 	}
-	public MeasuredValue getPossiblePowerSaving() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_POSISSLBE_POWER_SAVING);	
+	public Float getPossiblePowerSaving() {
+		return (Float) getProperty(PROPERTY_HAS_POSISSLBE_POWER_SAVING);	
 	}
-	public void setPossiblePowerSaving(MeasuredValue msg) {
+	public void setPossiblePowerSaving(Float msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_POSISSLBE_POWER_SAVING, msg);	
 	}
-	public MeasuredValue getPowerConsumptionWhenFullyLighted() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_POWER_CONSUMPTION_WHEN_FULLY_LIGHTED);	
+	public Float getPowerConsumptionWhenFullyLighted() {
+		return (Float) getProperty(PROPERTY_HAS_POWER_CONSUMPTION_WHEN_FULLY_LIGHTED);	
 	}
-	public void setPowerConsumptionWhenFullyLighted(MeasuredValue msg) {
+	public void setPowerConsumptionWhenFullyLighted(Float msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_POWER_CONSUMPTION_WHEN_FULLY_LIGHTED, msg);	
 	}
-	public MeasuredValue getPowerConsumptionRateList() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_POWER_CONSUMPTION_RATE_LIST);	
+	public Float getPowerConsumptionRateList() {
+		return (Float) getProperty(PROPERTY_HAS_POWER_CONSUMPTION_RATE_LIST);	
 	}
-	public void setPowerConsumptionRateList(MeasuredValue msg) {
+	public void setPowerConsumptionRateList(Float msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_POWER_CONSUMPTION_RATE_LIST, msg);	
 	}
-	public MeasuredValue getNumberForAssigningSceneControlSetting() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_NUMBER_FOR_ASSIGNING_SCENE_CONTROL_SETTING);	
+	public Float getNumberForAssigningSceneControlSetting() {
+		return (Float) getProperty(PROPERTY_HAS_NUMBER_FOR_ASSIGNING_SCENE_CONTROL_SETTING);	
 	}
-	public void setNumberForAssigningSceneControlSetting(MeasuredValue msg) {
+	public void setNumberForAssigningSceneControlSetting(Float msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_NUMBER_FOR_ASSIGNING_SCENE_CONTROL_SETTING, msg);	
 	}
-	public MeasuredValue getSceneControlSetting() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_SCENE_CONTROL_SETTING);	
+	public Float getSceneControlSetting() {
+		return (Float) getProperty(PROPERTY_HAS_SCENE_CONTROL_SETTING);	
 	}
-	public void setSceneControlSetting(MeasuredValue msg) {
+	public void setSceneControlSetting(Float msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_SCENE_CONTROL_SETTING, msg);	
 	}
-	public MeasuredValue getIlluminanceLevel() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_ILLUMINANCE_LEVEL);	
+	public Float getIlluminanceLevel() {
+		return (Float) getProperty(PROPERTY_HAS_ILLUMINANCE_LEVEL);	
 	}
-	public void setIlluminanceLevel(MeasuredValue msg) {
+	public void setIlluminanceLevel(Float msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_ILLUMINANCE_LEVEL, msg);	
 	}

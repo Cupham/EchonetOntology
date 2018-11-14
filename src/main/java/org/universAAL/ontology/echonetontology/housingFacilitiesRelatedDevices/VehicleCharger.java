@@ -21,8 +21,6 @@ package org.universAAL.ontology.echonetontology.housingFacilitiesRelatedDevices;
 import org.universAAL.ontology.echonetontology.EchonetOntology;
 import org.universAAL.ontology.echonetontology.EchonetSuperDevice;
 import org.universAAL.ontology.echonetontology.values.ChargerDischargerTypeValue;
-import org.universAAL.ontology.echonetontology.values.MeasuredValue;
-import org.universAAL.ontology.echonetontology.values.MinMaxSettingValue;
 import org.universAAL.ontology.echonetontology.values.OperationModeSettingValue;
 import org.universAAL.ontology.echonetontology.values.OperationStateSettingValue;
 
@@ -50,62 +48,62 @@ public class VehicleCharger extends EchonetSuperDevice{
 	public static final String PROPERTY_HAS_CHARGING_ELECTRIC_CURRENT_SETTING = EchonetOntology.NAMESPACE + "hasChargingElectricCurrentSetting";
 
 
-	public MeasuredValue getChargingAmountSetting() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_CHARGING_AMOUNT_SETTING);	
+	public Float getChargingAmountSetting() {
+		return (Float) getProperty(PROPERTY_HAS_CHARGING_AMOUNT_SETTING);	
 	}
-	public void setChargingAmountSetting(MeasuredValue msg) {
+	public void setChargingAmountSetting(Float msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_CHARGING_AMOUNT_SETTING, msg);	
 	}
 	public String getVehicleID() {
-		return (String) getProperty(PROPERTY_HAS_VEHICLE_ID);	
+		return  getProperty(PROPERTY_HAS_VEHICLE_ID).toString();	
 	}
 	public void setVehicleID(String msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_VEHICLE_ID, msg);	
 	}
-	public MeasuredValue getVehicleMountedBatteryRemainingChargeableCapacity() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_VEHICLE_MOUNTED_BATTERY_CHARGEABLE_REMAINING_CAPACITY);	
+	public Float getVehicleMountedBatteryRemainingChargeableCapacity() {
+		return (Float) getProperty(PROPERTY_HAS_VEHICLE_MOUNTED_BATTERY_CHARGEABLE_REMAINING_CAPACITY);	
 	}
-	public void setVehicleMountedBatteryRemainingChargeableCapacity(MeasuredValue msg) {
+	public void setVehicleMountedBatteryRemainingChargeableCapacity(Float msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_VEHICLE_MOUNTED_BATTERY_CHARGEABLE_REMAINING_CAPACITY, msg);	
 	}
-	public MeasuredValue getVehicleMountedBatteryChargeableCapacity() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_VEHICLE_MOUNTED_BATTERY_CHARGEABLE_CAPACITY);	
+	public Float getVehicleMountedBatteryChargeableCapacity() {
+		return (Float) getProperty(PROPERTY_HAS_VEHICLE_MOUNTED_BATTERY_CHARGEABLE_CAPACITY);	
 	}
-	public void setVehicleMountedBatteryChargeableCapacity(MeasuredValue msg) {
+	public void setVehicleMountedBatteryChargeableCapacity(Float msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_VEHICLE_MOUNTED_BATTERY_CHARGEABLE_CAPACITY, msg);	
 	}
-	public MeasuredValue getChargingElectricCurrentSetting() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_CHARGING_ELECTRIC_CURRENT_SETTING);	
+	public Float getChargingElectricCurrentSetting() {
+		return (Float) getProperty(PROPERTY_HAS_CHARGING_ELECTRIC_CURRENT_SETTING);	
 	}
-	public void setChargingElectricCurrentSetting(MeasuredValue msg) {
+	public void setChargingElectricCurrentSetting(Float msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_CHARGING_ELECTRIC_CURRENT_SETTING, msg);	
 	}
 	
-	public MeasuredValue getChargingElectricEnergySetting() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_CHARGING_ELECTRIC_ENERGY_SETTING);	
+	public Float getChargingElectricEnergySetting() {
+		return (Float) getProperty(PROPERTY_HAS_CHARGING_ELECTRIC_ENERGY_SETTING);	
 	}
-	public void setChargingElectricEnergySetting(MeasuredValue msg) {
+	public void setChargingElectricEnergySetting(Float msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_CHARGING_ELECTRIC_ENERGY_SETTING, msg);	
 	}
 	
-	public MeasuredValue getRemainingStoredElectric3() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_REMAINING_STORED_ELECTRIC_3);	
+	public Float getRemainingStoredElectric3() {
+		return (Float) getProperty(PROPERTY_HAS_REMAINING_STORED_ELECTRIC_3);	
 	}
-	public void setRemainingStoredElectric3(MeasuredValue msg) {
+	public void setRemainingStoredElectric3(Float msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_REMAINING_STORED_ELECTRIC_3, msg);	
 	}
 	
-	public MeasuredValue getRemainingStoredElectric1() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_REMAINING_STORED_ELECTRIC_1);	
+	public Float getRemainingStoredElectric1() {
+		return (Float) getProperty(PROPERTY_HAS_REMAINING_STORED_ELECTRIC_1);	
 	}
-	public void setRemainingStoredElectric1(MeasuredValue msg) {
+	public void setRemainingStoredElectric1(Float msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_REMAINING_STORED_ELECTRIC_1, msg);	
 	}
@@ -117,33 +115,33 @@ public class VehicleCharger extends EchonetSuperDevice{
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_OPERATION_MODE_SETTING, msg);	
 	}
-	public MeasuredValue getMeasuredCumulativeChargingElectricEnergy() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_MEASURED_CUMULATIVE_CHARGING_ELECTRIC_ENERGY);	
+	public Float getMeasuredCumulativeChargingElectricEnergy() {
+		return (Float) getProperty(PROPERTY_HAS_MEASURED_CUMULATIVE_CHARGING_ELECTRIC_ENERGY);	
 	}
-	public void setMeasuredCumulativeChargingElectricEnergy(MeasuredValue msg) {
+	public void setMeasuredCumulativeChargingElectricEnergy(Float msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_MEASURED_CUMULATIVE_CHARGING_ELECTRIC_ENERGY, msg);	
 	}
 	
-	public MeasuredValue getMeasuredInstantaneousChargingElectricEnergy() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_MEASURED_INSTANTANEOUS_CHARGING_ELECTRIC_ENERGY);	
+	public Float getMeasuredInstantaneousChargingElectricEnergy() {
+		return (Float) getProperty(PROPERTY_HAS_MEASURED_INSTANTANEOUS_CHARGING_ELECTRIC_ENERGY);	
 	}
-	public void setMeasuredInstantaneousChargingElectricEnergy(MeasuredValue msg) {
+	public void setMeasuredInstantaneousChargingElectricEnergy(Float msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_MEASURED_INSTANTANEOUS_CHARGING_ELECTRIC_ENERGY, msg);	
 	}
-	public MeasuredValue getRatedVoltage() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_RATED_VOLTAGE);	
+	public Float getRatedVoltage() {
+		return (Float) getProperty(PROPERTY_HAS_RATED_VOLTAGE);	
 	}
-	public void setRatedVoltage(MeasuredValue msg) {
+	public void setRatedVoltage(Float msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_RATED_VOLTAGE, msg);	
 	}
 	
-	public MeasuredValue getUsedCapacityOfVehicleMountedBattery1() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_VEHICLE_MOUNTED_BATTERY_USED_CAPACITY_1);	
+	public Float getUsedCapacityOfVehicleMountedBattery1() {
+		return (Float) getProperty(PROPERTY_HAS_VEHICLE_MOUNTED_BATTERY_USED_CAPACITY_1);	
 	}
-	public void setUsedCapacityOfVehicleMountedBattery1(MeasuredValue msg) {
+	public void setUsedCapacityOfVehicleMountedBattery1(Float msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_VEHICLE_MOUNTED_BATTERY_USED_CAPACITY_1, msg);	
 	}
@@ -155,17 +153,17 @@ public class VehicleCharger extends EchonetSuperDevice{
 			changeProperty(PROPERTY_HAS_CHARGER_TYPE, msg);	
 	}
 	
-	public MinMaxSettingValue getMinimumMaximumChargingCurrent() {
-		return (MinMaxSettingValue) getProperty(PROPERTY_HAS_MINIMUM_MAXIMUM_CHARGING_CURRENT);	
+	public String getMinimumMaximumChargingCurrent() {
+		return  getProperty(PROPERTY_HAS_MINIMUM_MAXIMUM_CHARGING_CURRENT).toString();	
 	}
-	public void setMinimumMaximumChargingCurrent(MinMaxSettingValue msg) {
+	public void setMinimumMaximumChargingCurrent(String msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_MINIMUM_MAXIMUM_CHARGING_CURRENT, msg);	
 	}
-	public MinMaxSettingValue getMinimumMaximumChargingElectricEnergy() {
-		return (MinMaxSettingValue) getProperty(PROPERTY_HAS_MINIMUM_MAXIMUM_CHARGING_ELECTRIC_ENERGY);	
+	public String getMinimumMaximumChargingElectricEnergy() {
+		return  getProperty(PROPERTY_HAS_MINIMUM_MAXIMUM_CHARGING_ELECTRIC_ENERGY).toString();	
 	}
-	public void setMinimumMaximumChargingElectricEnergy(MinMaxSettingValue msg) {
+	public void setMinimumMaximumChargingElectricEnergy(String msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_MINIMUM_MAXIMUM_CHARGING_ELECTRIC_ENERGY, msg);	
 	}
@@ -176,10 +174,10 @@ public class VehicleCharger extends EchonetSuperDevice{
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_VEHICLE_CONNECTION_CHARGEABLE_STATUS, msg);	
 	}
-	public MeasuredValue getRatedChargeCapacity() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_RATED_CHARGE_CAPACITY);	
+	public Float getRatedChargeCapacity() {
+		return (Float) getProperty(PROPERTY_HAS_RATED_CHARGE_CAPACITY);	
 	}
-	public void setRatedChargeCapacity(MeasuredValue msg) {
+	public void setRatedChargeCapacity(Float msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_RATED_CHARGE_CAPACITY, msg);	
 	}

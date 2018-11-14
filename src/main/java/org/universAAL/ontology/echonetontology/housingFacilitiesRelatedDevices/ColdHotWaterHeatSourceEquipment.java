@@ -20,14 +20,10 @@ package org.universAAL.ontology.echonetontology.housingFacilitiesRelatedDevices;
 
 import org.universAAL.ontology.echonetontology.EchonetOntology;
 import org.universAAL.ontology.echonetontology.EchonetSuperDevice;
-import org.universAAL.ontology.echonetontology.values.DateTimeValue;
-import org.universAAL.ontology.echonetontology.values.MeasuredValue;
 import org.universAAL.ontology.echonetontology.values.MeasurementMethodValue;
 import org.universAAL.ontology.echonetontology.values.OperationFunctionSettingValue;
 import org.universAAL.ontology.echonetontology.values.OperationModeSettingValue;
 import org.universAAL.ontology.echonetontology.values.OperationStatusValue;
-import org.universAAL.ontology.echonetontology.values.RatedPowerConsumptionInModeValue;
-import org.universAAL.ontology.echonetontology.values.TemperatureInModeValue;
 
 
 public class ColdHotWaterHeatSourceEquipment extends EchonetSuperDevice{
@@ -57,24 +53,24 @@ public class ColdHotWaterHeatSourceEquipment extends EchonetSuperDevice{
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_POWER_CONSUMPTION_MEASUREMENT_METHOD, msg);	
 	}
-	public RatedPowerConsumptionInModeValue getRatedPowerConsumption() {
-		return (RatedPowerConsumptionInModeValue) getProperty(PROPERTY_HAS_RATED_POWER_CONSUMPTION);	
+	public String getRatedPowerConsumption() {
+		return getProperty(PROPERTY_HAS_RATED_POWER_CONSUMPTION).toString();	
 	}
-	public void setRatedPowerConsumption(RatedPowerConsumptionInModeValue msg) {
+	public void setRatedPowerConsumption(String msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_RATED_POWER_CONSUMPTION, msg);	
 	}
-	public DateTimeValue getOffTimerSettingRelativeTime() {
-		return (DateTimeValue) getProperty(PROPERTY_HAS_OFF_TIMER_SETTING_RELATIVE_TIME);	
+	public String getOffTimerSettingRelativeTime() {
+		return  getProperty(PROPERTY_HAS_OFF_TIMER_SETTING_RELATIVE_TIME).toString();	
 	}
-	public void setOffTimerSettingRelativeTime(DateTimeValue msg) {
+	public void setOffTimerSettingRelativeTime(String msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_OFF_TIMER_SETTING_RELATIVE_TIME, msg);	
 	}
-	public DateTimeValue getOffTimerSettingTime() {
-		return (DateTimeValue) getProperty(PROPERTY_HAS_OFF_TIMER_SETTING_TIME);	
+	public String getOffTimerSettingTime() {
+		return  getProperty(PROPERTY_HAS_OFF_TIMER_SETTING_TIME).toString();	
 	}
-	public void setOfTimerSettingTime(DateTimeValue msg) {
+	public void setOfTimerSettingTime(String msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_OFF_TIMER_SETTING_TIME, msg);	
 	}
@@ -86,17 +82,17 @@ public class ColdHotWaterHeatSourceEquipment extends EchonetSuperDevice{
 			changeProperty(PROPERTY_HAS_OFF_TIMER_RESERVATION_SETTING, msg);	
 	}
 	
-	public DateTimeValue getOnTimerSettingRelativeTime() {
-		return (DateTimeValue) getProperty(PROPERTY_HAS_ON_TIMER_SETTING_RELATIVE_TIME);	
+	public String getOnTimerSettingRelativeTime() {
+		return  getProperty(PROPERTY_HAS_ON_TIMER_SETTING_RELATIVE_TIME).toString();	
 	}
-	public void setOnTimerSettingRelativeTime(DateTimeValue msg) {
+	public void setOnTimerSettingRelativeTime(String msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_ON_TIMER_SETTING_RELATIVE_TIME, msg);	
 	}
-	public DateTimeValue getOnTimerSettingTime() {
-		return (DateTimeValue) getProperty(PROPERTY_HAS_ON_TIMER_SETTING_TIME);	
+	public String getOnTimerSettingTime() {
+		return  getProperty(PROPERTY_HAS_ON_TIMER_SETTING_TIME).toString();	
 	}
-	public void setOnTimerSettingTime(DateTimeValue msg) {
+	public void setOnTimerSettingTime(String msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_ON_TIMER_SETTING_TIME, msg);	
 	}
@@ -108,14 +104,14 @@ public class ColdHotWaterHeatSourceEquipment extends EchonetSuperDevice{
 			changeProperty(PROPERTY_HAS_ON_TIMER_RESERVATION_SETTING, msg);	
 	}
 	public String getDailyTimerSetting2() {
-		return (String) getProperty(PROPERTY_HAS_DAILY_TIMER_SETTING_2);	
+		return  getProperty(PROPERTY_HAS_DAILY_TIMER_SETTING_2).toString();	
 	}
 	public void setDailyTimerSetting2(String msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_DAILY_TIMER_SETTING_2, msg);	
 	}
 	public String getDailyTimerSetting1() {
-		return (String) getProperty(PROPERTY_HAS_DAILY_TIMER_SETTING_1);	
+		return  getProperty(PROPERTY_HAS_DAILY_TIMER_SETTING_1).toString();	
 	}
 	public void setDailyTimerSetting1(String msg) {
 		if(msg !=null) 
@@ -135,31 +131,31 @@ public class ColdHotWaterHeatSourceEquipment extends EchonetSuperDevice{
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_SPECIAL_OPERATION_SETTING, msg);	
 	}
-	public MeasuredValue getMeasuredOutwardWaterTemperature() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_MEASURED_OUTWARD_WATER_TEMPERATURE);	
+	public Float getMeasuredOutwardWaterTemperature() {
+		return (Float) getProperty(PROPERTY_HAS_MEASURED_OUTWARD_WATER_TEMPERATURE);	
 	}
-	public void setMeasuredOutwardWaterTemperature(MeasuredValue msg) {
+	public void setMeasuredOutwardWaterTemperature(Float msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_MEASURED_OUTWARD_WATER_TEMPERATURE, msg);	
 	}
-	public MeasuredValue getMeasuredInwardWaterTemperature() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_MEASURED_INWARD_WATER_TEMPERATURE);	
+	public Float getMeasuredInwardWaterTemperature() {
+		return (Float) getProperty(PROPERTY_HAS_MEASURED_INWARD_WATER_TEMPERATURE);	
 	}
-	public void setMeasuredInwardWaterTemperature(MeasuredValue msg) {
+	public void setMeasuredInwardWaterTemperature(Float msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_MEASURED_INWARD_WATER_TEMPERATURE, msg);	
 	}
-	public TemperatureInModeValue getWaterTemperatureSetting2() {
-		return (TemperatureInModeValue) getProperty(PROPERTY_HAS_WATER_TEMPERATURE_SETTING_2);	
+	public String getWaterTemperatureSetting2() {
+		return  getProperty(PROPERTY_HAS_WATER_TEMPERATURE_SETTING_2).toString();	
 	}
-	public void setWaterTemperatureSetting2(TemperatureInModeValue msg) {
+	public void setWaterTemperatureSetting2(String msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_WATER_TEMPERATURE_SETTING_2, msg);	
 	}
-	public MeasuredValue getWaterTemperatureSetting1() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_WATER_TEMPERATURE_SETTING_1);	
+	public Float getWaterTemperatureSetting1() {
+		return (Float) getProperty(PROPERTY_HAS_WATER_TEMPERATURE_SETTING_1);	
 	}
-	public void setWaterTemperatureSetting1(MeasuredValue msg) {
+	public void setWaterTemperatureSetting1(Float msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_WATER_TEMPERATURE_SETTING_1, msg);	
 	}

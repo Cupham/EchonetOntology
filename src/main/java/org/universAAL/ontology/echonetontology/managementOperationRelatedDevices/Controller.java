@@ -21,9 +21,7 @@ package org.universAAL.ontology.echonetontology.managementOperationRelatedDevice
 
 import org.universAAL.ontology.echonetontology.EchonetOntology;
 import org.universAAL.ontology.echonetontology.EchonetSuperDevice;
-import org.universAAL.ontology.echonetontology.values.DateTimeValue;
 import org.universAAL.ontology.echonetontology.values.InstallationLocationValue;
-import org.universAAL.ontology.echonetontology.values.LocationValue;
 import org.universAAL.ontology.echonetontology.values.OccurenceStatusValue;
 import org.universAAL.ontology.echonetontology.values.OperationStatusValue;
 
@@ -38,8 +36,8 @@ public class Controller extends EchonetSuperDevice{
 	public static final String PROPERTY_HAS_CONNECTION_STATUS= EchonetOntology.NAMESPACE + "hasConnectionStatus";
 	public static final String PROPERTY_HAS_CONTROLLED_DEVICE_BUSINESS_CODE= EchonetOntology.NAMESPACE + "hasControlledDeviceBusinessCode";
 	public static final String PROPERTY_HAS_CONTROLLED_DEVICE_PRODUCT_CODE= EchonetOntology.NAMESPACE + "hasControlledDeviceProductCode";
-	public static final String PROPERTY_HAS_CONTROLLED_DEVICE_MANUFACTURER_DATE= EchonetOntology.NAMESPACE + "hasControlledDeviceManufacturerDateTimeValue";
-	public static final String PROPERTY_HAS_CONTROLLED_DEVICE_REGISTERED_INFORMATION_RENEWAL_DATE= EchonetOntology.NAMESPACE + "hasControlledDeviceRegisteredInformationRenewalDateTimeValue";
+	public static final String PROPERTY_HAS_CONTROLLED_DEVICE_MANUFACTURER_DATE= EchonetOntology.NAMESPACE + "hasControlledDeviceManufacturerString";
+	public static final String PROPERTY_HAS_CONTROLLED_DEVICE_REGISTERED_INFORMATION_RENEWAL_DATE= EchonetOntology.NAMESPACE + "hasControlledDeviceRegisteredInformationRenewalString";
 	public static final String PROPERTY_HAS_CONTROLLED_DEVICE_REGISTERED_INFORMATION_RENEWAL_VERSION_INFORMATION= EchonetOntology.NAMESPACE + "hasControlledDeviceRegisteredInformationRenewalVersionInfor";
 	public static final String PROPERTY_HAS_CONTROLLED_DEVICE_INSTALLATION_LOCATION= EchonetOntology.NAMESPACE + "hasControlledDeviceInstallationLocation";
 	public static final String PROPERTY_HAS_CONTROLLED_DEVICE_FAULT_STATUS= EchonetOntology.NAMESPACE + "hasControlledDeviceFaultStatus";
@@ -48,23 +46,23 @@ public class Controller extends EchonetSuperDevice{
 	public static final String PROPERTY_HAS_CONTROLLED_DEVICE_GET_PROPERTY_MAP= EchonetOntology.NAMESPACE + "hasControlledDeviceGetPropertyMap";
 	
 	public String getControlledDeviceGetPropertyMap() {
-		return (String) getProperty(PROPERTY_HAS_CONTROLLED_DEVICE_GET_PROPERTY_MAP);	
+		return  getProperty(PROPERTY_HAS_CONTROLLED_DEVICE_GET_PROPERTY_MAP).toString();	
 	}
 	public void setControlledDeviceGetPropertyMap(String msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_CONTROLLED_DEVICE_GET_PROPERTY_MAP, msg);	
 	}
 	public String getControlledDeviceSetPropertyMap() {
-		return (String) getProperty(PROPERTY_HAS_CONTROLLED_DEVICE_SET_PROPERTY_MAP);	
+		return  getProperty(PROPERTY_HAS_CONTROLLED_DEVICE_SET_PROPERTY_MAP).toString();	
 	}
 	public void setControlledDeviceSetPropertyMap(String msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_CONTROLLED_DEVICE_SET_PROPERTY_MAP, msg);	
 	}
-	public LocationValue getInstallationLocationAddress() {
-		return (LocationValue) getProperty(PROPERTY_HAS_INSTALLATION_LOCATION_ADDRESS);	
+	public String getInstallationLocationAddress() {
+		return  getProperty(PROPERTY_HAS_INSTALLATION_LOCATION_ADDRESS).toString();	
 	}
-	public void setInstallationLocationAddress(LocationValue msg) {
+	public void setInstallationLocationAddress(String msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_INSTALLATION_LOCATION_ADDRESS, msg);	
 	}
@@ -83,35 +81,35 @@ public class Controller extends EchonetSuperDevice{
 			changeProperty(PROPERTY_HAS_CONTROLLED_DEVICE_INSTALLATION_LOCATION, msg);	
 	}
 	public String getControlledDeviceRegisteredInformationRenewalVersionInfor() {
-		return (String) getProperty(PROPERTY_HAS_CONTROLLED_DEVICE_REGISTERED_INFORMATION_RENEWAL_VERSION_INFORMATION);	
+		return  getProperty(PROPERTY_HAS_CONTROLLED_DEVICE_REGISTERED_INFORMATION_RENEWAL_VERSION_INFORMATION).toString();	
 	}
 	public void setControlledDeviceRegisteredInformationRenewalVersionInfor(String msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_CONTROLLED_DEVICE_REGISTERED_INFORMATION_RENEWAL_VERSION_INFORMATION, msg);	
 	}
-	public DateTimeValue getControlledDeviceRegisteredInformationRenewalDateTimeValue() {
-		return (DateTimeValue) getProperty(PROPERTY_HAS_CONTROLLED_DEVICE_REGISTERED_INFORMATION_RENEWAL_DATE);	
+	public String getControlledDeviceRegisteredInformationRenewalString() {
+		return  getProperty(PROPERTY_HAS_CONTROLLED_DEVICE_REGISTERED_INFORMATION_RENEWAL_DATE).toString();	
 	}
-	public void setControlledDeviceRegisteredInformationRenewalDateTimeValue(DateTimeValue msg) {
+	public void setControlledDeviceRegisteredInformationRenewalString(String msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_CONTROLLED_DEVICE_REGISTERED_INFORMATION_RENEWAL_DATE, msg);	
 	}
-	public DateTimeValue getControlledDeviceManufacturerDateTimeValue() {
-		return (DateTimeValue) getProperty(PROPERTY_HAS_CONTROLLED_DEVICE_MANUFACTURER_DATE);	
+	public String getControlledDeviceManufacturerString() {
+		return  getProperty(PROPERTY_HAS_CONTROLLED_DEVICE_MANUFACTURER_DATE).toString();	
 	}
-	public void setControlledDeviceManufacturerDateTimeValue(DateTimeValue msg) {
+	public void setControlledDeviceManufacturerString(String msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_CONTROLLED_DEVICE_MANUFACTURER_DATE, msg);	
 	}
 	public String getControlledDeviceProductCode() {
-		return (String) getProperty(PROPERTY_HAS_CONTROLLED_DEVICE_PRODUCT_CODE);	
+		return  getProperty(PROPERTY_HAS_CONTROLLED_DEVICE_PRODUCT_CODE).toString();	
 	}
 	public void setControlledDeviceProductCode(String msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_CONTROLLED_DEVICE_PRODUCT_CODE, msg);	
 	}
 	public String getControlledDeviceBusinessCode() {
-		return (String) getProperty(PROPERTY_HAS_CONTROLLED_DEVICE_BUSINESS_CODE);	
+		return  getProperty(PROPERTY_HAS_CONTROLLED_DEVICE_BUSINESS_CODE).toString();	
 	}
 	public void setControlledDeviceBusinessCode(String msg) {
 		if(msg !=null) 
@@ -125,21 +123,21 @@ public class Controller extends EchonetSuperDevice{
 			changeProperty(PROPERTY_HAS_CONNECTION_STATUS, msg);	
 	}
 	public String getDeviceName() {
-		return (String) getProperty(PROPERTY_HAS_DEVICE_NAME);	
+		return  getProperty(PROPERTY_HAS_DEVICE_NAME).toString();	
 	}
 	public void setDeviceName(String msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_DEVICE_NAME, msg);	
 	}
 	public String getDeviceType() {
-		return (String) getProperty(PROPERTY_HAS_DEVICE_TYPE);	
+		return  getProperty(PROPERTY_HAS_DEVICE_TYPE).toString();	
 	}
 	public void setDeviceType(String msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_DEVICE_TYPE, msg);	
 	}
 	public String getDeviceID() {
-		return (String) getProperty(PROPERTY_HAS_DEVICE_ID);	
+		return  getProperty(PROPERTY_HAS_DEVICE_ID).toString();	
 	}
 	public void setDeviceID(String msg) {
 		if(msg !=null) 
@@ -160,7 +158,7 @@ public class Controller extends EchonetSuperDevice{
 			changeProperty(PROPERTY_HAS_NUMBER_OF_CONTROLLED_DEVICES, msg);	
 	}
 	public String getControllerID() {
-		return (String) getProperty(PROPERTY_HAS_CONTROLLER_ID);	
+		return  getProperty(PROPERTY_HAS_CONTROLLER_ID).toString();	
 	}
 	public void setControllerID(String msg) {
 		if(msg !=null) 

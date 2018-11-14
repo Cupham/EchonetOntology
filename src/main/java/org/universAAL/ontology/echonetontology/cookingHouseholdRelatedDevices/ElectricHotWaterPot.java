@@ -20,7 +20,6 @@ package org.universAAL.ontology.echonetontology.cookingHouseholdRelatedDevices;
 
 import org.universAAL.ontology.echonetontology.EchonetOntology;
 import org.universAAL.ontology.echonetontology.EchonetSuperDevice;
-import org.universAAL.ontology.echonetontology.values.MeasuredValue;
 import org.universAAL.ontology.echonetontology.values.OccurenceStatusValue;
 import org.universAAL.ontology.echonetontology.values.OperationModeSettingValue;
 import org.universAAL.ontology.echonetontology.values.OperationStateSettingValue;
@@ -50,10 +49,10 @@ public class ElectricHotWaterPot extends EchonetSuperDevice{
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_HOT_WATER_DISCHARGE_STATUS, msg);	
 	}
-	public MeasuredValue getWarmerTemperatureSettingValue() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_WARMER_TEMPERATURE_SETTING_VALUE);	
+	public Float getWarmerTemperatureSettingValue() {
+		return (Float) getProperty(PROPERTY_HAS_WARMER_TEMPERATURE_SETTING_VALUE);	
 	}
-	public void setWarmerTemperatureSettingValue(MeasuredValue msg) {
+	public void setWarmerTemperatureSettingValue(Float msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_WARMER_TEMPERATURE_SETTING_VALUE, msg);	
 	}

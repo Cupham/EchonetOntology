@@ -19,8 +19,6 @@ package org.universAAL.ontology.echonetontology.housingFacilitiesRelatedDevices;
 
 import org.universAAL.ontology.echonetontology.EchonetOntology;
 import org.universAAL.ontology.echonetontology.EchonetSuperDevice;
-import org.universAAL.ontology.echonetontology.values.DateTimeValue;
-import org.universAAL.ontology.echonetontology.values.MeasuredValue;
 import org.universAAL.ontology.echonetontology.values.OccurenceStatusValue;
 import org.universAAL.ontology.echonetontology.values.OperationModeSettingValue;
 import org.universAAL.ontology.echonetontology.values.OperationStatusValue;
@@ -47,17 +45,17 @@ public class BathRoomHeaterDryer extends EchonetSuperDevice{
 	public static final String PROPERTY_HAS_OFF_TIMER_SETTING_TIME = EchonetOntology.NAMESPACE + "hasOffTimerSettingTime";
 	public static final String PROPERTY_HAS_OFF_TIMER_SETTING_RELATIVE_TIME = EchonetOntology.NAMESPACE + "hasOffTimerSettingRelativeTime";
 	
-	public DateTimeValue getOffTimerSettingRelativeTime() {
-		return (DateTimeValue) getProperty(PROPERTY_HAS_OFF_TIMER_SETTING_RELATIVE_TIME);	
+	public String getOffTimerSettingRelativeTime() {
+		return  getProperty(PROPERTY_HAS_OFF_TIMER_SETTING_RELATIVE_TIME).toString();	
 	}
-	public void setOffTimerSettingRelativeTime(DateTimeValue msg) {
+	public void setOffTimerSettingRelativeTime(String msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_OFF_TIMER_SETTING_RELATIVE_TIME, msg);	
 	}
-	public DateTimeValue getOffTimerSettingTime() {
-		return (DateTimeValue) getProperty(PROPERTY_HAS_OFF_TIMER_SETTING_TIME);	
+	public String getOffTimerSettingTime() {
+		return  getProperty(PROPERTY_HAS_OFF_TIMER_SETTING_TIME).toString();	
 	}
-	public void setOffTimerSettingTime(DateTimeValue msg) {
+	public void setOffTimerSettingTime(String msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_OFF_TIMER_SETTING_TIME, msg);	
 	}
@@ -68,17 +66,17 @@ public class BathRoomHeaterDryer extends EchonetSuperDevice{
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_OFF_TIMER_BASED_RESERVATION_SETTING, msg);	
 	}
-	public DateTimeValue getOnTimerSettingRelativeTime() {
-		return (DateTimeValue) getProperty(PROPERTY_HAS_ON_TIMER_SETTING_RELATIVE_TIME);	
+	public String getOnTimerSettingRelativeTime() {
+		return  getProperty(PROPERTY_HAS_ON_TIMER_SETTING_RELATIVE_TIME).toString();	
 	}
-	public void setOnTimerSettingRelativeTime(DateTimeValue msg) {
+	public void setOnTimerSettingRelativeTime(String msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_ON_TIMER_SETTING_RELATIVE_TIME, msg);	
 	}
-	public DateTimeValue getOnTimerSettingTime() {
-		return (DateTimeValue) getProperty(PROPERTY_HAS_ON_TIMER_SETTING_TIME);	
+	public String getOnTimerSettingTime() {
+		return  getProperty(PROPERTY_HAS_ON_TIMER_SETTING_TIME).toString();	
 	}
-	public void setOnTimerSettingTime(DateTimeValue msg) {
+	public void setOnTimerSettingTime(String msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_ON_TIMER_SETTING_TIME, msg);	
 	}
@@ -117,17 +115,17 @@ public class BathRoomHeaterDryer extends EchonetSuperDevice{
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_VENTILATION_AIR_FLOW_RATE_SETTING, msg);	
 	}
-	public MeasuredValue getMeasuredBathroomTemperature() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_MEASURED_BATHROOM_TEMPERATURE);	
+	public Integer getMeasuredBathroomTemperature() {
+		return (Integer) getProperty(PROPERTY_HAS_MEASURED_BATHROOM_TEMPERATURE);	
 	}
-	public void setMeasuredBathroomTemperature(MeasuredValue msg) {
+	public void setMeasuredBathroomTemperature(Integer msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_MEASURED_BATHROOM_TEMPERATURE, msg);	
 	}
-	public MeasuredValue getMeasuredBathroomHumidity() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_MEASURED_BATHROOM_RELATIVE_HUMIDITY);	
+	public Integer getMeasuredBathroomHumidity() {
+		return (Integer) getProperty(PROPERTY_HAS_MEASURED_BATHROOM_RELATIVE_HUMIDITY);	
 	}
-	public void setMeasuredBathroomHumidity(MeasuredValue msg) {
+	public void setMeasuredBathroomHumidity(Integer msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_MEASURED_BATHROOM_RELATIVE_HUMIDITY, msg);	
 	}

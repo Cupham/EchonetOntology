@@ -20,7 +20,6 @@ package org.universAAL.ontology.echonetontology.housingFacilitiesRelatedDevices;
 
 import org.universAAL.ontology.echonetontology.EchonetOntology;
 import org.universAAL.ontology.echonetontology.EchonetSuperDevice;
-import org.universAAL.ontology.echonetontology.values.MeasuredValue;
 
 public class KeroseneMeter extends EchonetSuperDevice{
 	public static final String MY_URI = EchonetOntology.NAMESPACE + "KeroseneMetter";
@@ -28,17 +27,17 @@ public class KeroseneMeter extends EchonetSuperDevice{
 	public static final String PROPERTY_HAS_MEASURED_CUMMULATIVE_KEROSENE_CONSUMPTION_AMOUNT = EchonetOntology.NAMESPACE + "hasMeasuredCummulativeKeroseneConsumptionAmount";
 	public static final String PROPERTY_HAS_MEASURED_CUMMULATIVE_KEROSENE_CONSUMPTION_HISTORICAL_DATA = EchonetOntology.NAMESPACE + "hasMeasuredCummulativeKeroseneConsumptionHistoricalData";
 	
-	public MeasuredValue getMeasuredCummulativeKeroseneConsumptionHistoricalData() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_MEASURED_CUMMULATIVE_KEROSENE_CONSUMPTION_HISTORICAL_DATA);	
+	public Float getMeasuredCummulativeKeroseneConsumptionHistoricalData() {
+		return (Float) getProperty(PROPERTY_HAS_MEASURED_CUMMULATIVE_KEROSENE_CONSUMPTION_HISTORICAL_DATA);	
 	}
-	public void setMeasuredCummulativeKeroseneConsumptionHistoricalData(MeasuredValue msg) {
+	public void setMeasuredCummulativeKeroseneConsumptionHistoricalData(Float msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_MEASURED_CUMMULATIVE_KEROSENE_CONSUMPTION_HISTORICAL_DATA, msg);	
 	}
-	public MeasuredValue getMeasuredCummulativeKeroseneConsumptionAmount() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_MEASURED_CUMMULATIVE_KEROSENE_CONSUMPTION_AMOUNT);	
+	public Float getMeasuredCummulativeKeroseneConsumptionAmount() {
+		return (Float) getProperty(PROPERTY_HAS_MEASURED_CUMMULATIVE_KEROSENE_CONSUMPTION_AMOUNT);	
 	}
-	public void setMeasuredCummulativeKeroseneConsumptionAmount(MeasuredValue msg) {
+	public void setMeasuredCummulativeKeroseneConsumptionAmount(Float msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_MEASURED_CUMMULATIVE_KEROSENE_CONSUMPTION_AMOUNT, msg);	
 	}

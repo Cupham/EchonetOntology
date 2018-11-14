@@ -18,6 +18,7 @@ package org.universAAL.ontology.echonetontology.sensorRelatedDevices;
 
 import org.universAAL.ontology.echonetontology.EchonetOntology;
 import org.universAAL.ontology.echonetontology.EchonetSuperDevice;
+import org.universAAL.ontology.echonetontology.values.OccurenceStatusValue;
 import org.universAAL.ontology.echonetontology.values.ThresholdLevelValue;
 
 public class OpenCloseSensor extends EchonetSuperDevice{
@@ -59,10 +60,10 @@ public class OpenCloseSensor extends EchonetSuperDevice{
 		if(msg !=null)	
 			changeProperty(PROPERTY_HAS_DEGREE_OF_OPENNING_DETECTION_STATUS_1,msg);	
 	}
-	public ThresholdLevelValue getDegreeOfOpenningDetectionStatus2() {
-		return (ThresholdLevelValue) getProperty(PROPERTY_HAS_DEGREE_OF_OPENNING_DETECTION_STATUS_2);	
+	public OccurenceStatusValue getDegreeOfOpenningDetectionStatus2() {
+		return (OccurenceStatusValue) getProperty(PROPERTY_HAS_DEGREE_OF_OPENNING_DETECTION_STATUS_2);	
 	}
-	public void setDegreeOfOpenningDetectionStatus2(ThresholdLevelValue msg) {
+	public void setDegreeOfOpenningDetectionStatus2(OccurenceStatusValue msg) {
 		if(msg !=null)	
 			changeProperty(PROPERTY_HAS_DEGREE_OF_OPENNING_DETECTION_STATUS_2,msg);	
 	}

@@ -21,7 +21,6 @@ package org.universAAL.ontology.echonetontology.audiovisualRelatedDevices;
 import org.universAAL.ontology.echonetontology.EchonetOntology;
 import org.universAAL.ontology.echonetontology.EchonetSuperDevice;
 import org.universAAL.ontology.echonetontology.values.InputSourceSettingValue;
-import org.universAAL.ontology.echonetontology.values.MeasuredValue;
 import org.universAAL.ontology.echonetontology.values.OperationStatusValue;
 
 public class Audio extends EchonetSuperDevice{
@@ -44,10 +43,10 @@ public class Audio extends EchonetSuperDevice{
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_MUTE_SETTING, msg);	
 	}
-	public MeasuredValue getVolumeSetting() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_VOLUME_SETTING);	
+	public Integer getVolumeSetting() {
+		return (Integer) getProperty(PROPERTY_HAS_VOLUME_SETTING);	
 	}
-	public void setVolumeSetting(MeasuredValue msg) {
+	public void setVolumeSetting(Integer msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_VOLUME_SETTING, msg);	
 	}

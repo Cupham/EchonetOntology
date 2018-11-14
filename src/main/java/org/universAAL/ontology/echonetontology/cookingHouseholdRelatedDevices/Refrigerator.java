@@ -20,7 +20,6 @@ package org.universAAL.ontology.echonetontology.cookingHouseholdRelatedDevices;
 
 import org.universAAL.ontology.echonetontology.EchonetOntology;
 import org.universAAL.ontology.echonetontology.EchonetSuperDevice;
-import org.universAAL.ontology.echonetontology.values.MeasuredValue;
 import org.universAAL.ontology.echonetontology.values.OccurenceStatusValue;
 import org.universAAL.ontology.echonetontology.values.OperationModeSettingValue;
 import org.universAAL.ontology.echonetontology.values.OperationStateSettingValue;
@@ -120,59 +119,59 @@ public class Refrigerator extends EchonetSuperDevice{
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_QUICK_FREEZE_FUNCTION_SETTING, msg);	
 	}
-	public MeasuredValue getRatedPowerConsumption() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_RATED_POWER_CONSUMPTION);	
+	public Float getRatedPowerConsumption() {
+		return (Float) getProperty(PROPERTY_HAS_RATED_POWER_CONSUMPTION);	
 	}
-	public void setRatedPowerConsumption(MeasuredValue msg) {
+	public void setRatedPowerConsumption(Float msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_RATED_POWER_CONSUMPTION, msg);	
 	}
-	public MeasuredValue getMeasuredElectricCurrentConsumption() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_MEASURED_ELECTRIC_CURRENT_CONSUMPTION);	
+	public Float getMeasuredElectricCurrentConsumption() {
+		return (Float) getProperty(PROPERTY_HAS_MEASURED_ELECTRIC_CURRENT_CONSUMPTION);	
 	}
-	public void setMeasuredElectricCurrentConsumption(MeasuredValue msg) {
+	public void setMeasuredElectricCurrentConsumption(Float msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_MEASURED_ELECTRIC_CURRENT_CONSUMPTION, msg);	
 	}
-	public MeasuredValue getCompressorRotationSpeed() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_COMPRESSOR_ROTATION_SPEED);	
+	public Float getCompressorRotationSpeed() {
+		return (Float) getProperty(PROPERTY_HAS_COMPRESSOR_ROTATION_SPEED);	
 	}
-	public void setCompressorRotationSpeed(MeasuredValue msg) {
+	public void setCompressorRotationSpeed(Float msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_COMPRESSOR_ROTATION_SPEED, msg);	
 	}
-	public MeasuredValue getMeasuredMultiRefrigeratorCompartmentTemperature() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_MEASURED_MULTI_REFRIGERATOR_COMPARTMENT_TEMPERATURER);	
+	public Float getMeasuredMultiRefrigeratorCompartmentTemperature() {
+		return (Float) getProperty(PROPERTY_HAS_MEASURED_MULTI_REFRIGERATOR_COMPARTMENT_TEMPERATURER);	
 	}
-	public void setMeasuredMultiRefrigeratorCompartmentTemperature(MeasuredValue msg) {
+	public void setMeasuredMultiRefrigeratorCompartmentTemperature(Float msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_MEASURED_MULTI_REFRIGERATOR_COMPARTMENT_TEMPERATURER, msg);	
 	}
-	public MeasuredValue getMeasuredVegetableCompartmentTemperature() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_MEASURED_VEGETABLE_COMPARTMENT_TEMPERATURER);	
+	public Float getMeasuredVegetableCompartmentTemperature() {
+		return (Float) getProperty(PROPERTY_HAS_MEASURED_VEGETABLE_COMPARTMENT_TEMPERATURER);	
 	}
-	public void setMeasuredVegetableCompartmentTemperature(MeasuredValue msg) {
+	public void setMeasuredVegetableCompartmentTemperature(Float msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_MEASURED_VEGETABLE_COMPARTMENT_TEMPERATURER, msg);	
 	}
-	public MeasuredValue getMeasuredSubZeroFreshCompartmentTemperature() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_MEASURED_SUB_ZERO_FRESH_COMPARTMENT_TEMPERATURER);	
+	public Float getMeasuredSubZeroFreshCompartmentTemperature() {
+		return (Float) getProperty(PROPERTY_HAS_MEASURED_SUB_ZERO_FRESH_COMPARTMENT_TEMPERATURER);	
 	}
-	public void setMeasuredSubZeroFreshCompartmentTemperature(MeasuredValue msg) {
+	public void setMeasuredSubZeroFreshCompartmentTemperature(Float msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_MEASURED_SUB_ZERO_FRESH_COMPARTMENT_TEMPERATURER, msg);	
 	}
-	public MeasuredValue getMeasuredFreezerCompartmentTemperature() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_MEASURED_FREEZER_COMPARTMENT_TEMPERATURER);	
+	public Float getMeasuredFreezerCompartmentTemperature() {
+		return (Float) getProperty(PROPERTY_HAS_MEASURED_FREEZER_COMPARTMENT_TEMPERATURER);	
 	}
-	public void setMeasuredFreezerCompartmentTemperature(MeasuredValue msg) {
+	public void setMeasuredFreezerCompartmentTemperature(Float msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_MEASURED_FREEZER_COMPARTMENT_TEMPERATURER, msg);	
 	}
-	public MeasuredValue getMeasuredRefrigeratorCompartmentTemperature() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_MEASURED_REFRIGERATOR_COMPARTMENT_TEMPERATURER);	
+	public Float getMeasuredRefrigeratorCompartmentTemperature() {
+		return (Float) getProperty(PROPERTY_HAS_MEASURED_REFRIGERATOR_COMPARTMENT_TEMPERATURER);	
 	}
-	public void setMeasuredRefrigeratorCompartmentTemperature(MeasuredValue msg) {
+	public void setMeasuredRefrigeratorCompartmentTemperature(Float msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_MEASURED_REFRIGERATOR_COMPARTMENT_TEMPERATURER, msg);	
 	}
@@ -211,45 +210,45 @@ public class Refrigerator extends EchonetSuperDevice{
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_REFRIGERATOR_COMPARTMENT_TEMPERATURER_LEVEL_SETTING, msg);	
 	}
-	public MeasuredValue getMultiRefrigeratorCompartmentTemperatureSetting() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_MULTI_REFRIGERATOR_COMPARTMENT_TEMPERATURER_SETTING);	
+	public Float getMultiRefrigeratorCompartmentTemperatureSetting() {
+		return (Float) getProperty(PROPERTY_HAS_MULTI_REFRIGERATOR_COMPARTMENT_TEMPERATURER_SETTING);	
 	}
-	public void setMultiRefrigeratorCompartmentTemperatureSetting(MeasuredValue msg) {
+	public void setMultiRefrigeratorCompartmentTemperatureSetting(Float msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_MULTI_REFRIGERATOR_COMPARTMENT_TEMPERATURER_SETTING, msg);	
 	}
-	public MeasuredValue getVegetableCompartmentTemperatureSetting() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_VEGETABLE_COMPARTMENT_TEMPERATURER_SETTING);	
+	public Float getVegetableCompartmentTemperatureSetting() {
+		return (Float) getProperty(PROPERTY_HAS_VEGETABLE_COMPARTMENT_TEMPERATURER_SETTING);	
 	}
-	public void setVegetableCompartmentTemperatureSetting(MeasuredValue msg) {
+	public void setVegetableCompartmentTemperatureSetting(Float msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_VEGETABLE_COMPARTMENT_TEMPERATURER_SETTING, msg);	
 	}
-	public MeasuredValue getIceCompartmentTemperatureSetting() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_ICE_COMPARTMENT_TEMPERATURER_SETTING);	
+	public Float getIceCompartmentTemperatureSetting() {
+		return (Float) getProperty(PROPERTY_HAS_ICE_COMPARTMENT_TEMPERATURER_SETTING);	
 	}
-	public void setIceCompartmentTemperatureSetting(MeasuredValue msg) {
+	public void setIceCompartmentTemperatureSetting(Float msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_ICE_COMPARTMENT_TEMPERATURER_SETTING, msg);	
 	}
-	public MeasuredValue getFreezerCompartmentTemperatureSetting() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_FREEZER_COMPARTMENT_TEMPERATURER_SETTING);	
+	public Float getFreezerCompartmentTemperatureSetting() {
+		return (Float) getProperty(PROPERTY_HAS_FREEZER_COMPARTMENT_TEMPERATURER_SETTING);	
 	}
-	public void setFreezerCompartmentTemperatureSetting(MeasuredValue msg) {
+	public void setFreezerCompartmentTemperatureSetting(Float msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_FREEZER_COMPARTMENT_TEMPERATURER_SETTING, msg);	
 	}
-	public MeasuredValue getRefrigeratorCompartmentTemperatureSetting() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_REFRIGERATOR_COMPARTMENT_TEMPERATURER_SETTING);	
+	public Float getRefrigeratorCompartmentTemperatureSetting() {
+		return (Float) getProperty(PROPERTY_HAS_REFRIGERATOR_COMPARTMENT_TEMPERATURER_SETTING);	
 	}
-	public void setRefrigeratorCompartmentTemperatureSetting(MeasuredValue msg) {
+	public void setRefrigeratorCompartmentTemperatureSetting(Float msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_REFRIGERATOR_COMPARTMENT_TEMPERATURER_SETTING, msg);	
 	}
-	public MeasuredValue getMaximumAllowableTemperatureSettingLevel() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_MAXIMUM_ALLOWABLE_TEMEPRATURE_SETTING_LEVEL);	
+	public Float getMaximumAllowableTemperatureSettingLevel() {
+		return (Float) getProperty(PROPERTY_HAS_MAXIMUM_ALLOWABLE_TEMEPRATURE_SETTING_LEVEL);	
 	}
-	public void setMaximumAllowableTemperatureSettingLevel(MeasuredValue msg) {
+	public void setMaximumAllowableTemperatureSettingLevel(Float msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_MAXIMUM_ALLOWABLE_TEMEPRATURE_SETTING_LEVEL, msg);	
 	}

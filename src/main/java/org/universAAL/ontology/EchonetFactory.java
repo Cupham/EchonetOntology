@@ -127,7 +127,6 @@ import org.universAAL.ontology.echonetontology.sensorRelatedDevices.WaterLeakSen
 import org.universAAL.ontology.echonetontology.sensorRelatedDevices.WaterLevelSensor;
 import org.universAAL.ontology.echonetontology.sensorRelatedDevices.WaterOverflowSensor;
 import org.universAAL.ontology.echonetontology.sensorRelatedDevices.WeightSensor;
-import org.universAAL.ontology.echonetontology.values.MeasuredValue;
 
 /**
  * @author Pham Van Cu
@@ -246,8 +245,6 @@ public class EchonetFactory implements ResourceFactory {
 	public static final int TELEVISION = 106;
 	public static final int EXTENDED_LIGHTING_SYSTEM = 107;
 	public static final int ECHONET_SUPER_DEVICE = 108;
-
-	public static final int MEASURE_VALUE = 109;
 	
 
 	
@@ -482,8 +479,6 @@ public class EchonetFactory implements ResourceFactory {
 				return new NetworkCamera(instanceURI);
 			case TELEVISION:
 				return new Television(instanceURI);
-			case MEASURE_VALUE:
-				return new MeasuredValue(instanceURI);
 		}
 
 		return null;

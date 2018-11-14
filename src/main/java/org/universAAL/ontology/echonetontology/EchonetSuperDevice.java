@@ -17,12 +17,9 @@
 package org.universAAL.ontology.echonetontology;
 
 
-import org.universAAL.ontology.echonetontology.values.DateTimeValue;
-import org.universAAL.ontology.echonetontology.values.EchonetDeviceGroupCodeValue;
 import org.universAAL.ontology.echonetontology.values.FaultDesciptionValue;
 import org.universAAL.ontology.echonetontology.values.IdentificationNumberValue;
 import org.universAAL.ontology.echonetontology.values.InstallationLocationValue;
-import org.universAAL.ontology.echonetontology.values.MeasuredValue;
 import org.universAAL.ontology.echonetontology.values.OccurenceStatusValue;
 import org.universAAL.ontology.echonetontology.values.OperationModeSettingValue;
 import org.universAAL.ontology.echonetontology.values.OperationStatusValue;
@@ -70,20 +67,28 @@ public class EchonetSuperDevice extends Device{
 	public void setNodeIPAddress(String ip) {
 		changeProperty(PROPERTY_HAS_NODE_IP_ADDRESS, ip);	
 	}
-	public EchonetDeviceGroupCodeValue getClassGroupCode() {
-		return (EchonetDeviceGroupCodeValue) getProperty(PROPERTY_HAS_GROUP_CODE);
+	public String getClassGroupCode() {
+		return getProperty(PROPERTY_HAS_GROUP_CODE).toString();
 	}
-	public void setClassGroupCode(EchonetDeviceGroupCodeValue msg) {
+	public void setClassGroupCode(String msg) {
 		if(msg !=null) {
 			changeProperty(PROPERTY_HAS_GROUP_CODE, msg);
 		}
 	}
 	public String getClassCode() {
-		return (String) getProperty(PROPERTY_HAS_CLASS_CODE);
+		return  getProperty(PROPERTY_HAS_CLASS_CODE).toString();
 	}
 	public void setClassCode(String msg) {
 		if(msg !=null) {
 			changeProperty(PROPERTY_HAS_CLASS_CODE, msg);
+		}
+	}
+	public String getInstanceCode() {
+		return  getProperty(PROPERTY_HAS_INSTANCE_CODE).toString();
+	}
+	public void setInstanceCode(String msg) {
+		if(msg !=null) {
+			changeProperty(PROPERTY_HAS_INSTANCE_CODE, msg);
 		}
 	}
 	public OperationStatusValue getOperationStatus() {
@@ -104,7 +109,7 @@ public class EchonetSuperDevice extends Device{
 		}
 	}
 	public String getStandardVersionInformation() {
-		return (String) getProperty(PROPERTY_STANDARD_VERSION_INFORMATION);
+		return  getProperty(PROPERTY_STANDARD_VERSION_INFORMATION).toString();
 	}
 	public void setStandardVersionInformation(String msg) {
 		if(msg !=null)
@@ -130,7 +135,7 @@ public class EchonetSuperDevice extends Device{
 	}
 	
 	public  String getManufacturerCode() {
-		return (String) getProperty(PROPERTY_HAS_MANUFACTURER_CODE);
+		return  getProperty(PROPERTY_HAS_MANUFACTURER_CODE).toString();
 	}
 	public  void setManufacturerCode(String msg) {
 		if(msg != null) 
@@ -142,11 +147,11 @@ public class EchonetSuperDevice extends Device{
 			changeProperty(PROPERTY_HAS_BUSINESS_FACILITY_CODE, msg);
 	}
 	public  String getBusinessFacilityCode() {
-		return (String) getProperty(PROPERTY_HAS_BUSINESS_FACILITY_CODE);
+		return  getProperty(PROPERTY_HAS_BUSINESS_FACILITY_CODE).toString();
 	}
 	
 	public  String getProductCode() {
-		return (String) getProperty(PROPERTY_HAS_PRODUCT_CODE);
+		return  getProperty(PROPERTY_HAS_PRODUCT_CODE).toString();
 	}
 	public  void setProductCode(String msg) {
 		if(msg != null) 
@@ -155,16 +160,16 @@ public class EchonetSuperDevice extends Device{
 
 
 	public  String getProductionNumber() {
-		return (String) getProperty(PROPERTY_HAS_PRODUCTION_NUMBER);
+		return  getProperty(PROPERTY_HAS_PRODUCTION_NUMBER).toString();
 	}
 	public  void setProductionNumber(String msg) {
 		if(msg != null) 
 			changeProperty(PROPERTY_HAS_PRODUCTION_NUMBER, msg);
 	}
-	public DateTimeValue getProductionDateTimeValue() {
-		return (DateTimeValue) getProperty(PROPERTY_HAS_PRODUCTION_DATE);
+	public String getProductionString() {
+		return  getProperty(PROPERTY_HAS_PRODUCTION_DATE).toString();
 	}
-	public  void setProductionDateTimeValue(DateTimeValue msg) {
+	public  void setProductionString(String msg) {
 		changeProperty(PROPERTY_HAS_PRODUCTION_DATE, msg);
 	}	
 	public IdentificationNumberValue getIdentificationNumber() {
@@ -178,16 +183,16 @@ public class EchonetSuperDevice extends Device{
 	
 
 	public  String getManufacturerFaultCode() {
-		return (String) getProperty(PROPERTY_HAS_MANUFACTURER_FAULT_CODE);
+		return  getProperty(PROPERTY_HAS_MANUFACTURER_FAULT_CODE).toString();
 	}
 	public  void setManufacturerFaultCode(String msg) {
 		if(msg != null)
 			changeProperty(PROPERTY_HAS_MANUFACTURER_FAULT_CODE, msg);
 	}
-	public  MeasuredValue getCurrentLimitSetting() {	
-		return (MeasuredValue) getProperty(PROPERTY_HAS_CURRENT_LIMIT_SETTING);
+	public  Integer getCurrentLimitSetting() {	
+		return (Integer) getProperty(PROPERTY_HAS_CURRENT_LIMIT_SETTING);
 	}
-	public  void setCurrentLimitSetting(MeasuredValue msg) {
+	public  void setCurrentLimitSetting(Integer msg) {
 		if(msg != null)
 			changeProperty(PROPERTY_HAS_CURRENT_LIMIT_SETTING, msg);
 	}
@@ -208,48 +213,48 @@ public class EchonetSuperDevice extends Device{
 		}
 	}
 	public  String getCumulativeOperatingTime() {
-		return (String) getProperty(PROPERTY_HAS_CUMULATIVE_OPERATING_TIME);
+		return  getProperty(PROPERTY_HAS_CUMULATIVE_OPERATING_TIME).toString();
 	}
 	public  void setCumulativeOperatingTime(String msg) {
 		if(msg !=null)
 			changeProperty(PROPERTY_HAS_CUMULATIVE_OPERATING_TIME, msg);
 	}
-	public DateTimeValue getCurrentTimeSetting() {
-		return (DateTimeValue) getProperty(PROPERTY_HAS_CURRENT_TIME_SETTING);
+	public String getCurrentTimeSetting() {
+		return  getProperty(PROPERTY_HAS_CURRENT_TIME_SETTING).toString();
 	}
-	public  void setCurrentTimeSetting(DateTimeValue msg) {
+	public  void setCurrentTimeSetting(String msg) {
 		if(msg !=null)
 			changeProperty(PROPERTY_HAS_CURRENT_TIME_SETTING, msg);
 	}
-	public DateTimeValue getCurrentDateTimeValueSetting() {
-		return (DateTimeValue)getProperty(PROPERTY_HAS_CURRENT_DATE_SETTING);
+	public String getCurrentStringSetting() {
+		return getProperty(PROPERTY_HAS_CURRENT_DATE_SETTING).toString();
 	}
-	public  void setCurrentDateTimeValueSetting(DateTimeValue msg) {
+	public  void setCurrentStringSetting(String msg) {
 		if(msg !=null)
 			changeProperty(PROPERTY_HAS_CURRENT_DATE_SETTING, msg);
 	}
-	public MeasuredValue getMeasuredInstantaneousPowerConsumption() {
-		return (MeasuredValue)getProperty(PROPERTY_HAS_MEASURED_INSTANTANEOUS_POWER_CONSUMPTION);
+	public Integer getMeasuredInstantaneousPowerConsumption() {
+		return (Integer)getProperty(PROPERTY_HAS_MEASURED_INSTANTANEOUS_POWER_CONSUMPTION);
 	}
-	public  void setMeasuredInstantaneousPowerConsumption(MeasuredValue msg) {
+	public  void setMeasuredInstantaneousPowerConsumption(Integer msg) {
 		if(msg != null)
 			changeProperty(PROPERTY_HAS_MEASURED_INSTANTANEOUS_POWER_CONSUMPTION, msg);
 	}
 
 
-	public  MeasuredValue getMeasuredCumulativePowerConsumption() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_MEASURED_CUMULATIVE_POWER_CONSUMPTION);
+	public  Float getMeasuredCumulativePowerConsumption() {
+		return (Float) getProperty(PROPERTY_HAS_MEASURED_CUMULATIVE_POWER_CONSUMPTION);
 		
 	}
-	public  void setMeasuredCumulativePowerConsumption(MeasuredValue msg) {
+	public  void setMeasuredCumulativePowerConsumption(Float msg) {
 		if(msg != null)
 			changeProperty(PROPERTY_HAS_MEASURED_CUMULATIVE_POWER_CONSUMPTION, msg);
 	}
 	
-	public  MeasuredValue ElectricEnergyValue() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_POWER_LIMIT_SETTING);
+	public  Integer getPowerLimitSetting() {
+		return (Integer) getProperty(PROPERTY_HAS_POWER_LIMIT_SETTING);
 	}
-	public  void setPowerLimitSetting(MeasuredValue msg) {
+	public  void setPowerLimitSetting(Integer msg) {
 		changeProperty(PROPERTY_HAS_POWER_LIMIT_SETTING, msg);
 	}
 	

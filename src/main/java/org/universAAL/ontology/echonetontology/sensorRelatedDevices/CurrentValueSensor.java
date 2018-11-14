@@ -18,7 +18,6 @@ package org.universAAL.ontology.echonetontology.sensorRelatedDevices;
 
 import org.universAAL.ontology.echonetontology.EchonetOntology;
 import org.universAAL.ontology.echonetontology.EchonetSuperDevice;
-import org.universAAL.ontology.echonetontology.values.MeasuredValue;
 
 public class CurrentValueSensor extends EchonetSuperDevice{
 	public static final String MY_URI = EchonetOntology.NAMESPACE + "CurrentValueSensor";
@@ -46,24 +45,24 @@ public class CurrentValueSensor extends EchonetSuperDevice{
 		return true;
 	}
 	
-	public MeasuredValue getMeasuredCurrentValue1() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_MEASURED_CURRENT_VALUE_1);	
+	public Float getMeasuredCurrentValue1() {
+		return (Float) getProperty(PROPERTY_HAS_MEASURED_CURRENT_VALUE_1);	
 	}
-	public void setMeasuredCurrentValue1(MeasuredValue msg) {
+	public void setMeasuredCurrentValue1(Float msg) {
 		if (msg != null)
 			changeProperty(PROPERTY_HAS_MEASURED_CURRENT_VALUE_1,msg);	
 	}
-	public MeasuredValue getMeasuredCurrentValue2() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_MEASURED_CURRENT_VALUE_2);	
+	public Float getMeasuredCurrentValue2() {
+		return (Float) getProperty(PROPERTY_HAS_MEASURED_CURRENT_VALUE_2);	
 	}
-	public void setMeasuredCurrentValue2(MeasuredValue msg) {
+	public void setMeasuredCurrentValue2(Float msg) {
 		if (msg != null)
 			changeProperty(PROPERTY_HAS_MEASURED_CURRENT_VALUE_2,msg);	
 	}
-	public MeasuredValue getRatedVoltageToBeMeasured() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_RATED_VOLTAGE_TO_BE_MEASURED);	
+	public Integer getRatedVoltageToBeMeasured() {
+		return (Integer) getProperty(PROPERTY_HAS_RATED_VOLTAGE_TO_BE_MEASURED);	
 	}
-	public void setRatedVoltageToBeMeasured(MeasuredValue msg) {
+	public void setRatedVoltageToBeMeasured(Integer msg) {
 		if (msg != null)
 			changeProperty(PROPERTY_HAS_RATED_VOLTAGE_TO_BE_MEASURED,msg);	
 	}

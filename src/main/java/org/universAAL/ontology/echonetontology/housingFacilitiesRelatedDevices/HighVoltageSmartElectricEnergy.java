@@ -19,8 +19,6 @@ package org.universAAL.ontology.echonetontology.housingFacilitiesRelatedDevices;
 
 import org.universAAL.ontology.echonetontology.EchonetOntology;
 import org.universAAL.ontology.echonetontology.EchonetSuperDevice;
-import org.universAAL.ontology.echonetontology.values.DateTimeValue;
-import org.universAAL.ontology.echonetontology.values.MeasuredValue;
 
 public class HighVoltageSmartElectricEnergy extends EchonetSuperDevice{
 	public static final String MY_URI = EchonetOntology.NAMESPACE + "HighVoltageSmartElectricEnergy";
@@ -51,15 +49,15 @@ public class HighVoltageSmartElectricEnergy extends EchonetSuperDevice{
 	public static final String PROPERTY_HAS_MEASURED_CUMULATIVE_REACTIVE_ELECTRIC_POWER_CONSUMPTION_FOR_POWER_FACTOR_MEASUREMENT_HISTORICAL_DATA = EchonetOntology.NAMESPACE + 
 										"hasMeasuredCumulativeReactiveElectricPowerConsumptionForPoweerFactorMeasurementHistoricalData";
 
-	public MeasuredValue getMeasuredCumulativeReactiveElectricPowerConsumptionForPoweerFactorMeasurementHistoricalData() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_MEASURED_CUMULATIVE_REACTIVE_ELECTRIC_POWER_CONSUMPTION_FOR_POWER_FACTOR_MEASUREMENT_HISTORICAL_DATA);	
+	public Float getMeasuredCumulativeReactiveElectricPowerConsumptionForPoweerFactorMeasurementHistoricalData() {
+		return (Float) getProperty(PROPERTY_HAS_MEASURED_CUMULATIVE_REACTIVE_ELECTRIC_POWER_CONSUMPTION_FOR_POWER_FACTOR_MEASUREMENT_HISTORICAL_DATA);	
 	}
-	public void setMeasuredCumulativeReactiveElectricPowerConsumptionForPoweerFactorMeasurementHistoricalData(MeasuredValue msg) {
+	public void setMeasuredCumulativeReactiveElectricPowerConsumptionForPoweerFactorMeasurementHistoricalData(Float msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_MEASURED_CUMULATIVE_REACTIVE_ELECTRIC_POWER_CONSUMPTION_FOR_POWER_FACTOR_MEASUREMENT_HISTORICAL_DATA, msg);	
 	}
 	public String getMeasuredCumulativeReactiveElectricPowerConsumptionAmountUnit() {
-		return (String) getProperty(PROPERTY_HAS_MEASURED_CUMULATIVE_REACTIVE_ELECTRIC_POWER_CONSUMPTION_AMOUNT_UNIT);	
+		return  getProperty(PROPERTY_HAS_MEASURED_CUMULATIVE_REACTIVE_ELECTRIC_POWER_CONSUMPTION_AMOUNT_UNIT).toString();	
 	}
 	public void setMeasuredCumulativeReactiveElectricPowerConsumptionAmountUnit(String msg) {
 		if(msg !=null) 
@@ -72,36 +70,36 @@ public class HighVoltageSmartElectricEnergy extends EchonetSuperDevice{
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_NUMBER_OF_EFFECTIVE_DIGITS_FOR_MEASURED_CUMULATIVE_REACTIVE_ELECTRIC_POWER_CONSUMPTION_FOR_POWER_FACTOR_MEASUREMENT, msg);	
 	}
-	public MeasuredValue getMeasuredCumulativeReactiveElectricPowerConsumptionAtFixedTimeForPowerFactorMeasurement() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_MEASURED_CUMULATIVE_REACTIVE_ELECTRIC_POWER_CONSUMPTION_AT_FIXED_TIME_FOR_POWER_FACTOR_MEASUREMENT);	
+	public Float getMeasuredCumulativeReactiveElectricPowerConsumptionAtFixedTimeForPowerFactorMeasurement() {
+		return (Float) getProperty(PROPERTY_HAS_MEASURED_CUMULATIVE_REACTIVE_ELECTRIC_POWER_CONSUMPTION_AT_FIXED_TIME_FOR_POWER_FACTOR_MEASUREMENT);	
 	}
-	public void setMeasuredCumulativeReactiveElectricPowerConsumptionAtFixedTimeForPowerFactorMeasurement(MeasuredValue msg) {
+	public void setMeasuredCumulativeReactiveElectricPowerConsumptionAtFixedTimeForPowerFactorMeasurement(Float msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_MEASURED_CUMULATIVE_REACTIVE_ELECTRIC_POWER_CONSUMPTION_AT_FIXED_TIME_FOR_POWER_FACTOR_MEASUREMENT, msg);	
 	}
-	public MeasuredValue getMeasuredReactiveElectricPowerConsumptionForPowerFactorMeasurement() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_MEASURED_REACTIVE_ELECTRIC_POWER_CONSUMPTION_FOR_POWER_FACTOR_MEASUREMENT);	
+	public Float getMeasuredReactiveElectricPowerConsumptionForPowerFactorMeasurement() {
+		return (Float) getProperty(PROPERTY_HAS_MEASURED_REACTIVE_ELECTRIC_POWER_CONSUMPTION_FOR_POWER_FACTOR_MEASUREMENT);	
 	}
-	public void setMeasuredReactiveElectricPowerConsumptionForPowerFactorMeasurement(MeasuredValue msg) {
+	public void setMeasuredReactiveElectricPowerConsumptionForPowerFactorMeasurement(Float msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_MEASURED_REACTIVE_ELECTRIC_POWER_CONSUMPTION_FOR_POWER_FACTOR_MEASUREMENT, msg);	
 	}
 	public String getCumulativeMaximumElectricPowerDemandUnit() {
-		return (String) getProperty(PROPERTY_HAS_CUMULATIVE_MAXIMUM_ELECTRIC_POWER_DEMAND_UNIT);	
+		return  getProperty(PROPERTY_HAS_CUMULATIVE_MAXIMUM_ELECTRIC_POWER_DEMAND_UNIT).toString();	
 	}
 	public void setCumulativeMaximumElectricPowerDemandUnit(String msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_CUMULATIVE_MAXIMUM_ELECTRIC_POWER_DEMAND_UNIT, msg);	
 	}
-	public MeasuredValue getMeasuredElectricPowerDemandHistoricalData() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_MEASURED_ELECTRIC_POWER_DEMAND_HISTORICAL_DATA);	
+	public Float getMeasuredElectricPowerDemandHistoricalData() {
+		return (Float) getProperty(PROPERTY_HAS_MEASURED_ELECTRIC_POWER_DEMAND_HISTORICAL_DATA);	
 	}
-	public void setMeasuredElectricPowerDemandHistoricalData(MeasuredValue msg) {
+	public void setMeasuredElectricPowerDemandHistoricalData(Float msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_MEASURED_ELECTRIC_POWER_DEMAND_HISTORICAL_DATA, msg);	
 	}
 	public String getElectricPowerDemandUnit() {
-		return (String) getProperty(PROPERTY_HAS_ELECTRIC_POWER_DEMAND_UNIT);	
+		return  getProperty(PROPERTY_HAS_ELECTRIC_POWER_DEMAND_UNIT).toString();	
 	}
 	public void setElectricPowerDemandUnit(String msg) {
 		if(msg !=null) 
@@ -114,36 +112,36 @@ public class HighVoltageSmartElectricEnergy extends EchonetSuperDevice{
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_NUMBER_OF_EFFECTIVE_DIGITS_FOR_ELECTRIC_POWER_DEMAND, msg);	
 	}
-	public MeasuredValue getElectricPowerDemandAtFixedTime() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_ELECTRIC_POWER_DEMAND_AT_FIXED_TIME);	
+	public Float getElectricPowerDemandAtFixedTime() {
+		return (Float) getProperty(PROPERTY_HAS_ELECTRIC_POWER_DEMAND_AT_FIXED_TIME);	
 	}
-	public void setElectricPowerDemandAtFixedTime(MeasuredValue msg) {
+	public void setElectricPowerDemandAtFixedTime(Float msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_ELECTRIC_POWER_DEMAND_AT_FIXED_TIME, msg);	
 	}
-	public MeasuredValue getCumulativeMaximumElectricPowerDemand() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_CUMULATIVE_MAXIMUM_ELECTRIC_POWER_DEMAND);	
+	public Float getCumulativeMaximumElectricPowerDemand() {
+		return (Float) getProperty(PROPERTY_HAS_CUMULATIVE_MAXIMUM_ELECTRIC_POWER_DEMAND);	
 	}
-	public void setCumulativeMaximumElectricPowerDemand(MeasuredValue msg) {
+	public void setCumulativeMaximumElectricPowerDemand(Float msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_CUMULATIVE_MAXIMUM_ELECTRIC_POWER_DEMAND, msg);	
 	}
-	public MeasuredValue getMonthlyMaximumElectricPowerDemand() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_MONTHLY_MAXIMUM_ELECTRIC_POWER_DEMAND);	
+	public Float getMonthlyMaximumElectricPowerDemand() {
+		return (Float) getProperty(PROPERTY_HAS_MONTHLY_MAXIMUM_ELECTRIC_POWER_DEMAND);	
 	}
-	public void setMonthlyMaximumElectricPowerDemand(MeasuredValue msg) {
+	public void setMonthlyMaximumElectricPowerDemand(Float msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_MONTHLY_MAXIMUM_ELECTRIC_POWER_DEMAND, msg);	
 	}
-	public MeasuredValue getMeasuredCumulativeActiveElectricEnergyAmountHistoricalData() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_MEASURED_CUMULATIVE_ACTIVE_ELECTRIC_ENERGY_AMOUNT_HISTORICAL_DATA);	
+	public Float getMeasuredCumulativeActiveElectricEnergyAmountHistoricalData() {
+		return (Float) getProperty(PROPERTY_HAS_MEASURED_CUMULATIVE_ACTIVE_ELECTRIC_ENERGY_AMOUNT_HISTORICAL_DATA);	
 	}
-	public void setMeasuredCumulativeActiveElectricEnergyAmountHistoricalData(MeasuredValue msg) {
+	public void setMeasuredCumulativeActiveElectricEnergyAmountHistoricalData(Float msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_MEASURED_CUMULATIVE_ACTIVE_ELECTRIC_ENERGY_AMOUNT_HISTORICAL_DATA, msg);	
 	}
 	public String getMeasuredCumulativeActiveElectricEnergyAmountUnit() {
-		return (String) getProperty(PROPERTY_HAS_CUMULATIVE_ACTIVE_ELECTRIC_ENERGY_AMOUNT_UNIT);	
+		return  getProperty(PROPERTY_HAS_CUMULATIVE_ACTIVE_ELECTRIC_ENERGY_AMOUNT_UNIT).toString();	
 	}
 	public void setMeasuredCumulativeActiveElectricEnergyAmountUnit(String msg) {
 		if(msg !=null) 
@@ -156,52 +154,52 @@ public class HighVoltageSmartElectricEnergy extends EchonetSuperDevice{
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_NUMBER_OF_EFFECTIVE_DIGITS_FOR_CUMULATIVE_ELECTRIC_ENERGY, msg);	
 	}
-	public MeasuredValue getCumulativeActiveElectricEnergyForPowerFactorMeasurement() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_MEASURED_CUMULATIVE_ACTIVE_ELECTRIC_ENERGY_FOR_POWER_FACTOR_MEASUREMENT);	
+	public Float getCumulativeActiveElectricEnergyForPowerFactorMeasurement() {
+		return (Float) getProperty(PROPERTY_HAS_MEASURED_CUMULATIVE_ACTIVE_ELECTRIC_ENERGY_FOR_POWER_FACTOR_MEASUREMENT);	
 	}
-	public void setCumulativeActiveElectricEnergyForPowerFactorMeasurement(MeasuredValue msg) {
+	public void setCumulativeActiveElectricEnergyForPowerFactorMeasurement(Float msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_MEASURED_CUMULATIVE_ACTIVE_ELECTRIC_ENERGY_FOR_POWER_FACTOR_MEASUREMENT, msg);	
 	}
-	public MeasuredValue getCumulativeActiveElectricEnergyAmountMeasuredAtFixedTime() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_CUMULATIVE_ACTIVE_ELECTRIC_ENERGY_AMOUNT_MEASURED_AT_FIXED_TIME);	
+	public Float getCumulativeActiveElectricEnergyAmountMeasuredAtFixedTime() {
+		return (Float) getProperty(PROPERTY_HAS_CUMULATIVE_ACTIVE_ELECTRIC_ENERGY_AMOUNT_MEASURED_AT_FIXED_TIME);	
 	}
-	public void setCumulativeActiveElectricEnergyAmountMeasuredAtFixedTime(MeasuredValue msg) {
+	public void setCumulativeActiveElectricEnergyAmountMeasuredAtFixedTime(Float msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_CUMULATIVE_ACTIVE_ELECTRIC_ENERGY_AMOUNT_MEASURED_AT_FIXED_TIME, msg);	
 	}
-	public MeasuredValue getMeasuredCumulativeActiveElectricEnergyAmount() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_MEASURED_CUMULATIVE_ACTIVE_ELECTRIC_ENERGY_AMOUNT);	
+	public Float getMeasuredCumulativeActiveElectricEnergyAmount() {
+		return (Float) getProperty(PROPERTY_HAS_MEASURED_CUMULATIVE_ACTIVE_ELECTRIC_ENERGY_AMOUNT);	
 	}
-	public void setMeasuredCumulativeActiveElectricEnergyAmount(MeasuredValue msg) {
+	public void setMeasuredCumulativeActiveElectricEnergyAmount(Float msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_MEASURED_CUMULATIVE_ACTIVE_ELECTRIC_ENERGY_AMOUNT, msg);	
 	}
-	public DateTimeValue getDayToRetrieveMeasuredCumulativeElectricEnergyHistoricalData() {
-		return (DateTimeValue) getProperty(PROPERTY_HAS_DAY_TO_RETRIVE_MEASURED_CUMULATIVE_ELECTRIC_ENERGY_HISTORICAL_DATA);	
+	public String getDayToRetrieveMeasuredCumulativeElectricEnergyHistoricalData() {
+		return  getProperty(PROPERTY_HAS_DAY_TO_RETRIVE_MEASURED_CUMULATIVE_ELECTRIC_ENERGY_HISTORICAL_DATA).toString();	
 	}
-	public void setDayToRetrieveMeasuredCumulativeElectricEnergyHistoricalData(DateTimeValue msg) {
+	public void setDayToRetrieveMeasuredCumulativeElectricEnergyHistoricalData(String msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_DAY_TO_RETRIVE_MEASURED_CUMULATIVE_ELECTRIC_ENERGY_HISTORICAL_DATA, msg);	
 	}
-	public DateTimeValue getFixedDay() {
-		return (DateTimeValue) getProperty(PROPERTY_HAS_FIXED_DAY);	
+	public String getFixedDay() {
+		return  getProperty(PROPERTY_HAS_FIXED_DAY).toString();	
 	}
-	public void setFixedDay(DateTimeValue msg) {
+	public void setFixedDay(String msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_FIXED_DAY, msg);	
 	}
-	public MeasuredValue getMultiplyingFactorForCoefficient() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_MULTIPLYING_FACTOR_FOR_COEFFICIENT);	
+	public Float getMultiplyingFactorForCoefficient() {
+		return (Float) getProperty(PROPERTY_HAS_MULTIPLYING_FACTOR_FOR_COEFFICIENT);	
 	}
-	public void setMultiplyingFactorForCoefficient(MeasuredValue msg) {
+	public void setMultiplyingFactorForCoefficient(Float msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_MULTIPLYING_FACTOR_FOR_COEFFICIENT, msg);	
 	}
-	public MeasuredValue getCoefficient() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_COEFFICIENT);	
+	public Float getCoefficient() {
+		return (Float) getProperty(PROPERTY_HAS_COEFFICIENT);	
 	}
-	public void setCoefficient(MeasuredValue msg) {
+	public void setCoefficient(Float msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_COEFFICIENT, msg);	
 	}

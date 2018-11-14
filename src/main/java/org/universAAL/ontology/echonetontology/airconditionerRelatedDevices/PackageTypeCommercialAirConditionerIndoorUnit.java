@@ -19,8 +19,6 @@ package org.universAAL.ontology.echonetontology.airconditionerRelatedDevices;
 
 import org.universAAL.ontology.echonetontology.EchonetOntology;
 import org.universAAL.ontology.echonetontology.EchonetSuperDevice;
-import org.universAAL.ontology.echonetontology.values.ComercialAirconditionerCurrentFunctionValue;
-import org.universAAL.ontology.echonetontology.values.MeasuredValue;
 import org.universAAL.ontology.echonetontology.values.OperationModeSettingValue;
 import org.universAAL.ontology.echonetontology.values.OperationStatusValue;
 import org.universAAL.ontology.echonetontology.values.PowerConsumptionRange;
@@ -42,16 +40,16 @@ public class PackageTypeCommercialAirConditionerIndoorUnit extends EchonetSuperD
 			changeProperty(PROPERTY_HAS_POWER_CONSUMPTION_RANGE_INDOOR_UNIT, msg);	
 	}
 	public String getGroupInformation() {
-		return (String) getProperty(PROPERTY_HAS_GROUP_INFOMRATION);	
+		return getProperty(PROPERTY_HAS_GROUP_INFOMRATION).toString();	
 	}
 	public void setGroupInformation(String msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_GROUP_INFOMRATION, msg);	
 	}
-	public ComercialAirconditionerCurrentFunctionValue getCurrentFunction() {
-		return (ComercialAirconditionerCurrentFunctionValue) getProperty(PROPERTY_HAS_CURRENT_FUNCTION);	
+	public String getCurrentFunction() {
+		return getProperty(PROPERTY_HAS_CURRENT_FUNCTION).toString();	
 	}
-	public void setCurrentFunction(ComercialAirconditionerCurrentFunctionValue msg) {
+	public void setCurrentFunction(String msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_CURRENT_FUNCTION, msg);	
 	}
@@ -62,10 +60,10 @@ public class PackageTypeCommercialAirConditionerIndoorUnit extends EchonetSuperD
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_THERMOSTAT_STATE, msg);	
 	}
-	public MeasuredValue getMeasuredIndoorUnitTemperature() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_MEASURED_INDOOR_UNIT_TEMPERATURE);	
+	public Float getMeasuredIndoorUnitTemperature() {
+		return (Float) getProperty(PROPERTY_HAS_MEASURED_INDOOR_UNIT_TEMPERATURE);	
 	}
-	public void setMeasuredIndoorUnitTemperature(MeasuredValue msg) {
+	public void setMeasuredIndoorUnitTemperature(Float msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_MEASURED_INDOOR_UNIT_TEMPERATURE, msg);	
 	}

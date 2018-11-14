@@ -20,13 +20,10 @@ package org.universAAL.ontology.echonetontology.housingFacilitiesRelatedDevices;
 
 import org.universAAL.ontology.echonetontology.EchonetOntology;
 import org.universAAL.ontology.echonetontology.EchonetSuperDevice;
-import org.universAAL.ontology.echonetontology.values.DateTimeValue;
-import org.universAAL.ontology.echonetontology.values.MeasuredValue;
 import org.universAAL.ontology.echonetontology.values.MeasurementMethodValue;
 import org.universAAL.ontology.echonetontology.values.OperationFunctionSettingValue;
 import org.universAAL.ontology.echonetontology.values.OperationModeSettingValue;
 import org.universAAL.ontology.echonetontology.values.OperationStatusValue;
-import org.universAAL.ontology.echonetontology.values.RatedPowerConsumptionInModeValue;
 import org.universAAL.ontology.echonetontology.values.ThresholdLevelValue;
 
 
@@ -57,24 +54,24 @@ public class FloorHeater extends EchonetSuperDevice{
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_POWER_CONSUMPTION_MEASUREMENT_METHOD, msg);	
 	}
-	public RatedPowerConsumptionInModeValue getRatedPowerConsumption() {
-		return (RatedPowerConsumptionInModeValue) getProperty(PROPERTY_HAS_RATED_POWER_CONSUMPTION);	
+	public String getRatedPowerConsumption() {
+		return  getProperty(PROPERTY_HAS_RATED_POWER_CONSUMPTION).toString();	
 	}
-	public void setRatedPowerConsumption(RatedPowerConsumptionInModeValue msg) {
+	public void setRatedPowerConsumption(String msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_RATED_POWER_CONSUMPTION, msg);	
 	}
-	public DateTimeValue getOffTimerSettingRelativeTime() {
-		return (DateTimeValue) getProperty(PROPERTY_HAS_OFF_TIMER_SETTING_RELATIVE_TIME);	
+	public String getOffTimerSettingRelativeTime() {
+		return  getProperty(PROPERTY_HAS_OFF_TIMER_SETTING_RELATIVE_TIME).toString();	
 	}
-	public void setOffTimerSettingRelativeTime(DateTimeValue msg) {
+	public void setOffTimerSettingRelativeTime(String msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_OFF_TIMER_SETTING_RELATIVE_TIME, msg);	
 	}
-	public DateTimeValue getOffTimerSettingTime() {
-		return (DateTimeValue) getProperty(PROPERTY_HAS_OFF_TIMER_SETTING_TIME);	
+	public String getOffTimerSettingTime() {
+		return  getProperty(PROPERTY_HAS_OFF_TIMER_SETTING_TIME).toString();	
 	}
-	public void setOfTimerSettingTime(DateTimeValue msg) {
+	public void setOfTimerSettingTime(String msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_OFF_TIMER_SETTING_TIME, msg);	
 	}
@@ -86,17 +83,17 @@ public class FloorHeater extends EchonetSuperDevice{
 			changeProperty(PROPERTY_HAS_OFF_TIMER_RESERVATION_SETTING, msg);	
 	}
 	
-	public DateTimeValue getOnTimerSettingRelativeTime() {
-		return (DateTimeValue) getProperty(PROPERTY_HAS_ON_TIMER_SETTING_RELATIVE_TIME);	
+	public String getOnTimerSettingRelativeTime() {
+		return  getProperty(PROPERTY_HAS_ON_TIMER_SETTING_RELATIVE_TIME).toString();	
 	}
-	public void setOnTimerSettingRelativeTime(DateTimeValue msg) {
+	public void setOnTimerSettingRelativeTime(String msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_ON_TIMER_SETTING_RELATIVE_TIME, msg);	
 	}
-	public DateTimeValue getOnTimerSettingTime() {
-		return (DateTimeValue) getProperty(PROPERTY_HAS_ON_TIMER_SETTING_TIME);	
+	public String getOnTimerSettingTime() {
+		return  getProperty(PROPERTY_HAS_ON_TIMER_SETTING_TIME).toString();	
 	}
-	public void setOnTimerSettingTime(DateTimeValue msg) {
+	public void setOnTimerSettingTime(String msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_ON_TIMER_SETTING_TIME, msg);	
 	}
@@ -108,14 +105,14 @@ public class FloorHeater extends EchonetSuperDevice{
 			changeProperty(PROPERTY_HAS_ON_TIMER_RESERVATION_SETTING, msg);	
 	}
 	public String getDailyTimerSetting2() {
-		return (String) getProperty(PROPERTY_HAS_DAILY_TIMER_SETTING_2);	
+		return  getProperty(PROPERTY_HAS_DAILY_TIMER_SETTING_2).toString();	
 	}
 	public void setDailyTimerSetting2(String msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_DAILY_TIMER_SETTING_2, msg);	
 	}
 	public String getDailyTimerSetting1() {
-		return (String) getProperty(PROPERTY_HAS_DAILY_TIMER_SETTING_1);	
+		return  getProperty(PROPERTY_HAS_DAILY_TIMER_SETTING_1).toString();	
 	}
 	public void setDailyTimerSetting1(String msg) {
 		if(msg !=null) 
@@ -129,7 +126,7 @@ public class FloorHeater extends EchonetSuperDevice{
 			changeProperty(PROPERTY_HAS_DAILY_TIMER_SETTING_STATUS, msg);	
 	}
 	public String getZoneChangeSetting() {
-		return (String) getProperty(PROPERTY_HAS_ZONE_CHANGE_SETTING);	
+		return  getProperty(PROPERTY_HAS_ZONE_CHANGE_SETTING).toString();	
 	}
 	public void setZoneChangeSetting(String msg) {
 		if(msg !=null) 
@@ -142,17 +139,17 @@ public class FloorHeater extends EchonetSuperDevice{
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_SPECIAL_OPERATION_SETTING, msg);	
 	}
-	public MeasuredValue getFloorWaterTemperature() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_MEASURED_FLOOR_TEMPERATURE);	
+	public Float getFloorWaterTemperature() {
+		return (Float) getProperty(PROPERTY_HAS_MEASURED_FLOOR_TEMPERATURE);	
 	}
-	public void setMeasuredFloorTemperature(MeasuredValue msg) {
+	public void setMeasuredFloorTemperature(Float msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_MEASURED_FLOOR_TEMPERATURE, msg);	
 	}
-	public MeasuredValue getMeasuredRoomWaterTemperature() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_MEASURED_ROOM_TEMPERATURE);	
+	public Float getMeasuredRoomWaterTemperature() {
+		return (Float) getProperty(PROPERTY_HAS_MEASURED_ROOM_TEMPERATURE);	
 	}
-	public void setMeasuredRoomTemperature(MeasuredValue msg) {
+	public void setMeasuredRoomTemperature(Float msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_MEASURED_ROOM_TEMPERATURE, msg);	
 	}
@@ -163,10 +160,10 @@ public class FloorHeater extends EchonetSuperDevice{
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_TEMPERATURE_SETTING_2, msg);	
 	}
-	public MeasuredValue getTemperatureSetting1() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_TEMPERATURE_SETTING_1);	
+	public Float getTemperatureSetting1() {
+		return (Float) getProperty(PROPERTY_HAS_TEMPERATURE_SETTING_1);	
 	}
-	public void setTemperatureSetting1(MeasuredValue msg) {
+	public void setTemperatureSetting1(Float msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_TEMPERATURE_SETTING_1, msg);	
 	}

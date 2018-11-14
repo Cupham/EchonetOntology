@@ -20,7 +20,6 @@ package org.universAAL.ontology.echonetontology.housingFacilitiesRelatedDevices;
 
 import org.universAAL.ontology.echonetontology.EchonetOntology;
 import org.universAAL.ontology.echonetontology.EchonetSuperDevice;
-import org.universAAL.ontology.echonetontology.values.MeasuredValue;
 import org.universAAL.ontology.echonetontology.values.OperationFunctionSettingValue;
 import org.universAAL.ontology.echonetontology.values.OperationStateSettingValue;
 import org.universAAL.ontology.echonetontology.values.OperationStatusValue;
@@ -45,17 +44,17 @@ public class FuelCell extends EchonetSuperDevice{
 	public static final String PROPERTY_HAS_MEASURED_REMAINING_HOT_WATER_AMOUNT = EchonetOntology.NAMESPACE + "hasMeasuredRemainingHotWaterAmount";
 	public static final String PROPERTY_HAS_TANK_CAPACITY = EchonetOntology.NAMESPACE + "hasTankCapacity";
 		
-	public MeasuredValue getTankCapacity() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_TANK_CAPACITY);	
+	public Float getTankCapacity() {
+		return (Float) getProperty(PROPERTY_HAS_TANK_CAPACITY);	
 	}
-	public void setTankCapacity(MeasuredValue msg) {
+	public void setTankCapacity(Float msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_TANK_CAPACITY, msg);	
 	}
-	public MeasuredValue getMeasuredRemainingHotWaterAmount() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_MEASURED_REMAINING_HOT_WATER_AMOUNT);	
+	public Float getMeasuredRemainingHotWaterAmount() {
+		return (Float) getProperty(PROPERTY_HAS_MEASURED_REMAINING_HOT_WATER_AMOUNT);	
 	}
-	public void setMeasuredRemainingHotWaterAmount(MeasuredValue msg) {
+	public void setMeasuredRemainingHotWaterAmount(Float msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_MEASURED_REMAINING_HOT_WATER_AMOUNT, msg);	
 	}
@@ -66,17 +65,17 @@ public class FuelCell extends EchonetSuperDevice{
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_SYSTEM_INTERCONNECT_TYPE, msg);	
 	}
-	public MeasuredValue getMeasuredInHouseInstantaneousPowerConsumption() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_MEASURED_IN_HOUSE_INSTANTANEOUS_POWER_POWER_CONSUMPTION);	
+	public Float getMeasuredInHouseInstantaneousPowerConsumption() {
+		return (Float) getProperty(PROPERTY_HAS_MEASURED_IN_HOUSE_INSTANTANEOUS_POWER_POWER_CONSUMPTION);	
 	}
-	public void setMeasuredInHouseInstantaneousPowerConsumption(MeasuredValue msg) {
+	public void setMeasuredInHouseInstantaneousPowerConsumption(Float msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_MEASURED_IN_HOUSE_INSTANTANEOUS_POWER_POWER_CONSUMPTION, msg);	
 	}
-	public MeasuredValue getMeasuredInHouseCummulativePowerConsumption() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_MEASURED_IN_HOUSE_CUMMULATIVE_POWER_CONSUMPTION);	
+	public Float getMeasuredInHouseCummulativePowerConsumption() {
+		return (Float) getProperty(PROPERTY_HAS_MEASURED_IN_HOUSE_CUMMULATIVE_POWER_CONSUMPTION);	
 	}
-	public void setMeasuredInHouseCummulativePowerConsumption(MeasuredValue msg) {
+	public void setMeasuredInHouseCummulativePowerConsumption(Float msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_MEASURED_IN_HOUSE_CUMMULATIVE_POWER_CONSUMPTION, msg);	
 	}
@@ -94,52 +93,52 @@ public class FuelCell extends EchonetSuperDevice{
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_POWER_GENERATION_SETTING, msg);	
 	}
-	public MeasuredValue getMeasuredCummulativeGasConsumption() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_MEASURED_CUMMULATIVE_GAS_CONSUMPTION);	
+	public Float getMeasuredCummulativeGasConsumption() {
+		return (Float) getProperty(PROPERTY_HAS_MEASURED_CUMMULATIVE_GAS_CONSUMPTION);	
 	}
-	public void setMeasuredCummulativeGasConsumption(MeasuredValue msg) {
+	public void setMeasuredCummulativeGasConsumption(Float msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_MEASURED_CUMMULATIVE_GAS_CONSUMPTION, msg);	
 	}
-	public MeasuredValue getMeasuredInstantaneousGasConsumption() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_MEASURED_INSTANTANEOUS_GAS_CONSUMPTION);	
+	public Float getMeasuredInstantaneousGasConsumption() {
+		return (Float) getProperty(PROPERTY_HAS_MEASURED_INSTANTANEOUS_GAS_CONSUMPTION);	
 	}
-	public void setMeasuredInstantaneousGasConsumption(MeasuredValue msg) {
+	public void setMeasuredInstantaneousGasConsumption(Float msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_MEASURED_INSTANTANEOUS_GAS_CONSUMPTION, msg);	
 	}
-	public MeasuredValue getMeasuredCummulativePowerGenerationOutput() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_MEASURED_CUMMULATIVE_POWER_GENERATION_OUTPUT);	
+	public Float getMeasuredCummulativePowerGenerationOutput() {
+		return (Float) getProperty(PROPERTY_HAS_MEASURED_CUMMULATIVE_POWER_GENERATION_OUTPUT);	
 	}
-	public void setMeasuredCummulativePowerGenerationOutput(MeasuredValue msg) {
+	public void setMeasuredCummulativePowerGenerationOutput(Float msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_MEASURED_CUMMULATIVE_POWER_GENERATION_OUTPUT, msg);	
 	}
-	public MeasuredValue getMeasuredInstantaneousPowerGenerationOutput() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_MEASURED_INSTANTANEOUS_POWER_GENERATION_OUTPUT);	
+	public Float getMeasuredInstantaneousPowerGenerationOutput() {
+		return (Float) getProperty(PROPERTY_HAS_MEASURED_INSTANTANEOUS_POWER_GENERATION_OUTPUT);	
 	}
-	public void setMeasuredInstantaneousPowerGenerationOutput(MeasuredValue msg) {
+	public void setMeasuredInstantaneousPowerGenerationOutput(Float msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_MEASURED_INSTANTANEOUS_POWER_GENERATION_OUTPUT, msg);	
 	}
-	public MeasuredValue getHeatingValueOfHotWaterStorageTank() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_HEATING_VALUE_OF_HOT_WATER_STORAGE_TANK);	
+	public Float getHeatingValueOfHotWaterStorageTank() {
+		return (Float) getProperty(PROPERTY_HAS_HEATING_VALUE_OF_HOT_WATER_STORAGE_TANK);	
 	}
-	public void setHeatingValueOfHotWaterStorageTank(MeasuredValue msg) {
+	public void setHeatingValueOfHotWaterStorageTank(Float msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_HEATING_VALUE_OF_HOT_WATER_STORAGE_TANK, msg);	
 	}
-	public MeasuredValue getRatedPowerGenerationOutput() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_REATED_POWER_GENERATION_OUTPUT);	
+	public Float getRatedPowerGenerationOutput() {
+		return (Float) getProperty(PROPERTY_HAS_REATED_POWER_GENERATION_OUTPUT);	
 	}
-	public void setRatedPowerGenerationOutput(MeasuredValue msg) {
+	public void setRatedPowerGenerationOutput(Float msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_REATED_POWER_GENERATION_OUTPUT, msg);	
 	}
-	public MeasuredValue getMeasuredWaterTemperatureInWaterHeaterMode() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_MEASURED_WATER_TEMPERATURE_IN_WATER_HEATER_MODE);	
+	public Float getMeasuredWaterTemperatureInWaterHeaterMode() {
+		return (Float) getProperty(PROPERTY_HAS_MEASURED_WATER_TEMPERATURE_IN_WATER_HEATER_MODE);	
 	}
-	public void setMeasuredWaterTemperatureInWaterHeaterMode(MeasuredValue msg) {
+	public void setMeasuredWaterTemperatureInWaterHeaterMode(Float msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_MEASURED_WATER_TEMPERATURE_IN_WATER_HEATER_MODE, msg);	
 	}

@@ -20,7 +20,6 @@ package org.universAAL.ontology.echonetontology.cookingHouseholdRelatedDevices;
 
 import org.universAAL.ontology.echonetontology.EchonetOntology;
 import org.universAAL.ontology.echonetontology.EchonetSuperDevice;
-import org.universAAL.ontology.echonetontology.values.DateTimeValue;
 import org.universAAL.ontology.echonetontology.values.OperationStateSettingValue;
 import org.universAAL.ontology.echonetontology.values.OperationStatusValue;
 
@@ -36,17 +35,17 @@ public class RiceCooker extends EchonetSuperDevice{
 	public static final String PROPERTY_HAS_RICE_COOKING_RESERVATION_SETTING_TIME= EchonetOntology.NAMESPACE + "hasRiceCookingReservationSettingTime";	
 	public static final String PROPERTY_HAS_RICE_COOKING_RESERVATION_SETTING_RELATIVE_TIME= EchonetOntology.NAMESPACE + "hasRiceCookingReservationSettingRelativeTime";	
 	
-	public DateTimeValue getRiceCookingReservationSettingRelativeTime() {
-		return (DateTimeValue) getProperty(PROPERTY_HAS_RICE_COOKING_RESERVATION_SETTING_RELATIVE_TIME);	
+	public String getRiceCookingReservationSettingRelativeTime() {
+		return  getProperty(PROPERTY_HAS_RICE_COOKING_RESERVATION_SETTING_RELATIVE_TIME).toString();	
 	}
-	public void setRiceCookingReservationSettingRelativeTime(DateTimeValue msg) {
+	public void setRiceCookingReservationSettingRelativeTime(String msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_RICE_COOKING_RESERVATION_SETTING_RELATIVE_TIME, msg);	
 	}
-	public DateTimeValue getRiceCookingReservationSettingTime() {
-		return (DateTimeValue) getProperty(PROPERTY_HAS_RICE_COOKING_RESERVATION_SETTING_TIME);	
+	public String getRiceCookingReservationSettingTime() {
+		return  getProperty(PROPERTY_HAS_RICE_COOKING_RESERVATION_SETTING_TIME).toString();	
 	}
-	public void setRiceCookingReservationSettingTime(DateTimeValue msg) {
+	public void setRiceCookingReservationSettingTime(String msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_RICE_COOKING_RESERVATION_SETTING_TIME, msg);	
 	}

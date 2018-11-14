@@ -19,8 +19,6 @@ package org.universAAL.ontology.echonetontology.airconditionerRelatedDevices;
 
 import org.universAAL.ontology.echonetontology.EchonetOntology;
 import org.universAAL.ontology.echonetontology.EchonetSuperDevice;
-import org.universAAL.ontology.echonetontology.values.DateTimeValue;
-import org.universAAL.ontology.echonetontology.values.MeasuredValue;
 import org.universAAL.ontology.echonetontology.values.OperationStatusValue;
 import org.universAAL.ontology.echonetontology.values.RadiationMethodValue;
 import org.universAAL.ontology.echonetontology.values.ThresholdLevelValue;
@@ -49,17 +47,17 @@ public class ElectricStorageHeater extends EchonetSuperDevice{
 	public static final String PROPERTY_HAS_FAN_TIMER_2_ON_SETTING = EchonetOntology.NAMESPACE + "hasFanTimer2ONSetting";
 	public static final String PROPERTY_HAS_FAN_TIMER_2_OFF_SETTING = EchonetOntology.NAMESPACE + "hasFanTimer2OFFSetting";
 
-	public DateTimeValue getFanTimer2OFFSetting() {
-		return (DateTimeValue) getProperty(PROPERTY_HAS_FAN_TIMER_2_OFF_SETTING);	
+	public String getFanTimer2OFFSetting() {
+		return  getProperty(PROPERTY_HAS_FAN_TIMER_2_OFF_SETTING).toString();	
 	}
-	public void setFanTimer2OFFSetting(DateTimeValue msg) {
+	public void setFanTimer2OFFSetting(String msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_FAN_TIMER_2_OFF_SETTING, msg);	
 	}
-	public DateTimeValue getFanTimer2ONSetting() {
-		return (DateTimeValue) getProperty(PROPERTY_HAS_FAN_TIMER_2_ON_SETTING);	
+	public String getFanTimer2ONSetting() {
+		return  getProperty(PROPERTY_HAS_FAN_TIMER_2_ON_SETTING).toString();	
 	}
-	public void setFanTimer2ONSetting(DateTimeValue msg) {
+	public void setFanTimer2ONSetting(String msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_FAN_TIMER_2_ON_SETTING, msg);	
 	}
@@ -70,17 +68,17 @@ public class ElectricStorageHeater extends EchonetSuperDevice{
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_FAN_TIMER_2_SETTING, msg);	
 	}
-	public DateTimeValue getFanTimer1OFFSetting() {
-		return (DateTimeValue) getProperty(PROPERTY_HAS_FAN_TIMER_1_OFF_SETTING);	
+	public String getFanTimer1OFFSetting() {
+		return  getProperty(PROPERTY_HAS_FAN_TIMER_1_OFF_SETTING).toString();	
 	}
-	public void setFanTimer1OFFSetting(DateTimeValue msg) {
+	public void setFanTimer1OFFSetting(String msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_FAN_TIMER_1_OFF_SETTING, msg);	
 	}
-	public DateTimeValue getFanTimer1ONSetting() {
-		return (DateTimeValue) getProperty(PROPERTY_HAS_FAN_TIMER_1_ON_SETTING);	
+	public String getFanTimer1ONSetting() {
+		return  getProperty(PROPERTY_HAS_FAN_TIMER_1_ON_SETTING).toString();	
 	}
-	public void setFanTimer1ONSetting(DateTimeValue msg) {
+	public void setFanTimer1ONSetting(String msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_FAN_TIMER_1_ON_SETTING, msg);	
 	}
@@ -105,17 +103,17 @@ public class ElectricStorageHeater extends EchonetSuperDevice{
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_RADIATION_METHOD, msg);	
 	}
-	public MeasuredValue getMidnightPowerStartTimeSetting() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_MIDNIGHT_POWER_START_TIME_SETTING);	
+	public Integer getMidnightPowerStartTimeSetting() {
+		return (Integer) getProperty(PROPERTY_HAS_MIDNIGHT_POWER_START_TIME_SETTING);	
 	}
-	public void setMidnightPowerStartTimeSetting(MeasuredValue msg) {
+	public void setMidnightPowerStartTimeSetting(Integer msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_MIDNIGHT_POWER_START_TIME_SETTING, msg);	
 	}
-	public MeasuredValue getMidnightPowerDurationSetting() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_MIDNIGHT_POWER_DURATION_SETTING);	
+	public Integer getMidnightPowerDurationSetting() {
+		return (Integer) getProperty(PROPERTY_HAS_MIDNIGHT_POWER_DURATION_SETTING);	
 	}
-	public void setMidnightPowerDurationSetting(MeasuredValue msg) {
+	public void setMidnightPowerDurationSetting(Integer msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_MIDNIGHT_POWER_DURATION_SETTING, msg);	
 	}
@@ -133,17 +131,17 @@ public class ElectricStorageHeater extends EchonetSuperDevice{
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_DAYTIME_HEAT_STORAGE_SETTING, msg);	
 	}
-	public MeasuredValue getMeasuredStoredHeatTemperature() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_MEASURED_STORED_HEAT_TEMPERATURE);	
+	public Float getMeasuredStoredHeatTemperature() {
+		return (Float) getProperty(PROPERTY_HAS_MEASURED_STORED_HEAT_TEMPERATURE);	
 	}
-	public void setMeasuredStoredHeatTemperature(MeasuredValue msg) {
+	public void setMeasuredStoredHeatTemperature(Float msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_MEASURED_STORED_HEAT_TEMPERATURE, msg);	
 	}
-	public MeasuredValue getHeatStorageTemperatureSetting() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_HEAT_STORAGE_TEMPERATURE_SETTING);	
+	public Float getHeatStorageTemperatureSetting() {
+		return (Float) getProperty(PROPERTY_HAS_HEAT_STORAGE_TEMPERATURE_SETTING);	
 	}
-	public void setHeatStorageTemperatureSetting(MeasuredValue msg) {
+	public void setHeatStorageTemperatureSetting(Float msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_HEAT_STORAGE_TEMPERATURE_SETTING, msg);	
 	}
@@ -168,31 +166,31 @@ public class ElectricStorageHeater extends EchonetSuperDevice{
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_AIR_FLOW_RATE_SETTING, msg);	
 	}
-	public MeasuredValue getMeasuredOutdoorTemperature() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_MEASURED_OUTDOOR_TEMPERATURE);	
+	public Float getMeasuredOutdoorTemperature() {
+		return (Float) getProperty(PROPERTY_HAS_MEASURED_OUTDOOR_TEMPERATURE);	
 	}
-	public void setMeasuredOutdoorTemperature(MeasuredValue msg) {
+	public void setMeasuredOutdoorTemperature(Float msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_MEASURED_OUTDOOR_TEMPERATURE, msg);	
 	}
-	public MeasuredValue getMeasuredIndoorTemperature() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_MEASURED_INDOOR_TEMPERATURE);	
+	public Float getMeasuredIndoorTemperature() {
+		return (Float) getProperty(PROPERTY_HAS_MEASURED_INDOOR_TEMPERATURE);	
 	}
-	public void setMeasuredIndoorTemperature(MeasuredValue msg) {
+	public void setMeasuredIndoorTemperature(Float msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_MEASURED_INDOOR_TEMPERATURE, msg);	
 	}
-	public MeasuredValue getRatedPowerConsumption() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_RATED_POWER_CONSUMPTION);	
+	public Integer getRatedPowerConsumption() {
+		return (Integer) getProperty(PROPERTY_HAS_RATED_POWER_CONSUMPTION);	
 	}
-	public void setRatedPowerConsumption(MeasuredValue msg) {
+	public void setRatedPowerConsumption(Integer msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_RATED_POWER_CONSUMPTION, msg);	
 	}
-	public MeasuredValue getTemperatureSetting() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_TEMPERATURE_SETTING);	
+	public Float getTemperatureSetting() {
+		return (Float) getProperty(PROPERTY_HAS_TEMPERATURE_SETTING);	
 	}
-	public void setTemperatureSetting(MeasuredValue msg) {
+	public void setTemperatureSetting(Float msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_TEMPERATURE_SETTING, msg);	
 	}

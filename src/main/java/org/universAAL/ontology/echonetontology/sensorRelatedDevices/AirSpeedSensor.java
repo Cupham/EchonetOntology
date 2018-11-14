@@ -18,7 +18,6 @@ package org.universAAL.ontology.echonetontology.sensorRelatedDevices;
 
 import org.universAAL.ontology.echonetontology.EchonetOntology;
 import org.universAAL.ontology.echonetontology.EchonetSuperDevice;
-import org.universAAL.ontology.echonetontology.values.MeasuredValue;
 
 
 public class AirSpeedSensor extends EchonetSuperDevice{
@@ -45,17 +44,17 @@ public class AirSpeedSensor extends EchonetSuperDevice{
 		return true;
 	}
 	
-	public MeasuredValue setAirSpeedValue() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_MEASURED_VALUE_OF_AIR_SPEED);	
+	public Float setAirSpeedValue() {
+		return (Float) getProperty(PROPERTY_HAS_MEASURED_VALUE_OF_AIR_SPEED);	
 	}
-	public void getAirSpeedValue(MeasuredValue msg) {
+	public void getAirSpeedValue(Float msg) {
 		if(msg !=null)
 			changeProperty(PROPERTY_HAS_MEASURED_VALUE_OF_AIR_SPEED,msg);	
 	}
-	public MeasuredValue setAirFlowDirection() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_AIR_FLOW_DIRECTION);	
+	public Integer setAirFlowDirection() {
+		return (Integer) getProperty(PROPERTY_HAS_AIR_FLOW_DIRECTION);	
 	}
-	public void getAirFlowDirection(MeasuredValue msg) {
+	public void getAirFlowDirection(Integer msg) {
 		if(msg !=null)
 			changeProperty(PROPERTY_HAS_AIR_FLOW_DIRECTION,msg);	
 	}

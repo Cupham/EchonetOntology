@@ -20,8 +20,6 @@ package org.universAAL.ontology.echonetontology.housingFacilitiesRelatedDevices;
 
 import org.universAAL.ontology.echonetontology.EchonetOntology;
 import org.universAAL.ontology.echonetontology.EchonetSuperDevice;
-import org.universAAL.ontology.echonetontology.values.MeasuredValue;
-import org.universAAL.ontology.echonetontology.values.MinMaxSettingValue;
 import org.universAAL.ontology.echonetontology.values.OperationFunctionSettingValue;
 import org.universAAL.ontology.echonetontology.values.OperationModeSettingValue;
 import org.universAAL.ontology.echonetontology.values.OperationStatusValue;
@@ -83,143 +81,143 @@ public class StorageBattery extends EchonetSuperDevice{
 	public static final String PROPERTY_HAS_DISCHARGING_ELECTRIC_CURRENT_SETTING = EchonetOntology.NAMESPACE + "hasDischargingElectricCurrentSetting";
 	public static final String PROPERTY_HAS_RATED_VOLTAGE_INDEPENDENT = EchonetOntology.NAMESPACE + "hasRatedVoltageIndependent";
 
-	public MeasuredValue getRatedVoltageIndependent() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_RATED_VOLTAGE_INDEPENDENT);	
+	public Float getRatedVoltageIndependent() {
+		return (Float) getProperty(PROPERTY_HAS_RATED_VOLTAGE_INDEPENDENT);	
 	}
-	public void setRatedVoltageIndependent(MeasuredValue msg) {
+	public void setRatedVoltageIndependent(Float msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_RATED_VOLTAGE_INDEPENDENT, msg);	
 	}
-	public MeasuredValue getDischargingElectricCurrentSetting() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_DISCHARGING_ELECTRIC_CURRENT_SETTING);	
+	public Float getDischargingElectricCurrentSetting() {
+		return (Float) getProperty(PROPERTY_HAS_DISCHARGING_ELECTRIC_CURRENT_SETTING);	
 	}
-	public void setDischargingElectricCurrentSetting(MeasuredValue msg) {
+	public void setDischargingElectricCurrentSetting(Float msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_DISCHARGING_ELECTRIC_CURRENT_SETTING, msg);	
 	}
-	public MeasuredValue getChargingElectricCurrentSetting() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_CHARGING_ELECTRIC_CURRENT_SETTING);	
+	public Float getChargingElectricCurrentSetting() {
+		return (Float) getProperty(PROPERTY_HAS_CHARGING_ELECTRIC_CURRENT_SETTING);	
 	}
-	public void setChargingElectricCurrentSetting(MeasuredValue msg) {
+	public void setChargingElectricCurrentSetting(Float msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_CHARGING_ELECTRIC_CURRENT_SETTING, msg);	
 	}
-	public MeasuredValue getDischargingElectricPowerSetting() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_DISCHARGING_ELECTRIC_POWER_SETTING);	
+	public Float getDischargingElectricPowerSetting() {
+		return (Float) getProperty(PROPERTY_HAS_DISCHARGING_ELECTRIC_POWER_SETTING);	
 	}
-	public void setDischargingElectricPowerSetting(MeasuredValue msg) {
+	public void setDischargingElectricPowerSetting(Float msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_DISCHARGING_ELECTRIC_POWER_SETTING, msg);	
 	}
-	public MeasuredValue getChargingElectricPowerSetting() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_CHARGING_ELECTRIC_POWER_SETTING);	
+	public Float getChargingElectricPowerSetting() {
+		return (Float) getProperty(PROPERTY_HAS_CHARGING_ELECTRIC_POWER_SETTING);	
 	}
-	public void setChargingElectricPowerSetting(MeasuredValue msg) {
+	public void setChargingElectricPowerSetting(Float msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_CHARGING_ELECTRIC_POWER_SETTING, msg);	
 	}
-	public MeasuredValue getDischargingAmountSetting2() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_DISCHARGING_AMOUNT_SETTING_2);	
+	public Float getDischargingAmountSetting2() {
+		return (Float) getProperty(PROPERTY_HAS_DISCHARGING_AMOUNT_SETTING_2);	
 	}
-	public void setDischargingAmountSetting2(MeasuredValue msg) {
+	public void setDischargingAmountSetting2(Float msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_DISCHARGING_AMOUNT_SETTING_2, msg);	
 	}
-	public MeasuredValue getChargingAmountSetting2() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_CHARGING_AMOUNT_SETTING_2);	
+	public Float getChargingAmountSetting2() {
+		return (Float) getProperty(PROPERTY_HAS_CHARGING_AMOUNT_SETTING_2);	
 	}
-	public void setChargingAmountSetting2(MeasuredValue msg) {
+	public void setChargingAmountSetting2(Float msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_CHARGING_AMOUNT_SETTING_2, msg);	
 	}
-	public MeasuredValue getDischargingAmountSetting1() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_DISCHARGING_AMOUNT_SETTING_1);	
+	public Float getDischargingAmountSetting1() {
+		return (Float) getProperty(PROPERTY_HAS_DISCHARGING_AMOUNT_SETTING_1);	
 	}
-	public void setDischargingAmountSetting1(MeasuredValue msg) {
+	public void setDischargingAmountSetting1(Float msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_DISCHARGING_AMOUNT_SETTING_1, msg);	
 	}
-	public MeasuredValue getChargingAmountSetting1() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_CHARGING_AMOUNT_SETTING_1);	
+	public Float getChargingAmountSetting1() {
+		return (Float) getProperty(PROPERTY_HAS_CHARGING_AMOUNT_SETTING_1);	
 	}
-	public void setChargingAmountSetting1(MeasuredValue msg) {
+	public void setChargingAmountSetting1(Float msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_CHARGING_AMOUNT_SETTING_1, msg);	
 	}
 	public String getBatteryType() {
-		return (String) getProperty(PROPERTY_HAS_BATTERY_TYPE);	
+		return  getProperty(PROPERTY_HAS_BATTERY_TYPE).toString();	
 	}
 	public void setBatteryType(String msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_BATTERY_TYPE, msg);	
 	}
-	public MeasuredValue getBatteryStateOfHealth() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_BATTERY_STATE_OF_HEALTH);	
+	public Float getBatteryStateOfHealth() {
+		return (Float) getProperty(PROPERTY_HAS_BATTERY_STATE_OF_HEALTH);	
 	}
-	public void setBatteryStateOfHealth(MeasuredValue msg) {
+	public void setBatteryStateOfHealth(Float msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_BATTERY_STATE_OF_HEALTH, msg);	
 	}
-	public MeasuredValue getRemainingStoredElectric3() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_REMAINING_STORED_ELECTRIC_3);	
+	public Float getRemainingStoredElectric3() {
+		return (Float) getProperty(PROPERTY_HAS_REMAINING_STORED_ELECTRIC_3);	
 	}
-	public void setRemainingStoredElectric3(MeasuredValue msg) {
+	public void setRemainingStoredElectric3(Float msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_REMAINING_STORED_ELECTRIC_3, msg);	
 	}
-	public MeasuredValue getRemainingStoredElectric2() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_REMAINING_STORED_ELECTRIC_2);	
+	public Float getRemainingStoredElectric2() {
+		return (Float) getProperty(PROPERTY_HAS_REMAINING_STORED_ELECTRIC_2);	
 	}
-	public void setRemainingStoredElectric2(MeasuredValue msg) {
+	public void setRemainingStoredElectric2(Float msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_REMAINING_STORED_ELECTRIC_2, msg);	
 	}
-	public MeasuredValue getRemainingStoredElectric1() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_REMAINING_STORED_ELECTRIC_1);	
+	public Float getRemainingStoredElectric1() {
+		return (Float) getProperty(PROPERTY_HAS_REMAINING_STORED_ELECTRIC_1);	
 	}
-	public void setRemainingStoredElectric1(MeasuredValue msg) {
+	public void setRemainingStoredElectric1(Float msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_REMAINING_STORED_ELECTRIC_1, msg);	
 	}
-	public MeasuredValue getChargingDischargingAmountSetting2() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_CHARGING_DISCHARGING_AMOUNT_SETTING_2);	
+	public Float getChargingDischargingAmountSetting2() {
+		return (Float) getProperty(PROPERTY_HAS_CHARGING_DISCHARGING_AMOUNT_SETTING_2);	
 	}
-	public void setChargingDischargingAmountSetting2(MeasuredValue msg) {
+	public void setChargingDischargingAmountSetting2(Float msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_CHARGING_DISCHARGING_AMOUNT_SETTING_2, msg);	
 	}
-	public MeasuredValue getChargingDischargingAmountSetting1() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_CHARGING_DISCHARGING_AMOUNT_SETTING_1);	
+	public Float getChargingDischargingAmountSetting1() {
+		return (Float) getProperty(PROPERTY_HAS_CHARGING_DISCHARGING_AMOUNT_SETTING_1);	
 	}
-	public void setChargingDischargingAmountSetting1(MeasuredValue msg) {
+	public void setChargingDischargingAmountSetting1(Float msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_CHARGING_DISCHARGING_AMOUNT_SETTING_1, msg);	
 	}
-	public MinMaxSettingValue getMinimumMaximumDisChargingElectricCurrentIndependent() {
-		return (MinMaxSettingValue) getProperty(PROPERTY_HAS_MINIMUM_MAXIMUM_DISCHARGING_ELECTRIC_CURRENT_INDEPENDENT);	
+	public String getMinimumMaximumDisChargingElectricCurrentIndependent() {
+		return  getProperty(PROPERTY_HAS_MINIMUM_MAXIMUM_DISCHARGING_ELECTRIC_CURRENT_INDEPENDENT).toString();	
 	}
-	public void setMinimumMaximumDisChargingElectricCurrentIndependent(MinMaxSettingValue msg) {
+	public void setMinimumMaximumDisChargingElectricCurrentIndependent(String msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_MINIMUM_MAXIMUM_DISCHARGING_ELECTRIC_CURRENT_INDEPENDENT, msg);	
 	}
-	public MinMaxSettingValue getMinimumMaximumDisChargingElectricPowerIndependent() {
-		return (MinMaxSettingValue) getProperty(PROPERTY_HAS_MINIMUM_MAXIMUM_DISCHARGING_ELECTRIC_POWER_INDEPENDENT);	
+	public String getMinimumMaximumDisChargingElectricPowerIndependent() {
+		return  getProperty(PROPERTY_HAS_MINIMUM_MAXIMUM_DISCHARGING_ELECTRIC_POWER_INDEPENDENT).toString();	
 	}
-	public void setMinimumMaximumDisChargingElectricPowerIndependent(MinMaxSettingValue msg) {
+	public void setMinimumMaximumDisChargingElectricPowerIndependent(String msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_MINIMUM_MAXIMUM_DISCHARGING_ELECTRIC_POWER_INDEPENDENT, msg);	
 	}
-	public MinMaxSettingValue getMinimumMaximumChargingElectricCurrentIndependent() {
-		return (MinMaxSettingValue) getProperty(PROPERTY_HAS_MINIMUM_MAXIMUM_CHARGING_ELECTRIC_CURRENT_INDEPENDENT);	
+	public String getMinimumMaximumChargingElectricCurrentIndependent() {
+		return  getProperty(PROPERTY_HAS_MINIMUM_MAXIMUM_CHARGING_ELECTRIC_CURRENT_INDEPENDENT).toString();	
 	}
-	public void setMinimumMaximumChargingElectricCurrentIndependent(MinMaxSettingValue msg) {
+	public void setMinimumMaximumChargingElectricCurrentIndependent(String msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_MINIMUM_MAXIMUM_CHARGING_ELECTRIC_CURRENT_INDEPENDENT, msg);	
 	}
-	public MinMaxSettingValue getMinimumMaximumChargingElectricPowerIndependent() {
-		return (MinMaxSettingValue) getProperty(PROPERTY_HAS_MINIMUM_MAXIMUM_CHARGING_ELECTRIC_POWER_INDEPENDENT);	
+	public String getMinimumMaximumChargingElectricPowerIndependent() {
+		return  getProperty(PROPERTY_HAS_MINIMUM_MAXIMUM_CHARGING_ELECTRIC_POWER_INDEPENDENT).toString();	
 	}
-	public void setMinimumMaximumChargingElectricPowerIndependent(MinMaxSettingValue msg) {
+	public void setMinimumMaximumChargingElectricPowerIndependent(String msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_MINIMUM_MAXIMUM_CHARGING_ELECTRIC_POWER_INDEPENDENT, msg);	
 	}
@@ -237,69 +235,69 @@ public class StorageBattery extends EchonetSuperDevice{
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_OPERATION_MODE_SETTING, msg);	
 	}
-	public MeasuredValue getMeasuredCumulativeChargingElectricEnergy() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_MEASURED_CUMULATIVE_CHARGING_ELECTRIC_ENERGY);	
+	public Float getMeasuredCumulativeChargingElectricEnergy() {
+		return (Float) getProperty(PROPERTY_HAS_MEASURED_CUMULATIVE_CHARGING_ELECTRIC_ENERGY);	
 	}
-	public void setMeasuredCumulativeChargingElectricEnergy(MeasuredValue msg) {
+	public void setMeasuredCumulativeChargingElectricEnergy(Float msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_MEASURED_CUMULATIVE_CHARGING_ELECTRIC_ENERGY, msg);	
 	}
-	public MeasuredValue getMeasuredCumulativeDischargingElectricEnergy() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_MEASURED_CUMULATIVE_DISCHARGING_ELECTRIC_ENERGY);	
+	public Float getMeasuredCumulativeDischargingElectricEnergy() {
+		return (Float) getProperty(PROPERTY_HAS_MEASURED_CUMULATIVE_DISCHARGING_ELECTRIC_ENERGY);	
 	}
-	public void setMeasuredCumulativeDischargingElectricEnergy(MeasuredValue msg) {
+	public void setMeasuredCumulativeDischargingElectricEnergy(Float msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_MEASURED_CUMULATIVE_DISCHARGING_ELECTRIC_ENERGY, msg);	
 	}
 	
-	public MeasuredValue getMeasuredInstantaneousChargingDischargingElectricVoltage() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_MEASURED_INSTANTANEOUS_CHARGING_DISCHARGING_ELECTRIC_VOLTAGE);	
+	public Float getMeasuredInstantaneousChargingDischargingElectricVoltage() {
+		return (Float) getProperty(PROPERTY_HAS_MEASURED_INSTANTANEOUS_CHARGING_DISCHARGING_ELECTRIC_VOLTAGE);	
 	}
-	public void setMeasuredInstantaneousChargingDischargingElectricVoltage(MeasuredValue msg) {
+	public void setMeasuredInstantaneousChargingDischargingElectricVoltage(Float msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_MEASURED_INSTANTANEOUS_CHARGING_DISCHARGING_ELECTRIC_VOLTAGE, msg);	
 	}	
 	
-	public MeasuredValue getMeasuredInstantaneousChargingDischargingElectricCurrent() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_MEASURED_INSTANTANEOUS_CHARGING_DISCHARGING_ELECTRIC_CURRENT);	
+	public Float getMeasuredInstantaneousChargingDischargingElectricCurrent() {
+		return (Float) getProperty(PROPERTY_HAS_MEASURED_INSTANTANEOUS_CHARGING_DISCHARGING_ELECTRIC_CURRENT);	
 	}
-	public void setMeasuredInstantaneousChargingDischargingElectricCurrent(MeasuredValue msg) {
+	public void setMeasuredInstantaneousChargingDischargingElectricCurrent(Float msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_MEASURED_INSTANTANEOUS_CHARGING_DISCHARGING_ELECTRIC_CURRENT, msg);	
 	}
 	
-	public MeasuredValue getMeasuredInstantaneousChargingDischargingElectricPower() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_MEASURED_INSTANTANEOUS_CHARGING_DISCHARGING_ELECTRIC_POWER);	
+	public Float getMeasuredInstantaneousChargingDischargingElectricPower() {
+		return (Float) getProperty(PROPERTY_HAS_MEASURED_INSTANTANEOUS_CHARGING_DISCHARGING_ELECTRIC_POWER);	
 	}
-	public void setMeasuredInstantaneousChargingDischargingElectricPower(MeasuredValue msg) {
+	public void setMeasuredInstantaneousChargingDischargingElectricPower(Float msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_MEASURED_INSTANTANEOUS_CHARGING_DISCHARGING_ELECTRIC_POWER, msg);	
 	}
-	public MeasuredValue getRatedVoltage() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_RATED_CAPACITY);	
+	public Float getRatedVoltage() {
+		return (Float) getProperty(PROPERTY_HAS_RATED_CAPACITY);	
 	}
-	public void setRatedVoltage(MeasuredValue msg) {
+	public void setRatedVoltage(Float msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_RATED_CAPACITY, msg);	
 	}
-	public MeasuredValue getRatedCapacity() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_RATED_CAPACITY);	
+	public Float getRatedCapacity() {
+		return (Float) getProperty(PROPERTY_HAS_RATED_CAPACITY);	
 	}
-	public void setRatedCapacity(MeasuredValue msg) {
+	public void setRatedCapacity(Float msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_RATED_CAPACITY, msg);	
 	}
-	public MeasuredValue getRatedElectricEnergy() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_RATED_ELECTRIC_ENERGY);	
+	public Float getRatedElectricEnergy() {
+		return (Float) getProperty(PROPERTY_HAS_RATED_ELECTRIC_ENERGY);	
 	}
-	public void setRatedElectricEnergy(MeasuredValue msg) {
+	public void setRatedElectricEnergy(Float msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_RATED_ELECTRIC_ENERGY, msg);	
 	}
-	public MeasuredValue getACRatedElectricEnergy() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_AC_RATED_ELECTRIC_ENERGY);	
+	public Float getACRatedElectricEnergy() {
+		return (Float) getProperty(PROPERTY_HAS_AC_RATED_ELECTRIC_ENERGY);	
 	}
-	public void setACRatedElectricEnergy(MeasuredValue msg) {
+	public void setACRatedElectricEnergy(Float msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_AC_RATED_ELECTRIC_ENERGY, msg);	
 	}
@@ -331,115 +329,115 @@ public class StorageBattery extends EchonetSuperDevice{
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_RE_INTERCONNECTION_PERMISSION_SETTING, msg);	
 	}
-	public MinMaxSettingValue getMinimumMaximumDischargingCurrent() {
-		return (MinMaxSettingValue) getProperty(PROPERTY_HAS_MINIMUM_MAXIMUM_DISCHARGING_CURRENT);	
+	public String getMinimumMaximumDischargingCurrent() {
+		return  getProperty(PROPERTY_HAS_MINIMUM_MAXIMUM_DISCHARGING_CURRENT).toString();	
 	}
-	public void setMinimumMaximumDischargingCurrent(MinMaxSettingValue msg) {
+	public void setMinimumMaximumDischargingCurrent(String msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_MINIMUM_MAXIMUM_DISCHARGING_CURRENT, msg);	
 	}
-	public MinMaxSettingValue getMinimumMaximumChargingCurrent() {
-		return (MinMaxSettingValue) getProperty(PROPERTY_HAS_MINIMUM_MAXIMUM_CHARGING_CURRENT);	
+	public String getMinimumMaximumChargingCurrent() {
+		return  getProperty(PROPERTY_HAS_MINIMUM_MAXIMUM_CHARGING_CURRENT).toString();	
 	}
-	public void setMinimumMaximumChargingCurrent(MinMaxSettingValue msg) {
+	public void setMinimumMaximumChargingCurrent(String msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_MINIMUM_MAXIMUM_CHARGING_CURRENT, msg);	
 	}
-	public MinMaxSettingValue getMinimumMaximumDischargingElectricPower() {
-		return (MinMaxSettingValue) getProperty(PROPERTY_HAS_MINIMUM_MAXIMUM_DISCHARGING_ELECTRIC_POWER);	
+	public String getMinimumMaximumDischargingElectricPower() {
+		return  getProperty(PROPERTY_HAS_MINIMUM_MAXIMUM_DISCHARGING_ELECTRIC_POWER).toString();	
 	}
-	public void setMinimumMaximumDischargingElectricPower(MinMaxSettingValue msg) {
+	public void setMinimumMaximumDischargingElectricPower(String msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_MINIMUM_MAXIMUM_DISCHARGING_ELECTRIC_POWER, msg);	
 	}
-	public MinMaxSettingValue getMinimumMaximumChargingElectricPower() {
-		return (MinMaxSettingValue) getProperty(PROPERTY_HAS_MINIMUM_MAXIMUM_CHARGING_ELECTRIC_POWER);	
+	public String getMinimumMaximumChargingElectricPower() {
+		return  getProperty(PROPERTY_HAS_MINIMUM_MAXIMUM_CHARGING_ELECTRIC_POWER).toString();	
 	}
-	public void setMinimumMaximumChargingElectricPower(MinMaxSettingValue msg) {
+	public void setMinimumMaximumChargingElectricPower(String msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_MINIMUM_MAXIMUM_CHARGING_ELECTRIC_POWER, msg);	
 	}
-	public MeasuredValue getACDishargeAmountSettingValue() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_AC_DISCHARGE_AMOUNT_SETTING_VALUE);	
+	public Float getACDishargeAmountSettingValue() {
+		return (Float) getProperty(PROPERTY_HAS_AC_DISCHARGE_AMOUNT_SETTING_VALUE);	
 	}
-	public void setACDishargeAmountSettingValue(MeasuredValue msg) {
+	public void setACDishargeAmountSettingValue(Float msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_AC_DISCHARGE_AMOUNT_SETTING_VALUE, msg);	
 	}
-	public MeasuredValue getACChargeAmountSettingValue() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_AC_CHARGE_AMOUNT_SETTING_VALUE);	
+	public Float getACChargeAmountSettingValue() {
+		return (Float) getProperty(PROPERTY_HAS_AC_CHARGE_AMOUNT_SETTING_VALUE);	
 	}
-	public void setACChargeAmountSettingValue(MeasuredValue msg) {
+	public void setACChargeAmountSettingValue(Float msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_AC_CHARGE_AMOUNT_SETTING_VALUE, msg);	
 	}
-	public MeasuredValue getACMeasuredCumulativeDischargingElectricEnergy() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_AC_MEASURED_CUMULATIVE_DISCHARGING_ELECTRIC_ENERGY);	
+	public Float getACMeasuredCumulativeDischargingElectricEnergy() {
+		return (Float) getProperty(PROPERTY_HAS_AC_MEASURED_CUMULATIVE_DISCHARGING_ELECTRIC_ENERGY);	
 	}
-	public void setACMeasuredCumulativeDischargingElectricEnergy(MeasuredValue msg) {
+	public void setACMeasuredCumulativeDischargingElectricEnergy(Float msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_AC_MEASURED_CUMULATIVE_DISCHARGING_ELECTRIC_ENERGY, msg);	
 	}
-	public MeasuredValue getACMeasuredCumulativeChargingElectricEnergy() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_AC_MEASURED_CUMULATIVE_CHARGING_ELECTRIC_ENERGY);	
+	public Float getACMeasuredCumulativeChargingElectricEnergy() {
+		return (Float) getProperty(PROPERTY_HAS_AC_MEASURED_CUMULATIVE_CHARGING_ELECTRIC_ENERGY);	
 	}
-	public void setACMeasuredCumulativeChargingElectricEnergy(MeasuredValue msg) {
+	public void setACMeasuredCumulativeChargingElectricEnergy(Float msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_AC_MEASURED_CUMULATIVE_CHARGING_ELECTRIC_ENERGY, msg);	
 	}
-	public MeasuredValue getACDischargeLowerLimitSetting() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_AC_DISCHARGE_LOWER_LIMIT_SETTING);	
+	public Float getACDischargeLowerLimitSetting() {
+		return (Float) getProperty(PROPERTY_HAS_AC_DISCHARGE_LOWER_LIMIT_SETTING);	
 	}
-	public void setACDischargeLowerLimitSetting(MeasuredValue msg) {
+	public void setACDischargeLowerLimitSetting(Float msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_AC_DISCHARGE_LOWER_LIMIT_SETTING, msg);	
 	}
-	public MeasuredValue getACChargeUpperLimitSetting() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_AC_CHARGE_UPPER_LIMIT_SETTING);	
+	public Float getACChargeUpperLimitSetting() {
+		return (Float) getProperty(PROPERTY_HAS_AC_CHARGE_UPPER_LIMIT_SETTING);	
 	}
-	public void setACChargeUpperLimitSetting(MeasuredValue msg) {
+	public void setACChargeUpperLimitSetting(Float msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_AC_CHARGE_UPPER_LIMIT_SETTING, msg);	
 	}
-	public MeasuredValue getACDischargableElectricEnergy() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_AC_DISCHARGEABLE_ELECTRIC_ENERGY);	
+	public Float getACDischargableElectricEnergy() {
+		return (Float) getProperty(PROPERTY_HAS_AC_DISCHARGEABLE_ELECTRIC_ENERGY);	
 	}
-	public void setACDischargableElectricEnergy(MeasuredValue msg) {
+	public void setACDischargableElectricEnergy(Float msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_AC_DISCHARGEABLE_ELECTRIC_ENERGY, msg);	
 	}
-	public MeasuredValue getACChargableElectricEnergy() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_AC_CHARGEABLE_ELECTRIC_ENERGY);	
+	public Float getACChargableElectricEnergy() {
+		return (Float) getProperty(PROPERTY_HAS_AC_CHARGEABLE_ELECTRIC_ENERGY);	
 	}
-	public void setACChargableElectricEnergy(MeasuredValue msg) {
+	public void setACChargableElectricEnergy(Float msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_AC_CHARGEABLE_ELECTRIC_ENERGY, msg);	
 	}
-	public MeasuredValue getACDischargableCapacity() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_AC_DISCHARGEABLE_CAPACITY);	
+	public Float getACDischargableCapacity() {
+		return (Float) getProperty(PROPERTY_HAS_AC_DISCHARGEABLE_CAPACITY);	
 	}
-	public void setACDischargableCapacity(MeasuredValue msg) {
+	public void setACDischargableCapacity(Float msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_AC_DISCHARGEABLE_CAPACITY, msg);	
 	}
-	public MeasuredValue getACChargableCapacity() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_AC_CHARGEABLE_CAPACITY);	
+	public Float getACChargableCapacity() {
+		return (Float) getProperty(PROPERTY_HAS_AC_CHARGEABLE_CAPACITY);	
 	}
-	public void setACChargableCapacity(MeasuredValue msg) {
+	public void setACChargableCapacity(Float msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_AC_CHARGEABLE_CAPACITY, msg);	
 	}
-	public MeasuredValue getACEffectiveCapacityDisharging() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_AC_EFFECTIVE_CAPACITY_DISCHARGING);	
+	public Float getACEffectiveCapacityDisharging() {
+		return (Float) getProperty(PROPERTY_HAS_AC_EFFECTIVE_CAPACITY_DISCHARGING);	
 	}
-	public void setACEffectiveCapacityDisharging(MeasuredValue msg) {
+	public void setACEffectiveCapacityDisharging(Float msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_AC_EFFECTIVE_CAPACITY_DISCHARGING, msg);	
 	}
-	public MeasuredValue getACEffectiveCapacityCharging() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_AC_EFFECTIVE_CAPACITY_CHARGING);	
+	public Float getACEffectiveCapacityCharging() {
+		return (Float) getProperty(PROPERTY_HAS_AC_EFFECTIVE_CAPACITY_CHARGING);	
 	}
-	public void setACEffectiveCapacityCharging(MeasuredValue msg) {
+	public void setACEffectiveCapacityCharging(Float msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_AC_EFFECTIVE_CAPACITY_CHARGING, msg);	
 	}

@@ -19,10 +19,9 @@ package org.universAAL.ontology.echonetontology.housingFacilitiesRelatedDevices;
 
 import org.universAAL.ontology.echonetontology.EchonetOntology;
 import org.universAAL.ontology.echonetontology.EchonetSuperDevice;
-import org.universAAL.ontology.echonetontology.values.DateTimeValue;
-import org.universAAL.ontology.echonetontology.values.MeasuredValue;
 import org.universAAL.ontology.echonetontology.values.OperationStateSettingValue;
 import org.universAAL.ontology.echonetontology.values.OperationStatusValue;
+import org.universAAL.ontology.echonetontology.values.ThresholdLevelValue;
 
 public class InstantaneousWaterHeater extends EchonetSuperDevice{
 	public static final String MY_URI = EchonetOntology.NAMESPACE + "InstantaneousWaterHeater";
@@ -61,24 +60,24 @@ public class InstantaneousWaterHeater extends EchonetSuperDevice{
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_MUTE_SETTING, msg);	
 	}
-	public MeasuredValue getVolumeSetting() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_VOLUME_SETTING);	
+	public Integer getVolumeSetting() {
+		return (Integer) getProperty(PROPERTY_HAS_VOLUME_SETTING);	
 	}
-	public void setVolumeSetting(MeasuredValue msg) {
+	public void setVolumeSetting(Integer msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_VOLUME_SETTING, msg);	
 	}
-	public DateTimeValue getOnTimerSettingRelativeTime() {
-		return (DateTimeValue) getProperty(PROPERTY_HAS_ON_TIMER_SETTING_RELATIVE_TIME);	
+	public String getOnTimerSettingRelativeTime() {
+		return  getProperty(PROPERTY_HAS_ON_TIMER_SETTING_RELATIVE_TIME).toString();	
 	}
-	public void setOnTimerSettingRelativeTime(DateTimeValue msg) {
+	public void setOnTimerSettingRelativeTime(String msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_ON_TIMER_SETTING_RELATIVE_TIME, msg);	
 	}
-	public DateTimeValue getOnTimerSettingTime() {
-		return (DateTimeValue) getProperty(PROPERTY_HAS_ON_TIMER_SETTING_TIME);	
+	public String getOnTimerSettingTime() {
+		return  getProperty(PROPERTY_HAS_ON_TIMER_SETTING_TIME).toString();	
 	}
-	public void setOnTimerSettingTime(DateTimeValue msg) {
+	public void setOnTimerSettingTime(String msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_ON_TIMER_SETTING_TIME, msg);	
 	}
@@ -104,10 +103,10 @@ public class InstantaneousWaterHeater extends EchonetSuperDevice{
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_WATER_WARMER_ON_TIMER_RESERVATION_SETTING, msg);	
 	}
-	public DateTimeValue getWaterWarmerOnTimerSettingTime() {
-		return (DateTimeValue) getProperty(PROPERTY_HAS_WATER_WARMER_ON_TIMER_SETTING_TIME);	
+	public String getWaterWarmerOnTimerSettingTime() {
+		return  getProperty(PROPERTY_HAS_WATER_WARMER_ON_TIMER_SETTING_TIME).toString();	
 	}
-	public void setWaterWarmerOnTimerSettingTime(DateTimeValue msg) {
+	public void setWaterWarmerOnTimerSettingTime(String msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_WATER_WARMER_ON_TIMER_SETTING_TIME, msg);	
 	}
@@ -133,38 +132,38 @@ public class InstantaneousWaterHeater extends EchonetSuperDevice{
 			changeProperty(PROPERTY_HAS_BATHROOM_PRIORITY_SETTING, msg);	
 	}
 
-	public MeasuredValue getBathWaterVolumeSetting4MaximumSettableLevel() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_BATH_WATER_VOLUME_SETTING_4_MAXIMUM_SETTABLE_LEVEL);	
+	public Integer getBathWaterVolumeSetting4MaximumSettableLevel() {
+		return (Integer) getProperty(PROPERTY_HAS_BATH_WATER_VOLUME_SETTING_4_MAXIMUM_SETTABLE_LEVEL);	
 	}
-	public void setBathWaterVolumeSetting4MaximumSettableLevel(MeasuredValue msg) {
+	public void setBathWaterVolumeSetting4MaximumSettableLevel(Integer msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_BATH_WATER_VOLUME_SETTING_4_MAXIMUM_SETTABLE_LEVEL, msg);	
 	}
-	public MeasuredValue getBathWaterVolumeSetting4() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_BATH_WATER_VOLUME_SETTING_4);	
+	public Integer getBathWaterVolumeSetting4() {
+		return (Integer) getProperty(PROPERTY_HAS_BATH_WATER_VOLUME_SETTING_4);	
 	}
-	public void setBathWaterVolumeSetting4(MeasuredValue msg) {
+	public void setBathWaterVolumeSetting4(Integer msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_BATH_WATER_VOLUME_SETTING_4, msg);	
 	}
-	public MeasuredValue getBathWaterVolumeSetting3() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_BATH_WATER_VOLUME_SETTING_3);	
+	public Integer getBathWaterVolumeSetting3() {
+		return (Integer) getProperty(PROPERTY_HAS_BATH_WATER_VOLUME_SETTING_3);	
 	}
-	public void setBathWaterVolumeSetting3(MeasuredValue msg) {
+	public void setBathWaterVolumeSetting3(Integer msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_BATH_WATER_VOLUME_SETTING_3, msg);	
 	}
-	public MeasuredValue getBathWaterVolumeSetting2() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_BATH_WATER_VOLUME_SETTING_2);	
+	public ThresholdLevelValue getBathWaterVolumeSetting2() {
+		return (ThresholdLevelValue) getProperty(PROPERTY_HAS_BATH_WATER_VOLUME_SETTING_2);	
 	}
-	public void setBathWaterVolumeSetting2(MeasuredValue msg) {
+	public void setBathWaterVolumeSetting2(ThresholdLevelValue msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_BATH_WATER_VOLUME_SETTING_2, msg);	
 	}	
-	public MeasuredValue getBathWaterVolumeSetting1() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_BATH_WATER_VOLUME_SETTING_1);	
+	public Integer getBathWaterVolumeSetting1() {
+		return (Integer) getProperty(PROPERTY_HAS_BATH_WATER_VOLUME_SETTING_1);	
 	}
-	public void setBathWaterVolumeSetting1(MeasuredValue msg) {
+	public void setBathWaterVolumeSetting1(Integer msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_BATH_WATER_VOLUME_SETTING_1, msg);	
 	}
@@ -204,24 +203,24 @@ public class InstantaneousWaterHeater extends EchonetSuperDevice{
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_BATH_WATER_HEATER_STATUS, msg);	
 	}
-	public MeasuredValue getBathTemperatureSetting() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_BATH_TEMPERATURE_SETTING);	
+	public Integer getBathTemperatureSetting() {
+		return (Integer) getProperty(PROPERTY_HAS_BATH_TEMPERATURE_SETTING);	
 	}
-	public void setBathTemperatureSetting(MeasuredValue msg) {
+	public void setBathTemperatureSetting(Integer msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_BATH_TEMPERATURE_SETTING, msg);	
 	}
-	public DateTimeValue getRemainingAutomaticOperationTime() {
-		return (DateTimeValue) getProperty(PROPERTY_HAS_REMAINING_AUTOMATIC_OPERATION_TIME);	
+	public String getRemainingAutomaticOperationTime() {
+		return  getProperty(PROPERTY_HAS_REMAINING_AUTOMATIC_OPERATION_TIME).toString();	
 	}
-	public void setRemainingAutomaticOperationTime(DateTimeValue msg) {
+	public void setRemainingAutomaticOperationTime(String msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_REMAINING_AUTOMATIC_OPERATION_TIME, msg);	
 	}
-	public DateTimeValue getDurationOfAutomaticOperationSetting() {
-		return (DateTimeValue) getProperty(PROPERTY_HAS_DURATION_OF_AUTOMATIC_OPERATION_SETTING);	
+	public String getDurationOfAutomaticOperationSetting() {
+		return  getProperty(PROPERTY_HAS_DURATION_OF_AUTOMATIC_OPERATION_SETTING).toString();	
 	}
-	public void setDurationOfAutomaticOperationSetting(DateTimeValue msg) {
+	public void setDurationOfAutomaticOperationSetting(String msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_DURATION_OF_AUTOMATIC_OPERATION_SETTING, msg);	
 	}
@@ -232,10 +231,10 @@ public class InstantaneousWaterHeater extends EchonetSuperDevice{
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_HOT_WATER_WARMER_SETTING, msg);	
 	}
-	public MeasuredValue getHotWaterTemperatureSetting() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_HOT_WATER_TEMPERATURE_SETTING);	
+	public Integer getHotWaterTemperatureSetting() {
+		return (Integer) getProperty(PROPERTY_HAS_HOT_WATER_TEMPERATURE_SETTING);	
 	}
-	public void setHotWaterTemperatureSetting(MeasuredValue msg) {
+	public void setHotWaterTemperatureSetting(Integer msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_HOT_WATER_TEMPERATURE_SETTING, msg);	
 	}

@@ -19,7 +19,6 @@ package org.universAAL.ontology.echonetontology.housingFacilitiesRelatedDevices;
 
 import org.universAAL.ontology.echonetontology.EchonetOntology;
 import org.universAAL.ontology.echonetontology.EchonetSuperDevice;
-import org.universAAL.ontology.echonetontology.values.DateTimeValue;
 import org.universAAL.ontology.echonetontology.values.OccurenceStatusValue;
 import org.universAAL.ontology.echonetontology.values.OperationFunctionSettingValue;
 import org.universAAL.ontology.echonetontology.values.OperationModeSettingValue;
@@ -63,17 +62,17 @@ public class ElectricToiletSeat extends EchonetSuperDevice{
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_SPECIAL_OPERATION_MODE_SETTING, msg);	
 	}
-	public DateTimeValue getRoomHeatingDuration() {
-		return (DateTimeValue) getProperty(PROPERTY_HAS_ROOM_HEATING_DURATION);	
+	public String getRoomHeatingDuration() {
+		return  getProperty(PROPERTY_HAS_ROOM_HEATING_DURATION).toString();	
 	}
-	public void setRoomHeatingDuration(DateTimeValue msg) {
+	public void setRoomHeatingDuration(String msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_ROOM_HEATING_DURATION, msg);	
 	}
-	public DateTimeValue getRoomHeatingStartTime() {
-		return (DateTimeValue) getProperty(PROPERTY_HAS_ROOM_HEATING_START_TIME);	
+	public String getRoomHeatingStartTime() {
+		return  getProperty(PROPERTY_HAS_ROOM_HEATING_START_TIME).toString();	
 	}
-	public void setRoomHeatingStartTime(DateTimeValue msg) {
+	public void setRoomHeatingStartTime(String msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_ROOM_HEATING_START_TIME, msg);	
 	}
@@ -98,17 +97,17 @@ public class ElectricToiletSeat extends EchonetSuperDevice{
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_ROOM_HEATING_TEMPERATURE_LEVEL_SETTING, msg);	
 	}
-	public DateTimeValue getToiletSeatTemporalHaltDuration() {
-		return (DateTimeValue) getProperty(PROPERTY_HAS_TOILET_SEAT_TEMPORAL_HALT_DURATION);	
+	public String getToiletSeatTemporalHaltDuration() {
+		return  getProperty(PROPERTY_HAS_TOILET_SEAT_TEMPORAL_HALT_DURATION).toString();	
 	}
-	public void setToiletSeatTemporalHaltDuration(DateTimeValue msg) {
+	public void setToiletSeatTemporalHaltDuration(String msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_TOILET_SEAT_TEMPORAL_HALT_DURATION, msg);	
 	}
-	public DateTimeValue getToiletSeatTemporalHaltStartTime() {
-		return (DateTimeValue) getProperty(PROPERTY_HAS_TOILET_SEAT_TEMPORAL_HALT_START_TIME);	
+	public String getToiletSeatTemporalHaltStartTime() {
+		return  getProperty(PROPERTY_HAS_TOILET_SEAT_TEMPORAL_HALT_START_TIME).toString();	
 	}
-	public void setToiletSeatTemporalHaltStartTime(DateTimeValue msg) {
+	public void setToiletSeatTemporalHaltStartTime(String msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_TOILET_SEAT_TEMPORAL_HALT_START_TIME, msg);	
 	}

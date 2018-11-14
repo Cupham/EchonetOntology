@@ -18,7 +18,6 @@ package org.universAAL.ontology.echonetontology.sensorRelatedDevices;
 
 import org.universAAL.ontology.echonetontology.EchonetOntology;
 import org.universAAL.ontology.echonetontology.EchonetSuperDevice;
-import org.universAAL.ontology.echonetontology.values.MeasuredValue;
 import org.universAAL.ontology.echonetontology.values.OccurenceStatusValue;
 import org.universAAL.ontology.echonetontology.values.ThresholdLevelValue;
 
@@ -61,10 +60,10 @@ public class GasSensor extends EchonetSuperDevice{
 		if(msg !=null)	
 			changeProperty(PROPERTY_HAS_GAS_DETECTION_STATUS,msg);	
 	}
-	public MeasuredValue getGasConcentrationMeasuredValue() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_MEASURED_VALUE_OF_GAS_CONCENTRATION);	
+	public Integer getGasConcentrationMeasuredValue() {
+		return (Integer) getProperty(PROPERTY_HAS_MEASURED_VALUE_OF_GAS_CONCENTRATION);	
 	}
-	public void setGasConcentrationMeasuredValue(MeasuredValue msg) {
+	public void setGasConcentrationMeasuredValue(Integer msg) {
 		if(msg !=null)
 			changeProperty(PROPERTY_HAS_MEASURED_VALUE_OF_GAS_CONCENTRATION,msg);	
 	}

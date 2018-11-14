@@ -20,12 +20,8 @@ package org.universAAL.ontology.echonetontology.housingFacilitiesRelatedDevices;
 import org.universAAL.ontology.echonetontology.EchonetOntology;
 import org.universAAL.ontology.echonetontology.EchonetSuperDevice;
 import org.universAAL.ontology.echonetontology.values.ColorValue;
-import org.universAAL.ontology.echonetontology.values.DateTimeValue;
-import org.universAAL.ontology.echonetontology.values.LightingSettingValue;
-import org.universAAL.ontology.echonetontology.values.MeasuredValue;
 import org.universAAL.ontology.echonetontology.values.OperationModeSettingValue;
 import org.universAAL.ontology.echonetontology.values.OperationStatusValue;
-import org.universAAL.ontology.echonetontology.values.RGBValue;
 import org.universAAL.ontology.echonetontology.values.ThresholdLevelValue;
 
 public class GeneralLighting extends EchonetSuperDevice{
@@ -53,10 +49,10 @@ public class GeneralLighting extends EchonetSuperDevice{
 	public static final String PROPERTY_HAS_OFF_TIMER_SETTING = EchonetOntology.NAMESPACE + "hasOffTimerSetting";
 
 	
-	public DateTimeValue getOffTimerSetting() {
-		return (DateTimeValue) getProperty(PROPERTY_HAS_OFF_TIMER_SETTING);	
+	public String getOffTimerSetting() {
+		return  getProperty(PROPERTY_HAS_OFF_TIMER_SETTING).toString();	
 	}
-	public void setOffTimerSetting(DateTimeValue msg) {
+	public void setOffTimerSetting(String msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_OFF_TIMER_SETTING, msg);	
 	}	
@@ -68,10 +64,10 @@ public class GeneralLighting extends EchonetSuperDevice{
 			changeProperty(PROPERTY_HAS_OFF_TIMER_RESERVATION_SETTING, msg);	
 	}
 	
-	public DateTimeValue getOnTimerSetting() {
-		return (DateTimeValue) getProperty(PROPERTY_HAS_ON_TIMER_SETTING);	
+	public String getOnTimerSetting() {
+		return  getProperty(PROPERTY_HAS_ON_TIMER_SETTING).toString();	
 	}
-	public void setOnTimerSetting(DateTimeValue msg) {
+	public void setOnTimerSetting(String msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_ON_TIMER_SETTING, msg);	
 	}	
@@ -83,10 +79,10 @@ public class GeneralLighting extends EchonetSuperDevice{
 			changeProperty(PROPERTY_HAS_ON_TIMER_RESERVATION_SETTING, msg);	
 	}
 	
-	public RGBValue getRGBSettingForColorLighting() {
-		return (RGBValue) getProperty(PROPERTY_HAS_RGB_SETTING_FOR_COLOR_LIGHTING);	
+	public String getRGBSettingForColorLighting() {
+		return getProperty(PROPERTY_HAS_RGB_SETTING_FOR_COLOR_LIGHTING).toString();	
 	}
-	public void setRGBSettingForColorLighting(RGBValue msg) {
+	public void setRGBSettingForColorLighting(String msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_RGB_SETTING_FOR_COLOR_LIGHTING, msg);	
 	}
@@ -135,10 +131,10 @@ public class GeneralLighting extends EchonetSuperDevice{
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_ILLUMINANCE_LEVEL_STEP_SETTING_FOR_NIGHT_LIGHTING, msg);	
 	}
-	public MeasuredValue getIlluminanceLevelForNightLighting() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_ILLUMINANCE_LEVEL_FOR_NIGHT_LIGHTING);	
+	public Float getIlluminanceLevelForNightLighting() {
+		return (Float) getProperty(PROPERTY_HAS_ILLUMINANCE_LEVEL_FOR_NIGHT_LIGHTING);	
 	}
-	public void setIlluminanceLevelForNightLighting(MeasuredValue msg) {
+	public void setIlluminanceLevelForNightLighting(Float msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_ILLUMINANCE_LEVEL_FOR_NIGHT_LIGHTING, msg);	
 	}
@@ -149,10 +145,10 @@ public class GeneralLighting extends EchonetSuperDevice{
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_ILLUMINANCE_LEVEL_STEP_SETTING_FOR_MAIN_LIGHTING, msg);	
 	}
-	public MeasuredValue getIlluminanceLevelForMainLighting() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_ILLUMINANCE_LEVEL_FOR_MAIN_LIGHTING);	
+	public Float getIlluminanceLevelForMainLighting() {
+		return (Float) getProperty(PROPERTY_HAS_ILLUMINANCE_LEVEL_FOR_MAIN_LIGHTING);	
 	}
-	public void setIlluminanceLevelForMainLighting(MeasuredValue msg) {
+	public void setIlluminanceLevelForMainLighting(Float msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_ILLUMINANCE_LEVEL_FOR_MAIN_LIGHTING, msg);	
 	}
@@ -163,17 +159,17 @@ public class GeneralLighting extends EchonetSuperDevice{
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_LIGHTING_MODE_SETTING, msg);	
 	}
-	public LightingSettingValue getMaximumSetableLevelForNightLightingValue() {
-		return (LightingSettingValue) getProperty(PROPERTY_HAS_MAXIMUM_SETABLE_LEVEL_FOR_NIGHT_LIGHTING_VALUES);	
+	public String getMaximumSetableLevelForNightLightingValue() {
+		return  getProperty(PROPERTY_HAS_MAXIMUM_SETABLE_LEVEL_FOR_NIGHT_LIGHTING_VALUES).toString();	
 	}
-	public void setMaximumSetableLevelForNightLightingValue(LightingSettingValue msg) {
+	public void setMaximumSetableLevelForNightLightingValue(String msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_MAXIMUM_SETABLE_LEVEL_FOR_NIGHT_LIGHTING_VALUES, msg);	
 	}
-	public LightingSettingValue getMaximumSpecifiableValues() {
-		return (LightingSettingValue) getProperty(PROPERTY_HAS_MAXIMUM_SPECIFIABLE_VALUES);	
+	public String getMaximumSpecifiableValues() {
+		return  getProperty(PROPERTY_HAS_MAXIMUM_SPECIFIABLE_VALUES).toString();	
 	}
-	public void setMaximumSpecifiableValues(LightingSettingValue msg) {
+	public void setMaximumSpecifiableValues(String msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_MAXIMUM_SPECIFIABLE_VALUES, msg);	
 	}
@@ -198,10 +194,10 @@ public class GeneralLighting extends EchonetSuperDevice{
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_LIGHTING_COLOR_SETTING, msg);	
 	}
-	public MeasuredValue getIlluminanceLevel() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_ILLUMINANCE_LEVEL);	
+	public Float getIlluminanceLevel() {
+		return (Float) getProperty(PROPERTY_HAS_ILLUMINANCE_LEVEL);	
 	}
-	public void setIlluminanceLevel(MeasuredValue msg) {
+	public void setIlluminanceLevel(Float msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_ILLUMINANCE_LEVEL, msg);	
 	}

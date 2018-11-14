@@ -20,7 +20,6 @@ package org.universAAL.ontology.echonetontology.cookingHouseholdRelatedDevices;
 
 import org.universAAL.ontology.echonetontology.EchonetOntology;
 import org.universAAL.ontology.echonetontology.EchonetSuperDevice;
-import org.universAAL.ontology.echonetontology.values.DateTimeValue;
 import org.universAAL.ontology.echonetontology.values.OperationModeSettingValue;
 import org.universAAL.ontology.echonetontology.values.OperationStateSettingValue;
 import org.universAAL.ontology.echonetontology.values.OperationStatusValue;
@@ -36,17 +35,17 @@ public class ClothesDryer extends EchonetSuperDevice{
 	public static final String PROPERTY_HAS_ON_TIMER_SETTING_RELATIVE_TIME= EchonetOntology.NAMESPACE + "hasOnTimerSetting_RelativeTime";
 
 	
-	public DateTimeValue getOnTimerSetting_RelativeTime() {
-		return (DateTimeValue) getProperty(PROPERTY_HAS_ON_TIMER_SETTING_RELATIVE_TIME);	
+	public String getOnTimerSetting_RelativeTime() {
+		return  getProperty(PROPERTY_HAS_ON_TIMER_SETTING_RELATIVE_TIME).toString();	
 	}
-	public void setOnTimerSetting_RelativeTime(DateTimeValue msg) {
+	public void setOnTimerSetting_RelativeTime(String msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_ON_TIMER_SETTING_RELATIVE_TIME, msg);	
 	}
-	public DateTimeValue getOnTimerSetting() {
-		return (DateTimeValue) getProperty(PROPERTY_HAS_ON_TIMER_SETTING);	
+	public String getOnTimerSetting() {
+		return  getProperty(PROPERTY_HAS_ON_TIMER_SETTING).toString();	
 	}
-	public void setOnTimerSetting(DateTimeValue msg) {
+	public void setOnTimerSetting(String msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_ON_TIMER_SETTING, msg);	
 	}
@@ -57,10 +56,10 @@ public class ClothesDryer extends EchonetSuperDevice{
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_ON_TIMER_RESERVATION_SETTING, msg);	
 	}	
-	public DateTimeValue getDryingRemainingTime() {
-		return (DateTimeValue) getProperty(PROPERTY_HAS_DRYING_REMAINING_TIME);	
+	public String getDryingRemainingTime() {
+		return  getProperty(PROPERTY_HAS_DRYING_REMAINING_TIME).toString();	
 	}
-	public void setDryingRemainingTime(DateTimeValue msg) {
+	public void setDryingRemainingTime(String msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_DRYING_REMAINING_TIME, msg);	
 	}

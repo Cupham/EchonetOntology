@@ -20,12 +20,10 @@ package org.universAAL.ontology.echonetontology.housingFacilitiesRelatedDevices;
 import org.universAAL.ontology.echonetontology.EchonetOntology;
 import org.universAAL.ontology.echonetontology.EchonetSuperDevice;
 import org.universAAL.ontology.echonetontology.values.AlarmStatusValue;
-import org.universAAL.ontology.echonetontology.values.DateTimeValue;
-import org.universAAL.ontology.echonetontology.values.MeasuredValue;
 import org.universAAL.ontology.echonetontology.values.OperationModeSettingValue;
 import org.universAAL.ontology.echonetontology.values.OperationStateSettingValue;
 import org.universAAL.ontology.echonetontology.values.OperationStatusValue;
-import org.universAAL.ontology.echonetontology.values.SurplusElectricEnergyPowerPredictionValue;
+import org.universAAL.ontology.echonetontology.values.ThresholdLevelValue;
 public class WaterHeater extends EchonetSuperDevice{
 	public static final String MY_URI = EchonetOntology.NAMESPACE + "WaterHeater";
 	public static final String PROPERTY_HAS_AUTOMATIC_WATER_HEATING_SETTING = EchonetOntology.NAMESPACE + "hasAutomaticWaterHeatingSetting";
@@ -68,67 +66,67 @@ public class WaterHeater extends EchonetSuperDevice{
 	public static final String PROPERTY_HAS_PARTICIPATION_IN_ENERGY_SHIFT = EchonetOntology.NAMESPACE + "hasParticipationInEnergyShift";
 	public static final String PROPERTY_HAS_STANDARD_TIME_TO_START_HEATING= EchonetOntology.NAMESPACE + "hasStandardTimeToStartHeating";
 	public static final String PROPERTY_HAS_NUMBER_OF_ENERGY_SHIFTS = EchonetOntology.NAMESPACE + "hasNumberOfEnergyShifts";
-	public static final String PROPERTY_HAS_DATETIME_HEATING_SHIFT_TIME_1 = EchonetOntology.NAMESPACE + "hasDateTimeValuetimeHeatingShiftTime1";
-	public static final String PROPERTY_HAS_EXPECTED_ENERYGY_OF_DATETIME_HEATING_SHIFT_TIME_1 = EchonetOntology.NAMESPACE + "hasExpectedEnergyOfDateTimeValuetimeHeatingShiftTime1";
+	public static final String PROPERTY_HAS_DATETIME_HEATING_SHIFT_TIME_1 = EchonetOntology.NAMESPACE + "hasTimeHeatingShiftTime1";
+	public static final String PROPERTY_HAS_EXPECTED_ENERYGY_OF_DATETIME_HEATING_SHIFT_TIME_1 = EchonetOntology.NAMESPACE + "hasExpectedEnergyOfTimeHeatingShiftTime1";
 	public static final String PROPERTY_HAS_ENERGY_CONSUMPTION_PER_HOUR_1 = EchonetOntology.NAMESPACE + "hasEnergyConsumptionPerHour1";
-	public static final String PROPERTY_HAS_DATETIME_HEATING_SHIFT_TIME_2 = EchonetOntology.NAMESPACE + "hasDateTimeValuetimeHeatingShiftTime2";
-	public static final String PROPERTY_HAS_EXPECTED_ENERYGY_OF_DATETIME_HEATING_SHIFT_TIME_2 = EchonetOntology.NAMESPACE + "hasExpectedEnergyOfDateTimeValuetimeHeatingShiftTime2";
+	public static final String PROPERTY_HAS_DATETIME_HEATING_SHIFT_TIME_2 = EchonetOntology.NAMESPACE + "hasTimeHeatingShiftTime2";
+	public static final String PROPERTY_HAS_EXPECTED_ENERYGY_OF_DATETIME_HEATING_SHIFT_TIME_2 = EchonetOntology.NAMESPACE + "hasExpectedEnergyOfTimeHeatingShiftTime2";
 	public static final String PROPERTY_HAS_ENERGY_CONSUMPTION_PER_HOUR_2 = EchonetOntology.NAMESPACE + "hasEnergyConsumptionPerHour2";
 	
 	
-	public String getEnergyConsumptionPerHour2() {
-		return (String) getProperty(PROPERTY_HAS_ENERGY_CONSUMPTION_PER_HOUR_2);	
+	public Integer getEnergyConsumptionPerHour2() {
+		return  (Integer) getProperty(PROPERTY_HAS_ENERGY_CONSUMPTION_PER_HOUR_2);	
 	}
-	public void setEnergyConsumptionPerHour2(String msg) {
+	public void setEnergyConsumptionPerHour2(Integer msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_ENERGY_CONSUMPTION_PER_HOUR_2, msg);	
 	}
-	public String getExpectedEnergyOfDateTimeValuetimeHeatingShiftTime2() {
-		return (String) getProperty(PROPERTY_HAS_EXPECTED_ENERYGY_OF_DATETIME_HEATING_SHIFT_TIME_2);	
+	public Integer getExpectedEnergyOfTimeHeatingShiftTime2() {
+		return  (Integer)getProperty(PROPERTY_HAS_EXPECTED_ENERYGY_OF_DATETIME_HEATING_SHIFT_TIME_2);	
 	}
-	public void setExpectedEnergyOfDateTimeValuetimeHeatingShiftTime2(String msg) {
+	public void setExpectedEnergyOfTimeHeatingShiftTime2(Integer msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_EXPECTED_ENERYGY_OF_DATETIME_HEATING_SHIFT_TIME_2, msg);	
 	}
-	public void setDateTimeValuetimeHeatingShiftTime2(DateTimeValue msg) {
+	public void setTimeHeatingShiftTime2(String msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_EXPECTED_ENERYGY_OF_DATETIME_HEATING_SHIFT_TIME_2, msg);	
 	}
-	public DateTimeValue getDateTimeValuetimeHeatingShiftTime2() {
-		return (DateTimeValue) getProperty(PROPERTY_HAS_DATETIME_HEATING_SHIFT_TIME_2);	
+	public String getTimeHeatingShiftTime2() {
+		return  getProperty(PROPERTY_HAS_DATETIME_HEATING_SHIFT_TIME_2).toString();	
 	}
-	public String getEnergyConsumptionPerHour1() {
-		return (String) getProperty(PROPERTY_HAS_ENERGY_CONSUMPTION_PER_HOUR_1);	
+	public Integer getEnergyConsumptionPerHour1() {
+		return  (Integer) getProperty(PROPERTY_HAS_ENERGY_CONSUMPTION_PER_HOUR_1);	
 	}
-	public void setEnergyConsumptionPerHour1(String msg) {
+	public void setEnergyConsumptionPerHour1(Integer msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_ENERGY_CONSUMPTION_PER_HOUR_1, msg);	
 	}
-	public String getExpectedEnergyOfDateTimeValuetimeHeatingShiftTime1() {
-		return (String) getProperty(PROPERTY_HAS_EXPECTED_ENERYGY_OF_DATETIME_HEATING_SHIFT_TIME_1);	
+	public Integer getExpectedEnergyOfTimeHeatingShiftTime1() {
+		return  (Integer)getProperty(PROPERTY_HAS_EXPECTED_ENERYGY_OF_DATETIME_HEATING_SHIFT_TIME_1);	
 	}
-	public void setExpectedEnergyOfDateTimeValuetimeHeatingShiftTime1(String msg) {
+	public void setExpectedEnergyOfTimeHeatingShiftTime1(Integer msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_EXPECTED_ENERYGY_OF_DATETIME_HEATING_SHIFT_TIME_1, msg);	
 	}
-	public DateTimeValue getDateTimeValuetimeHeatingShiftTime1() {
-		return (DateTimeValue) getProperty(PROPERTY_HAS_DATETIME_HEATING_SHIFT_TIME_1);	
+	public String getTimeHeatingShiftTime1() {
+		return  getProperty(PROPERTY_HAS_DATETIME_HEATING_SHIFT_TIME_1).toString();	
 	}
-	public void setDateTimeValuetimeHeatingShiftTime1(DateTimeValue msg) {
+	public void setTimeHeatingShiftTime1(String msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_DATETIME_HEATING_SHIFT_TIME_1, msg);	
 	}
-	public MeasuredValue getNumberOfEnergyShifts() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_NUMBER_OF_ENERGY_SHIFTS);	
+	public Integer getNumberOfEnergyShifts() {
+		return (Integer) getProperty(PROPERTY_HAS_NUMBER_OF_ENERGY_SHIFTS);	
 	}
-	public void setNumberOfEnergyShifts(MeasuredValue msg) {
+	public void setNumberOfEnergyShifts(Integer msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_NUMBER_OF_ENERGY_SHIFTS, msg);	
 	}
-	public DateTimeValue getStandardTimeToStartHeating() {
-		return (DateTimeValue) getProperty(PROPERTY_HAS_STANDARD_TIME_TO_START_HEATING);	
+	public Integer getStandardTimeToStartHeating() {
+		return  (Integer)getProperty(PROPERTY_HAS_STANDARD_TIME_TO_START_HEATING);	
 	}
-	public void setStandardTimeToStartHeating(DateTimeValue msg) {
+	public void setStandardTimeToStartHeating(Integer msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_STANDARD_TIME_TO_START_HEATING, msg);	
 	}
@@ -139,38 +137,38 @@ public class WaterHeater extends EchonetSuperDevice{
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_PARTICIPATION_IN_ENERGY_SHIFT, msg);	
 	}
-	public MeasuredValue getRatedPowerConsumptionOfHPUnitInSummer() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_RATED_POWER_CONSUMPTION_OF_HP_UNIT_IN_SUMMER);	
+	public Integer getRatedPowerConsumptionOfHPUnitInSummer() {
+		return (Integer) getProperty(PROPERTY_HAS_RATED_POWER_CONSUMPTION_OF_HP_UNIT_IN_SUMMER);	
 	}
-	public void setRatedPowerConsumptionOfHPUnitInSummer(MeasuredValue msg) {
+	public void setRatedPowerConsumptionOfHPUnitInSummer(Integer msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_RATED_POWER_CONSUMPTION_OF_HP_UNIT_IN_SUMMER, msg);	
 	}
-	public MeasuredValue getRatedPowerConsumptionOfHPUnitInBetweenSeason() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_RATED_POWER_CONSUMPTION_OF_HP_UNIT_IN_BETWEEN_SEASON);	
+	public Integer getRatedPowerConsumptionOfHPUnitInBetweenSeason() {
+		return (Integer) getProperty(PROPERTY_HAS_RATED_POWER_CONSUMPTION_OF_HP_UNIT_IN_BETWEEN_SEASON);	
 	}
-	public void setRatedPowerConsumptionOfHPUnitInBetweenSeason(MeasuredValue msg) {
+	public void setRatedPowerConsumptionOfHPUnitInBetweenSeason(Integer msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_RATED_POWER_CONSUMPTION_OF_HP_UNIT_IN_BETWEEN_SEASON, msg);	
 	}
-	public MeasuredValue getRatedPowerConsumptionOfHPUnitInWinter() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_RATED_POWER_CONSUMPTION_OF_HP_UNIT_IN_WINTER);	
+	public Integer getRatedPowerConsumptionOfHPUnitInWinter() {
+		return (Integer) getProperty(PROPERTY_HAS_RATED_POWER_CONSUMPTION_OF_HP_UNIT_IN_WINTER);	
 	}
-	public void setRatedPowerConsumptionOfHPUnitInWinter(MeasuredValue msg) {
+	public void setRatedPowerConsumptionOfHPUnitInWinter(Integer msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_RATED_POWER_CONSUMPTION_OF_HP_UNIT_IN_WINTER, msg);	
 	}
-	public SurplusElectricEnergyPowerPredictionValue getSurplusElectricEnergyPowerPredictionValue() {
-		return (SurplusElectricEnergyPowerPredictionValue) getProperty(PROPERTY_HAS_SURPLUS_ELECTRIC_ENERGY_POWER_PREDICTION_VALUE);	
+	public String getSurplusElectricEnergyPowerPredictionValue() {
+		return  getProperty(PROPERTY_HAS_SURPLUS_ELECTRIC_ENERGY_POWER_PREDICTION_VALUE).toString();	
 	}
-	public void setSurplusElectricEnergyPowerPredictionValue(SurplusElectricEnergyPowerPredictionValue msg) {
+	public void setSurplusElectricEnergyPowerPredictionValue(String msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_SURPLUS_ELECTRIC_ENERGY_POWER_PREDICTION_VALUE, msg);	
 	}
-	public MeasuredValue getRemainingHotWaterVolume() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_REMAINING_HOT_WATER_VOLUME);	
+	public Integer getRemainingHotWaterVolume() {
+		return (Integer) getProperty(PROPERTY_HAS_REMAINING_HOT_WATER_VOLUME);	
 	}
-	public void setRemainingHotWaterVolume(MeasuredValue msg) {
+	public void setRemainingHotWaterVolume(Integer msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_REMAINING_HOT_WATER_VOLUME, msg);	
 	}
@@ -181,17 +179,17 @@ public class WaterHeater extends EchonetSuperDevice{
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_MUTE_SETTING, msg);	
 	}
-	public MeasuredValue getVolumeSetting() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_VOLUME_SETTING);	
+	public Integer getVolumeSetting() {
+		return (Integer) getProperty(PROPERTY_HAS_VOLUME_SETTING);	
 	}
-	public void setVolumeSetting(MeasuredValue msg) {
+	public void setVolumeSetting(Integer msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_VOLUME_SETTING, msg);	
 	}
-	public DateTimeValue getOnTimerSetting() {
-		return (DateTimeValue) getProperty(PROPERTY_HAS_ON_TIMER_SETTING);	
+	public String getOnTimerSetting() {
+		return  getProperty(PROPERTY_HAS_ON_TIMER_SETTING).toString();	
 	}
-	public void setOnTimerSetting(DateTimeValue msg) {
+	public void setOnTimerSetting(String msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_ON_TIMER_SETTING, msg);	
 	}
@@ -202,38 +200,38 @@ public class WaterHeater extends EchonetSuperDevice{
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_ON_TIMER_RESERVATION_SETTING, msg);	
 	}
-	public MeasuredValue getBathWaterVolumeSetting4MaximumSettableLevel() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_BATH_WATER_VOLUME_SETTING_4_MAXIMUM_SETABLE_LEVEL);	
+	public Integer getBathWaterVolumeSetting4MaximumSettableLevel() {
+		return (Integer) getProperty(PROPERTY_HAS_BATH_WATER_VOLUME_SETTING_4_MAXIMUM_SETABLE_LEVEL);	
 	}
-	public void setBathWaterVolumeSetting4MaximumSettableLevel(MeasuredValue msg) {
+	public void setBathWaterVolumeSetting4MaximumSettableLevel(Integer msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_BATH_WATER_VOLUME_SETTING_4_MAXIMUM_SETABLE_LEVEL, msg);	
 	}
-	public MeasuredValue getBathWaterVolumeSetting4() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_BATH_WATER_VOLUME_SETTING_4);	
+	public Integer getBathWaterVolumeSetting4() {
+		return (Integer) getProperty(PROPERTY_HAS_BATH_WATER_VOLUME_SETTING_4);	
 	}
-	public void setBathWaterVolumeSetting4(MeasuredValue msg) {
+	public void setBathWaterVolumeSetting4(Integer msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_BATH_WATER_VOLUME_SETTING_4, msg);	
 	}
-	public MeasuredValue getBathWaterVolumeSetting3() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_BATH_WATER_VOLUME_SETTING_3);	
+	public Integer getBathWaterVolumeSetting3() {
+		return (Integer) getProperty(PROPERTY_HAS_BATH_WATER_VOLUME_SETTING_3);	
 	}
-	public void setBathWaterVolumeSetting3(MeasuredValue msg) {
+	public void setBathWaterVolumeSetting3(Integer msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_BATH_WATER_VOLUME_SETTING_3, msg);	
 	}
-	public MeasuredValue getBathWaterVolumeSetting2() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_BATH_WATER_VOLUME_SETTING_2);	
+	public ThresholdLevelValue getBathWaterVolumeSetting2() {
+		return (ThresholdLevelValue) getProperty(PROPERTY_HAS_BATH_WATER_VOLUME_SETTING_2);	
 	}
-	public void setBathWaterVolumeSetting2(MeasuredValue msg) {
+	public void setBathWaterVolumeSetting2(ThresholdLevelValue msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_BATH_WATER_VOLUME_SETTING_2, msg);	
 	}	
-	public MeasuredValue getBathWaterVolumeSetting1() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_BATH_WATER_VOLUME_SETTING_1);	
+	public Integer getBathWaterVolumeSetting1() {
+		return (Integer) getProperty(PROPERTY_HAS_BATH_WATER_VOLUME_SETTING_1);	
 	}
-	public void setBathWaterVolumeSetting1(MeasuredValue msg) {
+	public void setBathWaterVolumeSetting1(Integer msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_BATH_WATER_VOLUME_SETTING_1, msg);	
 	}
@@ -280,45 +278,45 @@ public class WaterHeater extends EchonetSuperDevice{
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_AUTOMATIC_BATH_WATER_HEATING_MODE_SETTING, msg);	
 	}
-	public MeasuredValue getTankCapacity() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_TANK_CAPACITY);	
+	public Integer getTankCapacity() {
+		return (Integer) getProperty(PROPERTY_HAS_TANK_CAPACITY);	
 	}
-	public void setTankCapacity(MeasuredValue msg) {
+	public void setTankCapacity(Integer msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_TANK_CAPACITY, msg);	
 	}
-	public MeasuredValue getMeasuredAmountOfRemainingWaterInTank() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_MEASURED_AMOUNT_OF_REMAINING_WATER_IN_TANK);	
+	public Integer getMeasuredAmountOfRemainingWaterInTank() {
+		return (Integer) getProperty(PROPERTY_HAS_MEASURED_AMOUNT_OF_REMAINING_WATER_IN_TANK);	
 	}
-	public void getMeasuredAmountOfRemainingWaterInTank(MeasuredValue msg) {
+	public void getMeasuredAmountOfRemainingWaterInTank(Integer msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_MEASURED_AMOUNT_OF_REMAINING_WATER_IN_TANK, msg);	
 	}
-	public MeasuredValue getBathWaterVolumeSetting() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_BATH_WATER_VOLUME_SETTING);	
+	public Integer getBathWaterVolumeSetting() {
+		return (Integer) getProperty(PROPERTY_HAS_BATH_WATER_VOLUME_SETTING);	
 	}
-	public void setBathWaterVolumeSetting(MeasuredValue msg) {
+	public void setBathWaterVolumeSetting(Integer msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_BATH_WATER_VOLUME_SETTING, msg);	
 	}
-	public MeasuredValue getBathWaterTemperatureSetting() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_BATH_WATER_TEMPERATURE_SETTING);	
+	public Integer getBathWaterTemperatureSetting() {
+		return (Integer) getProperty(PROPERTY_HAS_BATH_WATER_TEMPERATURE_SETTING);	
 	}
-	public void setBathWaterTemperatureSetting(MeasuredValue msg) {
+	public void setBathWaterTemperatureSetting(Integer msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_BATH_WATER_TEMPERATURE_SETTING, msg);	
 	}
-	public MeasuredValue getTemperatureOfSuppliedWaterSetting() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_TEMPERATURE_OF_SUPPLIED_WATER_SETTING);	
+	public Integer getTemperatureOfSuppliedWaterSetting() {
+		return (Integer) getProperty(PROPERTY_HAS_TEMPERATURE_OF_SUPPLIED_WATER_SETTING);	
 	}
-	public void setTemperatureOfSuppliedWaterSetting(MeasuredValue msg) {
+	public void setTemperatureOfSuppliedWaterSetting(Integer msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_TEMPERATURE_OF_SUPPLIED_WATER_SETTING, msg);	
 	}
-	public DateTimeValue getRelativeTimeSettingForKeepingBathTemperature() {
-		return (DateTimeValue) getProperty(PROPERTY_HAS_RELATIVE_TIME_SETTING_FOR_KEEPING_BATH_TEMPERATURE);	
+	public String getRelativeTimeSettingForKeepingBathTemperature() {
+		return  getProperty(PROPERTY_HAS_RELATIVE_TIME_SETTING_FOR_KEEPING_BATH_TEMPERATURE).toString();	
 	}
-	public void setRelativeTimeSettingForKeepingBathTemperature(DateTimeValue msg) {
+	public void setRelativeTimeSettingForKeepingBathTemperature(String msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_RELATIVE_TIME_SETTING_FOR_KEEPING_BATH_TEMPERATURE, msg);	
 	}
@@ -336,10 +334,10 @@ public class WaterHeater extends EchonetSuperDevice{
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_ALARM_STATUS, msg);	
 	}
-	public MeasuredValue getMeasuredWaterTemperatureOfWaterHeater() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_MEASURED_WATER_TEMPERATURE_OF_WATER_HEATER);	
+	public Integer getMeasuredWaterTemperatureOfWaterHeater() {
+		return (Integer) getProperty(PROPERTY_HAS_MEASURED_WATER_TEMPERATURE_OF_WATER_HEATER);	
 	}
-	public void setMeasuredWaterTemperatureOfWaterHeater(MeasuredValue msg) {
+	public void setMeasuredWaterTemperatureOfWaterHeater(Integer msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_MEASURED_WATER_TEMPERATURE_OF_WATER_HEATER, msg);	
 	}
@@ -357,24 +355,24 @@ public class WaterHeater extends EchonetSuperDevice{
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_TANK_OPERATION_MODE_SETTING, msg);	
 	}
-	public DateTimeValue getRelativeTimeForManualWaterHeatingOffSetting() {
-		return (DateTimeValue) getProperty(PROPERTY_HAS_RELATIVE_TIME_FOR_MANUAL_WATER_HEATING_OFF_SETTING);	
+	public String getRelativeTimeForManualWaterHeatingOffSetting() {
+		return  getProperty(PROPERTY_HAS_RELATIVE_TIME_FOR_MANUAL_WATER_HEATING_OFF_SETTING).toString();	
 	}
-	public void setRelativeTimeForManualWaterHeatingOffSetting(DateTimeValue msg) {
+	public void setRelativeTimeForManualWaterHeatingOffSetting(String msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_RELATIVE_TIME_FOR_MANUAL_WATER_HEATING_OFF_SETTING, msg);	
 	}
-	public DateTimeValue getManualWaterHeatingStopDaySetting() {
-		return (DateTimeValue) getProperty(PROPERTY_HAS_MANUAL_WATER_HEATING_STOP_DAY_SETTING);	
+	public String getManualWaterHeatingStopDaySetting() {
+		return  getProperty(PROPERTY_HAS_MANUAL_WATER_HEATING_STOP_DAY_SETTING).toString();	
 	}
-	public void setManualWaterHeatingStopDaySetting(DateTimeValue msg) {
+	public void setManualWaterHeatingStopDaySetting(String msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_MANUAL_WATER_HEATING_STOP_DAY_SETTING, msg);	
 	}
-	public MeasuredValue getWaterHeatingTemperatureSetting() {
-		return (MeasuredValue) getProperty(PROPERTY_HAS_WATER_HEATING_TEMPERATURE_SETTING);	
+	public Integer getWaterHeatingTemperatureSetting() {
+		return (Integer) getProperty(PROPERTY_HAS_WATER_HEATING_TEMPERATURE_SETTING);	
 	}
-	public void setWaterHeatingTemperatureSetting(MeasuredValue msg) {
+	public void setWaterHeatingTemperatureSetting(Integer msg) {
 		if(msg !=null) 
 			changeProperty(PROPERTY_HAS_WATER_HEATING_TEMPERATURE_SETTING, msg);	
 	}
