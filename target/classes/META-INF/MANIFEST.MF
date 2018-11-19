@@ -1,5 +1,5 @@
 Manifest-Version: 1.0
-Bnd-LastModified: 1539672584533
+Bnd-LastModified: 1542611879910
 Build-Jdk: 1.8.0_171
 Built-By: cupham
 Bundle-Description: The Collection of ECHONET-based Devices Ontology
@@ -29,21 +29,17 @@ Export-Package: org.universAAL.ontology.echonetontology;uses:="org.unive
  g.universAAL.ontology.echonetontology";version="3.4.0",org.universAAL.o
  ntology.echonetontology.values;uses:="org.universAAL.middleware.owl";ve
  rsion="3.4.0",org.universAAL.ontology.echonetontology.healthRelatedDevi
- ces;uses:="org.universAAL.ontology.echonetontology.values,org.universAA
- L.ontology.echonetontology";version="3.4.0",org.universAAL.ontology.ech
- onetontology.audiovisualRelatedDevices;uses:="org.universAAL.ontology.e
- chonetontology.values,org.universAAL.ontology.echonetontology";version=
- "3.4.0"
+ ces;uses:="org.universAAL.ontology.echonetontology";version="3.4.0",org
+ .universAAL.ontology.echonetontology.audiovisualRelatedDevices;uses:="o
+ rg.universAAL.ontology.echonetontology.values,org.universAAL.ontology.e
+ chonetontology";version="3.4.0"
 Import-Package: org.universAAL.middleware.container,org.universAAL.middl
  eware.owl,org.universAAL.middleware.rdf,org.universAAL.ontology.echonet
- ontology.airconditionerRelatedDevices;version="[3.4,4)",org.universAAL.
- ontology.echonetontology.audiovisualRelatedDevices;version="[3.4,4)",or
- g.universAAL.ontology.echonetontology.cookingHouseholdRelatedDevices;ve
- rsion="[3.4,4)",org.universAAL.ontology.echonetontology.healthRelatedDe
- vices;version="[3.4,4)",org.universAAL.ontology.echonetontology.housing
- FacilitiesRelatedDevices;version="[3.4,4)",org.universAAL.ontology.echo
- netontology.managementOperationRelatedDevices;version="[3.4,4)",org.uni
- versAAL.ontology.echonetontology.sensorRelatedDevices;version="[3.4,4)"
- ,org.universAAL.ontology.echonetontology.values;version="[3.4,4)",org.u
- niversAAL.ontology.phThing;version="[3.4,4)"
+ ontology.airconditionerRelatedDevices,org.universAAL.ontology.echoneton
+ tology.audiovisualRelatedDevices,org.universAAL.ontology.echonetontolog
+ y.cookingHouseholdRelatedDevices,org.universAAL.ontology.echonetontolog
+ y.healthRelatedDevices,org.universAAL.ontology.echonetontology.housingF
+ acilitiesRelatedDevices,org.universAAL.ontology.echonetontology.managem
+ entOperationRelatedDevices,org.universAAL.ontology.echonetontology.sens
+ orRelatedDevices,org.universAAL.ontology.phThing;version="[3.4,4)"
 Tool: Bnd-1.50.0

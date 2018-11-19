@@ -99,8 +99,8 @@
 /Users/cupham/Documents/Code/org.universAAL.ontology.echonetontology/src/main/java/org/universAAL/ontology/echonetontology/sensorRelatedDevices/FlameSensor.java
 /Users/cupham/Documents/Code/org.universAAL.ontology.echonetontology/src/main/java/org/universAAL/ontology/echonetontology/sensorRelatedDevices/WaterOverflowSensor.java
 /Users/cupham/Documents/Code/org.universAAL.ontology.echonetontology/src/main/java/org/universAAL/ontology/echonetontology/housingFacilitiesRelatedDevices/WaterFlowMeter.java
-/Users/cupham/Documents/Code/org.universAAL.ontology.echonetontology/src/main/java/org/universAAL/ontology/echonetontology/values/ShapeValue.java
 /Users/cupham/Documents/Code/org.universAAL.ontology.echonetontology/src/main/java/org/universAAL/ontology/echonetontology/values/FaultDesciptionValue.java
+/Users/cupham/Documents/Code/org.universAAL.ontology.echonetontology/src/main/java/org/universAAL/ontology/echonetontology/managementOperationRelatedDevices/DREventController.java
 /Users/cupham/Documents/Code/org.universAAL.ontology.echonetontology/src/main/java/org/universAAL/ontology/echonetontology/housingFacilitiesRelatedDevices/SmartGasMeter.java
 /Users/cupham/Documents/Code/org.universAAL.ontology.echonetontology/src/main/java/org/universAAL/ontology/echonetontology/airconditionerRelatedDevices/ElectricStorageHeater.java
 /Users/cupham/Documents/Code/org.universAAL.ontology.echonetontology/src/main/java/org/universAAL/ontology/echonetontology/cookingHouseholdRelatedDevices/WashingMachine.java
